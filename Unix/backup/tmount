@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+# $Id: tmount,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+use strict;
+
+my ($tape);
+# which tape device to use
+$tape = '/dev/nst0';
+
+# mount the tape in the drive
+my ($label, $id, $tmp);
+system "mt -f $tape rewind";
+$tmp = `label $tape`;
+
+if ($tmp =~ /ID=(\d+) LABEL="(.*)"$/) {
+  $id = $1;
+  $label = $2;
+  print STDERR "Tape in $tape is '$label'.\n";
+  if ($label !~ /^Backup/) {
+    print STDERR "This tape is not designated to be a backup tape. Aborting.\n";
+    system "mt -f $tape offline";
+    exit -1;
+  }
+} else {
+  print STDERR "Tape in $tape was not recognized. Aborting.\n";
+  exit -1;
+}
+
+unlink '/var/lib/tob' if (-l '/var/lib/tob');
+mkdir "/var/lib/tob.$label.$id", 0755 if (! -d "/var/lib/tob.$label.$id");
+system "ln -s /var/lib/tob.$label.$id /var/lib/tob";

@@ -1,0 +1,51 @@
+README for the 'reverse' suite of backup utilities
+==================================================
+
+Release 4.
+==========
+
+General
+=======
+
+This is a small suite of programs to simplify my backups. They are
+very much under development, still. Not all the functionality I want
+is implemented, not even close, but I am working on it.
+
+These things _are_ buggy; they do not check for all possible failure
+modes as they should. If you use this for backup and it fails, it's
+not my problem. There is no warranty. You have been warned.
+
+Programs
+========
+
+The stuff that basically works as of the first release are:
+
+* 'save' This is a program that does backups. It backs up files that
+  have changed since the last backup, or all files of there is no
+  index for the tape in the drive.
+
+* 'lschunks' Shows what chunks are on a tape, when they were written,
+  which volume they contain, etc.
+
+* 'lsfiles' Gives a little more verbose info, show what files are on a 
+  tape and in which chunk they are (for quicker access)
+
+* 'label' A quick ugly little hack to make a label on a tape.
+
+* 'archive' A nice way to stuff a directory to tape for permanent storage.
+  Bypasses all pruning, and is meant for when you want to store away files
+  but do it in a way so that you will have the files' location in an index.
+
+Needed stuff
+============
+
+The backups are made with afio and compressed by gzip. You need those
+programs.
+
+Me
+==
+
+You can reach me at jborg@df.lth.se
+
+--
+$Id: README,v 1.1.1.1 2003/03/01 12:55:12 jb Exp $

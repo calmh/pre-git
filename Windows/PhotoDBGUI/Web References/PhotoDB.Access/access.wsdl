@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://services.jborg.info/photodb/1.0/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://services.jborg.info/photodb/1.0/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://services.jborg.info/photodb/1.0/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SelectAllFolders">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectAllFoldersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllFoldersResult" type="s0:ArrayOfFolder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFolder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Folder" nillable="true" type="s0:Folder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Folder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Highlight" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Caption" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s0:FolderSortOrder" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecLevel" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FolderSortOrder">
+        <s:restriction base="s:string">
+          <s:enumeration value="ByDate" />
+          <s:enumeration value="ByPopularity" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SessionHeader" type="s0:SessionHeader" />
+      <s:complexType name="SessionHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectFolderByFriendly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="friendly_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFolderByFriendlyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFolderByFriendlyResult" type="s0:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFolderByGUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFolderByGUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFolderByGUIDResult" type="s0:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllPhotos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folder_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllPhotosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllPhotosResult" type="s0:ArrayOfPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPhoto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Photo" nillable="true" type="s0:Photo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Photo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PhotoID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Caption" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecLevel" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPhotoByFriendly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="friendly_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPhotoByFriendlyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPhotoByFriendlyResult" type="s0:Photo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPhotoByGUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="photo_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPhotoByGUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPhotoByGUIDResult" type="s0:Photo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllInstances">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="photo_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllInstancesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllInstancesResult" type="s0:ArrayOfInstance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInstance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Instance" nillable="true" type="s0:Instance" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Instance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InstanceID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhotoID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="instance_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectInstanceResult" type="s0:Instance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectThumbnailInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="photo_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="thumbnail_size" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectThumbnailInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectThumbnailInstanceResult" type="s0:Instance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginAnonymous">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoginAnonymousResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginAnonymousResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </types>
+  <message name="SelectAllFoldersSoapIn">
+    <part name="parameters" element="s0:SelectAllFolders" />
+  </message>
+  <message name="SelectAllFoldersSoapOut">
+    <part name="parameters" element="s0:SelectAllFoldersResponse" />
+  </message>
+  <message name="SelectAllFoldersSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectFolderByFriendlySoapIn">
+    <part name="parameters" element="s0:SelectFolderByFriendly" />
+  </message>
+  <message name="SelectFolderByFriendlySoapOut">
+    <part name="parameters" element="s0:SelectFolderByFriendlyResponse" />
+  </message>
+  <message name="SelectFolderByFriendlySessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectFolderByGUIDSoapIn">
+    <part name="parameters" element="s0:SelectFolderByGUID" />
+  </message>
+  <message name="SelectFolderByGUIDSoapOut">
+    <part name="parameters" element="s0:SelectFolderByGUIDResponse" />
+  </message>
+  <message name="SelectFolderByGUIDSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectAllPhotosSoapIn">
+    <part name="parameters" element="s0:SelectAllPhotos" />
+  </message>
+  <message name="SelectAllPhotosSoapOut">
+    <part name="parameters" element="s0:SelectAllPhotosResponse" />
+  </message>
+  <message name="SelectAllPhotosSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectPhotoByFriendlySoapIn">
+    <part name="parameters" element="s0:SelectPhotoByFriendly" />
+  </message>
+  <message name="SelectPhotoByFriendlySoapOut">
+    <part name="parameters" element="s0:SelectPhotoByFriendlyResponse" />
+  </message>
+  <message name="SelectPhotoByFriendlySessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectPhotoByGUIDSoapIn">
+    <part name="parameters" element="s0:SelectPhotoByGUID" />
+  </message>
+  <message name="SelectPhotoByGUIDSoapOut">
+    <part name="parameters" element="s0:SelectPhotoByGUIDResponse" />
+  </message>
+  <message name="SelectPhotoByGUIDSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectAllInstancesSoapIn">
+    <part name="parameters" element="s0:SelectAllInstances" />
+  </message>
+  <message name="SelectAllInstancesSoapOut">
+    <part name="parameters" element="s0:SelectAllInstancesResponse" />
+  </message>
+  <message name="SelectAllInstancesSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectInstanceSoapIn">
+    <part name="parameters" element="s0:SelectInstance" />
+  </message>
+  <message name="SelectInstanceSoapOut">
+    <part name="parameters" element="s0:SelectInstanceResponse" />
+  </message>
+  <message name="SelectInstanceSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="SelectThumbnailInstanceSoapIn">
+    <part name="parameters" element="s0:SelectThumbnailInstance" />
+  </message>
+  <message name="SelectThumbnailInstanceSoapOut">
+    <part name="parameters" element="s0:SelectThumbnailInstanceResponse" />
+  </message>
+  <message name="SelectThumbnailInstanceSessionHeader">
+    <part name="SessionHeader" element="s0:SessionHeader" />
+  </message>
+  <message name="LoginSoapIn">
+    <part name="parameters" element="s0:Login" />
+  </message>
+  <message name="LoginSoapOut">
+    <part name="parameters" element="s0:LoginResponse" />
+  </message>
+  <message name="LoginAnonymousSoapIn">
+    <part name="parameters" element="s0:LoginAnonymous" />
+  </message>
+  <message name="LoginAnonymousSoapOut">
+    <part name="parameters" element="s0:LoginAnonymousResponse" />
+  </message>
+  <portType name="AccessSoap">
+    <operation name="SelectAllFolders">
+      <input message="s0:SelectAllFoldersSoapIn" />
+      <output message="s0:SelectAllFoldersSoapOut" />
+    </operation>
+    <operation name="SelectFolderByFriendly">
+      <input message="s0:SelectFolderByFriendlySoapIn" />
+      <output message="s0:SelectFolderByFriendlySoapOut" />
+    </operation>
+    <operation name="SelectFolderByGUID">
+      <input message="s0:SelectFolderByGUIDSoapIn" />
+      <output message="s0:SelectFolderByGUIDSoapOut" />
+    </operation>
+    <operation name="SelectAllPhotos">
+      <input message="s0:SelectAllPhotosSoapIn" />
+      <output message="s0:SelectAllPhotosSoapOut" />
+    </operation>
+    <operation name="SelectPhotoByFriendly">
+      <input message="s0:SelectPhotoByFriendlySoapIn" />
+      <output message="s0:SelectPhotoByFriendlySoapOut" />
+    </operation>
+    <operation name="SelectPhotoByGUID">
+      <input message="s0:SelectPhotoByGUIDSoapIn" />
+      <output message="s0:SelectPhotoByGUIDSoapOut" />
+    </operation>
+    <operation name="SelectAllInstances">
+      <input message="s0:SelectAllInstancesSoapIn" />
+      <output message="s0:SelectAllInstancesSoapOut" />
+    </operation>
+    <operation name="SelectInstance">
+      <input message="s0:SelectInstanceSoapIn" />
+      <output message="s0:SelectInstanceSoapOut" />
+    </operation>
+    <operation name="SelectThumbnailInstance">
+      <input message="s0:SelectThumbnailInstanceSoapIn" />
+      <output message="s0:SelectThumbnailInstanceSoapOut" />
+    </operation>
+    <operation name="Login">
+      <input message="s0:LoginSoapIn" />
+      <output message="s0:LoginSoapOut" />
+    </operation>
+    <operation name="LoginAnonymous">
+      <input message="s0:LoginAnonymousSoapIn" />
+      <output message="s0:LoginAnonymousSoapOut" />
+    </operation>
+  </portType>
+  <binding name="AccessSoap" type="s0:AccessSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="SelectAllFolders">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectAllFolders" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectAllFoldersSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectFolderByFriendly">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectFolderByFriendly" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectFolderByFriendlySessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectFolderByGUID">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectFolderByGUID" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectFolderByGUIDSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectAllPhotos">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectAllPhotos" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectAllPhotosSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectPhotoByFriendly">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectPhotoByFriendly" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectPhotoByFriendlySessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectPhotoByGUID">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectPhotoByGUID" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectPhotoByGUIDSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectAllInstances">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectAllInstances" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectAllInstancesSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectInstance">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectInstance" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectInstanceSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectThumbnailInstance">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/SelectThumbnailInstance" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:SelectThumbnailInstanceSessionHeader" part="SessionHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/Login" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LoginAnonymous">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/LoginAnonymous" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Access">
+    <port name="AccessSoap" binding="s0:AccessSoap">
+      <soap:address location="http://localhost/photodb/access.asmx" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,115 @@
+#!/bin/sh
+
+## (c) 2000 Jakob Borg
+##
+## This script sets up the database
+##
+## $Id: setupdb,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+cat<<EOF
+
+This script will help with initial setup of the database, and create a 
+configuration file for user with keeper.
+
+EOF
+
+DBHOST_DEFAULT=
+DBUSER_DEFAULT=postgres
+DBNAME_DEFAULT=keeper
+DBKUSER_DEFAULT=keeper
+DBKPASS_DEFAULT=
+DBPORT=
+
+read -p "Database server (leave blank for localhost) [$DBHOST_DEFAULT]: " DBHOST
+if [ "$DBHOST" == "" ]; then
+DBHOST=$DBHOST_DEFAULT
+fi
+
+read -p "Access database as which user? [$DBUSER_DEFAULT]: " DBUSER
+if [ "$DBUSER" == "" ]; then
+DBUSER=$DBUSER_DEFAULT
+fi
+
+read -p "Password for that user (will be visible when typing) []: " DBPASS
+
+read -p "Database name [$DBNAME_DEFAULT]: " DBNAME
+if [ "$DBNAME" == "" ]; then
+DBNAME=$DBNAME_DEFAULT
+fi
+
+read -p "Username for keeper service (will be created) [$DBKUSER_DEFAULT]: " DBKUSER
+if [ "$DBKUSER" == "" ]; then
+DBKUSER=$DBKUSER_DEFAULT
+fi
+
+while [ "$DBKPASS" == "" ]; do
+read -p "Password for keeper user [$DBKPASS_DEFAULT]: " DBKPASS
+done
+
+cat > keeper.cf <<EOF
+hostname=$DBHOST
+port=$DBPORT
+database=$DBNAME
+user=$DBKUSER
+password=$DBKPASS
+
+# DO NOT CHANGE THE FOLLOWING LINE
+VERSION=2.0
+EOF
+
+if [ "$DBHOST" == "" ]; then
+    DB=
+else
+    DB="-h $DBHOST"
+fi
+
+cat<<EOF
+
+The database and tables will now be created.
+
+EOF
+
+psql -U $DBUSER $DB > /dev/null  2>&1 <<EOF
+$DBPASS
+CREATE DATABASE $DBNAME;
+CREATE USER $DBKUSER;
+ALTER USER $DBKUSER WITH PASSWORD '$DBKPASS';
+EOF
+
+psql -U $DBUSER $DB $DBNAME > /dev/null 2>&1 <<EOF
+$DBPASS
+CREATE SEQUENCE "objects_id_seq" start 1 increment 1 maxvalue 2147483647 minvalue 1  cache 1 ;
+SELECT nextval ('"objects_id_seq"');
+CREATE TABLE "users" (
+        "name" character varying(16) NOT NULL,
+        "password" character varying(80),
+        "priv_level" int4,
+        PRIMARY KEY ("name")
+);
+REVOKE ALL on "users" from PUBLIC;
+GRANT ALL on "users" to "$DBKUSER";
+CREATE TABLE "objects" (
+        "mimetype" text,
+        "description" text,
+        "content" oid,
+        "created" date,
+        "id" int4 DEFAULT nextval('objects_id_seq'::text),
+        "priv_level" int4,
+        "deleted" int4
+);
+REVOKE ALL on "objects" from PUBLIC;
+GRANT ALL on "objects" to "$DBKUSER";
+CREATE  INDEX "objects_description_idx" on "objects" using btree ( "description" "text_ops" );
+CREATE UNIQUE INDEX "objects_id_idx" on "objects" using btree ( "id" "int4_ops" );
+CREATE  INDEX "objects_priv_level_idx" on "objects" using btree ( "priv_level" "int4_ops" );
+CREATE  INDEX "objects_mimetype_idx" on "objects" using btree ( "mimetype" "text_ops" );
+CREATE  INDEX "objects_content_idx" on "objects" using btree ( "content" "oid_ops" );
+INSERT INTO users VALUES ('root', '', 0);
+EOF
+
+cat<<EOF
+
+The database is now set up. The user 'root' can access the keeper
+system without password. You should change this as soon as possible.
+
+EOF

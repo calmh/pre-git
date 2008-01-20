@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ]; then
+   if [ -d /usr/doc -a ! -e /usr/doc/glcpu -a -d /usr/share/doc/glcpu ]; then
+      ln -sf ../share/doc/glcpu /usr/doc/glcpu
+   fi
+fi
+

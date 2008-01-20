@@ -1,0 +1,1 @@
+ const unsigned char TesterVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Tester  PROJECT:XDownloader-  DEVELOPER:jb  BUILT:" __DATE__  " " __TIME__ "" "\n"; const double TesterVersionNumber __attribute__ ((used)) = (double)0.;

@@ -1,0 +1,48 @@
+digraph Tester {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Deployment/Tester.octest\n4cc8a554fbb8011078ee8c91d33df692\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00002 [ label = "Contents/Info.plist\n0d0e4c605c5fb638ad33863f170b1161\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00003 [ label = "Tester.build/Info.plist\n0000000042fa71b80000000000000263\nUpToDate" ];
+   n00004 [ label = "ppc/TestTest.o\n02c0c6e53e40e10183c8bcceb2ade23b\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00005 [ label = "Headers/Cocoa.h\n0000000042c7f6b600000000000001c2\nUpToDate" ];
+   n00006 [ label = "Cocoa-cqinliulzgmcobcyowtdvuyperks/Cocoa.h.gch\n8fffc1df540f0a2610037980835db699\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00007 [ label = "XDownloader/TestTest.m\n0000000042fa706f0000000000000125\nUpToDate" ];
+   n00008 [ label = "ppc/Tester_vers.o\n8b0075cd7c9d8c5d04efa75d64a449c9\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00009 [ label = "DerivedSources/Tester_vers.c\n0000000042fa71b800000000000000eb\nUpToDate" ];
+   n00010 [ label = "MacOS/Tester\ncfdafe2125837aed437b31a4991ebe8f\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00011 [ label = "Frameworks/SenTestingKit.framework[C]\n0000000042c7f61d00000000000000cc\nUpToDate" ];
+   n00012 [ label = "<Tester.build/Script-2967212708AAA5AD00A1E964.sh>[A]\n76e1cc395d84d85c010160a075f7aa6c\nDepsUpdated", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00013 [ label = "Tester.build/Script-2967212708AAA5AD00A1E964.sh\n0000000042fa71b80000000000000062\nUpToDate" ];
+   n00014 [ label = "XDownloader/TestTest.h\n0000000042fa718e00000000000000d5\nUpToDate" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n0000000042fa71b80000000000000263\n^ 0d0e4c601ea5c780ad33863f170b1302\n= 0d0e4c605c5fb638ad33863f170b1161\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00002 [ label = "CompileC TestTest.o <wt:4>\nwaitCount: 1\n8fffc1df540f0bc710037980835db769\n^ 8d3f073a6a4feac693cbc54e31f05552\n= 02c0c6e53e40e10183c8bcceb2ade23b\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00003 [ label = "ProcessPCH Cocoa.h.gch <wt:3>\nwaitCount: 0\n0000000042c7f6b600000000000001c2\n^ 8fffc1df16c8fc9010037980835db75b\n= 8fffc1df540f0a2610037980835db699\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00004 [ label = "CompileC Tester_vers.o <wt:4>\nwaitCount: 0\n0000000042fa71b800000000000000eb\n^ 8b0075cd3e67fde504efa75d64a44922\n= 8b0075cd7c9d8c5d04efa75d64a449c9\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00005 [ label = "Ld Tester <wt:4>\nwaitCount: 2\n89c0b328001a9b4187271b93d609ab3e\n^ 461a4d092599e1acc45c2a374f1715b1\n= cfdafe2125837aed437b31a4991ebe8f\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00006 [ label = "PhaseScriptExecution Script-2967212708AAA5AD00A1E964.sh <wt:8>\nwaitCount: 0\n0000000042fa71b80000000000000062\n^ 76e1cc391f7ea9e4010160a075f7aa0e\n= 76e1cc395d84d85c010160a075f7aa6c\nNeedsToRun\n1 output is always out-of-date", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00007 [ label = "Touch Tester.octest <wt:9>\nwaitCount: 2\nc2d4b24179dcccd5ee48b79b8e15afee\n^ 8e1c17158264cdc596a63b0a5d28597c\n= 4cc8a554fbb8011078ee8c91d33df692\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00007 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00012 -> { c00006 };
+   c00001 -> { n00003 };
+   c00002 -> { n00006 n00007 };
+   c00003 -> { n00005 };
+   c00004 -> { n00009 };
+   c00005 -> { n00004 n00008 n00011 };
+   c00006 -> { n00013 };
+   c00007 -> { n00002 n00010 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00007 -> { n00014 };
+}

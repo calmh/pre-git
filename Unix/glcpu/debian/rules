@@ -1,0 +1,57 @@
+#!/usr/bin/make -f
+
+#  $Id: rules,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+binary: binary-arch binary-indep
+
+binary-arch: build
+# glcpu
+	rm -rf debian/tmp
+	mkdir -p debian/tmp/DEBIAN
+	mkdir -p debian/tmp/usr/bin
+	mkdir -p debian/tmp/usr/share/doc/glcpu
+	mkdir -p debian/tmp/usr/share/man/man1
+	cp -a debian/postinst.glcpu debian/tmp/DEBIAN/postinst
+	cp -a debian/prerm.glcpu debian/tmp/DEBIAN/prerm
+	cp -a debian/copyright debian/tmp/usr/share/doc/glcpu/
+	cp -a glcpurc.sample debian/tmp/usr/share/doc/glcpu/
+	cp -a debian/changelog debian/tmp/usr/share/doc/glcpu/changelog.Debian
+	cd debian/tmp/usr/share/doc/glcpu && gzip -9v changelog.Debian
+	cp -a debian/glcpu.1 debian/tmp/usr/share/man/man1
+	gzip -9 debian/tmp/usr/share/man/man1/glcpu.1
+	make PREFIX=debian/tmp/usr install-glcpu
+	dpkg-shlibdeps glcpu
+	dpkg-gencontrol -isp -pglcpu
+	chown -R root.root debian/tmp
+	chmod -R g-ws debian/tmp
+	dpkg --build debian/tmp ..
+# statd
+	rm -rf debian/tmp
+	mkdir -p debian/tmp/DEBIAN
+	mkdir -p debian/tmp/usr/sbin
+	mkdir -p debian/tmp/usr/share/doc/statd
+	mkdir -p debian/tmp/usr/share/man/man1
+	cp -a debian/postinst.statd debian/tmp/DEBIAN/postinst
+	cp -a debian/prerm.statd debian/tmp/DEBIAN/prerm
+	cp -a debian/copyright debian/tmp/usr/share/doc/statd/
+	cp -a debian/changelog debian/tmp/usr/share/doc/statd/changelog.Debian
+	cd debian/tmp/usr/share/doc/statd && gzip -9v changelog.Debian
+	cp -a debian/statd.1 debian/tmp/usr/share/man/man1
+	gzip -9 debian/tmp/usr/share/man/man1/statd.1
+	make PREFIX=debian/tmp/usr install-statd
+	dpkg-shlibdeps statd
+	dpkg-gencontrol -isp -pstatd
+	chown -R root.root debian/tmp
+	chmod -R g-ws debian/tmp
+	dpkg --build debian/tmp ..
+
+binary-indep: build
+
+build:
+	touch build
+
+clean:
+	rm -f build
+	rm -rf *~ debian/tmp debian/*~ debian/files* debian/substvars
+	make clean
+

@@ -1,0 +1,8 @@
+* Modularisera databasbackend
+* Skapa databasbackend för SQLite
+* Dela upp i två program: en databasuppdaterare och en behandlare
+* Skapa gränssnitt för extraktion av data
+* Använd för våra syften.
+* Hitta ett bra namn som antyder till "what if", routing, och anda bra saker. Kanske helt abstrakt?
+...
+* Skapa en webbsida.

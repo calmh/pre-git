@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoRenamer", "PhotoRenamer.csproj", "{1DB6EACB-22D4-4780-ADA8-498FE66275F2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifCopy", "..\ExifCopy\ExifCopy.csproj", "{196802BF-066B-4D9B-92D1-1736BC887DDE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1DB6EACB-22D4-4780-ADA8-498FE66275F2}.Debug.ActiveCfg = Debug|.NET
+		{1DB6EACB-22D4-4780-ADA8-498FE66275F2}.Debug.Build.0 = Debug|.NET
+		{1DB6EACB-22D4-4780-ADA8-498FE66275F2}.Release.ActiveCfg = Release|.NET
+		{1DB6EACB-22D4-4780-ADA8-498FE66275F2}.Release.Build.0 = Release|.NET
+		{196802BF-066B-4D9B-92D1-1736BC887DDE}.Debug.ActiveCfg = Debug|.NET
+		{196802BF-066B-4D9B-92D1-1736BC887DDE}.Debug.Build.0 = Debug|.NET
+		{196802BF-066B-4D9B-92D1-1736BC887DDE}.Release.ActiveCfg = Release|.NET
+		{196802BF-066B-4D9B-92D1-1736BC887DDE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

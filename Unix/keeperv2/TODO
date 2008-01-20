@@ -1,0 +1,73 @@
+- change password (and change .keeperrc)
+
+- ask for password if no .keeperrc, and create keeeperrc.
+
+- add, remove, and manage users. consider making this another program.
+
+- perhaps implement a status operation, to get the number of objects,
+  the space used, etc. should be fairly simple.
+
++ make scripts:
+  . for backing up the db to a tarfile or a pg_dump.
+  . for restoring that backup into a db
+  . for creating the db from the start
+
+- viewing:
+  need to parse mailcaps
+  find an appropriate viewer
+  execute viewer
+  (probably do not allow to view multiple objects at once?)
+
+* NOTE: OID kan never be 0
+
+* make configparser into a config class and a parser class, to be able
+  to use the config class for general purposes?
+
+  static config parser::parse(filename)
+  config {get,set}_value() som vanligt
+
+* remove implicit wildcarding perhaps (greater flexibility, faster
+  searches when there is more data online at the expense of often
+  having to type more %'s)? 
+
+* destructor for KeeperObj!
+
+* better exceptions
+
+* look over the design of keeper and think about simplifying stuff.
+
+* make the keeperstuff into a real library, to be linked against cli
+  and later on also gui. (look into rpath, PIC and -s)
+
+* implement query on id. {[-I <id>] | ["query"]} (both present =>
+  error, and use the new retrieve function described below to do the
+  query, because if we query by id we always want to do something with
+  the data in that object (or remove it... should he remove function
+  take a list of objects perhaps, so that you can give it the results
+  of a query))
+
+* implement removal
+  (move to archival database? the database _is_ archival already,
+  isn't it? perhaps just because of that, we should instead set an
+  "invisible" attribute and make a separate purge operation that is
+  protected by a low privilege level... because objects really
+  shouldn't be removed from the database on a regular basis. needs to
+  be configurable what priv_level that is, though.)
+
+* change stuff to use pointers perhaps?
+  (would need to look for examples, it shouldn't be needed with the
+  container classes actually; need to solve problem with memory handling)
+
+* implement:
+  KeeperObj* KeeperConnection::retrieve(id)
+  bool KeeperObj::has_data()
+  bool KeeperObj::~KeeperObj() (delete[] data)
+
+  when saving:
+  while (objects to save) {      
+        obj = keeper.retrieve(object.get_id())
+        cout << "whatever"
+        obj->save()
+        delete obj
+  }
+

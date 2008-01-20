@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS keeper;
+CREATE DATABASE keeper;
+USE keeper;
+
+CREATE TABLE Objects (
+	Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Comment VARCHAR(255) NOT NULL,
+	Filename VARCHAR(255) NOT NULL,
+	Data MEDIUMBLOB NOT NULL,
+	Updated TIMESTAMP NOT NULL,
+	INDEX Comment_idx(Comment),
+	INDEX Filename_idx(Filename)
+);

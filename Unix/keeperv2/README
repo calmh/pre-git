@@ -1,0 +1,74 @@
+README for Keeper MkII
+======================
+
+License
+-------
+
+For licensing and copyright, see the file "Artistic" that should be a
+part of this package. All files are licensed under the Artistic
+license and Copyright (c) 2000 Jakob Borg.
+
+Summary
+-------
+
+Keeper is a small program that talks to a PostgreSQL database, in
+order to provide a general object store. The project was started to
+provide a convenient method to store digital images, that a normal
+filesystem structure couldn't fulfill.
+
+Installation
+------------
+
+1. Programs
+
+ The installation is Makefile-based.
+
+ To install in /usr/local, simply run
+ $ make
+ and as root,
+ # make install
+ To install in /home/foo/bar/{bin/lib}, run
+ # make PREFIX=/home/foo/bar install
+ instead.
+
+2. Database
+
+ You will need access to a running and correctly configured PostgreSQL 
+ database. The included script 'setupdb' will guide you through making 
+ the necessary setup of the database are for keeper. 
+
+ The script will also create a working config file, which will be
+ called keeper.cf and put in the current directory. This file should be
+ put in /etc, be owned by root and have a mode of 0600.
+
+ $ ./setupdb
+
+3.0. User privileges - Intro
+
+ By default, only root will have access to the Keeper system, and root 
+ will have complete access (privlevel = 0). The higher the privlevel
+ for a user, the lower is their access. The max for privlevel is
+ MAX_INT. Recommended level for a normal user is 15.
+
+ The only operations restricted by privlevel is backup, purge  and
+ user management;  these can only be executed at privlevel 0. For all
+ other operations,  the privlevel is controlled at an object level, so
+ that a user with a   lower privlevel can not see, access or create
+ objects with a lower  privlevel than the user.
+
+ A privileged user can manage other user through the normal keeper
+ command.
+
+3.1. User Privileges - Setting Up
+
+ By defalt, root has a password of "". To enable root to access the
+ system and change his password, a file ~root/.keeperrc must be
+ created, with only the one line "password=".
+
+ At this point, root can run keeper -P to change his password, and
+ thereafter keeper -U ... to add more users.
+
+ These users will have to do the same thing, that is create a
+ ~/.keeperrc with the line "password=myPassWorRd".
+
+ Simple, yes?

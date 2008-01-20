@@ -1,0 +1,11 @@
+Known Bugs
+==========
+
+* It uses an obscene amount of RAM
+
+* The error checking on tape operations is too weak
+
+* Several tape operations are specific to Exabyte drives (not fatal)
+
+--
+$Id: BUGS,v 1.1.1.1 2003/03/01 12:55:12 jb Exp $

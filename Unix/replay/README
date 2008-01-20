@@ -1,0 +1,45 @@
+Replay 0.58
+===========
+
+This is a project I started beacause of the lack of a working GTK
+MP3-player, and as a reason to learn GTK. It is currently in early
+beta stage. It is basically a hack of amp.
+
+
+Introduction
+============
+
+Replay is an MP3 player with a GTK interface. It is based on amp. It
+has the following features as of today:
+
+- Cool GTK interface.
+- Theme support.
+- Plays layer 3 and layer 2 files.
+- Playlists (load/edit/save).
+- Y2K compliant. ;)
+- Can save to WAV.
+- Stereo/mono playing.
+- Fully controllable from command line, with options and signals.
+- Double click in playlist to jump to that track.
+- Seeking within a track.
+- Display playing time/number of files/size for whole playlist.
+
+Installation
+============
+
+Just put the compiled binary somewhere in your path.
+Run 'replay -h' to see what command line switches are available.
+
+
+Bugs
+====
+
+Probably lots. But these I know of:
+
+- Lousy organization of the source (Sorry non-Linux users...).
+- Seeking sometimes tracks crashes the player. Only happens in certain
+  (damaged?) files.
+
+-- 
+Jakob Borg <jb@k2.lund.se>
+

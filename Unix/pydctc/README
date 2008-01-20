@@ -1,0 +1,24 @@
+pydc
+====
+
+Requirements
+============
+
+* Python >= 2.1
+* py-QT bindings
+* dctc >= 0.65
+
+Installation
+============
+
+To install, simply:
+
+# make
+# make install
+
+And then, to configure and run:
+
+$ pydc
+
+-- 
+$Id: README,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $

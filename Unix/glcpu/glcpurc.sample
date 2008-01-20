@@ -1,0 +1,7 @@
+# $Id: glcpurc.sample,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+hosts = narayan:beta # [MANDATORY] my home computers
+# update_delay = 250 # [DEFAULT] milliseconds between updates
+# verbose = no # [DEFAULT] set to yes for a bit of extra info
+# trans_factor = 0.75 # [DEFAULT] (set to 0 to disable transparency&alpha)
+

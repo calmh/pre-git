@@ -1,0 +1,86 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:605: checking for cc
+configure:633: checking for cc
+configure:662: checking for gcc
+configure:739: checking whether the C compiler (gcc  ) works
+configure:753: gcc -o conftest    conftest.c  1>&5
+configure:773: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:778: checking whether we are using GNU C
+configure:787: gcc -E conftest.c
+configure:802: checking whether gcc accepts -g
+configure:832: checking how to run the C preprocessor
+configure:853: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:893: checking for ANSI C header files
+configure:906: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:973: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:997: checking for sys/wait.h that is POSIX.1 compatible
+configure:1018: gcc -c -g -O2  conftest.c 1>&5
+configure:1042: checking for fcntl.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1042: checking for sys/ioctl.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1042: checking for sys/time.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1042: checking for unistd.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1042: checking for linux/soundcard.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1042: checking for machine/soundcard.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1048: machine/soundcard.h: No such file or directory
+configure: failed program was:
+#line 1047 "configure"
+#include "confdefs.h"
+#include <machine/soundcard.h>
+configure:1042: checking for dmedia/audio.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1048: dmedia/audio.h: No such file or directory
+configure: failed program was:
+#line 1047 "configure"
+#include "confdefs.h"
+#include <dmedia/audio.h>
+configure:1042: checking for sys/audioio.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1048: sys/audioio.h: No such file or directory
+configure: failed program was:
+#line 1047 "configure"
+#include "confdefs.h"
+#include <sys/audioio.h>
+configure:1042: checking for sys/select.h
+configure:1052: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1080: checking for working const
+configure:1134: gcc -c -g -O2  conftest.c 1>&5
+configure:1155: checking for inline
+configure:1169: gcc -c -g -O2  conftest.c 1>&5
+configure:1195: checking whether time.h and sys/time.h may both be included
+configure:1209: gcc -c -g -O2  conftest.c 1>&5
+configure:1232: checking whether gcc needs -traditional
+configure:1278: checking for vprintf
+configure:1306: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1385: checking for select
+configure:1413: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1385: checking for mlock
+configure:1413: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1385: checking for mlockall
+configure:1413: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1385: checking for sched_setscheduler
+configure:1413: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1439: checking Checking OS type
+configure:1445: checking Checking machine architecture
+configure:1533: checking for esd_confirm_sample_cache in -lesd
+configure:1552: gcc -o conftest -O6 -ffast-math -fomit-frame-pointer    conftest.c -lesd -lm  1>&5
+/usr/bin/ld: cannot find -lesd
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1541 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char esd_confirm_sample_cache();
+
+int main() {
+esd_confirm_sample_cache()
+; return 0; }

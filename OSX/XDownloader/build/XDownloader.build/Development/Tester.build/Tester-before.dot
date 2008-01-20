@@ -1,0 +1,51 @@
+digraph Tester {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Development/Tester.octest\nb8b8907ccf157677490cb80f6ad1b730\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00002 [ label = "Contents/Info.plist\n226aa7167bf9884a40b981f62e33e352\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00003 [ label = "Tester.build/Info.plist\n0000000042fa77ef0000000000000263\nUpToDate" ];
+   n00004 [ label = "ppc/TestTest.o\n2e00d49a580cce213c0891e63fa55f51\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00005 [ label = "Headers/Cocoa.h\n0000000042c7f61100000000000001e5\nUpToDate" ];
+   n00006 [ label = "Cocoa-dnljwgvzdgmlmebuijdxtafibapk/Cocoa.h.gch\n717b72a9e46e4c2f688cb1888379b9be\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00007 [ label = "XDownloader/TestTest.m\n0000000042fa77240000000000000137\nUpToDate" ];
+   n00008 [ label = "ppc/Tester_vers.o\n7a67699999914781ea485800b1d1059c\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00009 [ label = "DerivedSources/Tester_vers.c\n0000000042fa77ef00000000000000eb\nUpToDate" ];
+   n00010 [ label = "MacOS/Tester\ne80aeeaea48ece1b637f32197f5be951\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00011 [ label = "Frameworks/SenTestingKit.framework[C]\n0000000042c7f61d00000000000000cc\nUpToDate" ];
+   n00012 [ label = "Release/Nym.Foundation.framework[C]\n0000000042d1811d00000000000000ee\nUpToDate" ];
+   n00013 [ label = "<Tester.build/Script-2967212708AAA5AD00A1E964.sh>[A]\n963967ad1d1e4d2c0c05325c28ee548d\nDepsUpdated", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00014 [ label = "Tester.build/Script-2967212708AAA5AD00A1E964.sh\n0000000042fa77ef0000000000000062\nUpToDate" ];
+   n00015 [ label = "XDownloader/TestTest.h\n0000000042fa775d0000000000000132\nUpToDate" ];
+   n00016 [ label = "Headers/NymLogger.h\n0000000042d191ce00000000000005d6\nUpToDate" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n0000000042fa77ef0000000000000263\n^ 226aa7163903ffa540b981f62e33e131\n= 226aa7167bf9884a40b981f62e33e352\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00002 [ label = "CompileC TestTest.o <wt:4>\nwaitCount: 1\n717b72a9a6bfdd98688cb1888379bc6d\n^ 5f7ba633feb313b95484206ebcdce33c\n= 2e00d49a580cce213c0891e63fa55f51\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00003 [ label = "ProcessPCH Cocoa.h.gch <wt:3>\nwaitCount: 0\n0000000042c7f61100000000000001e5\n^ 717b72a9a6a9ba3e688cb1888379b85b\n= 717b72a9e46e4c2f688cb1888379b9be\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00004 [ label = "CompileC Tester_vers.o <wt:4>\nwaitCount: 0\n0000000042fa77ef00000000000000eb\n^ 7a676999db6b306eea485800b1d10577\n= 7a67699999914781ea485800b1d1059c\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00005 [ label = "Ld Tester <wt:4>\nwaitCount: 2\n5467bd03c18bfea0d640c9e68e745aef\n^ bc6d53ad650530bbb53ffbfff12fb3be\n= e80aeeaea48ece1b637f32197f5be951\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00006 [ label = "PhaseScriptExecution Script-2967212708AAA5AD00A1E964.sh <wt:8>\nwaitCount: 0\n0000000042fa77ef0000000000000062\n^ 963967ad5fe43ac30c05325c28ee54ef\n= 963967ad1d1e4d2c0c05325c28ee548d\nNeedsToRun\n1 output is always out-of-date", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00007 [ label = "Touch Tester.octest <wt:9>\nwaitCount: 2\nca6049b8df77465123c6b3ef51680a03\n^ 72d8d9c4106230266aca0be03bb9bd33\n= b8b8907ccf157677490cb80f6ad1b730\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00007 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00013 -> { c00006 };
+   c00001 -> { n00003 };
+   c00002 -> { n00006 n00007 };
+   c00003 -> { n00005 };
+   c00004 -> { n00009 };
+   c00005 -> { n00004 n00008 n00011 n00012 };
+   c00006 -> { n00014 };
+   c00007 -> { n00002 n00010 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00007 -> { n00015 };
+   n00015 -> { n00016 };
+}

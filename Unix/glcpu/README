@@ -1,0 +1,34 @@
+README for GLcpu
+================
+
+Installing
+----------
+
+You need the following to compile and install GLcpu:
+
+* GLUT & OpenGL libraries, preferably with hardware accelleration.
+* CommonC++ libraries (for the networking).
+* GNU make
+* G++
+
+All you need to do is type make, and it will hopefully make itself. In
+the future, some kind of autoconfig stuff should be implemented, but
+I don't know how that works, so... If you have more then 1 CPU on a
+machine to be monitored, you need to change the NCPU constant in
+statd.cc. Sorry about that.
+
+Thereafter you need to run make install as root. This will place two
+binaries in /usr/local/bin: statd and glcpu. GLcpu is the cool program
+you run that shows the graphics. Statd needs to be installed in inetd
+on the computers that will be monitored. A line like the following may
+work well (it must run on pport 7687):
+
+7687    stream  tcp     nowait  nobody  /usr/sbin/tcpd /usr/local/sbin/statd
+
+You then need to restart inetd, and configure glcpu. To configure
+glcpu, you create a file ~/.glcpurc. You can find a sample of this file
+in glcpurc.sample. The "hosts="-line is a :-separated list of hosts to
+monitor.
+
+--
+$Id: README,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $

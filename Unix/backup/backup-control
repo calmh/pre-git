@@ -1,0 +1,88 @@
+#!/usr/bin/perl
+
+use strict;
+
+$| = 1;
+
+my ($cl, $date, $streamer, $dumpsfile, @devs, @level);
+@level = (0, 3, 2, 5, 4, 7, 6, 9, 8, 9); # magic
+@devs = ("narayan:/", "narayan:/var", "narayan:/home");
+$streamer = "narayan:/dev/tape";
+$date = `date +%u` - 1;
+$dumpsfile = "/var/backups/dumps";
+$cl = $level[$date];
+
+if (-f "/var/backups/force9") {
+	$cl = 9;
+} elsif (-f "/var/backups/force0") {
+	$cl = 0;
+	unlink "/var/backups/force0";
+}
+
+my ($label);
+$label = `mt rewind; /sbin/label /dev/tape`;
+if ($label =~ /LABEL="(.*)"/) {
+	$label = $1;
+} else {
+	print "Error reading label of tape.";
+	exit 1;
+}
+
+print "Tape in /dev/tape is \"" . $label . "\".\n";
+
+if ($cl ne 0) {
+	print "Winding...\n";
+	system "mt", "eom";
+} else {
+	print "Overwriting...\n";
+	open FILE, "<$dumpsfile";
+	my @data = <FILE>;
+	close FILE;
+	open FILE, ">$dumpsfile";
+	foreach (@data) {
+		/^$label/ or print FILE;
+	}
+	close FILE;
+	system "mt", "asf", "1";
+}
+
+$streamer =~ /(.*):(.*)/;
+my $sh = $1;
+my $sd = $2;
+foreach (@devs) {
+	my ($host, $fs);
+	/(.*):(.*)/ and ($host, $fs) = ($1, $2);
+
+	my $tmpdate = `date '+%Y-%m-%d %H:%M'`;
+	my $fn = `mt status`;
+	$fn =~ /file number = (\d+)/ and $fn = $1;
+	my $status;
+	my ($tmptell, $nb, $na);
+	$tmptell = `mt tell`;
+	$tmptell =~ /At block (\d+)\./ and $nb = $1;
+	if ($sh eq $host) {
+		print "Dumping $fs on $host... (local)\n";
+		$status = system "/sbin/dump", "-au" . $cl, "-h0", "-L$host:$fs:$cl", "-f", $sd, $fs;
+	} else {
+		print "Dumping $fs on $host... (remote)\n";
+		$status = system "rsh", $host, "/sbin/dump", "-au" . $cl, "-h0", "-L$host:$fs:$cl", "-f", $streamer, $fs;
+	}
+	$tmptell = `mt tell`;
+	$tmptell =~ /At block (\d+)\./ and $na = $1;
+	my $size = sprintf "%.02f", ($na - $nb) / 1024.0;
+	chop $tmpdate;
+	my $sl = ($status ne 0) ? "Failure" : "$size MB";
+	my $tab = (length("$host:$fs") < 8) ? "\t" : "";
+	open FILE, ">>$dumpsfile" or die $!;
+	print FILE "$label:$fn\t$host:$fs$tab\t$cl\t$tmpdate\t$sl\n";
+	close FILE;
+}
+
+print "Rewinding...\n";
+system "mt", "rewind";
+
+if ($date eq 7) {
+  print "Ejecting...\n";
+  system "mt", "offline";
+}
+

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Syncer Installer", "Syncer Installer.vdproj", "{380D05F4-F72E-460F-AD4E-4BB056BBF083}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{380D05F4-F72E-460F-AD4E-4BB056BBF083}.Debug.ActiveCfg = Debug
+		{380D05F4-F72E-460F-AD4E-4BB056BBF083}.Debug.Build.0 = Debug
+		{380D05F4-F72E-460F-AD4E-4BB056BBF083}.Release.ActiveCfg = Release
+		{380D05F4-F72E-460F-AD4E-4BB056BBF083}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

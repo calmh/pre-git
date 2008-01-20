@@ -1,0 +1,18 @@
+CHANGES
+=======
+
+DR3
+
+* Added text labels.
+
+DR2
+
+* Fixed bug that occurred when the rcfile only contained one host.
+* Made statd default to single processor.
+
+DR1
+
+- First release.
+
+--
+$Id: CHANGES,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $

@@ -1,0 +1,1 @@
+ const unsigned char _DnetVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:3Dnet  PROJECT:3Dnet-1.0  DEVELOPER:jb  BUILT:" __DATE__  " " __TIME__ "" "\n"; const double _DnetVersionNumber __attribute__ ((used)) = (double)1.0;

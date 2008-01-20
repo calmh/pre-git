@@ -1,0 +1,81 @@
+#!/usr/bin/env python2.1
+# $Id: player,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+# Copyright 2002
+# 	Jakob Borg <jakob@borg.pp.se>  All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. The name of the author may not be used to endorse or promote products
+#    derived from this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+# EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# System imports.
+import commands
+import shelve
+import os
+
+# Own imports.
+import database
+
+# The database connection.
+db = None
+# The preferences file (shelve).
+prefs = None
+
+def main(args=None):
+	# Import the global variables for assigning.
+	global db, prefs
+	
+	# Open the preferences file
+	prefs = shelve.open("prefs.db");
+	# ... and the database connection.
+	db = database.Database(prefs["database"])
+	
+	# There is no graceful way to exit -
+	# just interrupt it and get an exception.
+	while 1:
+		playSong()
+	
+def playSong():
+	# Get the playing song, marking a new song as playing if necessary.
+	file = db.getPlaying(getNew=1)
+	
+	# Check if we got a file or not. If not, the playlist was empty.
+	if file is None:
+		# Add a few random files to the playlist.
+		db.playRandom()
+	else:
+		if __debug__:
+			print "[", os.path.basename(file["name"]), "]"
+
+		# If we a re playing a randomly added song, add another
+		# one to keep the playlist busy.
+		if file["auto"] == 1:
+			db.playRandom()
+	
+		# Play the file with the mp3 player defined in the preferences.
+		commands.getstatusoutput(prefs["mp3player"] + " '" + file["name"] + "'")
+
+		# Mark playing as done for this file (also removes it from the
+		# playlist).
+		db.playingDone(file["id"])	
+
+if __name__ == "__main__":
+        main()

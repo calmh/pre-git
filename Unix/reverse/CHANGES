@@ -1,0 +1,25 @@
+Changes
+=======
+
+In release 4 from release 3:
+
+* Changed format for "Available volumes" list
+* Added file CONF_DIR/volumes to specify what kind of tape each tape is.
+* Changed to a safer method of creating new chunks at EOT.
+
+In release 3 from release 2:
+
+* Added a headerfile for constant pathnames and such (stddefs.h)
+* Added an 'install' target to the Makefile (you still need to read the
+  Install file)
+* Made lsfiles and lschunks take volume names instead of file names, and
+  they show a list of volumes if you give none.
+
+In release 2 from release 1:
+
+Nothing major, and I didn't keep track very well. Check the patch for
+details.
+
+-- 
+$Id: CHANGES,v 1.1.1.1 2003/03/01 12:55:12 jb Exp $
+

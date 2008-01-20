@@ -1,0 +1,487 @@
+My PID is 10324
+main()
+init_decoder
+init_main()
+	window
+	containers
+	menus
+		menu_bar_new
+		attach
+		show
+		loadpl
+		loadpl
+		savepl
+		loadmp3
+		loadmp3
+		blank
+		exit
+		exit
+		file
+		set_submenu
+		append
+		repeat
+		repeat
+		repeat
+		random
+		rdownmix
+		remaining
+		blank
+		remaining
+		options
+		set_submenu
+		append
+		help
+		help
+		help
+		help
+		blank
+		help
+		options
+		set_submenu
+		append
+	containers part two
+	progress bar
+	volume bar
+	buttons
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+xpm_label_box()
+	get_style
+	pixmap_create
+	pixmap_new
+	pack
+	show
+	status label
+	show
+init_pl()
+init_selector()
+add_to_playlist()
+/home/jb/audio/mp3/local/complete albums/blumchen - herzfrequenz/01 - intro (herz an herz).mp3
+recurse()
+	entering: /home/jb/audio/mp3/local/complete albums/blumchen - herzfrequenz/01 - intro (herz an herz).mp3
+.
+.
+.
+.
+basename2(): ------------------------------ done.
+	gtk_list_item_new_with_label
+.
+.
+.
+.
+.
+	done
+update_pl_playtime()
+	widget_show(main)
+button_callback()
+button_callback()
+do_play()
+	play
+/home/jb/audio/mp3/local/complete albums/blumchen - herzfrequenz/01 - intro (herz an herz).mp3
+
+
+	show_header
+show_header()
+	sprintf
+basename2(): ------------------------------ done.
+	setlabel
+	sprintf
+	setlabel
+status_display()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+status_display()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+button_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+button_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+selected_mp3()
+add_to_playlist()
+/home/jb/audio/mp3/local/songs by group/antiloop/antiloop - ss - flash.mp3
+recurse()
+	entering: /home/jb/audio/mp3/local/songs by group/antiloop/antiloop - ss - flash.mp3
+.
+.
+.
+.
+basename2(): -------------------------- done.
+	gtk_list_item_new_with_label
+.
+.
+.
+.
+.
+	done
+update_pl_playtime()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+button_callback()
+do_stop()
+sigchld_handler()
+do_next()
+songs_left: 1
+do_play()
+	play
+/home/jb/audio/mp3/local/songs by group/antiloop/antiloop - ss - flash.mp3
+
+
+	show_header
+show_header()
+	sprintf
+basename2(): -------------------------- done.
+	setlabel
+	sprintf
+	setlabel
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+volume_callback()
+volume_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+status_display()
+slider_callback()
+delete_event()
+do_stop()
+sigchld_handler()
+	loop
+	detach

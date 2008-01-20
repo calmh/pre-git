@@ -1,0 +1,14 @@
+/dev/
+/proc/
+/tmp/
+/exclude/
+.iso
+.mpg
+.mp3
+/vmware/
+SWAP
+/public/tele/
+/home/trance/
+/export/pub/mp3/
+/export/pub/vcd/
+/cache/

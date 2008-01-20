@@ -1,0 +1,86 @@
+glcpu (1.0-dr7-1) unstable; urgency=low
+
+  * A few changes to statd that hopefully fixes a bug.
+  * Descriptions fixed long ago but bug never closed. Closes: #85176.
+  * Recompile done but bug never closed there either. Bad maintainer!
+    Closes: #103252.
+
+ -- Jakob Borg <jakob@debian.org>  Sat,  3 Nov 2001 15:17:38 +0100
+
+glcpu (1.0-dr6-7) unstable; urgency=low
+
+  * Fixed build-depends.
+  * Fixed section.
+
+ -- Jakob Borg <jakob@debian.org>  Thu, 12 Jul 2001 10:12:47 +0200
+
+glcpu (1.0-dr6-6) unstable; urgency=low
+
+  * New release to be compatible with new libcommonc++, again. 
+
+ -- Jakob Borg <jakob@debian.org>  Thu,  5 Jul 2001 23:31:39 +0200
+
+glcpu (1.0-dr6-5) unstable; urgency=low
+
+  * New release to be compatible with new libcommonc++, closes: #103092.
+
+ -- Jakob Borg <jakob@debian.org>  Mon,  2 Jul 2001 14:09:02 +0200
+
+glcpu (1.0-dr6-4) unstable; urgency=low
+
+  * Added more bould-deps, closes: #89423.
+
+ -- Jakob Borg <jakob@debian.org>  Tue, 13 Mar 2001 20:56:15 +0100
+
+glcpu (1.0-dr6-3) unstable; urgency=low
+
+  * Added build-deps, closes: #87054.
+  * Changed package descriptions, closes: #75498 #85176.
+  * Removed glcpurc.sample from statd, closes: #85068.
+
+ -- Jakob Borg <jakob@debian.org>  Tue, 13 Mar 2001 20:56:05 +0100
+
+glcpu (1.0-dr6-2) unstable; urgency=low
+
+  * Updated to work with XFree86 4.
+  * Changed architecture specs (closes: Bug#76391)
+
+ -- Jakob Borg <jakob@debian.org>  Sat, 28 Oct 2000 09:17:54 +0200
+
+glcpu (1.0-dr6-1) unstable; urgency=low
+
+  * Added dependency on netkit-inetd to statd package (closes: Bug#75803).
+  * Removed need for destination alpha. (closes: Bug#75837).
+
+ -- Jakob Borg <jakob@debian.org>  Sat, 28 Oct 2000 09:17:54 +0200
+
+glcpu (1.0-dr5-2) unstable; urgency=low
+
+  * Removed dependency on utah-glx (closes: Bug#75743).
+
+ -- Jakob Borg <jakob@debian.org>  Sat, 28 Oct 2000 09:17:54 +0200
+
+glcpu (1.0-dr5-1) unstable; urgency=low
+
+  * Minor bugfixes only.
+
+ -- Jakob Borg <jakob@debian.org>  Wed, 25 Oct 2000 23:20:50 +0200
+
+glcpu (1.0-dr4-3) unstable; urgency=low
+
+  * Added dependency on utah-glx.
+
+ -- Jakob Borg <jakob@debian.org>  Wed, 25 Oct 2000 19:25:14 +0200
+
+glcpu (1.0-dr4-2) unstable; urgency=low
+
+  * Fixed incorrect library dependency (libcommonc++1).
+
+ -- Jakob Borg <jakob@debian.org>  Sat, 21 Oct 2000 12:49:10 +0200
+
+glcpu (1.0-dr4) unstable; urgency=low
+
+  * First debian package
+
+ -- Jakob Borg <jakob@debian.org>  Mon, 16 Oct 2000 01:55:29 +0200
+

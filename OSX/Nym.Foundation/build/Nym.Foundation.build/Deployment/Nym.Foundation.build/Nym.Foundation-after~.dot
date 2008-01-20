@@ -1,0 +1,60 @@
+digraph Nym.Foundation {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Deployment/Nym.Foundation.framework\n604711d7b130115fef91d0df19eae650\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00002 [ label = "Resources/Info.plist\ne4769a7b3b7f61fed82cced89a49adef\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00003 [ label = "Nym.Foundation.build/Info.plist\n00000000000000000000000000000000\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00004 [ label = "Headers/NymLogger.h\n6e6e9914a7ad5f50a3850f8ac33d522c\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00005 [ label = "Nym.Foundation/NymLogger.h\n0000000042fb02ef00000000000005d6\nUpToDate" ];
+   n00006 [ label = "English.lproj/InfoPlist.strings\n61d21e4a6991506edb751ff695a5a0aa\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00007 [ label = "English.lproj/InfoPlist.strings\n0000000042fb02ef000000000000010e\nUpToDate" ];
+   n00008 [ label = "ppc/NymLogger.o\ne02b5a995facfa89e34a9fce440a2f57\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00009 [ label = "Nym.Foundation/Nym.Foundation_Prefix.pch\n0000000042fb02ef00000000000000a0\nUpToDate" ];
+   n00010 [ label = "Nym.Foundation_Prefix-aevuhqruqgospxainmsxyzkxxvfl/Nym.Foundation_Prefix.pch.gch\n74fc66d36ca5916bc3167f77de4e07f8\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00011 [ label = "Nym.Foundation/NymLogger.m\n0000000042fb02ef0000000000000da8\nUpToDate" ];
+   n00012 [ label = "A/Nym.Foundation\n9d5e6b275792e0103234b82fc2a956b6\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00013 [ label = "Frameworks/Cocoa.framework[C]\n0000000042c7f61100000000000000cc\nUpToDate" ];
+   n00014 [ label = "Versions/Current\n9221498d64a41cc5c44336988ca40d10\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00015 [ label = "Nym.Foundation.framework/Resources\n8023682e80d50cbd0ae2082b5d63623d\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00016 [ label = "Nym.Foundation.framework/Headers\n95f30a1553dbffbb4ecd8bc870953bc5\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00017 [ label = "Nym.Foundation.framework/Nym.Foundation\n1da7a9d256bd67489b62d453d56506b5\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ e4769a7b3b7f61fed82cced89a49adef\n= e4769a7b3b7f61fed82cced89a49adef\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00002 [ label = "CpHeader NymLogger.h <wt:2>\nwaitCount: 0\n00000000000000000000000000000000\n^ 6e6e9914a7ad5f50a3850f8ac33d522c\n= 6e6e9914a7ad5f50a3850f8ac33d522c\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00003 [ label = "CpResource InfoPlist.strings <wt:4>\nwaitCount: 0\n00000000000000000000000000000000\n^ 61d21e4a6991506edb751ff695a5a0aa\n= 61d21e4a6991506edb751ff695a5a0aa\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00004 [ label = "CompileC NymLogger.o <wt:6>\nwaitCount: 0\n74fc66d36ca5916bc3167f77de4e0f86\n^ 94d73c4a33096be2205ce0b99a4420d1\n= e02b5a995facfa89e34a9fce440a2f57\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00005 [ label = "ProcessPCH Nym.Foundation_Prefix.pch.gch <wt:5>\nwaitCount: 0\n0000000042fb02ef00000000000000a0\n^ 74fc66d32e5e9384c3167f77de4e0758\n= 74fc66d36ca5916bc3167f77de4e07f8\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00006 [ label = "Ld Nym.Foundation <wt:6>\nwaitCount: 0\ne02b5a991d6b0c98e34a9fce440a2f9b\n^ 7d7531be4af9ec88d17e27e186a3792d\n= 9d5e6b275792e0103234b82fc2a956b6\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00007 [ label = "SymLink Current <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ 9221498d64a41cc5c44336988ca40d10\n= 9221498d64a41cc5c44336988ca40d10\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00008 [ label = "SymLink Resources <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ 8023682e80d50cbd0ae2082b5d63623d\n= 8023682e80d50cbd0ae2082b5d63623d\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00009 [ label = "SymLink Headers <wt:0>\nwaitCount: 0\n9221498d64a41cc5c44336988ca40d10\n^ 07d24398377fe37e8a8ebd50fc3136d5\n= 95f30a1553dbffbb4ecd8bc870953bc5\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00010 [ label = "SymLink Nym.Foundation <wt:8>\nwaitCount: 0\n00000000000000000000000000000000\n^ 1da7a9d256bd67489b62d453d56506b5\n= 1da7a9d256bd67489b62d453d56506b5\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00011 [ label = "Touch Nym.Foundation.framework <wt:9>\nwaitCount: 0\n82ac6d72e46b590b2a630829b97209ae\n^ e2eb7ca5555b4854c5f2d8f6a098effe\n= 604711d7b130115fef91d0df19eae650\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00011 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00012 -> { c00006 };
+   n00014 -> { c00007 };
+   n00015 -> { c00008 };
+   n00016 -> { c00009 };
+   n00017 -> { c00010 };
+   c00001 -> { n00003 };
+   c00002 -> { n00005 n00005 };
+   c00003 -> { n00007 n00007 };
+   c00004 -> { n00010 n00011 };
+   c00005 -> { n00009 };
+   c00006 -> { n00008 n00013 };
+   c00009 -> { n00014 };
+   c00011 -> { n00002 n00004 n00004 n00006 n00012 n00014 n00015 n00016 n00017 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00011 -> { n00005 };
+}

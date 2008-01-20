@@ -1,0 +1,114 @@
+#!/usr/bin/perl
+# $Id: do_backup,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+use strict;
+use IO::Handle;
+STDOUT->autoflush(1);
+
+my ($tape, $full_file, $diff_file, $lock_file, @volumes, $limit, $n);
+# which tape device to use
+$tape = '/dev/nst0';
+# touch this file and we'll do a full backup, regardless of date
+$full_file = '/etc/tob/full-backup';
+$diff_file = '/etc/tob/diff-backup';
+$lock_file = '/etc/tob/do_backup.LOCK';
+# this is the name of the volume, to give to tob
+@volumes = ( 'affinity', 'narayan' );
+# how much to fill tape before diff
+$limit = 3 * 1024 * 1024;
+my $date = `date +'%-d %-w'`;
+if (open FILE, "/var/lib/tob/block") {
+  read FILE, $n, -s FILE;
+  close FILE;
+} else {
+  $n = 0;
+}
+
+if (-f $lock_file) {
+    print "ERROR: already running or stale lockfile.\n";
+    exit 1;
+} else {
+    system "touch $lock_file";
+}
+
+# just parse the output from date
+my ($dom, $dow);
+if ($date =~ /(\d+) (\d+)/) {
+  $dom = $1;			# day of month
+  $dow = $2;			# day of week
+} else {
+  print STDERR "Error in parsing date output: '$date'\n";
+}
+
+# mount the tape in the drive
+my ($label, $id, $tmp);
+system "mt -f $tape rewind";
+$tmp = `label $tape`;
+
+if ($tmp =~ /ID=(\d+) LABEL="(.*)"$/) {
+  $id = $1;
+  $label = $2;
+  print STDERR "Tape in $tape is '$label'.\n";
+  if ($label !~ /^Backup/) {
+    print STDERR "This tape is not designated to be a backup tape. Aborting.\n";
+    system "mt -f $tape offline";
+    exit -1;
+  }
+} else {
+  print STDERR "Tape in $tape was not recognized. Aborting.\n";
+  exit -1;
+}
+
+unlink '/var/lib/tob' if (-l '/var/lib/tob');
+mkdir "/var/lib/tob.$label.$id", 0755 if (! -d "/var/lib/tob.$label.$id");
+system "ln -s /var/lib/tob.$label.$id /var/lib/tob";
+
+# policy:
+# full backup on the first of every month,
+# differential backup when necessary
+# incremental backup on all other days,
+
+my ($volume);
+if ($dom eq 1 or -f $full_file) {
+  # full backup
+  print STDERR "I think it's time for a full backup!\n";
+  
+  unlink $full_file if (-f $full_file);
+  system "mt -f $tape asf 1";
+  foreach $volume (@volumes) {
+    print "Backing up volume '$volume'.\n";
+    system "tob -full $volume";
+  }
+} else {
+  print STDERR sprintf("Tape used: %.01f megs.\n", $n / 1024);
+  if ($n > $limit or -f $diff_file) {
+    # differential backup
+    print STDERR "Okidokie, diff. backup today.\n";
+    
+    unlink $diff_file if (-f $diff_file);
+    system "mt -f $tape asf 2";
+    foreach $volume (@volumes) {
+    print "Backing up volume '$volume'.\n";
+      system "tob -diff $volume";
+    }
+  } else {
+    # incremental backup
+    print STDERR "I'll just do a run-of-the-mill incremental backup.\n";
+    
+    system "mt -f $tape eom";
+    foreach $volume (@volumes) {
+    print "Backing up volume '$volume'.\n";
+      system "tob -inc $volume";
+    }
+  }
+}
+
+my $tell;
+$tell = `mt -f $tape tell`;	# echo the amount of data now on the tape
+$tell =~ /At block (\d+)\./ and $n = $1;
+print STDERR "EOT at block $n.\n";
+open FILE, ">/var/lib/tob/block";
+print FILE $n;
+close FILE;
+system "mt -f $tape rewind";
+unlink $lock_file;

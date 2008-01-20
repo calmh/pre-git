@@ -1,0 +1,1707 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1347, 56}}";
+			sepNavSelRange = "{115, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{176, 468}, {750, 558}}";
+		};
+	};
+	290FF1AE085335D40036AB6F = {
+		fRef = 296A90C9084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.h: 15";
+		rLen = 0;
+		rLoc = 249;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29389A8F08539CB300F74984 = {
+		fRef = 296A925F084B979D00849634;
+		fallbackIsa = PBXBookmark;
+		isa = XDModelBookmark;
+	};
+	2938D6440846707B008664E7 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 832}}";
+			sepNavSelRange = "{406, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 832}}";
+			sepNavWindowFrame = "{{84, 273}, {898, 837}}";
+		};
+	};
+	2938D6450846707B008664E7 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 2044}}";
+			sepNavSelRange = "{4725, 0}";
+			sepNavVisRect = "{{0, 1201}, {1346, 832}}";
+			sepNavWindowFrame = "{{61, 294}, {898, 837}}";
+		};
+	};
+	2959051C085CCEC5009A3F1A = {
+		fRef = 296A935F084BA74100849634;
+		isa = PBXTextBookmark;
+		name = "Common.h: 11";
+		rLen = 0;
+		rLoc = 152;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	295905C7085CE482009A3F1A = {
+		fRef = 296A93CA084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.h: buttonOKClicked:";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	2959060B085CE6D1009A3F1A = {
+		fRef = 296A90CA084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.m: 99";
+		rLen = 0;
+		rLoc = 3947;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29637F52085CB9630096CCB9 = {
+		fRef = 29F77D9D085CB8E000FD3F79;
+		isa = PBXTextBookmark;
+		name = "index.html: 4";
+		rLen = 0;
+		rLoc = 103;
+		rType = 0;
+		vrLen = 539;
+		vrLoc = 0;
+	};
+	29637F54085CB9630096CCB9 = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = variables.html;
+		path = "/Users/jb/personal/projekt/XDownloader/English.lproj/XDownloader Help/variables.html";
+		refType = 0;
+		sourceTree = "<absolute>";
+	};
+	29637F75085CBC180096CCB9 = {
+		fRef = 29637F54085CB9630096CCB9;
+		isa = PBXTextBookmark;
+		name = "variables.html: 10";
+		rLen = 0;
+		rLoc = 201;
+		rType = 0;
+		vrLen = 1978;
+		vrLoc = 0;
+	};
+	29637F7A085CBC180096CCB9 = {
+		fRef = 29637F54085CB9630096CCB9;
+		isa = PBXTextBookmark;
+		name = "variables.html: 4";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29637FC6085CC3540096CCB9 = {
+		fRef = 29F77D9D085CB8E000FD3F79;
+		isa = PBXTextBookmark;
+		name = "index.html: 9";
+		rLen = 0;
+		rLoc = 389;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	2969634C0851EDF2003B1824 = {
+		fRef = 29B97316FDCFA39411CA2CEA;
+		isa = PBXTextBookmark;
+		name = "main.m: 15";
+		rLen = 0;
+		rLoc = 258;
+		rType = 0;
+		vrLen = 258;
+		vrLoc = 0;
+	};
+	2969634F0851EDF2003B1824 = {
+		fRef = 296A90CA084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.m: 23";
+		rLen = 0;
+		rLoc = 1404;
+		rType = 0;
+		vrLen = 1846;
+		vrLoc = 0;
+	};
+	296963540851EDF2003B1824 = {
+		fRef = 296A935F084BA74100849634;
+		isa = PBXTextBookmark;
+		name = "Common.h: DEBUG";
+		rLen = 0;
+		rLoc = 144;
+		rType = 0;
+		vrLen = 252;
+		vrLoc = 0;
+	};
+	296963570851EDF2003B1824 = {
+		fRef = 29B97316FDCFA39411CA2CEA;
+		isa = PBXTextBookmark;
+		name = "main.m: 15";
+		rLen = 0;
+		rLoc = 258;
+		rType = 0;
+		vrLen = 258;
+		vrLoc = 0;
+	};
+	296963C60851F45B003B1824 = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSManagedObjectContext.h;
+		path = /System/Library/Frameworks/CoreData.framework/Headers/NSManagedObjectContext.h;
+		refType = 0;
+		sourceTree = "<absolute>";
+	};
+	296963C80851F45E003B1824 = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSUserDefaultsController.h;
+		path = /System/Library/Frameworks/AppKit.framework/Headers/NSUserDefaultsController.h;
+		refType = 0;
+		sourceTree = "<absolute>";
+	};
+	296963CA0851F461003B1824 = {
+		fRef = 296963C60851F45B003B1824;
+		isa = PBXTextBookmark;
+		name = "- (BOOL)save:(NSError **)error;";
+		rLen = 32;
+		rLoc = 7406;
+		rType = 0;
+		vrLen = 4876;
+		vrLoc = 3983;
+	};
+	296963CD0851F461003B1824 = {
+		fRef = 296963C60851F45B003B1824;
+		isa = PBXTextBookmark;
+		name = "- (BOOL)save:(NSError **)error;";
+		rLen = 32;
+		rLoc = 7406;
+		rType = 0;
+		vrLen = 4876;
+		vrLoc = 3983;
+	};
+	296963D90851F4A8003B1824 = {
+		fRef = 32CA4F630368D1EE00C91783;
+		isa = PBXTextBookmark;
+		name = "XDownloader_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 153;
+		vrLoc = 0;
+	};
+	296963DD0851F4A8003B1824 = {
+		fRef = 296963C80851F45E003B1824;
+		isa = PBXTextBookmark;
+		name = "NSUserDefaultsController.h: 44";
+		rLen = 0;
+		rLoc = 1447;
+		rType = 0;
+		vrLen = 1646;
+		vrLoc = 0;
+	};
+	296963DE0851F4A8003B1824 = {
+		fRef = 32CA4F630368D1EE00C91783;
+		isa = PBXTextBookmark;
+		name = "XDownloader_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 153;
+		vrLoc = 0;
+	};
+	296963E40851F4A9003B1824 = {
+		fRef = 296963C80851F45E003B1824;
+		isa = PBXTextBookmark;
+		name = "- (void)save:(id)sender;    // no effect if applies immediately";
+		rLen = 64;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	296963F40851F5D2003B1824 = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: 5";
+		rLen = 0;
+		rLoc = 72;
+		rType = 0;
+		vrLen = 236;
+		vrLoc = 0;
+	};
+	296963F50851F5D2003B1824 = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 20";
+		rLen = 0;
+		rLoc = 642;
+		rType = 0;
+		vrLen = 774;
+		vrLoc = 0;
+	};
+	296963F60851F5D2003B1824 = {
+		fRef = 089C165DFE840E0CC02AAC07;
+		isa = PBXTextBookmark;
+		name = "English: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	296964190851F7EA003B1824 = {
+		fRef = 2938D6440846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.h: getMappings";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 0;
+	};
+	2969641F0851F7EA003B1824 = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 5";
+		rLen = 0;
+		rLoc = 132;
+		rType = 0;
+		vrLen = 1515;
+		vrLoc = 0;
+	};
+	296964230851F7EA003B1824 = {
+		fRef = 2938D6440846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.h: 8";
+		rLen = 0;
+		rLoc = 142;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 0;
+	};
+	296964240851F7EA003B1824 = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 87";
+		rLen = 0;
+		rLoc = 4481;
+		rType = 0;
+		vrLen = 2212;
+		vrLoc = 0;
+	};
+	2969649B0852002D003B1824 = {
+		fRef = 296A925F084B979D00849634;
+		fallbackIsa = PBXBookmark;
+		isa = XDModelBookmark;
+	};
+	296A90C9084B8B6E00849634 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1347, 280}}";
+			sepNavSelRange = "{249, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+		};
+	};
+	296A90CA084B8B6E00849634 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 1750}}";
+			sepNavSelRange = "{4242, 0}";
+			sepNavVisRect = "{{0, 918}, {1346, 832}}";
+			sepNavWindowFrame = "{{15, 336}, {898, 837}}";
+		};
+	};
+	296A925F084B979D00849634 = {
+		uiCtxt = {
+			"Xdesign Model Editor Bookmark Key" = {
+				UIContextForClassArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnns = (
+						"CT Class",
+						"CT Kind",
+						"CT Superclass",
+						"CT Documentation",
+					);
+					chosenTableColumnns_sortDirections = (
+					);
+					chosenTableColumnns_sortKeys = (
+					);
+					chosenTableColumnns_sortSelectors = (
+					);
+					chosenTableWidths = (
+						76.000000,
+						45.000000,
+						117.454102,
+						22.000000,
+					);
+				};
+				UIContextForDetailArea = {
+					_indexOfSelectedView = 1;
+				};
+				UIContextForLayoutManager = {
+					detailSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {898, 124}}",
+							"{{903, 0}, {488, 124}}",
+						);
+					};
+					diagramSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {1391, 124}}",
+							"{{0, 129}, {1391, 569}}",
+						);
+					};
+					tableSplitGeometry = {
+						_collapsingFrameDimension = 0;
+						_indexOfCollapsedView = 0;
+						_percentageOfCollapsedView = 0;
+						isCollapsed = yes;
+						sizes = (
+							"{{0, 0}, {277, 124}}",
+							"{{282, 0}, {615, 124}}",
+						);
+					};
+				};
+				UIContextForPropertyArea = {
+					_indexOfSelectedView = 0;
+					chosenTableColumnnsAT = (
+						"PR Type Icon",
+						"PR Member",
+						"PR Kind",
+						"PR Type",
+						"PR Visibility",
+						"PR Documentation",
+					);
+					chosenTableColumnnsAT_sortDirections = (
+					);
+					chosenTableColumnnsAT_sortKeys = (
+					);
+					chosenTableColumnnsAT_sortSelectors = (
+					);
+					chosenTableColumnnsPT = (
+						"AL Type Icon",
+						"AL Member",
+						"AL Kind",
+						"AL Type",
+						"AL Visibility",
+						"AL Documentation",
+					);
+					chosenTableColumnnsPT_sortDirections = (
+					);
+					chosenTableColumnnsPT_sortKeys = (
+					);
+					chosenTableColumnnsPT_sortSelectors = (
+					);
+					chosenTableColumnnsRT = (
+						"OP Type Icon",
+						"OP Member",
+						"OP Kind",
+						"OP Type",
+						"OP Visibility",
+						"OP Documentation",
+					);
+					chosenTableColumnnsRT_sortDirections = (
+					);
+					chosenTableColumnnsRT_sortKeys = (
+					);
+					chosenTableColumnnsRT_sortSelectors = (
+					);
+					chosenTableWidthsAT = (
+						22.000000,
+						122.000000,
+						66.000000,
+						82.000000,
+						44.000000,
+						22.000000,
+					);
+					chosenTableWidthsPT = (
+						22.000000,
+						122.000000,
+						61.000000,
+						87.000000,
+						265.000000,
+						22.000000,
+					);
+					chosenTableWidthsRT = (
+						22.000000,
+						122.000000,
+						62.000000,
+						86.000000,
+						44.000000,
+						22.000000,
+					);
+				};
+				"xdesign model browser state key - shown/hidden" = 1;
+				"xdesign model diagram view visible rect key" = "{{-364, -61}, {1376, 554}}";
+			};
+		};
+	};
+	296A935F084BA74100849634 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 683}}";
+			sepNavSelRange = "{152, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 683}}";
+			sepNavWindowFrame = "{{107, 252}, {898, 837}}";
+		};
+	};
+	296A93CA084BBC4700849634 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 683}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 683}}";
+			sepNavWindowFrame = "{{38, 596}, {750, 558}}";
+		};
+	};
+	296A93CB084BBC4700849634 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1556, 1344}}";
+			sepNavSelRange = "{717, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{61, 192}, {1335, 939}}";
+		};
+	};
+	297A9B100851E2FD00373A8C = {
+		fRef = 296A93CB084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.m: 15";
+		rLen = 0;
+		rLoc = 3256;
+		rType = 0;
+		vrLen = 308;
+		vrLoc = 0;
+	};
+	297A9B110851E2FD00373A8C = {
+		fRef = 296A93CA084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 0;
+	};
+	297A9B290851E39600373A8C = {
+		fRef = 296A90C9084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.h: exifData";
+		rLen = 0;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 332;
+		vrLoc = 0;
+	};
+	298F9937085E04D000ADDF4D = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 96";
+		rLen = 0;
+		rLoc = 2669;
+		rType = 0;
+		vrLen = 1448;
+		vrLoc = 2006;
+	};
+	298F9938085E04D000ADDF4D = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: 27";
+		rLen = 65;
+		rLoc = 810;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 0;
+	};
+	298F993A085E04D000ADDF4D = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 23";
+		rLen = 0;
+		rLoc = 747;
+		rType = 0;
+		vrLen = 1789;
+		vrLoc = 0;
+	};
+	298F993B085E04D000ADDF4D = {
+		fRef = 2938D6440846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.h: setJobName:";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 0;
+	};
+	29B06EEC085F599100D17BAB = {
+		fRef = 296A90CA084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.m: 125";
+		rLen = 0;
+		rLoc = 4242;
+		rType = 0;
+		vrLen = 2098;
+		vrLoc = 2144;
+	};
+	29B06EEE085F599100D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 288";
+		rLen = 0;
+		rLoc = 8646;
+		rType = 0;
+		vrLen = 1767;
+		vrLoc = 6841;
+	};
+	29B06EEF085F599100D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 133";
+		rLen = 0;
+		rLoc = 4915;
+		rType = 0;
+		vrLen = 2253;
+		vrLoc = 2353;
+	};
+	29B06EF0085F599100D17BAB = {
+		fRef = 296A90CA084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.m: 36";
+		rLen = 0;
+		rLoc = 1155;
+		rType = 0;
+		vrLen = 1982;
+		vrLoc = 0;
+	};
+	29B06EF1085F599100D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 291";
+		rLen = 0;
+		rLoc = 8577;
+		rType = 0;
+		vrLen = 1810;
+		vrLoc = 6972;
+	};
+	29B06EF2085F599100D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 140";
+		rLen = 0;
+		rLoc = 4869;
+		rType = 0;
+		vrLen = 2389;
+		vrLoc = 2525;
+	};
+	29B06EF3085F599100D17BAB = {
+		fRef = 296A90CA084B8B6E00849634;
+		isa = PBXTextBookmark;
+		name = "ExifWrapper.m: 125";
+		rLen = 0;
+		rLoc = 4242;
+		rType = 0;
+		vrLen = 2098;
+		vrLoc = 2144;
+	};
+	29B06F04085F5A0A00D17BAB = {
+		fRef = 296A93CB084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.m: 26";
+		rLen = 0;
+		rLoc = 717;
+		rType = 0;
+		vrLen = 2142;
+		vrLoc = 0;
+	};
+	29B06F06085F5A0A00D17BAB = {
+		fRef = 296A93CB084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.m: 26";
+		rLen = 0;
+		rLoc = 717;
+		rType = 0;
+		vrLen = 2142;
+		vrLoc = 0;
+	};
+	29B06F09085F5A0A00D17BAB = {
+		fRef = 296A93CB084BBC4700849634;
+		isa = PBXTextBookmark;
+		name = "PreferencesController.m: 26";
+		rLen = 0;
+		rLoc = 717;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29B06F0F085F5A8E00D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 118";
+		rLen = 0;
+		rLoc = 4113;
+		rType = 0;
+		vrLen = 2376;
+		vrLoc = 2576;
+	};
+	29B06F12085F5A8F00D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: 139";
+		rLen = 0;
+		rLoc = 4788;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29B06F32085F5C1E00D17BAB = {
+		fRef = 2938D6440846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.h: setJobName:";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 0;
+	};
+	29B06F33085F5C1E00D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: tableView:objectValueForTableColumn:row:";
+		rLen = 0;
+		rLoc = 4725;
+		rType = 0;
+		vrLen = 2424;
+		vrLoc = 2528;
+	};
+	29B06F35085F5C1E00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = nil;
+		rLen = 0;
+		rLoc = 4225;
+		rType = 0;
+		vrLen = 2210;
+		vrLoc = 3349;
+	};
+	29B06F36085F5C1E00D17BAB = {
+		fRef = 2938D6440846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.h: setJobName:";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 0;
+	};
+	29B06F37085F5C1E00D17BAB = {
+		fRef = 2938D6450846707B008664E7;
+		isa = PBXTextBookmark;
+		name = "NameMapper.m: tableView:objectValueForTableColumn:row:";
+		rLen = 0;
+		rLoc = 4725;
+		rType = 0;
+		vrLen = 2424;
+		vrLoc = 2528;
+	};
+	29B06F45085F5CD100D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: setJobName:";
+		rLen = 0;
+		rLoc = 3261;
+		rType = 0;
+		vrLen = 1973;
+		vrLoc = 2987;
+	};
+	29B06F4D085F5D0F00D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: refreshProgress";
+		rLen = 0;
+		rLoc = 482;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	29B06F5A085F5D7E00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 1";
+		rLen = 0;
+		rLoc = 16;
+		rType = 0;
+		vrLen = 1201;
+		vrLoc = 0;
+	};
+	29B06F5B085F5D7E00D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: mainWindow";
+		rLen = 0;
+		rLoc = 145;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 0;
+	};
+	29B06F5C085F5D7E00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 140";
+		rLen = 0;
+		rLoc = 3389;
+		rType = 0;
+		vrLen = 1573;
+		vrLoc = 2906;
+	};
+	29B06F66085F5E0400D17BAB = {
+		fRef = 089C165DFE840E0CC02AAC07;
+		isa = PBXTextBookmark;
+		name = "English: 4";
+		rLen = 0;
+		rLoc = 115;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	29B06F67085F5E0400D17BAB = {
+		fRef = 089C165DFE840E0CC02AAC07;
+		isa = PBXTextBookmark;
+		name = "English: 4";
+		rLen = 0;
+		rLoc = 115;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	29B06F6A085F5E0500D17BAB = {
+		fRef = 089C165DFE840E0CC02AAC07;
+		isa = PBXTextBookmark;
+		name = "English: 4";
+		rLen = 0;
+		rLoc = 115;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29B06F75085F5E4D00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 5";
+		rLen = 0;
+		rLoc = 124;
+		rType = 0;
+		vrLen = 1082;
+		vrLoc = 0;
+	};
+	29B06F7C085F5E9700D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 173";
+		rLen = 0;
+		rLoc = 4327;
+		rType = 0;
+		vrLen = 1529;
+		vrLoc = 3007;
+	};
+	29B06F7E085F5E9700D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: buttonReresh";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 1129;
+		vrLoc = 0;
+	};
+	29B06F7F085F5E9700D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 173";
+		rLen = 0;
+		rLoc = 4327;
+		rType = 0;
+		vrLen = 1529;
+		vrLoc = 3007;
+	};
+	29B06F88085F601000D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: buttonRefrresh";
+		rLen = 0;
+		rLoc = 478;
+		rType = 0;
+		vrLen = 1130;
+		vrLoc = 0;
+	};
+	29B06F89085F601000D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: buttonRefrresh";
+		rLen = 0;
+		rLoc = 478;
+		rType = 0;
+		vrLen = 1130;
+		vrLoc = 0;
+	};
+	29B06F8A085F601000D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 149";
+		rLen = 0;
+		rLoc = 3403;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 1803;
+	};
+	29B06F8B085F602F00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 149";
+		rLen = 0;
+		rLoc = 3403;
+		rType = 0;
+		vrLen = 1207;
+		vrLoc = 1803;
+	};
+	29B06F8C085F602F00D17BAB = {
+		fRef = 29B13C2508450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.h: buttonRefrresh";
+		rLen = 0;
+		rLoc = 478;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29B06F8D085F602F00D17BAB = {
+		fRef = 29B13C2608450540008DFC26;
+		isa = PBXTextBookmark;
+		name = "RenamerController.m: 149";
+		rLen = 0;
+		rLoc = 3403;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	29B13C1308450127008DFC26 = {
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		configStateDict = {
+		};
+		cppStopOnCatchEnabled = 0;
+		cppStopOnThrowEnabled = 0;
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		isa = PBXExecutable;
+		libgmallocEnabled = 0;
+		name = XDownloader;
+		savedGlobals = {
+		};
+		shlibInfoDictList_v2 = (
+			{
+				level = 0;
+				path = /usr/lib/system/libmathCommon.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libSystem.B.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libicucore.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libauto.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libobjc.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libz.1.2.2.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Security.framework/Versions/A/Security;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CFNetwork.framework/Versions/A/CFNetwork;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/WebServicesCore.framework/Versions/A/WebServicesCore;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libbsm.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libcrypto.0.9.7.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libcups.2.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/FindByContent.framework/Versions/A/FindByContent;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libRaw.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libmx.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CarbonSound.framework/Versions/A/CarbonSound;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libiconv.2.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libxml2.2.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libsqlite3.0.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/PrivateFrameworks/ZeroLink.framework/Versions/A/ZeroLink;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /Users/jb/personal/projekt/XDownloader/build/XDownloader.app/Contents/MacOS/XDownloader;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/main.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/RenamerController.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /Developer/Applications/Xcode.app/Contents/PlugIns/GDBMIDebugging.xcplugin/Contents/Resources/PBGDBIntrospectionSupport.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/Renamer.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Ink.framework/Versions/A/Ink;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HTMLRendering.framework/Versions/A/HTMLRendering;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/NavigationServices.framework/Versions/A/NavigationServices;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework/Versions/A/CommonPanels;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/Application Support/DivXNetworks/liblame3.92.dylib";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/Application Support/DivXNetworks/libMPAEncode0.1.dylib";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libcrypto.0.9.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /usr/lib/libssl.0.9.dylib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/Application Support/DivXNetworks/libdpus10.dylib";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/Application Support/DivXNetworks/libdpv10.dylib";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/Application Support/DivXNetworks/libPSIKey.dylib";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/vecLib.framework/Versions/A/vecLib;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/QuickTime.framework/Versions/A/QuickTime;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Library/QuickTime/DivX 5.component/Contents/MacOS/DivX 5";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/Frameworks/AGL.framework/Versions/A/AGL;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /System/Library/QuickTime/QuickTimeComponents.component/Contents/MacOS/QuickTimeComponents;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/NameMapper.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = /Perforce/personal/projekt/XDownloader/build/XDownloader.app/Contents/MacOS/XDownloader;
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Perforce/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/NameMapper.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Perforce/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/main.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Perforce/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/Renamer.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Perforce/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/RenamerController.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Perforce/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/ExifWrapper.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/PreferencesController.ob";
+				whenToLoad = 0;
+			},
+			{
+				level = 0;
+				path = "/Users/jb/personal/projekt/XDownloader/build/XDownloader.build/XDownloader.build/Objects-normal/ppc/ExifWrapper.ob";
+				whenToLoad = 0;
+			},
+		);
+		sourceDirectories = (
+		);
+	};
+	29B13C2208450131008DFC26 = {
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		isa = PBXSourceControlManager;
+		scmConfiguration = {
+			perforceClient = anto;
+			perforceDepot = "ano.nym.se:1666";
+			perforcePassword = tahngoh6R;
+			perforceToolPath = /usr/local/bin/p4;
+			perforceUserName = jb;
+		};
+		scmType = scm.perforce;
+	};
+	29B13C2308450131008DFC26 = {
+		indexTemplatePath = "";
+		isa = PBXCodeSenseManager;
+	};
+	29B13C2508450540008DFC26 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1347, 574}}";
+			sepNavSelRange = "{478, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{61, 294}, {898, 837}}";
+		};
+	};
+	29B13C2608450540008DFC26 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1347, 4424}}";
+			sepNavSelRange = "{3403, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+			sepNavWindowFrame = "{{199, 447}, {750, 558}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA = {
+		activeBuildStyle = 4A9504CCFFE6A4B311CA0CBA;
+		activeExecutable = 29B13C1308450127008DFC26;
+		activeTarget = 8D1107260486CEB800E47090;
+		addToTargets = (
+			8D1107260486CEB800E47090,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 29B13C2308450131008DFC26;
+		executables = (
+			29B13C1308450127008DFC26,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					450,
+					200,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1000,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					683,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 140464350;
+			PBXWorkspaceStateSaveDate = 140464350;
+		};
+		perUserProjectItems = {
+			290FF1AE085335D40036AB6F = 290FF1AE085335D40036AB6F;
+			29389A8F08539CB300F74984 = 29389A8F08539CB300F74984;
+			2959051C085CCEC5009A3F1A = 2959051C085CCEC5009A3F1A;
+			295905C7085CE482009A3F1A = 295905C7085CE482009A3F1A;
+			2959060B085CE6D1009A3F1A = 2959060B085CE6D1009A3F1A;
+			29637F52085CB9630096CCB9 = 29637F52085CB9630096CCB9;
+			29637F75085CBC180096CCB9 = 29637F75085CBC180096CCB9;
+			29637F7A085CBC180096CCB9 = 29637F7A085CBC180096CCB9;
+			29637FC6085CC3540096CCB9 = 29637FC6085CC3540096CCB9;
+			2969634C0851EDF2003B1824 = 2969634C0851EDF2003B1824;
+			2969634F0851EDF2003B1824 = 2969634F0851EDF2003B1824;
+			296963540851EDF2003B1824 = 296963540851EDF2003B1824;
+			296963570851EDF2003B1824 = 296963570851EDF2003B1824;
+			296963CA0851F461003B1824 = 296963CA0851F461003B1824;
+			296963CD0851F461003B1824 = 296963CD0851F461003B1824;
+			296963D90851F4A8003B1824 = 296963D90851F4A8003B1824;
+			296963DD0851F4A8003B1824 = 296963DD0851F4A8003B1824;
+			296963DE0851F4A8003B1824 = 296963DE0851F4A8003B1824;
+			296963E40851F4A9003B1824 = 296963E40851F4A9003B1824;
+			296963F40851F5D2003B1824 = 296963F40851F5D2003B1824;
+			296963F50851F5D2003B1824 = 296963F50851F5D2003B1824;
+			296963F60851F5D2003B1824 = 296963F60851F5D2003B1824;
+			296964190851F7EA003B1824 = 296964190851F7EA003B1824;
+			2969641F0851F7EA003B1824 = 2969641F0851F7EA003B1824;
+			296964230851F7EA003B1824 = 296964230851F7EA003B1824;
+			296964240851F7EA003B1824 = 296964240851F7EA003B1824;
+			2969649B0852002D003B1824 = 2969649B0852002D003B1824;
+			297A9B100851E2FD00373A8C = 297A9B100851E2FD00373A8C;
+			297A9B110851E2FD00373A8C = 297A9B110851E2FD00373A8C;
+			297A9B290851E39600373A8C = 297A9B290851E39600373A8C;
+			298F9937085E04D000ADDF4D = 298F9937085E04D000ADDF4D;
+			298F9938085E04D000ADDF4D = 298F9938085E04D000ADDF4D;
+			298F993A085E04D000ADDF4D = 298F993A085E04D000ADDF4D;
+			298F993B085E04D000ADDF4D = 298F993B085E04D000ADDF4D;
+			29B06EEC085F599100D17BAB = 29B06EEC085F599100D17BAB;
+			29B06EEE085F599100D17BAB = 29B06EEE085F599100D17BAB;
+			29B06EEF085F599100D17BAB = 29B06EEF085F599100D17BAB;
+			29B06EF0085F599100D17BAB = 29B06EF0085F599100D17BAB;
+			29B06EF1085F599100D17BAB = 29B06EF1085F599100D17BAB;
+			29B06EF2085F599100D17BAB = 29B06EF2085F599100D17BAB;
+			29B06EF3085F599100D17BAB = 29B06EF3085F599100D17BAB;
+			29B06F04085F5A0A00D17BAB = 29B06F04085F5A0A00D17BAB;
+			29B06F06085F5A0A00D17BAB = 29B06F06085F5A0A00D17BAB;
+			29B06F09085F5A0A00D17BAB = 29B06F09085F5A0A00D17BAB;
+			29B06F0F085F5A8E00D17BAB = 29B06F0F085F5A8E00D17BAB;
+			29B06F12085F5A8F00D17BAB = 29B06F12085F5A8F00D17BAB;
+			29B06F32085F5C1E00D17BAB = 29B06F32085F5C1E00D17BAB;
+			29B06F33085F5C1E00D17BAB = 29B06F33085F5C1E00D17BAB;
+			29B06F35085F5C1E00D17BAB = 29B06F35085F5C1E00D17BAB;
+			29B06F36085F5C1E00D17BAB = 29B06F36085F5C1E00D17BAB;
+			29B06F37085F5C1E00D17BAB = 29B06F37085F5C1E00D17BAB;
+			29B06F45085F5CD100D17BAB = 29B06F45085F5CD100D17BAB;
+			29B06F4D085F5D0F00D17BAB = 29B06F4D085F5D0F00D17BAB;
+			29B06F5A085F5D7E00D17BAB = 29B06F5A085F5D7E00D17BAB;
+			29B06F5B085F5D7E00D17BAB = 29B06F5B085F5D7E00D17BAB;
+			29B06F5C085F5D7E00D17BAB = 29B06F5C085F5D7E00D17BAB;
+			29B06F66085F5E0400D17BAB = 29B06F66085F5E0400D17BAB;
+			29B06F67085F5E0400D17BAB = 29B06F67085F5E0400D17BAB;
+			29B06F6A085F5E0500D17BAB = 29B06F6A085F5E0500D17BAB;
+			29B06F75085F5E4D00D17BAB = 29B06F75085F5E4D00D17BAB;
+			29B06F7C085F5E9700D17BAB = 29B06F7C085F5E9700D17BAB;
+			29B06F7E085F5E9700D17BAB = 29B06F7E085F5E9700D17BAB;
+			29B06F7F085F5E9700D17BAB = 29B06F7F085F5E9700D17BAB;
+			29B06F88085F601000D17BAB = 29B06F88085F601000D17BAB;
+			29B06F89085F601000D17BAB = 29B06F89085F601000D17BAB;
+			29B06F8A085F601000D17BAB = 29B06F8A085F601000D17BAB;
+			29B06F8B085F602F00D17BAB = 29B06F8B085F602F00D17BAB;
+			29B06F8C085F602F00D17BAB = 29B06F8C085F602F00D17BAB;
+			29B06F8D085F602F00D17BAB = 29B06F8D085F602F00D17BAB;
+			29F77D9F085CB8E100FD3F79 = 29F77D9F085CB8E100FD3F79;
+		};
+		sourceControlManager = 29B13C2208450131008DFC26;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 868}}";
+			sepNavSelRange = "{258, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 868}}";
+		};
+	};
+	29F77D9D085CB8E000FD3F79 = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = index.html;
+		path = "/Users/jb/personal/projekt/XDownloader/English.lproj/XDownloader Help/index.html";
+		refType = 0;
+		sourceTree = "<absolute>";
+	};
+	29F77D9F085CB8E100FD3F79 = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 28";
+		rLen = 0;
+		rLoc = 875;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	32CA4F630368D1EE00C91783 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 868}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 868}}";
+		};
+	};
+	8D1107260486CEB800E47090 = {
+		activeExec = 0;
+		executables = (
+			29B13C1308450127008DFC26,
+		);
+	};
+	8D1107310486CEB800E47090 = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1346, 683}}";
+			sepNavSelRange = "{875, 0}";
+			sepNavVisRect = "{{0, 0}, {1346, 683}}";
+			sepNavWindowFrame = "{{153, 489}, {750, 558}}";
+		};
+	};
+}

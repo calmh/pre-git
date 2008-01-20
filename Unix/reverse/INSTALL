@@ -1,0 +1,44 @@
+Installation instructions
+=========================
+
+The installation is very hacky at the moment. This will be improved as
+time passes. Basically, what needs to be done is:
+
+$ make
+
+This should make the programs. It works under Linux and probably
+_only_ under Linux, since it uses Linux-specific tape ioctls.
+
+The tape-device is hard-coded (BAD!!) to /dev/tape. If this does not
+suite you, edit stddefs.h (yes, a config file format are in the works).
+
+# make install
+
+This will install the binaries in /usr/local/bin and create the necessary
+directory structure.
+
+Then you need to create the .startdir, .prune and .root-files for each 
+volume you want to backup, and put them in /etc/reverse. There is an example
+in the example-conf dir.
+
+Basically, the files should contain the following:
+
+<volume>.root: a single line with the root directory of the volume
+<volume>.startdir: a list of directories to backup. Note that save
+                   does not cross filesystem borders.
+<volume>.prune: a list of patterns of files that should not be
+                backed up. This is put through a simple substring-search,
+                so no fancy patterns are available, unfortunately.
+volumes:	a list of tapes and what role they have. See example.
+
+That should be about it.
+
+You now need to label a tape:
+
+$ label /dev/nst0 -v Name-of-tape
+
+Add the tape to the volumes-list with a type "/backup" and you can start
+doing backups.
+
+-- 
+$Id: INSTALL,v 1.1.1.1 2003/03/01 12:55:12 jb Exp $

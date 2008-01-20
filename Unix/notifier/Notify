@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+
+import notifier, collector, jabber, time, commands, string, sys
+
+debug = 1
+
+def mainIter():
+	message = conn.recieveMessage()
+	if message:
+		if debug:
+			print "[Notify] Recieved a message from Notifier"
+		mbody = message.getBody()
+		if mbody == "Quit right now.":
+			if debug:
+				print "[Notify] Quitting"
+			conn.sendMessage(message.build_reply("Right on!"))
+			conn.running = 0
+			conn.join()
+			sys.exit(0)
+		else:
+			if debug:
+				print "[Notify] Didn't recognize command"
+			data = commands.getoutput("fortune")
+			conn.sendMessage(message.build_reply(data))
+	message = coll.getMessage()
+	if not message is None:
+		if debug:
+			print "[Notify] Recieved a message from Collector - broadcasting"
+		conn.sendMessageAll(message)
+
+if debug:
+	print "[Notify] Starting Collector"
+coll = collector.Collector(port=7042, debug=debug)
+coll.setDaemon(1)
+coll.start()
+
+if debug:
+	print "[Notify] Starting Notifier"
+conn = notifier.Notifier(host="jabber.org", debug=debug)
+conn.login(username="notifier", passwd="n0tifier", resource="pyNotifier0.1")
+conn.setDaemon(1)
+conn.start()
+
+while 1:
+	mainIter()
+	time.sleep(1)
+		

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ \( "$1" = "upgrade" -o "$1" = "remove" \) -a -L /usr/doc/statd ]; then
+    rm -f /usr/doc/statd
+fi
+
+update-inetd --disable 7687
+/etc/init.d/inetd reload
+

@@ -1,0 +1,8 @@
+hostname=
+port=
+database=ktest
+user=ktest
+password=foo
+
+# DO NOT CHANGE THE FOLLOWING LINE
+VERSION=2.0

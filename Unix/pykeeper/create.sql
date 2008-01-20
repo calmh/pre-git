@@ -1,0 +1,17 @@
+DROP SEQUENCE objects_serial;
+CREATE SEQUENCE objects_serial INCREMENT 1 MINVALUE 1;
+
+DROP TABLE Categories;
+CREATE TABLE Categories (
+	Name VARCHAR(255),
+	Comment VARCHAR(255),
+	Id INT NOT NULL UNIQUE DEFAULT NEXTVAL('objects_serial')
+);
+
+DROP TABLE Photos;
+CREATE TABLE Photos (
+	Name VARCHAR(255),
+	Comment VARCHAR(255),
+	Category INT NOT NULL,
+	Id INT NOT NULL UNIQUE DEFAULT NEXTVAL('objects_serial')
+);

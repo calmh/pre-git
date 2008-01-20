@@ -1,0 +1,1 @@
+ const unsigned char XDownloaderVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:XDownloader  PROJECT:XDownloader-1.0  DEVELOPER:jb  BUILT:" __DATE__  " " __TIME__ "" "\n"; const double XDownloaderVersionNumber __attribute__ ((used)) = (double)1.0;

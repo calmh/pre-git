@@ -1,0 +1,51 @@
+digraph Nym.Foundation {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Development/Nym.Foundation.framework\nf592ff2438dd5697f365a77f7eda91f5\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00002 [ label = "Resources/Info.plist\n0bebf0a4fcfeeb006f07d2d42082ba90\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00003 [ label = "Nym.Foundation.build/Info.plist\n0000000042fb02230000000000000273\nUpToDate" ];
+   n00004 [ label = "English.lproj/InfoPlist.strings\n139252caf23f7b2ef2e329dc0a828dbe\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00005 [ label = "English.lproj/InfoPlist.strings\n0000000042fafd3a000000000000010e\nUpToDate" ];
+   n00006 [ label = "ppc/NymLogger.o\n65a0998142bfddca7f2420a79aabb7bf\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00007 [ label = "Headers/AppKit.h\n0000000042c7f6b60000000000001328\nUpToDate" ];
+   n00008 [ label = "AppKit-bxzqwqrbgwpuiaadfmftdrozzcga/AppKit.h.gch\n6ef2b6003841acbbeadd33900842ced0\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00009 [ label = "Nym.Foundation/NymLogger.m\n0000000042fafd3a0000000000000da8\nUpToDate" ];
+   n00010 [ label = "A/Nym.Foundation\n44e2151fd50a65bd05757fe8f0c18b68\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00011 [ label = "Versions/Current\n4a6b227339408016cf504726e17b7eaa\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00012 [ label = "Nym.Foundation.framework/Resources\n70ff254d48ad58bd325a3e479d476643\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00013 [ label = "Nym.Foundation.framework/Nym.Foundation\n89b87d0ca17ec8cdb29d5c04f2af14f0\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00014 [ label = "Nym.Foundation/NymLogger.h\n0000000042fafd3a00000000000005d6\nUpToDate" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n0000000042fb02230000000000000273\n^ 0bebf0a4be05e9236f07d2d42082b8e3\n= 0bebf0a4fcfeeb006f07d2d42082ba90\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00002 [ label = "CpResource InfoPlist.strings <wt:4>\nwaitCount: 0\n00000000000000000000000000000000\n^ 139252caf23f7b2ef2e329dc0a828dbe\n= 139252caf23f7b2ef2e329dc0a828dbe\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00003 [ label = "CompileC NymLogger.o <wt:6>\nwaitCount: 1\n6ef2b6003841acbbeadd33900842c6ae\n^ 0b522f817afe717195f9133792e97111\n= 65a0998142bfddca7f2420a79aabb7bf\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00004 [ label = "ProcessPCH AppKit.h.gch <wt:5>\nwaitCount: 0\n0000000042c7f6b60000000000001328\n^ 6ef2b6007a865a0deadd33900842ddf8\n= 6ef2b6003841acbbeadd33900842ced0\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00005 [ label = "Ld Nym.Foundation <wt:6>\nwaitCount: 1\n65a0998142bfddca7f2420a79aabb7bf\n^ 21428c9e97b5b8777a515f4f6a6a3cd7\n= 44e2151fd50a65bd05757fe8f0c18b68\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00006 [ label = "SymLink Current <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ 4a6b227339408016cf504726e17b7eaa\n= 4a6b227339408016cf504726e17b7eaa\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00007 [ label = "SymLink Resources <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ 70ff254d48ad58bd325a3e479d476643\n= 70ff254d48ad58bd325a3e479d476643\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00008 [ label = "SymLink Nym.Foundation <wt:8>\nwaitCount: 0\n00000000000000000000000000000000\n^ 89b87d0ca17ec8cdb29d5c04f2af14f0\n= 89b87d0ca17ec8cdb29d5c04f2af14f0\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00009 [ label = "Touch Nym.Foundation.framework <wt:9>\nwaitCount: 6\nefb7cd430b58e5f5d706a1855452b05f\n^ 1a2532673385b362246306fa2a8821aa\n= f592ff2438dd5697f365a77f7eda91f5\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00009 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00011 -> { c00006 };
+   n00012 -> { c00007 };
+   n00013 -> { c00008 };
+   c00001 -> { n00003 };
+   c00002 -> { n00005 n00005 };
+   c00003 -> { n00008 n00009 };
+   c00004 -> { n00007 };
+   c00005 -> { n00006 };
+   c00009 -> { n00002 n00004 n00010 n00011 n00012 n00013 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00009 -> { n00014 };
+}

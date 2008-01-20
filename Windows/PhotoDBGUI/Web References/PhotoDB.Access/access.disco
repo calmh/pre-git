@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/photodb/access.asmx?wsdl" docRef="http://localhost/photodb/access.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/photodb/access.asmx" xmlns:q1="http://services.jborg.info/photodb/1.0/" binding="q1:AccessSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

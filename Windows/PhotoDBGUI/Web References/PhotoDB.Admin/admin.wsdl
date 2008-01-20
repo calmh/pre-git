@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://services.jborg.info/photodb/1.0/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://services.jborg.info/photodb/1.0/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://services.jborg.info/photodb/1.0/">
+      <s:element name="CreateFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caption" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFolderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folder_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caption" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePhotoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="photo_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateInstanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="real_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sec_level" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folder_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeletePhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="photo_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePhotoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="instance_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteInstanceResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="CreateFolderSoapIn">
+    <part name="parameters" element="s0:CreateFolder" />
+  </message>
+  <message name="CreateFolderSoapOut">
+    <part name="parameters" element="s0:CreateFolderResponse" />
+  </message>
+  <message name="CreatePhotoSoapIn">
+    <part name="parameters" element="s0:CreatePhoto" />
+  </message>
+  <message name="CreatePhotoSoapOut">
+    <part name="parameters" element="s0:CreatePhotoResponse" />
+  </message>
+  <message name="CreateInstanceSoapIn">
+    <part name="parameters" element="s0:CreateInstance" />
+  </message>
+  <message name="CreateInstanceSoapOut">
+    <part name="parameters" element="s0:CreateInstanceResponse" />
+  </message>
+  <message name="CreateUserSoapIn">
+    <part name="parameters" element="s0:CreateUser" />
+  </message>
+  <message name="CreateUserSoapOut">
+    <part name="parameters" element="s0:CreateUserResponse" />
+  </message>
+  <message name="DeleteFolderSoapIn">
+    <part name="parameters" element="s0:DeleteFolder" />
+  </message>
+  <message name="DeleteFolderSoapOut">
+    <part name="parameters" element="s0:DeleteFolderResponse" />
+  </message>
+  <message name="DeletePhotoSoapIn">
+    <part name="parameters" element="s0:DeletePhoto" />
+  </message>
+  <message name="DeletePhotoSoapOut">
+    <part name="parameters" element="s0:DeletePhotoResponse" />
+  </message>
+  <message name="DeleteInstanceSoapIn">
+    <part name="parameters" element="s0:DeleteInstance" />
+  </message>
+  <message name="DeleteInstanceSoapOut">
+    <part name="parameters" element="s0:DeleteInstanceResponse" />
+  </message>
+  <portType name="AdminSoap">
+    <operation name="CreateFolder">
+      <input message="s0:CreateFolderSoapIn" />
+      <output message="s0:CreateFolderSoapOut" />
+    </operation>
+    <operation name="CreatePhoto">
+      <input message="s0:CreatePhotoSoapIn" />
+      <output message="s0:CreatePhotoSoapOut" />
+    </operation>
+    <operation name="CreateInstance">
+      <input message="s0:CreateInstanceSoapIn" />
+      <output message="s0:CreateInstanceSoapOut" />
+    </operation>
+    <operation name="CreateUser">
+      <input message="s0:CreateUserSoapIn" />
+      <output message="s0:CreateUserSoapOut" />
+    </operation>
+    <operation name="DeleteFolder">
+      <input message="s0:DeleteFolderSoapIn" />
+      <output message="s0:DeleteFolderSoapOut" />
+    </operation>
+    <operation name="DeletePhoto">
+      <input message="s0:DeletePhotoSoapIn" />
+      <output message="s0:DeletePhotoSoapOut" />
+    </operation>
+    <operation name="DeleteInstance">
+      <input message="s0:DeleteInstanceSoapIn" />
+      <output message="s0:DeleteInstanceSoapOut" />
+    </operation>
+  </portType>
+  <binding name="AdminSoap" type="s0:AdminSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="CreateFolder">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/CreateFolder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreatePhoto">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/CreatePhoto" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateInstance">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/CreateInstance" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateUser">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/CreateUser" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteFolder">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/DeleteFolder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeletePhoto">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/DeletePhoto" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteInstance">
+      <soap:operation soapAction="http://services.jborg.info/photodb/1.0/DeleteInstance" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Admin">
+    <port name="AdminSoap" binding="s0:AdminSoap">
+      <soap:address location="http://localhost/photodb/admin.asmx" />
+    </port>
+  </service>
+</definitions>

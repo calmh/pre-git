@@ -1,0 +1,62 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoDB", "http://localhost/PhotoDB/PhotoDB.csproj", "{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectStore", "..\ObjectStore\ObjectStore.csproj", "{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoDbCli", "..\PhotoDbCli\PhotoDbCli.csproj", "{95D11D2F-A91F-40D0-B4E7-BEC66479E158}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalleryApp", "http://localhost/GalleryApp/GalleryApp.csproj", "{49DB0967-C496-4900-89CC-308BC2325163}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoDBGUI", "..\PhotoDBGUI\PhotoDBGUI.csproj", "{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Not web = Not web
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Debug.ActiveCfg = Debug|.NET
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Debug.Build.0 = Debug|.NET
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Not web.ActiveCfg = Not web|.NET
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Not web.Build.0 = Not web|.NET
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Release.ActiveCfg = Release|.NET
+		{F8EB1DC2-34B4-4C64-A5E8-ACF006C86D46}.Release.Build.0 = Release|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Debug.ActiveCfg = Debug|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Debug.Build.0 = Debug|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Not web.ActiveCfg = Not web|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Not web.Build.0 = Not web|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Release.ActiveCfg = Release|.NET
+		{FE9C022C-8DF9-41D3-88AE-C50B2B6FEE55}.Release.Build.0 = Release|.NET
+		{95D11D2F-A91F-40D0-B4E7-BEC66479E158}.Debug.ActiveCfg = Debug|.NET
+		{95D11D2F-A91F-40D0-B4E7-BEC66479E158}.Debug.Build.0 = Debug|.NET
+		{95D11D2F-A91F-40D0-B4E7-BEC66479E158}.Not web.ActiveCfg = Not web|.NET
+		{95D11D2F-A91F-40D0-B4E7-BEC66479E158}.Release.ActiveCfg = Release|.NET
+		{95D11D2F-A91F-40D0-B4E7-BEC66479E158}.Release.Build.0 = Release|.NET
+		{49DB0967-C496-4900-89CC-308BC2325163}.Debug.ActiveCfg = Debug|.NET
+		{49DB0967-C496-4900-89CC-308BC2325163}.Debug.Build.0 = Debug|.NET
+		{49DB0967-C496-4900-89CC-308BC2325163}.Not web.ActiveCfg = Not web|.NET
+		{49DB0967-C496-4900-89CC-308BC2325163}.Release.ActiveCfg = Release|.NET
+		{49DB0967-C496-4900-89CC-308BC2325163}.Release.Build.0 = Release|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Debug.ActiveCfg = Debug|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Debug.Build.0 = Debug|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Not web.ActiveCfg = Release|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Not web.Build.0 = Release|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Release.ActiveCfg = Release|.NET
+		{D6DCC38F-C527-41AE-B0AE-A9A532B3E70D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

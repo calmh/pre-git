@@ -1,0 +1,23 @@
+Source: glcpu
+Maintainer: Jakob Borg <jakob@debian.org>
+Priority: optional
+Standards-Version: 3.0.1.0
+Section: x11
+Build-Depends: libcommonc++-dev, glutg3-dev, xlibs-dev
+
+Package: glcpu
+Section: x11
+Architecture: any
+Depends: ${shlibs:Depends}
+Suggests: statd
+Description: The GLcpu program is a 3D-plotter for system activity.
+ GLcpu can monitor any number of hosts over a network, using very little
+ bandwidth and plot their CPU activity in 3D.
+
+Package: statd
+Section: net
+Architecture: any
+Depends: ${shlibs:Depends}, netkit-inetd
+Description: Data collection deamon for GLcpu.
+ This is a small daemon run from inetd, to collect data
+ for glcpu(1). It needs to be installed on all hosts to be monitored.

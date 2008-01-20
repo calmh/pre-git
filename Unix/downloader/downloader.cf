@@ -1,0 +1,19 @@
+<downloader>
+	<destination dir="/store/files/film"/>
+	<lock file="/tmp/downloader.lock"/>
+	<database file="/store/files/film/.done.db"/>
+	
+	<site href="ftp://bfs.sytes.net/New/tv/" user="jbftp" password="ari6Lav">
+		<match type="regexp" pattern="the\.shield.*s03e"/>
+		<match type="regexp" pattern="scrubs.*s04e"/>
+		<match type="regexp" pattern="(stargate|sg-1).*s08e"/>
+	</site>
+	
+	<site href="ftp://bfs.sytes.net/New/divx/" user="jbftp" password="ari6Lav">
+		<match type="regexp" pattern="troy"/>
+		<match type="regexp" pattern="butterfly"/>
+		<match type="regexp" pattern="fahrenheit"/>
+		<match type="regexp" pattern="after.tomorrow"/>
+	</site>
+</downloader>
+

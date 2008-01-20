@@ -1,0 +1,11 @@
+To do
+=====
+
+* Extend the grid if we have many rows.
+
+* Better error checking in the networking code.
+
+* More autodetection in the build process.
+
+--
+$Id: TODO,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $

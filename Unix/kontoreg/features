@@ -1,0 +1,6 @@
+* allt som nuvarande register kan
+* andra/fler fält?
+* fungera lika bra på alla platformar vi använder
+* total integrering med användaradministrationen på webben (om man skapar
+  användare läggs den automatiskt till i kontoregistret)
+* asymmetric encryption?

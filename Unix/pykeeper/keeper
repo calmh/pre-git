@@ -1,0 +1,679 @@
+#!/usr/bin/env python2.1
+# $Id: keeper,v 1.1.1.1 2003/03/01 12:55:11 jb Exp $
+
+# Copyright 2002
+#       Jakob Borg <jakob@borg.pp.se>  All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. The name of the author may not be used to endorse or promote products
+#    derived from this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+# EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+import ConfigParser
+import re
+import icons
+import os
+import sys
+import exif
+
+from pyPgSQL import PgSQL
+from basegui import BaseWidget
+from basenewcat import BaseNewCategory
+from qt import *
+from types import *
+from PIL import Image
+
+# Represent a photograph. Holds information about
+# the file and possibly it's EXIF info and thumbnail.
+class Photo:
+	type = "Photo"
+	def __init__(self, name, category, comment, ident):
+		self.name = name
+		self.category = category
+		self.comment = comment
+		self.ident = ident
+		self.displayName = re.search("([^/]+)$", self.name).group(1)
+		self.exif = None
+
+	# Gather EXIF information and thumbnail if it is not already present.
+	def getInfo(self):
+		if self.exif is None:
+			self.exif = exif.parse(self.name)
+
+# Represent a category.
+class Category:
+	type = "Category"
+	def __init__(self, name, comment, ident):
+		self.name = name
+		self.comment = comment
+		self.ident = ident
+
+# "New Category" dialog box
+class NewCategory(BaseNewCategory):
+    def __init__(self,parent):
+    	BaseNewCategory.__init__(self,parent=parent)
+	self.parent = parent
+	
+    def accept(self):
+    	cat = self.parent.createCategory(name=str(self.name.text()), comment=str(self.comment.text()))
+	self.parent.displayCategory(cat)
+	self.close()
+
+class Database:
+    def __init__(self, cstring):
+    	self.conn = PgSQL.connect(cstring)
+
+    def categories(self):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Categories
+	""")
+	results = curs.fetchall()
+	cats = []
+	for result in results:
+		cats.append(Category(result.name, result.comment, result.id))
+	return cats
+	
+    def categoryByName(self, name):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Categories
+	WHERE
+	Name = %s
+	""", name)
+	result = curs.fetchone()
+	return Category(result.name, result.comment, result.id)
+
+    def categoryByIdent(self, ident):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Categories
+	WHERE
+	Id = %s
+	""", ident)
+	result = curs.fetchone()
+	if result is None: return None
+	return Category(result.name, result.comment, result.id)
+
+    def insertCategory(self, name, comment=""):
+     	curs = self.conn.cursor()
+	curs.execute("""
+	INSERT INTO Categories
+	(Name, Comment)
+	VALUES (%s, %s)
+	""", name, comment)
+	self.conn.commit()
+	curs.execute("""
+	SELECT Id FROM Categories
+	WHERE Name = %s
+	""", name)
+	result = curs.fetchone()
+	assert result
+	curs.close()
+	return result.id
+	
+    def deleteCategory(self, ident):
+     	curs = self.conn.cursor()
+	curs.execute("""
+	DELETE FROM Categories
+	WHERE Id = %s
+	""", ident)
+	self.conn.commit()
+	curs.close()    
+	
+    def updateCategory(self, ident, name=None, comment=None):
+     	curs = self.conn.cursor()
+	if name:
+		curs.execute("""
+		UPDATE Categories
+		SET Name = %s
+		WHERE Id = %s
+		""", name, ident)
+	if comment:
+		curs.execute("""
+		UPDATE Categories
+		SET Comment = %s
+		WHERE Id = %s
+		""", comment, ident)
+	self.conn.commit()
+	curs.close()
+
+    def photos(self):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Photos
+	""")
+	results = curs.fetchall()
+	photos = []
+	for result in results:
+		photos.append(Photo(result.name, result.category, result.comment, result.id))
+	curs.close()
+	return photos
+
+    def insertPhoto(self, name, comment="", categoryName="Default", categoryId=None):
+     	curs = self.conn.cursor()
+	if categoryId is None:
+		categoryId = self.categoryByName(name=categoryName).ident
+	curs.execute("""
+	INSERT INTO Photos
+	(Name, Comment, Category)
+	VALUES (%s, %s, %s)
+	""", name, comment, str(categoryId))
+	self.conn.commit()
+	curs.execute("""
+	SELECT Id FROM Photos
+	WHERE Name = %s
+	""", name)
+	result = curs.fetchone()
+	assert result
+	curs.close()
+	return result.id
+
+    def updatePhoto(self, ident, category=None, comment=None):
+     	curs = self.conn.cursor()
+	if category:
+		curs.execute("""
+		UPDATE Photos
+		SET Category = %s
+		WHERE Id = %s
+		""", category, ident)
+	if comment:
+		curs.execute("""
+		UPDATE Photos
+		SET Comment = %s
+		WHERE Id = %s
+		""", comment, ident)
+	self.conn.commit()
+	curs.close()
+
+    def removePhoto(self, ident):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	DELETE FROM Photos
+	WHERE ID = %s
+	""", ident)
+	self.conn.commit()
+	curs.close()
+	
+    def photoByIdent(self, ident):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Photos
+	WHERE
+	Id = %s
+	""", ident)
+	result = curs.fetchone()
+	if result is None: return None
+	return Photo(result.name, result.category, result.comment, result.id)
+
+    def photoByName(self, name):
+    	curs = self.conn.cursor()
+	curs.execute("""
+	SELECT *
+	FROM Photos
+	WHERE
+	Name = %s
+	""", name)
+	result = curs.fetchone()
+	if result is None: return None
+	return Photo(result.name, result.category, result.comment, result.id)
+
+    def dbck(self):
+    	photos = self.photos()
+	cats = {}
+	n = 1
+	for photo in photos:
+		# If the category is already recorded as consistent, continue
+		if cats.has_key(photo.category) and cats[photo.category] == photo.category:
+			continue
+		
+		# If we have already created a replacement category - use that and continue
+		if cats.has_key(photo.category):
+			self.updatePhoto(photo.ident, category=cats[photo.category])
+			continue
+			
+		# If the category exists, mark it consistent and continue
+		cat = self.categoryByIdent(ident=photo.category)
+		if cat != None:
+			cats[photo.category] = cat.ident
+			continue
+			
+		# Create a new category, and mark it as a replacement for the old
+		ni = self.insertCategory(name="Auto " + str(n), comment="Automatically created category")
+		n += 1
+		cats[photo.category] = ni
+		# Update the photo with that
+		self.updatePhoto(photo.ident, category=ni)
+		print "\t[a missing category was recreated]"
+
+# Cast as exception
+class InitError: pass
+
+# Implements the basic Keeper functionality.
+class KeeperGUI(BaseWidget):
+    # These lists contain
+    #  1) The EXIF fields we are interested in
+    exif_fields = ["DateTime", "ExposureTime", "FNumber", "ExposureBiasValue", "Flash", "Model"]
+    #  2) More user-friendly names for those fields
+    exif_names = ["Date/Time", "Exposure Time", "Aperture", "Exposure Bias", "Flash Used", "Camera Model"]
+    #  3) Transforms to be applied on the result before displaying it
+    exif_transforms = [lambda x: x, lambda x: x + " s", lambda x: "f/" + str(round(eval(x), 1)), lambda x: x, lambda x: x, lambda x: x]
+
+    # This is where we keep user settings and the thumbnail cache
+    prefdir = os.path.expanduser("~/.keeper")
+    tncachedir = prefdir + "/tncache"
+    
+    # These are the default settings, in the absense of a config file
+    config_defaults = {
+    	"host":"localhost",
+    	"port":"5432",
+	"db":"photo",
+	"user":"photo",
+	"pass":"",
+	}
+
+    def __init__(self,parent = None,name = None,fl = 0):
+        BaseWidget.__init__(self,parent,name,fl)
+	self.lPDB.setText("Not connected")
+
+	# Make sure the preference and thumbnail cache directories exist
+	if not os.path.isdir(self.prefdir):
+		os.mkdir(self.prefdir)
+	if not os.path.isdir(self.tncachedir):
+		os.mkdir(self.tncachedir)
+		
+	# Parse the configuration file
+	self.prefs = ConfigParser.ConfigParser()
+	if not self.prefs.has_section("database"):
+		self.prefs.add_section("database")
+		for key in self.config_defaults.keys():
+			self.prefs.set("database", key, self.config_defaults[key])
+	if not self.prefs.has_section("debug"):
+		self.prefs.add_section("debug")
+		self.prefs.set("debug", "debug_columns", "0")
+	self.prefs.read([os.path.expanduser(self.prefdir + "/keeper.ini")])
+
+	# Create list icons for future use
+	self.categoryIcon = QPixmap(icons.folder_data)
+	self.photoIcon = QPixmap(icons.image_data)
+	
+	# Create the connection string for the database
+	cstring = self.prefs.get("database", "host") + ":" + \
+		self.prefs.get("database", "port") + ":" + \
+		self.prefs.get("database", "db") + ":" + \
+		self.prefs.get("database", "user") + ":" + \
+		self.prefs.get("database", "pass")
+	self.dbc = Database(cstring)
+	
+	# Try to initialize from the database. If that fails, try some rudimentary
+	# recovery and exit.
+	try:
+		self.initFromDB()
+	except:
+		print "A database error was detected - trying recovery..."
+		self.dbc.dbck()
+		print "Check complete. Please rerun Keeper."
+		raise InitError
+	 
+	self.lPDB.setText("Connected to " + self.prefs.get("database", "host") + ":" + self.prefs.get("database", "port"))
+
+	# Make the information display sorted in the same order as the fields above
+	self.info.setSorting(3, 0)
+	
+	# Add debug info to the lists if so configured
+	if self.prefs.getboolean("debug", "debug_columns"):
+		self.files.addColumn("ID")
+		self.info.addColumn("ID")
+		self.categories.addColumn("ID")
+
+    # Create a QListViewItem for an object and put it in the list(s)
+    def listItem(self, root, item):
+  	litem = QListViewItem(root)
+	if type(item) == InstanceType and item.type == "Photo":
+		litem.setText(0, item.displayName)
+		litem.setPixmap(0, self.photoIcon)
+	elif type(item) == InstanceType and item.type == "Category":
+		litem.setText(0, item.name)
+		litem.setPixmap(0, self.categoryIcon)
+	else:
+		print "item " + item.ident + " is a " + str(type(item))
+	litem.setText(1, str(item.ident))
+		
+    # Create a new Category object and insert it in the database.
+    def createCategory(self, name, comment):
+	self.dbc.insertCategory(name, comment)
+	return self.dbc.categoryByName(name)
+
+    # Display and existing Category object in the lists.
+    def displayCategory(self, cat):
+	self.listItem(root=self.files, item=cat)
+	self.listItem(root=self.categories, item=cat)
+	self.category.insertItem(cat.name)
+
+    # Find a category QListViewItem given its name.
+    def findCategory(self, name, root):
+    	item = root.firstChild()
+	while item != None:
+		if (str(item.text(0)) == name):
+			return item
+		item = item.nextSibling()
+	return None
+
+    # Create a new Photo object and insert it in the database.
+    def createPhoto(self, name):
+    	newid = self.dbc.insertPhoto(name)
+	return self.dbc.photoByIdent(newid)
+	
+    # Display a photo object in the list.
+    def displayPhoto(self, photo):
+	cat = self.dbc.categoryByIdent(ident=photo.category)
+	assert cat, photo.category
+    	root = self.findCategory(root=self.files, name=cat.name)
+    	self.listItem(root=root, item=photo)
+
+    # Initialize Keeper from an existing PhotoDB.
+    def initFromDB(self):
+	# Get all the categories and show them
+    	cats = self.dbc.categories()	
+    	for cat in cats:
+		self.displayCategory(cat)
+
+	# Get all the photos and show them
+	photos = self.dbc.photos()
+	for photo in photos:
+		self.displayPhoto(photo)
+			
+	# Verify that a default category is available.
+	if self.findCategory(root=self.files, name="Default") is None:
+		defcat = self.createCategory(name="Default", comment="The default category")
+		self.displayCategory(defcat)
+
+    # A category item was selected - show information.
+    def slotViewCategory(self):
+    	# Get the selected item or return of none selected
+    	item = self.categories.selectedItem()
+	if item is None: return
+	
+	# Update the fields with current info
+	name = str(item.text(0))
+	cat = self.dbc.categoryByName(name)
+	self.catName.setText(cat.name)
+	self.catComment.setText(cat.comment)
+	
+	# If this is the default category, forbid updates
+	if name == "Default":
+		self.pbUpdateCat.setEnabled(0)
+		self.pbDeleteCat.setEnabled(0)
+	# ... otherwise permit them
+	else:
+		self.pbUpdateCat.setEnabled(1)
+		self.pbDeleteCat.setEnabled(1)
+
+    # "New Category" was clicked - open the dialog.
+    def slotNewCategory(self):
+	ncd = NewCategory(parent=self)
+	ncd.show()
+
+    # "Delete" was clicked - remove the category
+    def slotDeleteCategory(self):
+    	# Find the selected item - return if nothing was selected
+    	sel = self.categories.selectedItem()
+	if sel is None: return
+	
+	# Move all photos to the Default category
+	defcat = self.findCategory(root=self.files, name="Default")
+	defident = str(defcat.text(1))
+	name = str(sel.text(0))
+	tmp = self.findCategory(root=self.files, name=name)
+	child = tmp.firstChild()
+	while child != None:
+		# Note the nchild juggling to avoid fucking up the structures
+		nchild = child.nextSibling()
+		print str(child.text(0))
+		tmp.takeItem(child)
+		defcat.insertItem(child)
+		ident = str(child.text(1))		
+		self.dbc.updatePhoto(ident=ident, category=defident)
+		child = nchild
+	
+	# Delete the category itself from the category list
+	self.categories.takeItem(sel)	
+	# ... find it in the files list and delete it from there
+	self.files.takeItem(tmp)
+	# ... find it in the selection box and remove it from there too
+	lb = self.category.listBox()
+	for n in range(lb.numRows()):
+		if str(self.category.text(n)) == name:
+			self.category.removeItem(n)
+			break
+	# ... find it's ident and kill it in the database
+	ident = str(sel.text(1))
+	self.dbc.deleteCategory(ident=ident)
+	# ... and GC the fucker!
+	del sel
+	
+    # "Update Category" was clicked - change name and comment.
+    def slotUpdateCategory(self):
+    	# Get the selected item or return if none selected
+    	item = self.categories.selectedItem()
+	if item is None: return
+	
+	name = str(item.text(0))
+	ident = str(item.text(1))
+	newname = str(self.catName.text())
+	newcomment = str(self.catComment.text())
+	
+	# Update the displayed categories in the listboxes
+	item1 = self.findCategory(name=name, root=self.files)
+	item2 = self.findCategory(name=name, root=self.categories)
+	item1.setText(0, newname)
+	item2.setText(0, newname)
+	
+	# Update the category in the database
+	self.dbc.updateCategory(ident=ident, name=newname, comment=newcomment)
+	
+	# Update the category selection combobox
+	lb = self.category.listBox()
+	for n in range(lb.numRows()):
+		if str(self.category.text(n)) == name:
+			self.category.changeItem(newname, n)
+			break
+
+    # Remove the selected photo from the database
+    def slotRemovePhoto(self):
+    	# Get the selected item or return if none selected
+    	item = self.files.selectedItem()
+	if item is None: return
+	ident = str(item.text(1))
+	
+	# Remove from the listbox
+	if not item.nextSibling() is None:
+		item.nextSibling().setSelected(1)
+	item.parent().takeItem(item)
+	del item
+	
+	# Remove from the database
+	self.dbc.removePhoto(ident=ident)
+		
+    # "Import" was clicked - let user select photos and add them
+    # to the system.
+    def slotImportPhoto(self):
+	files = QFileDialog.getOpenFileNames("Photos (*.jpg)", os.path.expanduser("~/"));
+    	for file in files:
+		name = str(file)
+		# Add the photo if it doesn't already exist
+		if self.dbc.photoByName(name) is None:
+			photo = self.createPhoto(name)
+			self.displayPhoto(photo)
+
+    # A photo was selected - show information.
+    def slotViewPhoto(self):
+    	# Get the selected photograph.
+	sel = self.files.selectedItem()
+	if sel is None: return
+
+	self.info.clear()
+	self.comment.clear()
+	self.pixmap.clear()
+
+	ident = str(sel.text(1))
+	tmp = self.dbc.photoByIdent(ident)
+	if tmp is None: return
+
+	# Set the comment and category fields
+	self.comment.setText(tmp.comment)
+	catname = self.dbc.categoryByIdent(ident=tmp.category).name
+	lb = self.category.listBox()
+	for n in range(lb.numRows()):
+		if str(self.category.text(n)) == catname:
+			self.category.setCurrentItem(n)
+			break
+
+	# Display each of the seleced EXIF fields in the information list
+	tmp.getInfo()
+	if tmp.exif != None:
+		for n in range(len(self.exif_fields)):
+			field = self.exif_fields[n]
+			if tmp.exif.has_key(field):
+				name = self.exif_names[n]
+				transform = self.exif_transforms[n]
+				item = QListViewItem(self.info)
+				item.setText(0, name + ":")
+				item.setText(1, transform(tmp.exif[field]))
+				item.setText(2, str(n))
+				
+	# Display the thumbnail
+	tname = self.tncachedir + "/obj-" + str(tmp.ident) + ".jpg"
+	if not os.path.isfile(tname):
+		img = Image.open(tmp.name)
+		assert img
+		img.thumbnail((250,250))
+		img.save(tname)
+	tn = QPixmap(tname)
+	self.pixmap.setPixmap(tn)
+	
+    def slotUpdatePhoto(self):
+	# Get the currently selected item (return if nothing selected)
+    	sel = self.files.selectedItem()
+	if sel is None: return
+	selI = str(sel.text(1))
+	
+	# Get the desired comment and category
+	comment = str(self.comment.text())
+	categoryN = str(self.category.currentText())
+	category = self.dbc.categoryByName(categoryN)
+	assert category # we should not be able to select a nonexistent category	
+	categoryI = category.ident
+	
+	# Select the next sibling before changing the list
+	# (this makes it easier to update many photos)
+	if not sel.nextSibling() is None:
+		sel.nextSibling().setSelected(1)
+	
+	# Move the photo in the list
+	opar = sel.parent()
+	npar = self.findCategory(root=self.files, name=categoryN)
+	opar.takeItem(sel)
+	npar.insertItem(sel)
+	
+	# Update the database with new information
+	self.dbc.updatePhoto(ident=selI, category=categoryI, comment=comment)
+	
+    # Close databases before exiting.
+    def prepareForExit(self):
+	f = open(os.path.expanduser(self.prefdir + "/keeper.ini"), "w");
+	f.write("# keeper.ini\n\n# This is an automatically (re)generated file.\n# Comments will not be preserved.\n\n")
+	self.prefs.write(f)
+	f.close()
+	return BaseWidget.__del__(self)
+
+    # Export the data as a text file
+    def slotExportText(self):
+	name = QFileDialog.getSaveFileName(os.path.expanduser("~/"), "Text files (*.txt)");
+	if name is None: return
+	name = str(name)
+    	catindex = {}
+
+	sfile = open(name, "w")
+	for category in self.dbc.categories():
+		sfile.write('Category: "' + category.name + '"\n')
+		sfile.write('\tComment: "' + category.comment + '"\n\n')
+		catindex[category.ident] = category.name
+	for photo in self.dbc.photos():
+		sfile.write('Photo: "' + photo.name + '"\n')
+		sfile.write('\tComment: "' + photo.comment + '"\n')
+		sfile.write('\tCategory: "' + catindex[photo.category] + '"\n')
+		# Display each of the seleced EXIF fields in the information list
+		photo.getInfo()
+		if photo.exif != None:
+			for n in range(len(self.exif_fields)):
+				field = self.exif_fields[n]
+				if photo.exif.has_key(field):
+					name = self.exif_names[n]
+					transform = self.exif_transforms[n]
+					sfile.write("\t" + name + ": ")
+					sfile.write('"' + transform(photo.exif[field]) + '"\n')
+		sfile.write("\n")
+	sfile.close()
+	
+    # Export the data as a cthumb album
+    def slotExportCthumb(self):
+    	pass
+
+def setupMenus(window, app, widget):
+	mb = window.menuBar()
+	mFile = QPopupMenu(mb)
+	mFile.insertItem("&Import photo...", widget.slotImportPhoto)
+	mFile.insertItem("&New Category...", widget.slotNewCategory)
+	mFile.insertItem("Export (&text)...", widget.slotExportText)
+	mFile.insertItem("Export (&cthumb)...", widget.slotExportCthumb)
+	mFile.insertSeparator()
+	mFile.insertItem("E&xit", app, SLOT("quit()"))
+	mb.insertItem("&File", mFile)
+
+def main(args):
+	app=QApplication(args)
+	win=QMainWindow()
+	try:
+		widget=KeeperGUI(parent=win)
+	except InitError:
+		return
+	except PgSQL.DatabaseError:
+		info = sys.exc_info()
+		print "Error connecting to database:\n\t" + str(info[1])
+		print "Check settings in config file and try again."
+		return
+	win.setCentralWidget(widget)
+	win.setCaption("pyKeeper")
+	win.setIcon(QPixmap(icons.image_data))
+	setupMenus(win, app, widget)
+	win.show()
+	app.connect(app, SIGNAL("lastWindowClosed()"),
+		app, SLOT("quit()"))
+	app.exec_loop()
+	widget.prepareForExit()
+
+if __name__=="__main__":
+	main(sys.argv)

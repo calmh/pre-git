@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="PDBDataset" targetNamespace="http://services.jborg.info/Database.xsd" elementFormDefault="qualified"
+	xmlns="http://services.jborg.info/Database.xsd" xmlns:mstns="http://services.jborg.info/Database.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="exif">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="exif_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="photo_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="shutter" type="xs:double" minOccurs="0" />
+				<xs:element name="aperture" type="xs:double" minOccurs="0" />
+				<xs:element name="capture_date" type="xs:dateTime" minOccurs="0" />
+				<xs:element name="iso" type="xs:int" minOccurs="0" />
+				<xs:element name="focal_length" type="xs:int" minOccurs="0" />
+				<xs:element name="expcomp" type="xs:double" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="folder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="folder_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="friendly_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="caption" type="xs:string" minOccurs="0" />
+				<xs:element name="highlight_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" minOccurs="0" />
+				<xs:element name="sort_order" type="xs:int" minOccurs="0" />
+				<xs:element name="created_date" type="xs:dateTime" />
+				<xs:element name="sec_level" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="photo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="photo_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="friendly_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+				<xs:element name="caption" type="xs:string" minOccurs="0" />
+				<xs:element name="folder_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="created_date" type="xs:dateTime" />
+				<xs:element name="sec_level" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="instance">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="instance_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="photo_id" msdata:DataType="System.Guid, mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+					type="xs:string" />
+				<xs:element name="width" type="xs:int" minOccurs="0" />
+				<xs:element name="height" type="xs:int" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="user">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user_id" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="sec_level" type="xs:int" />
+				<xs:element name="login" type="xs:string" />
+				<xs:element name="password" type="xs:base64Binary" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="session">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="session_id" type="xs:string" />
+				<xs:element name="user_id" type="xs:string" />
+				<xs:element name="last_seen" type="xs:dateTime" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

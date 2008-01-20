@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ]; then
+   if [ -d /usr/doc -a ! -e /usr/doc/statd -a -d /usr/share/doc/statd ]; then
+      ln -sf ../share/doc/statd /usr/doc/statd
+   fi
+fi
+
+update-inetd --group INFO --add '7687\t\tstream\ttcp\tnowait\troot\t/usr/sbin/tcpd\t/usr/sbin/statd'
+/etc/init.d/inetd reload
+

@@ -1,0 +1,612 @@
+<!DOCTYPE UI><UI>
+<class>BaseJukeBox</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>JukeBox</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1024</width>
+            <height>769</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>minimumSize</name>
+        <size>
+            <width>1024</width>
+            <height>768</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>BFS Jukebox</string>
+    </property>
+    <vbox>
+        <property stdset="1">
+            <name>margin</name>
+            <number>11</number>
+        </property>
+        <property stdset="1">
+            <name>spacing</name>
+            <number>6</number>
+        </property>
+        <widget>
+            <class>QTabWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TabWidget2</cstring>
+            </property>
+            <widget>
+                <class>QWidget</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>tab</cstring>
+                </property>
+                <attribute>
+                    <name>title</name>
+                    <string>Jukebox</string>
+                </attribute>
+                <vbox>
+                    <property stdset="1">
+                        <name>margin</name>
+                        <number>11</number>
+                    </property>
+                    <property stdset="1">
+                        <name>spacing</name>
+                        <number>6</number>
+                    </property>
+                    <widget>
+                        <class>QLabel</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>playing</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>font</name>
+                            <font>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property stdset="1">
+                            <name>frameShape</name>
+                            <enum>MShape</enum>
+                        </property>
+                        <property stdset="1">
+                            <name>frameShadow</name>
+                            <enum>MShadow</enum>
+                        </property>
+                    </widget>
+                    <widget>
+                        <class>QLayoutWidget</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>Layout5</cstring>
+                        </property>
+                        <hbox>
+                            <property stdset="1">
+                                <name>margin</name>
+                                <number>0</number>
+                            </property>
+                            <property stdset="1">
+                                <name>spacing</name>
+                                <number>6</number>
+                            </property>
+                            <widget>
+                                <class>QListView</class>
+                                <column>
+                                    <property>
+                                        <name>text</name>
+                                        <string>Name</string>
+                                    </property>
+                                    <property>
+                                        <name>clickable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                    <property>
+                                        <name>resizeable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property>
+                                        <name>text</name>
+                                        <string>Length</string>
+                                    </property>
+                                    <property>
+                                        <name>clickable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                    <property>
+                                        <name>resizeable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property>
+                                        <name>text</name>
+                                        <string>Bitrate</string>
+                                    </property>
+                                    <property>
+                                        <name>clickable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                    <property>
+                                        <name>resizeable</name>
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <property stdset="1">
+                                    <name>name</name>
+                                    <cstring>files</cstring>
+                                </property>
+                                <property stdset="1">
+                                    <name>minimumSize</name>
+                                    <size>
+                                        <width>250</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property stdset="1">
+                                    <name>showSortIndicator</name>
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget>
+                                <class>QLayoutWidget</class>
+                                <property stdset="1">
+                                    <name>name</name>
+                                    <cstring>Layout20</cstring>
+                                </property>
+                                <vbox>
+                                    <property stdset="1">
+                                        <name>margin</name>
+                                        <number>0</number>
+                                    </property>
+                                    <property stdset="1">
+                                        <name>spacing</name>
+                                        <number>6</number>
+                                    </property>
+                                    <widget>
+                                        <class>QGroupBox</class>
+                                        <property stdset="1">
+                                            <name>name</name>
+                                            <cstring>GroupBox3</cstring>
+                                        </property>
+                                        <property stdset="1">
+                                            <name>maximumSize</name>
+                                            <size>
+                                                <width>400</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property stdset="1">
+                                            <name>title</name>
+                                            <string>Playlist</string>
+                                        </property>
+                                        <vbox>
+                                            <property stdset="1">
+                                                <name>margin</name>
+                                                <number>11</number>
+                                            </property>
+                                            <property stdset="1">
+                                                <name>spacing</name>
+                                                <number>6</number>
+                                            </property>
+                                            <widget>
+                                                <class>QListView</class>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>#</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>Name</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>Length</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>Bitrate</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <property stdset="1">
+                                                    <name>name</name>
+                                                    <cstring>playlist</cstring>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                    <widget>
+                                        <class>QGroupBox</class>
+                                        <property stdset="1">
+                                            <name>name</name>
+                                            <cstring>GroupBox4</cstring>
+                                        </property>
+                                        <property stdset="1">
+                                            <name>maximumSize</name>
+                                            <size>
+                                                <width>400</width>
+                                                <height>250</height>
+                                            </size>
+                                        </property>
+                                        <property stdset="1">
+                                            <name>title</name>
+                                            <string>Top Ten</string>
+                                        </property>
+                                        <vbox>
+                                            <property stdset="1">
+                                                <name>margin</name>
+                                                <number>11</number>
+                                            </property>
+                                            <property stdset="1">
+                                                <name>spacing</name>
+                                                <number>6</number>
+                                            </property>
+                                            <widget>
+                                                <class>QListView</class>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>#</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>Name</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <column>
+                                                    <property>
+                                                        <name>text</name>
+                                                        <string>Score</string>
+                                                    </property>
+                                                    <property>
+                                                        <name>clickable</name>
+                                                        <bool>false</bool>
+                                                    </property>
+                                                    <property>
+                                                        <name>resizeable</name>
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </column>
+                                                <property stdset="1">
+                                                    <name>name</name>
+                                                    <cstring>toplist</cstring>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget>
+                        <class>QLayoutWidget</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>Layout23</cstring>
+                        </property>
+                        <hbox>
+                            <property stdset="1">
+                                <name>margin</name>
+                                <number>0</number>
+                            </property>
+                            <property stdset="1">
+                                <name>spacing</name>
+                                <number>6</number>
+                            </property>
+                            <widget>
+                                <class>QPushButton</class>
+                                <property stdset="1">
+                                    <name>name</name>
+                                    <cstring>pbAdd</cstring>
+                                </property>
+                                <property stdset="1">
+                                    <name>text</name>
+                                    <string>&amp;Add</string>
+                                </property>
+                                <property>
+                                    <name>toolTip</name>
+                                    <string>Add selected file to playlist</string>
+                                </property>
+                            </widget>
+                            <widget>
+                                <class>QPushButton</class>
+                                <property stdset="1">
+                                    <name>name</name>
+                                    <cstring>pbAddRandom</cstring>
+                                </property>
+                                <property stdset="1">
+                                    <name>text</name>
+                                    <string>Add ra&amp;ndom</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property>
+                                    <name>name</name>
+                                    <cstring>Spacer2</cstring>
+                                </property>
+                                <property stdset="1">
+                                    <name>orientation</name>
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property stdset="1">
+                                    <name>sizeType</name>
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property>
+                                    <name>sizeHint</name>
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget>
+                                <class>QLabel</class>
+                                <property stdset="1">
+                                    <name>name</name>
+                                    <cstring>TextLabel6</cstring>
+                                </property>
+                                <property stdset="1">
+                                    <name>text</name>
+                                    <string>BFS Jukebox v0.1</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget>
+                <class>QWidget</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>tab</cstring>
+                </property>
+                <attribute>
+                    <name>title</name>
+                    <string>Transfer Stats</string>
+                </attribute>
+                <widget>
+                    <class>QLayoutWidget</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>Layout8</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>geometry</name>
+                        <rect>
+                            <x>40</x>
+                            <y>20</y>
+                            <width>470</width>
+                            <height>90</height>
+                        </rect>
+                    </property>
+                    <grid>
+                        <property stdset="1">
+                            <name>margin</name>
+                            <number>0</number>
+                        </property>
+                        <property stdset="1">
+                            <name>spacing</name>
+                            <number>6</number>
+                        </property>
+                        <widget row="2"  column="0" >
+                            <class>QLabel</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>TextLabel3</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>text</name>
+                                <string>Number of users:</string>
+                            </property>
+                        </widget>
+                        <widget row="0"  column="1" >
+                            <class>QLCDNumber</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>inbw</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>sizePolicy</name>
+                                <sizepolicy>
+                                    <hsizetype>1</hsizetype>
+                                    <vsizetype>3</vsizetype>
+                                </sizepolicy>
+                            </property>
+                            <property stdset="1">
+                                <name>frameShape</name>
+                                <enum>NoFrame</enum>
+                            </property>
+                            <property stdset="1">
+                                <name>segmentStyle</name>
+                                <enum>Filled</enum>
+                            </property>
+                        </widget>
+                        <widget row="1"  column="1" >
+                            <class>QLCDNumber</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>outbw</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>sizePolicy</name>
+                                <sizepolicy>
+                                    <hsizetype>1</hsizetype>
+                                    <vsizetype>3</vsizetype>
+                                </sizepolicy>
+                            </property>
+                            <property stdset="1">
+                                <name>frameShape</name>
+                                <enum>NoFrame</enum>
+                            </property>
+                            <property stdset="1">
+                                <name>segmentStyle</name>
+                                <enum>Filled</enum>
+                            </property>
+                        </widget>
+                        <widget row="2"  column="1" >
+                            <class>QLCDNumber</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>numusers</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>sizePolicy</name>
+                                <sizepolicy>
+                                    <hsizetype>1</hsizetype>
+                                    <vsizetype>3</vsizetype>
+                                </sizepolicy>
+                            </property>
+                            <property stdset="1">
+                                <name>frameShape</name>
+                                <enum>NoFrame</enum>
+                            </property>
+                            <property stdset="1">
+                                <name>segmentStyle</name>
+                                <enum>Filled</enum>
+                            </property>
+                        </widget>
+                        <widget row="0"  column="2" >
+                            <class>QProgressBar</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>inbwpb</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>minimumSize</name>
+                                <size>
+                                    <width>200</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                        </widget>
+                        <widget row="1"  column="2" >
+                            <class>QProgressBar</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>outbwpb</cstring>
+                            </property>
+                        </widget>
+                        <widget row="0"  column="0" >
+                            <class>QLabel</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>TextLabel1</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>text</name>
+                                <string>Incoming bandwidth (kbit/s):</string>
+                            </property>
+                        </widget>
+                        <widget row="1"  column="0" >
+                            <class>QLabel</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>TextLabel2</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>text</name>
+                                <string>Outgoing bandwidth (kbit/s):</string>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>pbAdd</sender>
+        <signal>clicked()</signal>
+        <receiver>JukeBox</receiver>
+        <slot>slotAdd()</slot>
+    </connection>
+    <connection>
+        <sender>files</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>JukeBox</receiver>
+        <slot>slotAdd()</slot>
+    </connection>
+    <connection>
+        <sender>pbAddRandom</sender>
+        <signal>clicked()</signal>
+        <receiver>JukeBox</receiver>
+        <slot>slotAddRandom()</slot>
+    </connection>
+    <connection>
+        <sender>playlist</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>JukeBox</receiver>
+        <slot>slotPlaylistCancel()</slot>
+    </connection>
+    <slot access="public">slotPlaylistCancel()</slot>
+    <slot access="public">slotAdd()</slot>
+    <slot access="public">slotAddRandom()</slot>
+</connections>
+</UI>

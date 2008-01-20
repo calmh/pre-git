@@ -1,0 +1,71 @@
+digraph "Unit Test" {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Deployment/Unit Test.octest\n4541d43a5fa19460407d04feb27b7f8d\nDepsUpdated", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00002 [ label = "Contents/Info.plist\ne116c93bfd8735cc2f4324486fa81abd\nUpToDate" ];
+   n00003 [ label = "Unit Test.build/Info.plist\n0000000042fb0a760000000000000269\nUpToDate" ];
+   n00004 [ label = "ppc/NameMapper.o\n15feec2f500c6372cf6db260d25fc7be\nUpToDate" ];
+   n00005 [ label = "Headers/Cocoa.h\n0000000042c7f61100000000000001e5\nUpToDate" ];
+   n00006 [ label = "Cocoa-cxcdhmgwsfnfeqbidfzpcwoqnybj/Cocoa.h.gch\n51c7387b37e745a62b1d0df5ba144154\nUpToDate", peripheries = 3 ];
+   n00007 [ label = "XDownloader/NameMapper.m\n0000000042fb02b6000000000000135f\nUpToDate" ];
+   n00008 [ label = "ppc/testExifWrapper.o\nf62aea30c225c736578858a7cef20fd2\nMissing", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00009 [ label = "XDownloader/testExifWrapper.m\n0000000042fb0bcb0000000000000188\nUpToDate" ];
+   n00010 [ label = "ppc/XDVariables.o\n03ae5a77d2617ee4ecb00ab418636e99\nUpToDate" ];
+   n00011 [ label = "XDownloader/XDVariables.m\n0000000042fb02b60000000000001741\nUpToDate" ];
+   n00012 [ label = "ppc/ExifWrapper.o\n74c9f0f6c1bc4cf8d8bd4b7023b9c049\nUpToDate" ];
+   n00013 [ label = "XDownloader/ExifWrapper.m\n0000000042fb02b60000000000000f57\nUpToDate" ];
+   n00014 [ label = "ppc/Unit Test_vers.o\n9b53bd8de8fe34c9fbd2546e7d82eb23\nUpToDate" ];
+   n00015 [ label = "DerivedSources/Unit Test_vers.c\n0000000042fb0a7600000000000000f4\nUpToDate" ];
+   n00016 [ label = "MacOS/Unit Test\n1c21186fc62a664d8c842da55023dec0\nDepsUpdated", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9" ];
+   n00017 [ label = "Frameworks/Nym.Foundation.framework[C]\n0000000042fb084400000000000000cc\nUpToDate" ];
+   n00018 [ label = "Frameworks/SenTestingKit.framework[C]\n0000000042c7f61d00000000000000cc\nUpToDate" ];
+   n00019 [ label = "<Unit Test.build/Script-29969BA808AB413900D15ED6.sh>[A]\n597b13a052299dca3c749d2b2b9642da\nDepsUpdated", color = "0.1 0.5 0.5", fillcolor = "0.1 0.2 0.9", peripheries = 3 ];
+   n00020 [ label = "Unit Test.build/Script-29969BA808AB413900D15ED6.sh\n0000000042fb0a760000000000000062\nUpToDate" ];
+   n00021 [ label = "XDownloader/ExifWrapper.h\n0000000042fb02b6000000000000014b\nUpToDate" ];
+   n00022 [ label = "Headers/NymLogger.h\n0000000042fb084100000000000005d6\nUpToDate" ];
+   n00023 [ label = "XDownloader/NameMapper.h\n0000000042fb02b600000000000001f4\nUpToDate" ];
+   n00024 [ label = "XDownloader/XDVariables.h\n0000000042fb02b60000000000000150\nUpToDate" ];
+   n00025 [ label = "XDownloader/testExifWrapper.h\n0000000042fb0afc00000000000000f2\nUpToDate" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n0000000042fb0a760000000000000269\n^ e116c93bbf7c3fba2f4324486fa818d4\n= e116c93bfd8735cc2f4324486fa81abd\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00002 [ label = "CompileC NameMapper.o <wt:4>\nwaitCount: 0\n51c7387b751c4de72b1d0df5ba145632\n^ 4439d45425102e95e470bf95684b918c\n= 15feec2f500c6372cf6db260d25fc7be\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00003 [ label = "ProcessPCH Cocoa.h.gch <wt:3>\nwaitCount: 0\n0000000042c7f61100000000000001e5\n^ 51c7387b7520b3b72b1d0df5ba1440b1\n= 51c7387b37e745a62b1d0df5ba144154\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00004 [ label = "CompileC testExifWrapper.o <wt:4>\nwaitCount: 0\n51c7387b751c46272b1d0df5ba144165\n^ a7edd24bb73981117c95555274e64eb7\n= f62aea30c225c736578858a7cef20fd2\nNeedsToRun\n1 output is missing", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00005 [ label = "CompileC XDVariables.o <wt:4>\nwaitCount: 0\n51c7387b751c4de72b1d0df5ba145293\n^ 5269620ca77d3303c7ad0741a2773c0a\n= 03ae5a77d2617ee4ecb00ab418636e99\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00006 [ label = "CompileC ExifWrapper.o <wt:4>\nwaitCount: 0\n51c7387b751c4de72b1d0df5ba144a9e\n^ 250ec88db4a0011ff3a0468599ad8ad7\n= 74c9f0f6c1bc4cf8d8bd4b7023b9c049\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00007 [ label = "CompileC \"Unit Test_vers.o\" <wt:4>\nwaitCount: 0\n0000000042fb0a7600000000000000f4\n^ 9b53bd8daa053ebffbd2546e7d82ebd7\n= 9b53bd8de8fe34c9fbd2546e7d82eb23\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00008 [ label = "Ld \"Unit Test\" <wt:4>\nwaitCount: 1\n0fe0111369365cc8573aff6d5af58d9f\n^ 13c1097caf1c3a85dbbed2c80ad6535f\n= 1c21186fc62a664d8c842da55023dec0\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00009 [ label = "PhaseScriptExecution Script-29969BA808AB413900D15ED6.sh <wt:8>\nwaitCount: 0\n0000000042fb0a760000000000000062\n^ 597b13a010d297bc3c749d2b2b9642b8\n= 597b13a052299dca3c749d2b2b9642da\nNeedsToRun\n1 output is always out-of-date", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+   c00010 [ label = "Touch \"Unit Test.octest\" <wt:9>\nwaitCount: 1\nfd37d1543bad5381a3c709ed3f8bc47d\n^ b876056e640cc7e1e3ba0d138df0bbf0\n= 4541d43a5fa19460407d04feb27b7f8d\nIndirectlyNeedsToRun\nNeeds to run because at least one of the inputs to the command are scheduled to be updated.", color = "0.6 0.5 0.7", fillcolor = "0.6 0.2 1.0" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00010 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00012 -> { c00006 };
+   n00014 -> { c00007 };
+   n00016 -> { c00008 };
+   n00019 -> { c00009 };
+   c00001 -> { n00003 };
+   c00002 -> { n00006 n00007 };
+   c00003 -> { n00005 };
+   c00004 -> { n00006 n00009 };
+   c00005 -> { n00006 n00011 };
+   c00006 -> { n00006 n00013 };
+   c00007 -> { n00015 };
+   c00008 -> { n00004 n00008 n00010 n00012 n00014 n00017 n00018 };
+   c00009 -> { n00020 };
+   c00010 -> { n00002 n00016 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00007 -> { n00023 n00021 n00024 n00022 };
+   n00009 -> { n00025 n00021 };
+   n00011 -> { n00024 n00022 };
+   n00013 -> { n00021 n00022 };
+}

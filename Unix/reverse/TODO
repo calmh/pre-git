@@ -1,0 +1,19 @@
+Todo
+=======
+
+Thing that need to be done, or that I plan to do, in no particular order:
+
+* Find out what in my memory handling is failing, and fixing it so
+  that 'save' won't need so much memory.
+
+* Create the 'restore' tool, with a command-line syntax slightly
+  inspired from Legato.
+
+* Use getopts for command-line switches.
+
+* Create a 'reversed' daemon to run on computers, to be able to do
+  network backups without having the remote machine NFS-mounted.
+
+-- 
+$Id: TODO,v 1.1.1.1 2003/03/01 12:55:12 jb Exp $
+

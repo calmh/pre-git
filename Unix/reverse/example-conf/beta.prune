@@ -1,0 +1,10 @@
+/dev/
+/proc/
+/tmp/
+/exclude/
+.iso
+.mpg
+.mp3
+/vmware/
+SWAP
+/public/tele/

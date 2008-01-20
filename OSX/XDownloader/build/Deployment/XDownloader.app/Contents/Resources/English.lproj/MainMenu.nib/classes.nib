@@ -1,0 +1,52 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                buttonCancelClicked = id; 
+                buttonOKClicked = id; 
+                chooseDestination = id; 
+                chooseSource = id; 
+                preferencesSelected = id; 
+            }; 
+            CLASS = PreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                exampleField = NSTextField; 
+                exampleVariables = NSTableView; 
+                preferencesPanel = NSPanel; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                buttonDownloadClicked = id; 
+                buttonJobNameCancelClicked = id; 
+                buttonJobNameOKClicked = id; 
+                buttonRefreshClicked = id; 
+                buttonStopClicked = id; 
+            }; 
+            CLASS = RenamerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                buttonDownload = NSButton; 
+                buttonRefresh = NSButton; 
+                jobName = NSString; 
+                jobNameField = NSTextField; 
+                jobNameWindow = NSWindow; 
+                mainWindow = NSWindow; 
+                progressIndicator = NSProgressIndicator; 
+                progressWindow = NSWindow; 
+                refreshProgress = NSProgressIndicator; 
+                table = NSTableView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper", "Keeper.csproj", "{7E26D4D3-426D-4035-8FEE-4BF4A0240157}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Keeper Installer", "..\Keeper Installer\Keeper Installer.vdproj", "{98B9397D-8446-43C0-8F6C-15C0BA6FCAF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7E26D4D3-426D-4035-8FEE-4BF4A0240157}.Debug.ActiveCfg = Debug|.NET
+		{7E26D4D3-426D-4035-8FEE-4BF4A0240157}.Debug.Build.0 = Debug|.NET
+		{7E26D4D3-426D-4035-8FEE-4BF4A0240157}.Release.ActiveCfg = Release|.NET
+		{7E26D4D3-426D-4035-8FEE-4BF4A0240157}.Release.Build.0 = Release|.NET
+		{98B9397D-8446-43C0-8F6C-15C0BA6FCAF7}.Debug.ActiveCfg = Debug
+		{98B9397D-8446-43C0-8F6C-15C0BA6FCAF7}.Release.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

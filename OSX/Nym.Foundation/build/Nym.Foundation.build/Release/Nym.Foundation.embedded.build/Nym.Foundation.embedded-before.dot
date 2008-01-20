@@ -1,0 +1,60 @@
+digraph Nym.Foundation.embedded {
+   size = "10.000000,8.500000";
+   concentrate = false;
+
+   node [ shape = box, style = filled, color = "0.3 0.5 0.6", fillcolor = "0.3 0.2 0.9", fontname = "Monaco", fontsize = "9" ];
+   n00001 [ label = "Release/Nym.Foundation.embedded.framework\n0b3e90e037778dbdcae26328cc36c5f4\nUpToDate", peripheries = 3 ];
+   n00002 [ label = "Resources/Info.plist\n0ec77c58ec5403fb917eb3a53e3e61da\nUpToDate" ];
+   n00003 [ label = "Nym.Foundation.embedded.build/Info.plist\n0000000042fafd910000000000000280\nUpToDate" ];
+   n00004 [ label = "Headers/NymLogger.h\n303c1271a09c2ef4320e02f269d888e2\nUpToDate" ];
+   n00005 [ label = "Nym.Foundation/NymLogger.h\n0000000042fafd3a00000000000005d6\nUpToDate" ];
+   n00006 [ label = "English.lproj/InfoPlist.strings\n656ebf0e01a8bdcc459bf6493c62bd77\nUpToDate" ];
+   n00007 [ label = "English.lproj/InfoPlist.strings\n0000000042fafd3a000000000000010e\nUpToDate" ];
+   n00008 [ label = "ppc/NymLogger.o\n9fef619e6cd83b9928206193af05855f\nUpToDate" ];
+   n00009 [ label = "Nym.Foundation/Nym.Foundation_Prefix.pch\n0000000042fafd3a00000000000000a0\nUpToDate" ];
+   n00010 [ label = "Nym.Foundation_Prefix-aevuhqruqgospxainmsxyzkxxvfl/Nym.Foundation_Prefix.pch.gch\n2679b6af7a117d22778714e6a4d1d4fd\nUpToDate", peripheries = 3 ];
+   n00011 [ label = "Nym.Foundation/NymLogger.m\n0000000042fafd3a0000000000000da8\nUpToDate" ];
+   n00012 [ label = "A/Nym.Foundation.embedded\nfc7027d5c9f0f1fc5afcddab1b75cbc9\nUpToDate" ];
+   n00013 [ label = "Frameworks/Cocoa.framework[C]\n0000000042c7f61100000000000000cc\nUpToDate" ];
+   n00014 [ label = "Versions/Current\nd767f8508a936618bfbcd6e67306581b\nUpToDate" ];
+   n00015 [ label = "Nym.Foundation.embedded.framework/Resources\n626b7f173ede0a5fef793216052533ad\nUpToDate" ];
+   n00016 [ label = "Nym.Foundation.embedded.framework/Headers\n5c3ce112b9f0934a664a0e80bda876f2\nUpToDate" ];
+   n00017 [ label = "Nym.Foundation.embedded.framework/Nym.Foundation.embedded\n775597172759af6b7d11611636bbc3a9\nUpToDate" ];
+
+   node [ shape = box, style = "filled,bold", color = "0.7 0.5 0.7", fillcolor = "0.7 0.2 1.0", fontname = "Monaco", fontsize = "9" ];
+   c00001 [ label = "PBXCp Info.plist <wt:0>\nwaitCount: 0\n0000000042fafd910000000000000280\n^ 0ec77c58aeaefe6a917eb3a53e3e635a\n= 0ec77c58ec5403fb917eb3a53e3e61da\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00002 [ label = "CpHeader NymLogger.h <wt:2>\nwaitCount: 0\n00000000000000000000000000000000\n^ 303c1271a09c2ef4320e02f269d888e2\n= 303c1271a09c2ef4320e02f269d888e2\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00003 [ label = "CpResource InfoPlist.strings <wt:4>\nwaitCount: 0\n00000000000000000000000000000000\n^ 656ebf0e01a8bdcc459bf6493c62bd77\n= 656ebf0e01a8bdcc459bf6493c62bd77\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00004 [ label = "CompileC NymLogger.o <wt:6>\nwaitCount: 0\n2679b6af7a117d22778714e6a4d1dc83\n^ b996d73116c946bb5fa775750bd459dc\n= 9fef619e6cd83b9928206193af05855f\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00005 [ label = "ProcessPCH Nym.Foundation_Prefix.pch.gch <wt:5>\nwaitCount: 0\n0000000042fafd3a00000000000000a0\n^ 2679b6af38eb8018778714e6a4d1d45d\n= 2679b6af7a117d22778714e6a4d1d4fd\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00006 [ label = "Ld Nym.Foundation.embedded <wt:6>\nwaitCount: 0\n9fef619e2e1fcd8828206193af058593\n^ 639f464be7ef3c7472dcbc38b4704e5a\n= fc7027d5c9f0f1fc5afcddab1b75cbc9\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00007 [ label = "SymLink Current <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ d767f8508a936618bfbcd6e67306581b\n= d767f8508a936618bfbcd6e67306581b\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00008 [ label = "SymLink Resources <wt:0>\nwaitCount: 0\n00000000000000000000000000000000\n^ 626b7f173ede0a5fef793216052533ad\n= 626b7f173ede0a5fef793216052533ad\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00009 [ label = "SymLink Headers <wt:0>\nwaitCount: 0\nd767f8508a936618bfbcd6e67306581b\n^ 8b5b19423363f552d9f6d866ceae2ee9\n= 5c3ce112b9f0934a664a0e80bda876f2\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00010 [ label = "SymLink Nym.Foundation.embedded <wt:8>\nwaitCount: 0\n00000000000000000000000000000000\n^ 775597172759af6b7d11611636bbc3a9\n= 775597172759af6b7d11611636bbc3a9\nDoesNotNeedToRun\n(no 'why' info)" ];
+   c00011 [ label = "Touch Nym.Foundation.embedded.framework <wt:9>\nwaitCount: 0\n09bc15c10ee81fadc5871321e419c989\n^ 02828521399f92100f657009282f0c7d\n= 0b3e90e037778dbdcae26328cc36c5f4\nDoesNotNeedToRun\n(no 'why' info)" ];
+
+   edge [ style = solid, color = black, arrowhead = none, arrowtail = normal ];
+   n00001 -> { c00011 };
+   n00002 -> { c00001 };
+   n00004 -> { c00002 };
+   n00006 -> { c00003 };
+   n00008 -> { c00004 };
+   n00010 -> { c00005 };
+   n00012 -> { c00006 };
+   n00014 -> { c00007 };
+   n00015 -> { c00008 };
+   n00016 -> { c00009 };
+   n00017 -> { c00010 };
+   c00001 -> { n00003 };
+   c00002 -> { n00005 n00005 };
+   c00003 -> { n00007 n00007 };
+   c00004 -> { n00010 n00011 };
+   c00005 -> { n00009 };
+   c00006 -> { n00008 n00013 };
+   c00009 -> { n00014 };
+   c00011 -> { n00002 n00004 n00004 n00006 n00012 n00014 n00015 n00016 n00017 };
+
+   edge [ style = solid, color = gray60, arrowhead = none, arrowtail = normal ];
+   n00011 -> { n00005 };
+}

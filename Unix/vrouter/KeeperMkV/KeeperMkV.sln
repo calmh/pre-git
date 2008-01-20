@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeeperMkV", "KeeperMkV.csproj", "{64D27259-7CC5-4284-954C-847E238CAE4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{64D27259-7CC5-4284-954C-847E238CAE4E}.Debug.ActiveCfg = Debug|.NET
+		{64D27259-7CC5-4284-954C-847E238CAE4E}.Debug.Build.0 = Debug|.NET
+		{64D27259-7CC5-4284-954C-847E238CAE4E}.Release.ActiveCfg = Release|.NET
+		{64D27259-7CC5-4284-954C-847E238CAE4E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,133 @@
+0.58 [981109]
+- Fixed 'Add MP3'-dialog.
+- Start playing automatically.
+
+0.57 [981030]
+- Minor assorted bugfixes.
+
+0.56 [981024]
+- Updates of the player code: no more crashes when seeking!
+- Removed some GCC-isms.
+- Fixes to make it compile under Solaris and FreeBSD
+
+0.55 [981019]
+- Fixed several not-so-minor bugs concerning stability. More on the way... Still have a few patches to apply.
+
+0.54 [981010]
+- Completed (?) implementation of ID3-tagging
+- Fixed several minor bugs.
+
+0.53 [981010]
+- Fixed bug about sometimes not showing ID3 information
+- Autoconf support for Japanese I18N (Thanks to Hiroshi Takekawa!)
+
+0.52 [981007]
+- Fixed bug that caused crashes when doing recursive add. (Thanks to all who reported it.)
+- Added support for ID3-tags and I18N internatialization. (Thanks to Daisuke Taruki!)
+- Small interface changes.
+- Some other minor bugs squashed.
+
+0.51 [980930]
+- Fixed bug about not closing played files.
+- Now handles WinAMP .m3u playlists.
+- Removed unportable asprintf calls.
+- UI improvements
+- Various bugs fixed...
+
+0.50 [980922]
+- Mostly synced with bug reports/patched from other people. Credits to them!
+- More playlist features.
+- Esound now detected in configure script.
+
+0.49 [980920]
+- Enhanced playlist functionality
+- Added ESD-support (Read Makefile!) (Thanks to Nick Lopez!)
+
+0.48 [980914]
+- Fixed a few bugs.
+- Added autoconf
+
+0.47 [980906] 
+- Auto-scrolling of playlist window implemented. 
+- Playlist window shows length and bitrate of all songs and has a more advanced way of handling which songs have been played 
+- Fixed bug concerning loading of MP3's from command line 
+
+0.46 [980901] 
+- You now can save options between sessions. 
+- Click the label to toggle between elapsed or remaining time. 
+- Removed /tmp/replay.pid beacuse it's a security danger. Will find out a more elegant scheme later.
+
+0.45 [980830] 
+- Window doesn't automatically resize to accomodate long song title anymore. 
+- New cooler pixmapped buttons stolen from gtcd 
+
+0.44 [980827] 
+- Recursive adding of MP3's. Just select a directory in the file
+  selector and press OK.
+- Will only load files that vaguely resemble an MP3. 
+
+0.43 [980826] 
+- Fixed hardcoded /home/jb preventing people from using themes... Sorry. 
+- Fixed two bad bugs about pausing (100% CPU-time and lockup when
+  'Stop' pressed...) 
+- Implemented 'default' playlist. Give an empty -p to avoid loading it. 
+- Made 'Remove' and 'Move *' buttons safe even if there are no MP3's loaded. 
+
+0.42 [980823]
+- Theme support.
+- Added volume bar.
+
+0.41 [980823]
+- One-line bugfix. Oops.
+
+0.40 [980823]
+- Now needs GTK 1.1 instead of 1.0. Upgrade!
+- Fixed buggy random play.
+- Handles 'sound device busy'-errors a little more gracefully.
+- Display playing time/number of files/size for whole playlist.
+
+0.36 [980821]
+- Added support for SIGUSR[12] signals.
+
+0.35 [980819]
+- Fixed bug about double -clicking in playlist.
+- Made 'Move Up' and 'Move Down' and 'Remove' act more like expected.
+
+0.34 [980817]
+- Added 'Save to WAV' feature.
+- Added 'Show Remaining Time' option.
+- Made 'Options' menu stuff more self - explanatory.
+- Changed command line interface.
+
+0.33 [980815]
+- Fixed some more not - so - fatal bugs.
+
+0.32 [980815]
+- Fixed some more fatal bugs...oops.
+
+0.31 [980815]
+- Fixed a fatal bug.
+
+0.30 [980815]
+- Fixed random play.Oops.
+- Made player fork to avoid stopping play under some window managers.
+- Adjustable audio buffer(default 0).This is an experimental feature
+ and makes the player 's interface kind of sluggish.
+
+0.27 [980813]
+- Added random play.
+- Added remove(from playlist)
+after play.
+- Fixed pause bug introduced in 0.25.Oops.
+
+0.26 [980813]
+- Fixed track length bug.
+
+0.25 [980813]
+- Added 'Help' menu.
+- Added complete playlist editing capabilities.
+- Cosmetic changes to playlist window.
+- Tidied up the code.
+
+0.2 [980812]
+- First public release
