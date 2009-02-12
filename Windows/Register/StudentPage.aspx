@@ -11,9 +11,15 @@
     <form id="form1" runat="server">
     <h1>
         Hantera tränande</h1>
+    <asp:Panel ID="messagePane" CssClass="section error" Visible="false" runat="server">
+        <h2>
+            Meddelande</h2>
+        <p>
+            <asp:Label ID="lMessage" runat="server" Text=""></asp:Label></p>
+    </asp:Panel>
     <div class="section">
-    <h2>
-        <asp:Label ID="lHeader" runat="server" Text="Label"></asp:Label></h2>
+        <h2>
+            <asp:Label ID="lHeader" runat="server" Text="Label"></asp:Label></h2>
         <div class="form">
             <table>
                 <tr>
@@ -38,7 +44,7 @@
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbPersonalID" runat="server"></asp:TextBox>
-                        (YYYYMMDD-XXXX eller blankt)
+                        (YYYYMMDD, YYYYMMDD-XXXX eller blankt)
                     </td>
                 </tr>
                 <tr>

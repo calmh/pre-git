@@ -56,48 +56,60 @@ public class Student
         get { return _personalNumber; }
         set
         {
+            string pn = null;
+
+            // Shorcuts
+
             if (value == null)
-            {
-                _personalNumber = null;
                 return;
-            }
 
             Regex re = new Regex("^1900....-....$");
             if (re.Match(value).Success)
-            {
-                _personalNumber = null;
                 return;
-            }
+
+            // Possible values
 
             re = new Regex("^[0-9]{12}$");
             if (re.Match(value).Success)
-            {
-                _personalNumber = value.Substring(0, 8) + "-" + value.Substring(8, 4);
-                return;
-            }
+                pn = value.Substring(0, 8) + "-" + value.Substring(8, 4);
 
             re = new Regex("^[0-9]{10}$");
             if (re.Match(value).Success)
-            {
-                _personalNumber = "19" + value.Substring(0, 6) + "-" + value.Substring(6, 4);
-                return;
-            }
+                pn = "19" + value.Substring(0, 6) + "-" + value.Substring(6, 4);
 
             re = new Regex("^[0-9]{6}-[0-9]{4}$");
             if (re.Match(value).Success)
-            {
-                _personalNumber = "19" + value.Substring(0, 11);
-                return;
-            }
+                pn = "19" + value.Substring(0, 11);
 
             re = new Regex("^[0-9]{8}-[0-9]{4}$");
             if (re.Match(value).Success)
+                pn = value;
+
+            re = new Regex("^(19|20)[0-9]{6}$");
+            if (re.Match(value).Success)
+                pn = value;
+
+            re = new Regex("^[0-9]{6}$");
+            if (re.Match(value).Success)
+                pn = "19" + value;
+
+            if (pn == null)
+                throw new InvalidCastException("Personnummret är i ett okänt format och kunde inte tolkas.");
+
+            try
             {
-                _personalNumber = value;
-                return;
+                // Test if the date is valid
+                int year = int.Parse(pn.Substring(0, 4));
+                int month = int.Parse(pn.Substring(4, 2));
+                int day = int.Parse(pn.Substring(6, 2));
+                DateTime d = new DateTime(year, month, day);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                throw new InvalidCastException("Födelsedatum/personnummer är inte giltigt.");
             }
 
-            throw new InvalidCastException("Not a valid personal number");
+            _personalNumber = pn;
         }
     }
 
@@ -107,7 +119,9 @@ public class Student
         {
             if (PersonalNumber == null)
                 return "";
-            else
+            else if (PersonalNumber.Length == 8)
+                return PersonalNumber;
+            else if (PersonalNumber.Length == 13)
             {
                 string ns = PersonalNumber.Replace("-", "");
                 int m = 2;
@@ -134,6 +148,8 @@ public class Student
                 else
                     return PersonalNumber + " [!]";
             }
+            else
+                return "?";
         }
     }
 

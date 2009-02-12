@@ -71,11 +71,11 @@ public partial class ClubPage : ProtectedPage
 
         List<Student> withPersonalNumber;
         if (cbFilterActive.Checked)
-            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.Active; });
+            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13 && s.Active; });
         else
-            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null; });
+            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13; });
 
-        List<Student> men = withPersonalNumber.FindAll(delegate(Student s) { return (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 1; });
+        List<Student> men = withPersonalNumber.FindAll(delegate(Student s) { return  (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 1; });
         List<Student> women = withPersonalNumber.FindAll(delegate(Student s) { return (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 0; });
         int men0to6 = men.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 7.0; }).Count;
         int men7to14 = men.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 15.0; }).Count - men0to6;

@@ -70,29 +70,37 @@ public partial class StudentPage : ProtectedPage
             s = new Student();
             newStudent = true;
         }
-        s.FName = tbFName.Text;
-        s.SName = tbSName.Text;
-        if (tbPersonalID.Text != "")
-            s.PersonalNumber = tbPersonalID.Text;
-        else
-            s.PersonalNumber = null;
-        s.HomePhone = tbHomePhone.Text;
-        s.MobilePhone = tbMobilePhone.Text;
-        s.StreetAddress = tbStreetAddress.Text;
-        int zip = 0;
-        int.TryParse(tbZipCode.Text, out zip);
-        s.ZipCode = zip;
-        s.City = tbCity.Text;
-        s.Title = (Student.TitleEnum)int.Parse(ddTitle.SelectedValue);
-        s.Email = tbEmail.Text;
-        s.Comments = tbComments.Text;
-        if (cbPersonalPassword.Checked)
-            s.Password = null;
-        if (newStudent)
+        try
         {
-            Manager.Instance.GetClub((Guid)Session["club"]).Students.Add(s);
+            s.FName = tbFName.Text;
+            s.SName = tbSName.Text;
+            if (tbPersonalID.Text != "")
+                s.PersonalNumber = tbPersonalID.Text;
+            else
+                s.PersonalNumber = null;
+            s.HomePhone = tbHomePhone.Text;
+            s.MobilePhone = tbMobilePhone.Text;
+            s.StreetAddress = tbStreetAddress.Text;
+            int zip = 0;
+            int.TryParse(tbZipCode.Text, out zip);
+            s.ZipCode = zip;
+            s.City = tbCity.Text;
+            s.Title = (Student.TitleEnum)int.Parse(ddTitle.SelectedValue);
+            s.Email = tbEmail.Text;
+            s.Comments = tbComments.Text;
+            if (cbPersonalPassword.Checked)
+                s.Password = null;
+            if (newStudent)
+            {
+                Manager.Instance.GetClub((Guid)Session["club"]).Students.Add(s);
+            }
+            Manager.Instance.Save();
+            Response.Redirect("ClubPage.aspx");
         }
-        Manager.Instance.Save();
-        Response.Redirect("ClubPage.aspx");
+        catch (Exception ex)
+        {
+            lMessage.Text = ex.Message;
+            messagePane.Visible = true;
+        }
     }
 }
