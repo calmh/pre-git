@@ -16,6 +16,9 @@ public class ProtectedPage : System.Web.UI.Page
     {
         base.OnInit(e);
 
+        if (Form == null || Form.Controls == null)
+            return;
+
         Panel p = new Panel();
         p.ID = "topbar";
 
