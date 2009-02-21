@@ -19,34 +19,48 @@ public partial class StudentPage : ProtectedPage
         Guid uId = (Guid)Session["user"];
         lHeader.Text = "Skapa ny tränande";
 
-        if (Session["student"] != null && !IsPostBack)
+        if (Session["student"] != null)
         {
-            lHeader.Text = "Uppdatera information om tränande";
+           lHeader.Text = "Uppdatera information om tränande";
             Guid cId = (Guid)Session["club"];
             Guid sId = (Guid)Session["student"];
 
             Student s = Manager.Instance.GetStudentInClub(cId, sId);
             if (s != null)
             {
-                tbFName.Text = s.FName;
-                tbSName.Text = s.SName;
-                if (s.PersonalNumber != null)
-                    tbPersonalID.Text = s.PersonalNumber;
-                else
-                    tbPersonalID.Text = "";
-                tbHomePhone.Text = s.HomePhone;
-                tbMobilePhone.Text = s.MobilePhone;
-                tbStreetAddress.Text = s.StreetAddress;
-                if (s.ZipCode != 0)
-                    tbZipCode.Text = s.ZipCode.ToString();
-                tbCity.Text = s.City;
-                tbEmail.Text = s.Email;
-                ddTitle.SelectedValue = ((int)s.Title).ToString();
-                tbComments.Text = s.Comments;
-                if (s.Password != null && s.Password != "")
+                Club club = Manager.Instance.GetClub(cId);
+                if ((club.GetPermission(uId) & (int)Club.Permission.DeleteStudents) != 0)
                 {
-                    lPersonalPassword.Text = "Ja. Återställ lösenord: ";
-                    cbPersonalPassword.Visible = true;
+                    deletePanel.Visible = true;
+                    bDelete.Enabled = cbDelete.Checked;
+                }
+                else
+                {
+                    deletePanel.Visible = false;
+                }
+
+                if (!IsPostBack)
+                {
+                    tbFName.Text = s.FName;
+                    tbSName.Text = s.SName;
+                    if (s.PersonalNumber != null)
+                        tbPersonalID.Text = s.PersonalNumber;
+                    else
+                        tbPersonalID.Text = "";
+                    tbHomePhone.Text = s.HomePhone;
+                    tbMobilePhone.Text = s.MobilePhone;
+                    tbStreetAddress.Text = s.StreetAddress;
+                    if (s.ZipCode != 0)
+                        tbZipCode.Text = s.ZipCode.ToString();
+                    tbCity.Text = s.City;
+                    tbEmail.Text = s.Email;
+                    ddTitle.SelectedValue = ((int)s.Title).ToString();
+                    tbComments.Text = s.Comments;
+                    if (s.Password != null && s.Password != "")
+                    {
+                        lPersonalPassword.Text = "Ja. Återställ lösenord: ";
+                        cbPersonalPassword.Visible = true;
+                    }
                 }
             }
         }
@@ -101,6 +115,22 @@ public partial class StudentPage : ProtectedPage
         {
             lMessage.Text = ex.Message;
             messagePane.Visible = true;
+        }
+    }
+    protected void bDelete_Click(object sender, EventArgs e)
+    {
+        if (!VerifyMinimumClubPermission(Club.Permission.DeleteStudents))
+            return;
+
+        if (Session["student"] != null && Session["club"] != null)
+        {
+            Guid cid = (Guid)Session["club"];
+            Guid sid = (Guid)Session["student"];
+            Student student = Manager.Instance.GetStudentInClub(cid, sid);
+            Club club = Manager.Instance.GetClub(cid);
+            club.Students.Remove(student);
+            Manager.Instance.Save();
+            Response.Redirect("ClubPage.aspx");
         }
     }
 }

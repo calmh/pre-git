@@ -137,6 +137,17 @@
                         <asp:Button ID="bSave" runat="server" Text="Spara" OnClick="bSave_Click" />
                     </td>
                 </tr>
+                <asp:Panel ID="deletePanel" runat="server" Visible="false">
+                    <tr>
+                        <td class="prompt">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <asp:CheckBox ID="cbDelete" runat="server" AutoPostBack="true" />
+                            <asp:Button ID="bDelete" runat="server" Text="Radera" OnClick="bDelete_Click" />
+                        </td>
+                    </tr>
+                </asp:Panel>
             </table>
         </div>
     </div>

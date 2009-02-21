@@ -66,6 +66,8 @@ public partial class AdminPage : ProtectedPage
                         perm += "Graderingar ";
                     if (c.HasPermission(u.ID, Club.Permission.EditPayment))
                         perm += "Inbetalning ";
+                    if (c.HasPermission(u.ID, Club.Permission.DeleteStudents))
+                        perm += "Radera ";
                 }
                 row.Add(perm);
             };
@@ -118,6 +120,8 @@ public partial class AdminPage : ProtectedPage
             c.SetPermission(u.ID, (int)Club.Permission.View | (int)Club.Permission.EditStudents | (int)Club.Permission.EditGraduation);
         else if (p == ((int)Club.Permission.View | (int)Club.Permission.EditStudents | (int)Club.Permission.EditGraduation))
             c.SetPermission(u.ID, (int)Club.Permission.View | (int)Club.Permission.EditStudents | (int)Club.Permission.EditGraduation | (int)Club.Permission.EditPayment);
+        else if (p == ((int)Club.Permission.View | (int)Club.Permission.EditStudents | (int)Club.Permission.EditGraduation | (int)Club.Permission.EditPayment))
+            c.SetPermission(u.ID, (int)Club.Permission.View | (int)Club.Permission.EditStudents | (int)Club.Permission.EditGraduation | (int)Club.Permission.EditPayment | (int)Club.Permission.DeleteStudents);
         else
             c.SetPermission(u.ID, 0);
     }

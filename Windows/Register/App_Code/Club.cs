@@ -121,6 +121,7 @@ public class Club
         View = 1,
         EditStudents = 2,
         EditGraduation = 4,
-        EditPayment = 8
+        EditPayment = 8,
+        DeleteStudents = 16
     };
 }
