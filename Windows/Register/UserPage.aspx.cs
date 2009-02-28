@@ -69,8 +69,10 @@ public partial class UserPage : ProtectedPage
             {
                 if (st.Password != null)
                     return st.SName.ToLower() == tbName.Text.ToLower() && st.Password == crypted;
-                else
+                else if (st.PersonalNumber != null)
                     return st.SName.ToLower() == tbName.Text.ToLower() && st.PersonalNumber.EndsWith("-" + tbPinCode.Text);
+                else
+                    return false;
             }
             );
         if (s != null)
