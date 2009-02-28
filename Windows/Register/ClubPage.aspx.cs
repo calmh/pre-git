@@ -330,6 +330,15 @@ public partial class ClubPage : ProtectedPage
                 bf.CommandName = "Redigera";
                 gvStudents.Columns.Add(bf);
             }
+            else if (dg.HeaderText == "Namn" && club.HasPermission(uId, Club.Permission.View))
+            {
+                bf = new ButtonField();
+                bf.ButtonType = ButtonType.Image;
+                bf.ImageUrl = "view-16x16.png";
+                bf.Text = "Persondata";
+                bf.CommandName = "Persondata";
+                gvStudents.Columns.Add(bf);
+            }
             else if (dg.HeaderText == "Grad" && club.HasPermission(uId, Club.Permission.EditGraduation))
             {
                 bf = new ButtonField();
@@ -427,6 +436,14 @@ public partial class ClubPage : ProtectedPage
             if (e.CommandName == "Redigera")
             {
                 if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+                    return;
+
+                Session["student"] = sid;
+                Response.Redirect("StudentPage.aspx");
+            }
+            else if (e.CommandName == "Persondata")
+            {
+                if (!VerifyMinimumClubPermission(Club.Permission.View, "ClubPage.aspx"))
                     return;
 
                 Session["student"] = sid;

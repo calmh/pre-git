@@ -13,7 +13,7 @@ public partial class StudentPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditStudents))
+        if (!VerifyMinimumClubPermission(Club.Permission.View))
             return;
 
         Guid uId = (Guid)Session["user"];
@@ -62,6 +62,23 @@ public partial class StudentPage : ProtectedPage
                         cbPersonalPassword.Visible = true;
                     }
                 }
+            }
+
+            Club c = Manager.Instance.GetClub(cId);
+            if (!c.HasPermission(uId, Club.Permission.EditStudents)) {
+                lHeader.Text = "Information om tränande";
+                tbCity.ReadOnly = true;
+                tbComments.ReadOnly = true;
+                tbEmail.ReadOnly = true;
+                tbFName.ReadOnly = true;
+                tbHomePhone.ReadOnly = true;
+                tbMobilePhone.ReadOnly = true;
+                tbPersonalID.ReadOnly = true;
+                tbSName.ReadOnly = true;
+                tbStreetAddress.ReadOnly = true;
+                tbZipCode.ReadOnly = true;
+                bSave.Visible = false;
+                cbPersonalPassword.Visible = false;
             }
         }
     }

@@ -23,7 +23,7 @@ public class ProtectedPage : System.Web.UI.Page
         p.ID = "topbar";
 
         Label l = new Label();
-        l.Text = "T.I.A. Registersystem v1.1.20090212";
+        l.Text = "T.I.A. Registersystem v1.1.20090228";
         l.CssClass = "version";
         p.Controls.Add(l);
 
