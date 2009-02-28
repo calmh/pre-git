@@ -8,8 +8,6 @@ public partial class UserPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        // InitPage(); Funkar inte, har sönder ddClubs av någon anledning?!
-
         if (!IsPostBack)
         {
             ddClubs.Items.Clear();
@@ -59,7 +57,14 @@ public partial class UserPage : ProtectedPage
     {
         Guid clubId = new Guid(ddClubs.SelectedValue);
         string crypted = Manager.ComputeHash(tbPinCode.Text);
-        Student s = Manager.Instance.GetClub(clubId).Students.Find(
+        Club c = Manager.Instance.GetClub(clubId);
+        if (c == null)
+        {
+            Session["message"] = "Okänt fel för klubb " + clubId.ToString();
+            Response.Redirect("UserPage.aspx");
+            return;
+        }
+        Student s = c.Students.Find(
             delegate(Student st)
             {
                 if (st.Password != null)
