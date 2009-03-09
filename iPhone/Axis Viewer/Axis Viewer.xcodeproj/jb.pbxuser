@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* Axis_ViewerAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 568}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 476}";
+		};
+	};
+	1D3623250D0F684500981E51 /* Axis_ViewerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 574}}";
+			sepNavSelRange = "{501, 0}";
+			sepNavVisRange = "{0, 836}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Axis Viewer */ = {
+		activeExec = 0;
+		executables = (
+			2954800E0F65931300ABBCD2 /* Axis Viewer */,
+		);
+	};
+	28A0AAE50D9B0CCF005BE974 /* Axis_Viewer_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 568}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 191}";
+		};
+	};
+	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 568}}";
+			sepNavSelRange = "{238, 0}";
+			sepNavVisRange = "{0, 262}";
+		};
+	};
+	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2478}}";
+			sepNavSelRange = "{955, 0}";
+			sepNavVisRange = "{328, 1018}";
+		};
+	};
+	2954800E0F65931300ABBCD2 /* Axis Viewer */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Axis Viewer";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	295480250F65932900ABBCD2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	295480260F65932900ABBCD2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	295480440F65959D00ABBCD2 /* CameraData.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 568}}";
+			sepNavSelRange = "{197, 0}";
+			sepNavVisRange = "{0, 460}";
+		};
+	};
+	295480450F65959D00ABBCD2 /* CameraData.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 568}}";
+			sepNavSelRange = "{257, 0}";
+			sepNavVisRange = "{0, 286}";
+		};
+	};
+	2954804B0F6596BC00ABBCD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 17";
+		rLen = 0;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 0;
+	};
+	2954804C0F6596BC00ABBCD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480440F65959D00ABBCD2 /* CameraData.h */;
+		name = "CameraData.h: 16";
+		rLen = 0;
+		rLoc = 260;
+		rType = 0;
+		vrLen = 294;
+		vrLoc = 0;
+	};
+	2954804D0F6596BC00ABBCD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 12";
+		rLen = 0;
+		rLoc = 253;
+		rType = 0;
+		vrLen = 255;
+		vrLoc = 0;
+	};
+	2954805D0F65975B00ABBCD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480450F65959D00ABBCD2 /* CameraData.m */;
+		name = "CameraData.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	295480A90F659B2200ABBCD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 12";
+		rLen = 0;
+		rLoc = 238;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	295480B50F659BCB00ABBCD2 /* CameraViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 280}}";
+			sepNavSelRange = "{340, 0}";
+			sepNavVisRange = "{44, 310}";
+			sepNavWindowFrame = "{{61, 273}, {750, 558}}";
+		};
+	};
+	295480B60F659BCB00ABBCD2 /* CameraViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1398, 1064}}";
+			sepNavSelRange = "{1046, 0}";
+			sepNavVisRange = "{552, 1665}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 2954800E0F65931300ABBCD2 /* Axis Viewer */;
+		activeSDKPreference = iphonesimulator2.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Axis Viewer */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Axis Viewer */,
+		);
+		breakpoints = (
+			29EC29970F65A82B0013FE9A /* CameraViewController.m:74 */,
+		);
+		codeSenseManager = 295480260F65932900ABBCD2 /* Code sense */;
+		executables = (
+			2954800E0F65931300ABBCD2 /* Axis Viewer */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					993,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 258321567;
+			PBXWorkspaceStateSaveDate = 258321567;
+		};
+		perUserProjectItems = {
+			2954804B0F6596BC00ABBCD2 /* PBXTextBookmark */ = 2954804B0F6596BC00ABBCD2 /* PBXTextBookmark */;
+			2954804C0F6596BC00ABBCD2 /* PBXTextBookmark */ = 2954804C0F6596BC00ABBCD2 /* PBXTextBookmark */;
+			2954804D0F6596BC00ABBCD2 /* PBXTextBookmark */ = 2954804D0F6596BC00ABBCD2 /* PBXTextBookmark */;
+			2954805D0F65975B00ABBCD2 /* PBXTextBookmark */ = 2954805D0F65975B00ABBCD2 /* PBXTextBookmark */;
+			295480A90F659B2200ABBCD2 /* PBXTextBookmark */ = 295480A90F659B2200ABBCD2 /* PBXTextBookmark */;
+			29DEED6D0F65AD12002B7EE8 /* PBXTextBookmark */ = 29DEED6D0F65AD12002B7EE8 /* PBXTextBookmark */;
+			29DEED6E0F65AD12002B7EE8 /* PBXTextBookmark */ = 29DEED6E0F65AD12002B7EE8 /* PBXTextBookmark */;
+			29DEED7A0F65AD29002B7EE8 /* PBXTextBookmark */ = 29DEED7A0F65AD29002B7EE8 /* PBXTextBookmark */;
+			29EC28FD0F659E2C0013FE9A /* PBXTextBookmark */ = 29EC28FD0F659E2C0013FE9A /* PBXTextBookmark */;
+			29EC28FE0F659E2C0013FE9A /* PBXTextBookmark */ = 29EC28FE0F659E2C0013FE9A /* PBXTextBookmark */;
+			29EC29860F65A8060013FE9A /* PBXTextBookmark */ = 29EC29860F65A8060013FE9A /* PBXTextBookmark */;
+			29EC29870F65A8060013FE9A /* PBXTextBookmark */ = 29EC29870F65A8060013FE9A /* PBXTextBookmark */;
+			29EC29880F65A8060013FE9A /* PlistBookmark */ = 29EC29880F65A8060013FE9A /* PlistBookmark */;
+			29EC298E0F65A8060013FE9A /* PBXTextBookmark */ = 29EC298E0F65A8060013FE9A /* PBXTextBookmark */;
+			29EC298F0F65A8060013FE9A /* PlistBookmark */ = 29EC298F0F65A8060013FE9A /* PlistBookmark */;
+			29EC29AB0F65A9570013FE9A /* PBXTextBookmark */ = 29EC29AB0F65A9570013FE9A /* PBXTextBookmark */;
+			29EC29B00F65A9760013FE9A /* PBXTextBookmark */ = 29EC29B00F65A9760013FE9A /* PBXTextBookmark */;
+			29EC29B10F65A9760013FE9A /* PBXTextBookmark */ = 29EC29B10F65A9760013FE9A /* PBXTextBookmark */;
+			29EC29B20F65A9760013FE9A /* PBXTextBookmark */ = 29EC29B20F65A9760013FE9A /* PBXTextBookmark */;
+			29EC29BA0F65A9760013FE9A /* PBXTextBookmark */ = 29EC29BA0F65A9760013FE9A /* PBXTextBookmark */;
+			29EC29C20F65AA140013FE9A /* PBXTextBookmark */ = 29EC29C20F65AA140013FE9A /* PBXTextBookmark */;
+			29EC29D50F65AC280013FE9A /* PBXTextBookmark */ = 29EC29D50F65AC280013FE9A /* PBXTextBookmark */;
+		};
+		sourceControlManager = 295480250F65932900ABBCD2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29DEED6D0F65AD12002B7EE8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 34";
+		rLen = 0;
+		rLoc = 955;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 328;
+	};
+	29DEED6E0F65AD12002B7EE8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 34";
+		rLen = 0;
+		rLoc = 955;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 328;
+	};
+	29DEED7A0F65AD29002B7EE8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480B60F659BCB00ABBCD2 /* CameraViewController.m */;
+		name = "CameraViewController.m: 34";
+		rLen = 0;
+		rLoc = 1046;
+		rType = 0;
+		vrLen = 1665;
+		vrLoc = 552;
+	};
+	29EC28FD0F659E2C0013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480B50F659BCB00ABBCD2 /* CameraViewController.h */;
+		name = "CameraViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 230;
+		vrLoc = 0;
+	};
+	29EC28FE0F659E2C0013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480B60F659BCB00ABBCD2 /* CameraViewController.m */;
+		name = "CameraViewController.m: 11";
+		rLen = 0;
+		rLoc = 201;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 0;
+	};
+	29EC29860F65A8060013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480B50F659BCB00ABBCD2 /* CameraViewController.h */;
+		name = "CameraViewController.h: 13";
+		rLen = 0;
+		rLoc = 256;
+		rType = 0;
+		vrLen = 354;
+		vrLoc = 0;
+	};
+	29EC29870F65A8060013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28A0AAE50D9B0CCF005BE974 /* Axis_Viewer_Prefix.pch */;
+		name = "Axis_Viewer_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 0;
+	};
+	29EC29880F65A8060013FE9A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/jb/projekt/iPhone/Axis Viewer/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	29EC298E0F65A8060013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28A0AAE50D9B0CCF005BE974 /* Axis_Viewer_Prefix.pch */;
+		name = "Axis_Viewer_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 191;
+		vrLoc = 0;
+	};
+	29EC298F0F65A8060013FE9A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/jb/projekt/iPhone/Axis Viewer/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	29EC29970F65A82B0013FE9A /* CameraViewController.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 295480B60F659BCB00ABBCD2 /* CameraViewController.m */;
+		functionName = "-handleOrientationDidChange:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = "Axis Viewer";
+		modificationTime = 258321089.469564;
+		state = 1;
+	};
+	29EC29AB0F65A9570013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Axis_ViewerAppDelegate.m */;
+		name = "Axis_ViewerAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 609;
+		rType = 0;
+		vrLen = 734;
+		vrLoc = 0;
+	};
+	29EC29B00F65A9760013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480450F65959D00ABBCD2 /* CameraData.m */;
+		name = "CameraData.m: 15";
+		rLen = 0;
+		rLoc = 257;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	29EC29B10F65A9760013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480440F65959D00ABBCD2 /* CameraData.h */;
+		name = "CameraData.h: 10";
+		rLen = 0;
+		rLoc = 197;
+		rType = 0;
+		vrLen = 460;
+		vrLoc = 0;
+	};
+	29EC29B20F65A9760013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* Axis_ViewerAppDelegate.h */;
+		name = "Axis_ViewerAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 0;
+	};
+	29EC29BA0F65A9760013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* Axis_ViewerAppDelegate.h */;
+		name = "Axis_ViewerAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 0;
+	};
+	29EC29C20F65AA140013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* Axis_ViewerAppDelegate.m */;
+		name = "Axis_ViewerAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 501;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 0;
+	};
+	29EC29D50F65AC280013FE9A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 295480B60F659BCB00ABBCD2 /* CameraViewController.m */;
+		name = "CameraViewController.m: 31";
+		rLen = 0;
+		rLoc = 1196;
+		rType = 0;
+		vrLen = 1666;
+		vrLoc = 640;
+	};
+}
