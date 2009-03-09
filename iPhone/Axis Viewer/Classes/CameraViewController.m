@@ -31,13 +31,11 @@
 	else
 		url = [NSString stringWithFormat: @"http://%@/mjpg/video.mjpg", camera.address];
 		
-	embedHTML = [NSString stringWithFormat: @"<html><body style=\"text-align: center; background-color: transparent; color: white; margin:0\"><img src=\"%@\" style=\"max-width: 100%%; max-height: 100%%\"/></body></html>", url];
+	embedHTML = [NSString stringWithFormat: @"<html><body style=\"text-align: center; background-color: black; margin:0\"><img src=\"%@\" style=\"max-width: 100%%; max-height: 100%%\"/></body></html>", url];
 	[embedHTML retain];
 	
-	UIWebView *videoView;
-	videoView = [[UIWebView alloc] init];
-	[videoView loadHTMLString:embedHTML baseURL:nil];
-	[self setView:videoView];
+	[self setView: [[UIWebView alloc] init]];
+	[(UIWebView*) self.view loadHTMLString:embedHTML baseURL:nil];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);	
 	
 	NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
