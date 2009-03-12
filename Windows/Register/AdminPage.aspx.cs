@@ -49,7 +49,7 @@ public partial class AdminPage : ProtectedPage
             row.Add(c.Name);
             foreach (User u in users)
             {
-                string perm = "Ingen";
+                string perm = "-";
                 //if (u.WriteClubs.Find(delegate(Guid g) { return g == c.ID; }) != Guid.Empty)
                 //    perm = "Skriva";
                 //if (u.ReadClubs.Find(delegate(Guid g) { return g == c.ID; }) != Guid.Empty)
@@ -59,15 +59,15 @@ public partial class AdminPage : ProtectedPage
                 {
                     perm = "";
                     if (c.HasPermission(u.ID, Club.Permission.View))
-                        perm += "Läsa ";
+                        perm += "R";
                     if (c.HasPermission(u.ID, Club.Permission.EditStudents))
-                        perm += "Register ";
+                        perm += "E";
                     if (c.HasPermission(u.ID, Club.Permission.EditGraduation))
-                        perm += "Graderingar ";
+                        perm += "G";
                     if (c.HasPermission(u.ID, Club.Permission.EditPayment))
-                        perm += "Inbetalning ";
+                        perm += "P";
                     if (c.HasPermission(u.ID, Club.Permission.DeleteStudents))
-                        perm += "Radera ";
+                        perm += "X";
                 }
                 row.Add(perm);
             };

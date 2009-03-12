@@ -16,6 +16,13 @@
                 <RowStyle CssClass="tableRow" />
                 <AlternatingRowStyle CssClass="tableAltRow" />
             </asp:GridView>
+            <p>
+                R &mdash; Se klubbmedlemmar och statistik.<br />
+                E &mdash; Skapa och redigera klubbmedlemmar, skicka meddelanden.<br />
+                G &mdash; Skapa och redigera graderingar.<br />
+                P &mdash; Skapa och redigera inbetalningar.<br />
+                X &mdash; Radera klubbmedlemmar.<br />
+            </p>
         </div>
     </div>
     <div class="section">
