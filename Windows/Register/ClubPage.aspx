@@ -57,7 +57,7 @@
             <asp:Table ID="tabStatistics" runat="server">
             </asp:Table>
             <p class="noprint">
-                Statistiken baserar sig på de aktiva elever i medlemsregistret som har ett personnummer.
+                Statistiken baserar sig på de elever i medlemsregistret som har födelsedatum. För elever med komplett personnummer görs könsindelning.
             </p>
         </div>
         <div class="floater">

@@ -16,6 +16,11 @@ table
     clear: none;
 }
 
+td.sum 
+{
+    font-style: italic;
+}
+
 @media screen
 {
     body

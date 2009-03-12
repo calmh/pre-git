@@ -70,10 +70,16 @@ public partial class ClubPage : ProtectedPage
         tabPayments.Rows.Clear();
 
         List<Student> withPersonalNumber;
+        List<Student> withBirthDateOnly;
         if (cbFilterActive.Checked)
+        {
             withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13 && s.Active; });
-        else
+            withBirthDateOnly = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 8 && s.Active; });
+        }
+        else {
             withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13; });
+            withBirthDateOnly = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 8; });
+        }
 
         List<Student> men = withPersonalNumber.FindAll(delegate(Student s) { return  (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 1; });
         List<Student> women = withPersonalNumber.FindAll(delegate(Student s) { return (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 0; });
@@ -85,6 +91,10 @@ public partial class ClubPage : ProtectedPage
         int women7to14 = women.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 15.0; }).Count - women0to6;
         int women15to19 = women.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 20.0; }).Count - women7to14 - women0to6;
         int women20over = women.Count - women15to19 - women7to14 - women0to6;
+        int other0to6 = withBirthDateOnly.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 7.0; }).Count;
+        int other7to14 = withBirthDateOnly.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 15.0; }).Count - other0to6;
+        int other15to19 = withBirthDateOnly.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 20.0; }).Count - other7to14 - other0to6;
+        int other20over = withBirthDateOnly.Count - other15to19 - other7to14 - other0to6;
 
         TableRow tr;
         TableHeaderCell th;
@@ -98,6 +108,9 @@ public partial class ClubPage : ProtectedPage
         tr.Cells.Add(th);
         th = new TableHeaderCell();
         th.Text = "Kvinnor";
+        tr.Cells.Add(th);
+        th = new TableHeaderCell();
+        th.Text = "Okänt";
         tr.Cells.Add(th);
         th = new TableHeaderCell();
         th.Text = "Totalt";
@@ -119,10 +132,15 @@ public partial class ClubPage : ProtectedPage
         td.Text = women20over.ToString();
         td.CssClass = "rightAlign";
         tr.Cells.Add(td);
+        // "Övriga" över 20
+        td = new TableCell();
+        td.Text = other20over.ToString();
+        td.CssClass = "rightAlign";
+        tr.Cells.Add(td);
         // Totalt över 20
         td = new TableCell();
-        td.Text = (men20over + women20over).ToString();
-        td.CssClass = "rightAlign";
+        td.Text = (men20over + women20over + other20over).ToString();
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
         tabStatistics.Rows.Add(tr);
 
@@ -141,10 +159,15 @@ public partial class ClubPage : ProtectedPage
         td.Text = women15to19.ToString();
         td.CssClass = "rightAlign";
         tr.Cells.Add(td);
-        // Totalt över 20
+        // "Övriga" 15-19
         td = new TableCell();
-        td.Text = (men15to19 + women15to19).ToString();
+        td.Text = other15to19.ToString();
         td.CssClass = "rightAlign";
+        tr.Cells.Add(td);
+        // Totalt 15-19
+        td = new TableCell();
+        td.Text = (men15to19 + women15to19 + other15to19).ToString();
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
         tabStatistics.Rows.Add(tr);
 
@@ -163,10 +186,15 @@ public partial class ClubPage : ProtectedPage
         td.Text = women7to14.ToString();
         td.CssClass = "rightAlign";
         tr.Cells.Add(td);
-        // Totalt över 20
+        // "Övriga" 7-14
         td = new TableCell();
-        td.Text = (men7to14 + women7to14).ToString();
+        td.Text = other7to14.ToString();
         td.CssClass = "rightAlign";
+        tr.Cells.Add(td);
+        // Totalt 7-14
+        td = new TableCell();
+        td.Text = (men7to14 + women7to14 + other7to14).ToString();
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
         tabStatistics.Rows.Add(tr);
 
@@ -185,10 +213,15 @@ public partial class ClubPage : ProtectedPage
         td.Text = women0to6.ToString();
         td.CssClass = "rightAlign";
         tr.Cells.Add(td);
-        // Totalt över 20
+        // "Övriga" 0-6
         td = new TableCell();
-        td.Text = (men0to6 + women0to6).ToString();
+        td.Text = other0to6.ToString();
         td.CssClass = "rightAlign";
+        tr.Cells.Add(td);
+        // Totalt 0-6
+        td = new TableCell();
+        td.Text = (men0to6 + women0to6 + other0to6).ToString();
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
         tabStatistics.Rows.Add(tr);
 
@@ -200,17 +233,22 @@ public partial class ClubPage : ProtectedPage
         // Män
         td = new TableCell();
         td.Text = men.Count.ToString();
-        td.CssClass = "rightAlign";
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
-        // Kvinnor 0-6
+        // Kvinnor
         td = new TableCell();
         td.Text = women.Count.ToString();
-        td.CssClass = "rightAlign";
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
-        // Totalt över 20
+        // "Övriga" 
         td = new TableCell();
-        td.Text = (men.Count + women.Count).ToString();
-        td.CssClass = "rightAlign";
+        td.Text = withBirthDateOnly.Count.ToString();
+        td.CssClass = "rightAlign sum";
+        tr.Cells.Add(td);
+        // Totalt
+        td = new TableCell();
+        td.Text = (men.Count + women.Count + withBirthDateOnly.Count).ToString();
+        td.CssClass = "rightAlign sum";
         tr.Cells.Add(td);
         tabStatistics.Rows.Add(tr);
 
