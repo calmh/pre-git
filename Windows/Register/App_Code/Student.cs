@@ -26,7 +26,7 @@ public class Student
 
     public void Tidy()
     {
-        _graduations.Sort(delegate(Graduation a, Graduation b) { return a.When.CompareTo(b.When); });
+        _graduations.Sort(delegate(Graduation a, Graduation b) { return -a.When.CompareTo(b.When); });
         _payments.Sort(delegate(Payment a, Payment b) { return -a.When.CompareTo(b.When); });
     }
 
@@ -280,7 +280,7 @@ public class Student
             else
             {
                 Tidy();
-                return _graduations[_graduations.Count - 1].Grade;
+                return _graduations[0].Grade;
             }
         }
     }
@@ -296,8 +296,7 @@ public class Student
             else
             {
                 Tidy();
-                Graduation latest = _graduations[_graduations.Count - 1];
-                return latest.GradeStr;
+                return _graduations[0].GradeStr;
             }
         }
     }
@@ -309,7 +308,7 @@ public class Student
             if (_graduations.Count == 0)
                 return "-";
             Tidy();
-            Graduation latest = _graduations[_graduations.Count - 1];
+            Graduation latest = _graduations[0];
             TimeSpan diff = DateTime.Now - latest.When;
             if (diff.TotalDays < 30)
                 return "<1 mån";

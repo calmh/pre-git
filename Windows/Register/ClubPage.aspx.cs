@@ -320,6 +320,19 @@ public partial class ClubPage : ProtectedPage
                     else
                         return dir * a.PersonalNumber.CompareTo(b.PersonalNumber);
                 });
+            else if (sort == "SinceGraduationStr")
+                students.Sort(delegate(Student a, Student b)
+                {
+                    if (a.CurrentGrade != 0 && b.CurrentGrade != 0)
+                        return dir * a.Graduations[0].When.CompareTo(b.Graduations[0].When);
+                    else if (a.CurrentGrade != 0)
+                        return -dir;
+                    else if (b.CurrentGrade != 0)
+                        return dir;
+                    else
+                        return 0;
+
+                });
         }
 
         gvStudents.Columns.Clear();
