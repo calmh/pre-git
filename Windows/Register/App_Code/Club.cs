@@ -59,6 +59,18 @@ public class Club
         set { _students = value; }
     }
 
+    public List<string> GroupList
+    {
+        get
+        {
+            Dictionary<string, bool> groups = new Dictionary<string, bool>();
+            foreach (Student s in Students)
+                if (s.Group != null)
+                    groups[s.Group] = true;
+            return new List<string>(groups.Keys);
+        }
+    }
+
     public List<PermissionEntry> PermissionList;
 
     public int GetPermission(Guid uId)

@@ -274,7 +274,19 @@ public partial class ClubPage : ProtectedPage
             if (Session["clubPageSortDir"] != null && ((int)Session["clubPageSortDir"]) != 1)
                 dir = -1;
 
-            if (sort == "Name")
+            if (sort == "Group")
+                students.Sort(delegate(Student a, Student b)
+                {
+                    if (a.Group != null && b.Group != null)
+                        return dir * a.Group.CompareTo(b.Group);
+                    else if (a.Group == null && b.Group == null)
+                        return 0;
+                    else if (a.Group == null)
+                        return -dir;
+                    else // if (b.Group == null)
+                        return dir;
+                });
+            else if (sort == "Name")
                 students.Sort(delegate(Student a, Student b)
                 {
                     return dir * a.Name.CompareTo(b.Name);
@@ -405,6 +417,15 @@ public partial class ClubPage : ProtectedPage
         {
             Session.Remove("selectedStudents");
             Guid cId = (Guid)Session["club"];
+            RefreshStudentsTable(Manager.Instance.GetClub(cId));
+        }
+        else if (args.CommandName == "SelectAll")
+        {
+            Guid cId = (Guid)Session["club"];
+            Dictionary<Guid, bool> selected = new Dictionary<Guid, bool>();
+            foreach (Student s in Manager.Instance.GetClub(cId).Students)
+                selected[s.ID] = true;
+            Session["selectedStudents"] = selected;
             RefreshStudentsTable(Manager.Instance.GetClub(cId));
         }
     }

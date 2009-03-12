@@ -99,6 +99,17 @@
                 </tr>
                 <tr>
                     <td class="prompt">
+                        Grupp
+                    </td>
+                    <td class="value">
+                        <asp:DropDownList ID="ddGroup" runat="server">
+                        </asp:DropDownList>
+                        <asp:TextBox ID="tbGroup" runat="server"></asp:TextBox>
+                        Välj existerande eller ange namn på ny grupp.                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prompt">
                         Titel
                     </td>
                     <td class="value">

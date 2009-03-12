@@ -56,6 +56,12 @@ public partial class StudentPage : ProtectedPage
                     tbEmail.Text = s.Email;
                     ddTitle.SelectedValue = ((int)s.Title).ToString();
                     tbComments.Text = s.Comments;
+                    ddGroup.Items.Clear();
+                    ddGroup.Items.Add("");
+                    foreach (string group in club.GroupList)
+                        ddGroup.Items.Add(group);
+                    if (s.Group != null)
+                        ddGroup.SelectedValue = s.Group;
                     if (s.Password != null && s.Password != "")
                     {
                         lPersonalPassword.Text = "Ja. Återställ lösenord: ";
@@ -119,6 +125,11 @@ public partial class StudentPage : ProtectedPage
             s.Title = (Student.TitleEnum)int.Parse(ddTitle.SelectedValue);
             s.Email = tbEmail.Text;
             s.Comments = tbComments.Text;
+            if (tbGroup.Text != "")
+                s.Group = tbGroup.Text;
+            else if (ddGroup.SelectedValue != null && ddGroup.SelectedValue != "")
+                s.Group = ddGroup.SelectedValue;
+                
             if (cbPersonalPassword.Checked)
                 s.Password = null;
             if (newStudent)

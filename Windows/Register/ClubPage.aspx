@@ -34,7 +34,9 @@
         <div class="noprint" style="margin-top: 10px; margin-bottom: 10px;">
             <b>Markering:</b>
             <asp:Button ID="lbEraseSelection" OnCommand="commandClicked" CommandName="EraseSelection"
-                runat="server" Text="Rensa" />
+                runat="server" Text="Avmarkera alla" />
+            <asp:Button ID="lbSelectAll" OnCommand="commandClicked" CommandName="SelectAll"
+                runat="server" Text="Markera alla" />
             <asp:Button ID="lbSelectedGradering" OnCommand="commandClicked" CommandName="SelectedAddGraduation"
                 runat="server" Text="Registrera gradering" />
             <asp:Button ID="lbSelectedMessage" OnCommand="commandClicked" CommandName="SelectedSendMessage"

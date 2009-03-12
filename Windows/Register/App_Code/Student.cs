@@ -33,6 +33,7 @@ public class Student
     public static DisplayGuide[] GetDisplayGuide()
     {
         List<DisplayGuide> d = new List<DisplayGuide>();
+        d.Add(new DisplayGuide("Grupp", "Group"));
         d.Add(new DisplayGuide("Namn", "Name"));
         d.Add(new DisplayGuide("Personnummer", "PersonalNumberStr"));
         d.Add(new DisplayGuide("Grad", "CurrentGradeStr"));
@@ -244,6 +245,14 @@ public class Student
     {
         get { return _password; }
         set { _password = value; }
+    }
+
+    private string _group;
+    [XmlAttribute]
+    public string Group
+    {
+        get { return _group; }
+        set { _group = value; }
     }
 
     private List<Payment> _payments;
