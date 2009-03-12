@@ -46,11 +46,10 @@
     <div class="section">
         <h2>
             Registrerade betalningar</h2>
-        <asp:GridView ID="gvPayments" runat="server" AutoGenerateColumns="False" 
-            onrowcancelingedit="gvPayments_RowCancelingEdit" 
-            onrowediting="gvPayments_RowEditing" onrowupdating="gvPayments_RowUpdating">
+        <asp:GridView ID="gvPayments" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="gvPayments_RowCancelingEdit"
+            OnRowEditing="gvPayments_RowEditing" OnRowUpdating="gvPayments_RowUpdating">
             <Columns>
-                <asp:BoundField DataField="When" DataFormatString="{0:yyyy-MM-dd}" HeaderText="Datum" ReadOnly="true" />
+                <asp:BoundField DataField="When" DataFormatString="{0:yyyy-MM-dd}" HeaderText="Datum" ApplyFormatInEditMode="true"/>
                 <asp:BoundField DataField="Amount" DataFormatString="{0:F2}" HeaderText="Belopp" />
                 <asp:BoundField DataField="Comment" HeaderText="Avser" />
                 <asp:CommandField EditText="Redigera" ShowEditButton="true" UpdateText="Spara" CancelText="Avbryt" />
@@ -81,6 +80,9 @@
                             <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                             <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
                         </asp:Calendar>
+                        <asp:TextBox ID="tbWhen" runat="server"></asp:TextBox>
+                        <asp:Button ID="lbChangeDateSelector" runat="server" OnClick="lbChangeDateSelector_Click"
+                            Text="Button" />
                     </td>
                 </tr>
                 <tr>

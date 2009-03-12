@@ -33,6 +33,7 @@ public partial class PaymentPage : ProtectedPage
         if (!IsPostBack)
         {
             calWhen.SelectedDate = DateTime.Now;
+            tbWhen.Text = DateTime.Now.ToString("yyyy-MM-dd");
             FillDefaults();
         }
     }
@@ -42,6 +43,18 @@ public partial class PaymentPage : ProtectedPage
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
         tbAmount.Text = current.GetDefaultValue("Payment", "tbAmount");
         tbComment.Text = current.GetDefaultValue("Payment", "tbComment");
+        if (current.GetDefaultValue("default", "dateSelector") == "calendar")
+        {
+            calWhen.Visible = true;
+            tbWhen.Visible = false;
+            lbChangeDateSelector.Text = "Använd extinmatning";
+        }
+        else
+        {
+            calWhen.Visible = false;
+            tbWhen.Visible = true;
+            lbChangeDateSelector.Text = "Använd kalender";
+        }
     }
 
     private void SaveDefaults()
@@ -49,6 +62,10 @@ public partial class PaymentPage : ProtectedPage
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
         current.SetDefaultValue("Payment", "tbAmount", tbAmount.Text);
         current.SetDefaultValue("Payment", "tbComment", tbComment.Text);
+        if (calWhen.Visible)
+            current.SetDefaultValue("default", "dateSelector", "calendar");
+        else
+            current.SetDefaultValue("default", "dateSelector", "text");
     }
 
     private void updatePaymentsTable()
@@ -89,7 +106,7 @@ public partial class PaymentPage : ProtectedPage
     protected void gvPayments_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
         Payment p = new Payment();
-        p.When = DateTime.Parse(gvPayments.Rows[e.RowIndex].Cells[0].Text);
+        p.When = DateTime.Parse(((TextBox)gvPayments.Rows[e.RowIndex].Cells[0].Controls[0]).Text);
         p.Amount = double.Parse(((TextBox)gvPayments.Rows[e.RowIndex].Cells[1].Controls[0]).Text);
         p.Comment = ((TextBox)gvPayments.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
 
@@ -108,5 +125,21 @@ public partial class PaymentPage : ProtectedPage
     {
         gvPayments.EditIndex = -1;
         updatePaymentsTable();
+    }
+
+    protected void lbChangeDateSelector_Click(object sender, EventArgs e)
+    {
+        if (calWhen.Visible)
+        {
+            tbWhen.Visible = true;
+            calWhen.Visible = false;
+            lbChangeDateSelector.Text = "Använd kalender";
+        }
+        else
+        {
+            tbWhen.Visible = false;
+            calWhen.Visible = true;
+            lbChangeDateSelector.Text = "Använd textinmatning";
+        }
     }
 }

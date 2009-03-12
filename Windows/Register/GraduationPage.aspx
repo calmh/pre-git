@@ -79,6 +79,9 @@
                             <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                             <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
                         </asp:Calendar>
+                        <asp:TextBox ID="tbWhen" runat="server"></asp:TextBox>
+                        <asp:Button ID="lbChangeDateSelector" runat="server" 
+                            onclick="lbChangeDateSelector_Click" Text="Button" />
                     </td>
                 </tr>
                 <tr>

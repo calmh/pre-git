@@ -33,6 +33,7 @@ public partial class GraduationPage : ProtectedPage
         if (!IsPostBack)
         {
             calWhen.SelectedDate = DateTime.Now;
+            tbWhen.Text = DateTime.Now.ToString("yyyy-MM-dd");
             FillDefaults();
         }
     }
@@ -45,6 +46,18 @@ public partial class GraduationPage : ProtectedPage
         int selectedIndex = 0;
         int.TryParse(current.GetDefaultValue("Graduation", "ddGrade"), out selectedIndex);
         ddGrade.SelectedIndex = selectedIndex;
+        if (current.GetDefaultValue("default", "dateSelector") == "calendar")
+        {
+            calWhen.Visible = true;
+            tbWhen.Visible = false;
+            lbChangeDateSelector.Text = "Använd extinmatning";
+        }
+        else
+        {
+            calWhen.Visible = false;
+            tbWhen.Visible = true;
+            lbChangeDateSelector.Text = "Använd kalender";
+        }
     }
 
     private void SaveDefaults()
@@ -53,6 +66,10 @@ public partial class GraduationPage : ProtectedPage
         current.SetDefaultValue("Graduation", "tbExaminer", tbExaminer.Text);
         current.SetDefaultValue("Graduation", "tbInstructor", tbInstructor.Text);
         current.SetDefaultValue("Graduation", "ddGrade", ddGrade.SelectedIndex.ToString());
+        if (calWhen.Visible)
+            current.SetDefaultValue("default", "dateSelector", "calendar");
+        else
+            current.SetDefaultValue("default", "dateSelector", "text");
     }
 
     private void updateGraduationsTable(Student s)
@@ -73,7 +90,10 @@ public partial class GraduationPage : ProtectedPage
         if (s != null)
         {
             Graduation g = new Graduation();
-            g.When = calWhen.SelectedDate;
+            if (calWhen.Visible)
+                g.When = calWhen.SelectedDate;
+            else
+                g.When = DateTime.Parse(tbWhen.Text);
             g.Examiner = tbExaminer.Text;
             g.Instructor = tbInstructor.Text;
             g.Grade = int.Parse(ddGrade.SelectedValue);
@@ -83,5 +103,21 @@ public partial class GraduationPage : ProtectedPage
             Manager.Instance.Save();
         }
         Response.Redirect("ClubPage.aspx");
+    }
+
+    protected void lbChangeDateSelector_Click(object sender, EventArgs e)
+    {
+        if (calWhen.Visible)
+        {
+            tbWhen.Visible = true;
+            calWhen.Visible = false;
+            lbChangeDateSelector.Text = "Använd kalender";
+        }
+        else
+        {
+            tbWhen.Visible = false;
+            calWhen.Visible = true;
+            lbChangeDateSelector.Text = "Använd textinmatning";
+        }
     }
 }
