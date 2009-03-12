@@ -66,7 +66,18 @@
             <asp:Table ID="tabPayments" runat="server">
             </asp:Table>
             <p class="noprint">
-                Summerade inbetalningar är de som bokförts de senaste 12 månaderna, uppdelat per
+                Summerade inbetalningar är de som bokförts de senaste 
+                <asp:DropDownList ID="ddSumMonths" runat="server" AutoPostBack="true" 
+                    onselectedindexchanged="ddSumMonths_SelectedIndexChanged">
+                <asp:ListItem Value="3" />
+                <asp:ListItem Value="6" />
+                <asp:ListItem Value="9" />
+                <asp:ListItem Value="12" />
+                <asp:ListItem Value="18" />
+                <asp:ListItem Value="24" />
+                <asp:ListItem Value="36" />
+                <asp:ListItem Value="48" />
+                </asp:DropDownList> månaderna, uppdelat per
                 märkning.
             </p>
         </div>

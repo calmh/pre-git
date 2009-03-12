@@ -34,7 +34,8 @@ public partial class ClubPage : ProtectedPage
             lbSelectedGradering.Visible = false;
 
         clubName.Text = club.Name;
-        LoadDefaults();
+        if (!IsPostBack)
+            LoadDefaults();
 
         RefreshStatisticsTable(club);
         RefreshStudentsTable(club);
@@ -44,6 +45,8 @@ public partial class ClubPage : ProtectedPage
     {
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
         cbFilterActive.Checked = (current.GetDefaultValue("ClubPage", "cbFilterActive") == "true");
+        ddSumMonths.SelectedValue = current.GetDefaultValue("ClubPage", "ddSumMonths");
+
     }
 
     private void SaveDefaults()
@@ -53,6 +56,7 @@ public partial class ClubPage : ProtectedPage
             current.SetDefaultValue("ClubPage", "cbFilterActive", "true");
         else
             current.SetDefaultValue("ClubPage", "cbFilterActive", "false");
+        current.SetDefaultValue("ClubPage", "ddSumMonths", ddSumMonths.SelectedValue);
     }
 
     private double yearsOld(string personalNumber)
@@ -253,7 +257,7 @@ public partial class ClubPage : ProtectedPage
         tabStatistics.Rows.Add(tr);
 
         // Inbetalningar
-        DateTime cutoff = DateTime.Now.AddYears(-1);
+        DateTime cutoff = DateTime.Now.AddMonths(-int.Parse(ddSumMonths.SelectedValue));
         Dictionary<string, double> payments = new Dictionary<string, double>();
         foreach (Student s in club.Students)
         {
@@ -622,10 +626,17 @@ public partial class ClubPage : ProtectedPage
 
     protected void cbFilterActive_CheckedChanged(object sender, EventArgs e)
     {
-        cbFilterActive.Checked = !cbFilterActive.Checked;
+        //cbFilterActive.Checked = !cbFilterActive.Checked;
         SaveDefaults();
         Club club = Manager.Instance.GetClub((Guid) Session["club"]);
         RefreshStudentsTable(club);
+        RefreshStatisticsTable(club);
+    }
+
+    protected void ddSumMonths_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        SaveDefaults();
+        Club club = Manager.Instance.GetClub((Guid)Session["club"]);
         RefreshStatisticsTable(club);
     }
 }
