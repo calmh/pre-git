@@ -57,7 +57,7 @@ public partial class StudentPage : ProtectedPage
                     ddTitle.SelectedValue = ((int)s.Title).ToString();
                     tbComments.Text = s.Comments;
                     ddGroup.Items.Clear();
-                    ddGroup.Items.Add("");
+                    ddGroup.Items.Add("(ingen grupp)");
                     foreach (string group in club.GroupList)
                         ddGroup.Items.Add(group);
                     if (s.Group != null)
@@ -127,8 +127,10 @@ public partial class StudentPage : ProtectedPage
             s.Comments = tbComments.Text;
             if (tbGroup.Text != "")
                 s.Group = tbGroup.Text;
-            else if (ddGroup.SelectedValue != null && ddGroup.SelectedValue != "")
+            else if (ddGroup.SelectedValue != "(ingen grupp)")
                 s.Group = ddGroup.SelectedValue;
+            else
+                s.Group = null;
                 
             if (cbPersonalPassword.Checked)
                 s.Password = null;
