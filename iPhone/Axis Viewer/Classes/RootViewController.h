@@ -12,4 +12,6 @@
 	NSMutableArray *cameras;
 }
 
+-(void)addPressed: (id)sender;
+
 @end
