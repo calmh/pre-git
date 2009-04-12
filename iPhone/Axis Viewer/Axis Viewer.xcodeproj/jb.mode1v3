@@ -273,8 +273,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>1</integer>
+									<integer>15</integer>
+									<integer>11</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -314,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CameraEditViewController.h</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CameraEditViewController.h</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29930B950F92469100F2FC7E</string>
+										<string>29930BC10F924C1600F2FC7E</string>
 										<key>history</key>
 										<array>
 											<string>29EC29870F65A8060013FE9A</string>
@@ -337,11 +337,11 @@
 											<string>29930A950F9230B900F2FC7E</string>
 											<string>29930B690F9243EE00F2FC7E</string>
 											<string>29930B730F92444100F2FC7E</string>
-											<string>29930B790F92458000F2FC7E</string>
 											<string>29930B890F92464800F2FC7E</string>
 											<string>29930B8A0F92464800F2FC7E</string>
 											<string>29930B910F92469100F2FC7E</string>
-											<string>29930B920F92469100F2FC7E</string>
+											<string>29930BBD0F924C1600F2FC7E</string>
+											<string>29930BBE0F924C1600F2FC7E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -510,6 +510,7 @@
 											<string>29930B8D0F92464800F2FC7E</string>
 											<string>29930B930F92469100F2FC7E</string>
 											<string>29930B940F92469100F2FC7E</string>
+											<string>29930BBF0F924C1600F2FC7E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -703,12 +704,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>29930B960F92469100F2FC7E</string>
 		<string>299309BA0F91504D00F2FC7E</string>
 		<string>299307E90F9138C000F2FC7E</string>
 		<string>299307EA0F9138C000F2FC7E</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2954801A0F65932900ABBCD2</string>
 		<string>/Users/jb/projekt/iPhone/Axis Viewer/Axis Viewer.xcodeproj</string>
 	</array>
@@ -803,7 +803,7 @@
 			<key>WindowToolGUID</key>
 			<string>2954801A0F65932900ABBCD2</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1084,7 +1084,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
