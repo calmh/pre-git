@@ -3,7 +3,7 @@
 //  Axis Viewer
 //
 //  Created by Jakob Borg on 3/9/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Copyright Jakob Borg 2009. All rights reserved.
 //
 
 #import "Axis_ViewerAppDelegate.h"

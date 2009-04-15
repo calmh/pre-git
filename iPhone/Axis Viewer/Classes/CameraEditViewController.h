@@ -3,7 +3,7 @@
 //  Axis Viewer
 //
 //  Created by Jakob Borg on 4/11/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
