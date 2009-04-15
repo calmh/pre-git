@@ -40,21 +40,7 @@
 			[parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
 	}
 	
-	/*
-	 This doesn't work.
-	 Needs to use NSURLConnection with authentiction stuff.
-	 
-	 paramsUrlStr = [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"];
-	 paramsUrl = [NSURL URLWithString:paramsUrlStr];
-	 params = [NSString stringWithContentsOfURL:paramsUrl encoding:NSUTF8StringEncoding error:nil];
-	 lines = [params componentsSeparatedByString:@"\n"];
-	 for (NSString *line in lines) {
-	 NSArray *parts = [line componentsSeparatedByString:@"="];
-	 if ([parts count] == 2)
-	 [parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
-	 }
-	 */
-	
+	[params release];
 	return parameters;
 }
 
@@ -103,6 +89,7 @@
 	[self.tableView reloadData];
 	[connection release];
 	[receivedData release];
+	receivedData = nil;
 	
 	// Try to load as admin, if it's not already done.
 	NSString *url = [self createCameraURL];
