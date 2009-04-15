@@ -7,6 +7,7 @@
 //
 
 #import "CameraEditViewController.h"
+#import "EditingCell.h"
 
 @implementation CameraEditViewController
 
@@ -18,13 +19,31 @@
 	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
 	[keys retain];
 	descriptions = [[NSMutableDictionary alloc] init];
-	[descriptions setValue:@"Description" forKey:@"description"];
-	[descriptions setValue:@"Address" forKey:@"address"];
-	[descriptions setValue:@"User name" forKey:@"username"];
-	[descriptions setValue:@"Password" forKey:@"password"];
-	[descriptions setValue:@"Frame rate" forKey:@"framerate"];
+	[descriptions setValue:@"Description:" forKey:@"description"];
+	[descriptions setValue:@"Address:" forKey:@"address"];
+	[descriptions setValue:@"User name:" forKey:@"username"];
+	[descriptions setValue:@"Password:" forKey:@"password"];
 	
 	[self setEditing:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(keyboardWillShow:)
+	 name:UIKeyboardWillShowNotification
+         object:nil];
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(keyboardWillHide:)
+	 name:UIKeyboardWillHideNotification
+         object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,8 +73,7 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
-	static NSString *CellIdentifier = @"EditCell";
-	
+	static NSString *identifier = @"EditingCell";
 	NSString* labelStr = @"";
 	NSString* valueStr = @"";
 	int row = [indexPath indexAtPosition:1];
@@ -63,62 +81,41 @@
 	labelStr = [descriptions valueForKey:key];
 	valueStr = [camera valueForKey:key];
 	
-        UITableViewCell *cell; // = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	//      if (cell == nil) {
-	int margin = 5;
-	
-	CGRect frame = CGRectMake(0, 0, 300, 44);
-	cell = [[[UITableViewCell alloc] initWithFrame:frame reuseIdentifier:CellIdentifier] autorelease];
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	
-	frame = CGRectInset(frame, margin, margin);
-	int width = frame.size.width;
-	frame.size.width = width / 3 - margin;
-	
-	UILabel *label;
-	label = [[[UILabel alloc] initWithFrame:frame] autorelease];
-	label.text = labelStr;
-	label.lineBreakMode = UILineBreakModeTailTruncation;
-	label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
-	[cell.contentView addSubview:label];
-	
-	frame.origin.x += width / 3 + margin;
-	frame.size.width = width / 3 * 2 - margin;
-	
-	UITextField* value;
-	value = [[[UITextField alloc] initWithFrame:frame] autorelease];
-	value.text = valueStr;
-	value.borderStyle = UITextBorderStyleNone;
-	value.textColor = [UIColor darkGrayColor];
-	value.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-	value.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	value.delegate = self;
-	value.tag = row;
-	if ([key compare:@"password"] == 0) {
-		[value setKeyboardType:UIKeyboardTypeDefault];
-		[value setAutocorrectionType:UITextAutocorrectionTypeNo];
-		[value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-		[value setSecureTextEntry:YES];
-	} else if ([key compare:@"description"] == 0) {
-		[value setKeyboardType:UIKeyboardTypeDefault];
-		[value setAutocorrectionType:UITextAutocorrectionTypeDefault];
-		[value setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
-	} else if ([key compare:@"address"] == 0) {
-		[value setKeyboardType:UIKeyboardTypeURL];
-		[value setAutocorrectionType:UITextAutocorrectionTypeNo];
-		[value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-	} else {
-		[value setKeyboardType:UIKeyboardTypeASCIICapable];
-		[value setAutocorrectionType:UITextAutocorrectionTypeNo];
-		[value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+	EditingCell *cell=  (EditingCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
+	if (cell == nil) { 
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
+		for (id object in nib) {
+			if ([object isKindOfClass:[EditingCell class]])
+				cell = (EditingCell *)object;
+		}
+		cell.value.delegate = self;
 	}
-	[cell.contentView addSubview:value];
 	
-	//} else {
-	//		((UILabel*) [cell.contentView.subviews objectAtIndex:0]).text = labelStr;
-	//		((UILabel*) [cell.contentView.subviews objectAtIndex:1]).text = valueStr;
-	//      }
+	cell.prompt.text = labelStr;
+	cell.value.text = valueStr;
+	cell.value.tag = row;
+	if ([key compare:@"password"] == 0) {
+		[cell.value setKeyboardType:UIKeyboardTypeDefault];
+		[cell.value setAutocorrectionType:UITextAutocorrectionTypeNo];
+		[cell.value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+		[cell.value setSecureTextEntry:YES];
+		[cell.value setPlaceholder:@"password"];
+	} else if ([key compare:@"description"] == 0) {
+		[cell.value setKeyboardType:UIKeyboardTypeDefault];
+		[cell.value setAutocorrectionType:UITextAutocorrectionTypeDefault];
+		[cell.value setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
+		[cell.value setPlaceholder:@"A description"];
+	} else if ([key compare:@"address"] == 0) {
+		[cell.value setKeyboardType:UIKeyboardTypeURL];
+		[cell.value setAutocorrectionType:UITextAutocorrectionTypeNo];
+		[cell.value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+		[cell.value setPlaceholder:@"cam.example.com"];
+	} else if ([key compare:@"username"] == 0) {
+		[cell.value setKeyboardType:UIKeyboardTypeASCIICapable];
+		[cell.value setAutocorrectionType:UITextAutocorrectionTypeNo];
+		[cell.value setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+		[cell.value setPlaceholder:@"user"];
+	}
 	
 	return cell;
 }
@@ -127,6 +124,52 @@
 {
 	NSString* key = [keys objectAtIndex:textField.tag];
 	[camera setValue:textField.text forKey:key];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if (section == 0)
+		return @"Basic Settings";
+	else
+		return nil;
+}
+
+- (void)keyboardWillShow:(NSNotification *)note
+{
+	CGRect keyboardBounds;
+	[[note.userInfo valueForKey:UIKeyboardBoundsUserInfoKey] getValue: &keyboardBounds];
+	int keyboardHeight = keyboardBounds.size.height;
+	if (keyboardIsShowing == NO)
+	{
+		keyboardIsShowing = YES;
+		CGRect frame = self.view.frame;
+		frame.size.height -= keyboardHeight;
+		
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+		[UIView setAnimationDuration:0.3f];
+		self.view.frame = frame;
+		[UIView commitAnimations];
+	}
+}
+
+- (void)keyboardWillHide:(NSNotification *)note
+{
+	CGRect keyboardBounds;
+	[[note.userInfo valueForKey:UIKeyboardBoundsUserInfoKey] getValue: &keyboardBounds];
+	int keyboardHeight = keyboardBounds.size.height;
+	if (keyboardIsShowing == YES)
+	{
+		keyboardIsShowing = NO;
+		CGRect frame = self.view.frame;
+		frame.size.height += keyboardHeight;
+		
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+		[UIView setAnimationDuration:0.3f];
+		self.view.frame = frame;
+		[UIView commitAnimations];
+	}
 }
 
 - (void)dealloc {

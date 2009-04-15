@@ -1,20 +1,20 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface CameraDisplayViewController : UIViewController {
+@interface CameraDisplayViewController : UITableViewController {
 	UIWebView* webView;
-	UILabel* titleLabel;
-	UILabel* modelLabel;
-	UISwitch* fastRefresh;
 	NSMutableDictionary* camera;
 	NSMutableData* receivedData;
+	NSString* cameraText;
+	NSString* cameraModel;
+	BOOL fetchedAsViewer;
+	BOOL fetchedAsOperator;
 }
 
-@property(nonatomic, retain) IBOutlet UIWebView* webView;
-@property(nonatomic, retain) IBOutlet UILabel* titleLabel;
-@property(nonatomic, retain) IBOutlet UILabel* modelLabel;
-@property(nonatomic, retain) IBOutlet UISwitch* fastRefresh;
 @property(nonatomic, retain) NSMutableDictionary* camera;
+@property(nonatomic, retain) NSString* cameraText;
+@property(nonatomic, retain) NSString* cameraModel;
+
 
 - (void)editPressed: (id)sender;
 - (void)fastRefreshChanged: (id)sender;

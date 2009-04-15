@@ -1,9 +1,10 @@
 #import "CameraDisplayViewController.h"
 #import "CameraEditViewController.h"
+#import "DescriptionCell.h"
 
 @implementation CameraDisplayViewController
 
-@synthesize webView, camera, titleLabel, modelLabel, fastRefresh;
+@synthesize camera, cameraText, cameraModel;
 
 -(void) viewDidLoad
 {
@@ -23,9 +24,8 @@
 		return [NSString stringWithFormat: @"http://%@:%@@%@", username, password, address];
 	else
 		return [NSString stringWithFormat: @"http://%@", address];
-
+	
 }
-
 
 - (NSDictionary*) getAxisParameters {
 	// The URL to the parameters list.
@@ -58,14 +58,28 @@
 	return parameters;
 }
 
--(void) updateInformationLabelsForCamera:(NSString*) url
+-(void) getAxisParametersAsViewer:(NSString*) url
 {
-	NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand,Image"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-	NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	if (theConnection) {
-		receivedData=[[NSMutableData alloc] init];
+	if (!fetchedAsViewer) {
+		fetchedAsViewer = YES;
+		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+		NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+		if (theConnection) {
+			receivedData=[[NSMutableData alloc] init];
+		}
 	}
-	
+}
+
+-(void) getAxisParametersAsOperator:(NSString*) url
+{
+	if (!fetchedAsOperator) {
+		fetchedAsOperator = YES;
+		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+		NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+		if (theConnection) {
+			receivedData=[[NSMutableData alloc] init];
+		}
+	}
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -75,16 +89,24 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	 // Get the parameter list from the camera and set a label to show the model name.
-	 NSDictionary *params = [self getAxisParameters];
-	 NSString *value = nil;
-	 if (value = [params valueForKey:@"root.Brand.ProdShortName"])
-	 modelLabel.text = value;
-	 else 
-	 modelLabel.text = @"Unknown";
-
+	// Get the parameter list from the camera and set a label to show the model name.
+	NSDictionary *params = [self getAxisParameters];
+	NSString *value = nil;
+	if (value = [params valueForKey:@"root.Brand.ProdShortName"]) {
+		self.cameraModel = value;
+	}
+	value = nil;
+	if (value = [params valueForKey:@"root.Image.I0.Text.String"]) {
+		self.cameraText = value;
+	}
+	
+	[self.tableView reloadData];
 	[connection release];
 	[receivedData release];
+	
+	// Try to load as admin, if it's not already done.
+	NSString *url = [self createCameraURL];
+	[self getAxisParametersAsOperator: url];
 }
 
 -(void) updateWebViewForCamera:(NSString*) url withFps:(NSNumber*) fps
@@ -97,20 +119,13 @@
 -(void) viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[self.titleLabel setText: [camera valueForKey:@"description"]];
-	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	//[self.titleLabel setText: [camera valueForKey:@"description"]];
+	//self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 	
-	NSNumber* fps = [camera valueForKey:@"framerate"];
-	if ([fps intValue] == 0) {
-		fps = [NSNumber numberWithInt:1];
-		[camera setValue:fps forKey:@"framerate"];
-	}
-
-	fastRefresh.on = [fps intValue] > 5;
-	
+	fetchedAsViewer = NO;
+	fetchedAsOperator = NO;
 	NSString *url = [self createCameraURL];
-	[self updateInformationLabelsForCamera: url];
-	[self updateWebViewForCamera:url withFps:fps];
+	[self getAxisParametersAsViewer: url];
 }
 
 
@@ -125,14 +140,105 @@
 -(void) fastRefreshChanged:(id)sender
 {
 	int ifps = 1;
-	if (fastRefresh.on)
-		ifps = 10;
+	//if (fastRefresh.on)
+	//	ifps = 10;
 	
 	NSNumber* fps = [NSNumber numberWithInt:ifps];
 	[camera setValue:fps forKey:@"framerate"];
-
+	
 	NSString *url = [self createCameraURL];
 	[self updateWebViewForCamera:url withFps:fps];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	if (cameraModel || cameraText)
+		return 2;
+	else
+		return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	if (section == 0) {
+		return 1;
+	} else {
+		if (cameraModel && cameraText)
+			return 2;
+		else if (cameraModel || cameraText)
+			return 1;
+	}
+	return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSString* identifier;
+	if (indexPath.section == 0)
+		identifier = @"CameraCell";
+	else
+		identifier = @"DescriptionCell";
+	
+	UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:identifier];
+	if (!cell) {
+		if (indexPath.section == 0 && indexPath.row == 0) {
+			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:identifier] autorelease];
+			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 280, 210)];
+			[webView autorelease];
+			NSNumber* fps = [camera valueForKey:@"framerate"];
+			if ([fps intValue] == 0) {
+				fps = [NSNumber numberWithInt:1];
+				[camera setValue:fps forKey:@"framerate"];
+			}
+			NSString *url = [self createCameraURL];
+			[self updateWebViewForCamera:url withFps:fps];
+			[cell.contentView addSubview:webView];
+		} else if (indexPath.section == 1) {
+			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
+			for (id object in nib) {
+				if ([object isKindOfClass:[DescriptionCell class]])
+					cell = (DescriptionCell *)object;
+			}
+			DescriptionCell* dcell = (DescriptionCell*)cell;
+			if (indexPath.row == 0 && cameraText) {
+				dcell.descriptionLabel.text = @"Description";
+				dcell.valueLabel.text = cameraText;
+			} else if (indexPath.row == 0 && !cameraText && cameraModel) {
+				dcell.descriptionLabel.text = @"Camera Model";
+				dcell.valueLabel.text = cameraModel;
+			} else if (indexPath.row == 1 && cameraModel) {
+				dcell.descriptionLabel.text = @"Camera Model";
+				dcell.valueLabel.text = cameraModel;
+			}
+		}
+	}
+	return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static int descriptionCellHeight = 0;
+	// Find the correct height of a description cell.
+	if (descriptionCellHeight == 0) {
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DescriptionCell" owner:self options:nil];
+		for (id object in nib) {
+			if ([object isKindOfClass:[DescriptionCell class]]) {
+				DescriptionCell* cell = (DescriptionCell *)object;
+				descriptionCellHeight = cell.frame.size.height;
+			}
+		}
+	}
+	
+	if (indexPath.section == 0 && indexPath.row == 0)
+		return 230;
+	else
+		return descriptionCellHeight;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if (section == 0)
+		return [camera valueForKey:@"description"];
+	else
+		return nil;
 }
 
 @end

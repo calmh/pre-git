@@ -28,11 +28,11 @@
 	if (cameras == nil) {
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos Filip", @"description", @"jb", @"username", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos Filip & Anna", @"description", @"jb", @"username", nil];
 		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En finsk skola", @"description", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En skolgård någonstans", @"description", nil];
 		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"216.62.222.101", @"address", @"Några hundar", @"description", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"216.62.222.101", @"address", @"Ett hundpensionat kanske", @"description", nil];
 		[cameras addObject:cam];
 	}
 }

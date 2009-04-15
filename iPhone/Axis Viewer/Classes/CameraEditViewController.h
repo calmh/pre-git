@@ -12,6 +12,7 @@
 	NSMutableDictionary* camera;
 	NSMutableDictionary* descriptions;
 	NSArray* keys;
+	BOOL keyboardIsShowing;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;
