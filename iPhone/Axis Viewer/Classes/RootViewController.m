@@ -25,32 +25,16 @@
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
 	cameras = [[NSMutableArray alloc] initWithContentsOfFile:filename];
 	
-	if (cameras == nil)
+	if (cameras == nil) {
 		cameras = [[NSMutableArray alloc] init];
-	
-	/*
-	 if ([cameras count] == 0) {
-	 NSMutableDictionary *cam = [[NSMutableDictionary alloc] init];
-	 [cam setValue:@"Filip hemma" forKey:@"description"];
-	 [cam setValue:@"cam.filip.morotsmedia.se" forKey:@"address"];
-	 [cam setValue:@"jb" forKey:@"username"];
-	 [cam setValue:@"iphone" forKey:@"password"];
-	 [cameras addObject:cam];
-	 [cam release];
-	 
-	 cam = [[NSMutableDictionary alloc] init];
-	 [cam setValue:@"DNLab.se 1" forKey:@"description"];
-	 [cam setValue:@"cam.dnlab.se" forKey:@"address"];
-	 [cameras addObject:cam];
-	 [cam release];
-	 
-	 cam = [[NSMutableDictionary alloc] init];
-	 [cam setValue:@"DNLab.se 2" forKey:@"description"];
-	 [cam setValue:@"cam.dnlab.se" forKey:@"address"];
-	 [cameras addObject:cam];
-	 [cam release];
-	 }
-	 */
+		NSMutableDictionary *cam;
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos filip", @"description", @"jb", @"username", nil];
+		[cameras addObject:cam];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En finsk skola", @"description", nil];
+		[cameras addObject:cam];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"216.62.222.101", @"address", @"Några hundar", @"description", nil];
+		[cameras addObject:cam];
+	}
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -15,13 +15,15 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil];
+	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
 	[keys retain];
 	descriptions = [[NSMutableDictionary alloc] init];
 	[descriptions setValue:@"Description" forKey:@"description"];
 	[descriptions setValue:@"Address" forKey:@"address"];
 	[descriptions setValue:@"User name" forKey:@"username"];
 	[descriptions setValue:@"Password" forKey:@"password"];
+	[descriptions setValue:@"Frame rate" forKey:@"framerate"];
+	
 	[self setEditing:YES];
 }
 
@@ -38,7 +40,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 4;
+	return [keys count];
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
