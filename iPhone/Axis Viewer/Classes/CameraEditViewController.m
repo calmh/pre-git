@@ -12,15 +12,6 @@
 
 @synthesize camera;
 
-/*
- - (id)initWithStyle:(UITableViewStyle)style {
- // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
- if (self = [super initWithStyle:style]) {
- }
- return self;
- }
- */
-
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
@@ -32,54 +23,7 @@
 	[descriptions setValue:@"User name" forKey:@"username"];
 	[descriptions setValue:@"Password" forKey:@"password"];
 	[self setEditing:YES];
-	
-	//UIBarButtonItem *b1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelClicked:)];
-	//self.navigationItem.leftBarButtonItem = b1; 
-	//[b1 release];
-	
-	//UIBarButtonItem *b2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveClicked:)];
-	//self.navigationItem.rightBarButtonItem = b2; 
-	//[b2 release];
 }
-
--(void) cancelClicked:(id) sender
-{
-	[self.navigationController popViewControllerAnimated:YES];
-}
-
--(void) saveClicked:(id) sender
-{
-	[self.navigationController popViewControllerAnimated:YES];
-}
-
-/*
- - (void)viewWillAppear:(BOOL)animated {
- [super viewWillAppear:animated];
- }
- */
-/*
- - (void)viewDidAppear:(BOOL)animated {
- [super viewDidAppear:animated];
- }
- */
-/*
- - (void)viewWillDisappear:(BOOL)animated {
- [super viewWillDisappear:animated];
- }
- */
-/*
- - (void)viewDidDisappear:(BOOL)animated {
- [super viewDidDisappear:animated];
- }
- */
-
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
@@ -91,7 +35,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
 }
-
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -134,8 +77,6 @@
 	UILabel *label;
 	label = [[[UILabel alloc] initWithFrame:frame] autorelease];
 	label.text = labelStr;
-	//label.font = [UIFont boldSystemFontOfSize:16.0];
-	//label.textAlignment = UITextAlignmentRight;
 	label.lineBreakMode = UILineBreakModeTailTruncation;
 	label.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
 	[cell.contentView addSubview:label];
@@ -146,10 +87,6 @@
 	UITextField* value;
 	value = [[[UITextField alloc] initWithFrame:frame] autorelease];
 	value.text = valueStr;
-	//value.font = [UIFont systemFontOfSize:16.0];
-	//value.textColor = [UIColor blackColor];
-	//value.textAlignment = UITextAlignmentRight;
-	//value.lineBreakMode = UILineBreakModeTailTruncation;
 	value.borderStyle = UITextBorderStyleNone;
 	value.textColor = [UIColor darkGrayColor];
 	value.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -190,51 +127,12 @@
 	[camera setValue:textField.text forKey:key];
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- 
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
- }
- */
-
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-
 - (void)dealloc {
-	[super dealloc];
+	[descriptions release];
+	[keys release];
 	[camera release];
+	[super dealloc];
 }
-
 
 @end
 

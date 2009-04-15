@@ -63,12 +63,6 @@
 	}
 }
 
-/*
- - (void)viewDidAppear:(BOOL)animated {
- [super viewDidAppear:animated];
- }
- */
-
 - (void)addPressed:(id)sender
 {
 	NSMutableDictionary *cam = [[NSMutableDictionary alloc] init];
@@ -88,12 +82,6 @@
 	[cameras writeToFile:filename atomically:NO];
 	[super viewWillDisappear:animated];
 }
-
-/*
- - (void)viewDidDisappear:(BOOL)animated {
- [super viewDidDisappear:animated];
- }
- */
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -150,16 +138,6 @@
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-
 // The editing style for a row is the kind of button displayed to the left of the cell when in editing mode.
 - (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
 	// No editing style if not editing or the index path is nil.
@@ -176,9 +154,6 @@
 		[cameras removeObjectAtIndex:indexPath.row];
 		//[tableView reloadData];
 		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-	}   
-	else if (editingStyle == UITableViewCellEditingStyleInsert) {
-		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
 	}   
 }
 
@@ -197,10 +172,7 @@
 
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (indexPath.row < [cameras count])
-		return YES;
-	else
-		return NO;
+	return YES;
 }
 
 

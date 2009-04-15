@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraEditViewController : UITableViewController {
+@interface CameraEditViewController : UITableViewController <UITextFieldDelegate> {
 	NSMutableDictionary* camera;
 	NSMutableDictionary* descriptions;
 	NSArray* keys;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;
-
-- (void)cancelClicked:(id) sender;
-- (void)saveClicked:(id) sender;
 
 @end

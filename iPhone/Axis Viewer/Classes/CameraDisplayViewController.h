@@ -2,16 +2,15 @@
 #import <Foundation/Foundation.h>
 
 @interface CameraDisplayViewController : UIViewController {
-    IBOutlet UIWebView* webView;
-    IBOutlet UILabel* titleLabel;
+    UIWebView* webView;
+    UILabel* titleLabel;
     NSMutableDictionary* camera;
 }
 
--(void) setCamera:(NSMutableDictionary*)newCamera;
--(void) editPressed:(id) sender;
-
-@property(nonatomic, retain) UIWebView* webView;
-@property(nonatomic, retain) UILabel* titleLabel;
+@property(nonatomic, retain) IBOutlet UIWebView* webView;
+@property(nonatomic, retain) IBOutlet UILabel* titleLabel;
 @property(nonatomic, retain) NSMutableDictionary* camera;
+
+-(void) editPressed:(id) sender;
 
 @end

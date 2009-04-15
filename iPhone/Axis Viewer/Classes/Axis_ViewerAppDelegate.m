@@ -9,12 +9,10 @@
 #import "Axis_ViewerAppDelegate.h"
 #import "RootViewController.h"
 
-
 @implementation Axis_ViewerAppDelegate
 
 @synthesize window;
 @synthesize navigationController;
-
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
