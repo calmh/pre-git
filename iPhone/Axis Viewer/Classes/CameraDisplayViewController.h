@@ -2,18 +2,21 @@
 #import <Foundation/Foundation.h>
 
 @interface CameraDisplayViewController : UIViewController {
-    UIWebView* webView;
-    UILabel* titleLabel;
+	UIWebView* webView;
+	UILabel* titleLabel;
 	UILabel* modelLabel;
-    NSMutableDictionary* camera;
+	UISwitch* fastRefresh;
+	NSMutableDictionary* camera;
+	NSMutableData* receivedData;
 }
 
 @property(nonatomic, retain) IBOutlet UIWebView* webView;
 @property(nonatomic, retain) IBOutlet UILabel* titleLabel;
 @property(nonatomic, retain) IBOutlet UILabel* modelLabel;
+@property(nonatomic, retain) IBOutlet UISwitch* fastRefresh;
 @property(nonatomic, retain) NSMutableDictionary* camera;
 
-- (NSDictionary*)getAxisParametersForCamera: (NSString*)url;
 - (void)editPressed: (id)sender;
+- (void)fastRefreshChanged: (id)sender;
 
 @end

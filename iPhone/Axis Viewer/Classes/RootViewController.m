@@ -28,7 +28,7 @@
 	if (cameras == nil) {
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos filip", @"description", @"jb", @"username", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos Filip", @"description", @"jb", @"username", nil];
 		[cameras addObject:cam];
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En finsk skola", @"description", nil];
 		[cameras addObject:cam];
@@ -105,7 +105,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+		//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	}
 	
 	NSMutableDictionary *cam = [cameras objectAtIndex:indexPath.row];
