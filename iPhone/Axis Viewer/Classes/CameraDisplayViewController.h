@@ -3,20 +3,18 @@
 
 @interface CameraDisplayViewController : UITableViewController {
 	UIWebView* webView;
+	NSURL* webViewLoadedURL;
 	NSMutableDictionary* camera;
+	NSMutableDictionary* parameters;
+	NSMutableDictionary* fetchedUrls;
 	NSMutableData* receivedData;
-	NSString* cameraText;
-	NSString* cameraModel;
-	BOOL fetchedAsViewer;
-	BOOL fetchedAsOperator;
+	NSDate* updated;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;
-@property(nonatomic, retain) NSString* cameraText;
-@property(nonatomic, retain) NSString* cameraModel;
-
+@property(nonatomic, retain) NSURL* webViewLoadedURL;
 
 - (void)editPressed: (id)sender;
-- (void)fastRefreshChanged: (id)sender;
+// - (void)fastRefreshChanged: (id)sender;
 
 @end
