@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Axis_ViewerAppDelegate.h"
 
 @interface RootViewController : UITableViewController {
-	NSMutableArray *cameras;
+	Axis_ViewerAppDelegate *appDelegate;
 }
 
 -(void)addPressed: (id)sender;

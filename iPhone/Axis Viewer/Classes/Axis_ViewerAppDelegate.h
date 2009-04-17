@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface Axis_ViewerAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    UINavigationController *navigationController;
+	UIWindow *window;
+	UINavigationController *navigationController;
+	NSMutableArray *cameras;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (readonly) NSMutableArray* cameras;
 
 @end
 

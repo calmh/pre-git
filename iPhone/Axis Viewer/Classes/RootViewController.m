@@ -15,32 +15,19 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
-	 UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
-	 self.navigationItem.leftBarButtonItem = b; 
-	 [b release];
-	 
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
-	cameras = [[NSMutableArray alloc] initWithContentsOfFile:filename];
+	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
+	self.navigationItem.leftBarButtonItem = b; 
+	[b release];
 	
-	if (cameras == nil) {
-		cameras = [[NSMutableArray alloc] init];
-		NSMutableDictionary *cam;
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos Filip & Anna", @"description", @"jb", @"username", nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En skolgård någonstans", @"description", nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"216.62.222.101", @"address", @"Ett hundpensionat kanske", @"description", nil];
-		[cameras addObject:cam];
-	}
+	self.title = NSLocalizedString(@"Camera List", @"");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.tableView reloadData];
-	if ([cameras count] > 0) {
+	if ([appDelegate.cameras count] > 0) {
 		self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	} else {
 		self.navigationItem.rightBarButtonItem = nil;
@@ -50,8 +37,8 @@
 - (void)addPressed:(id)sender
 {
 	NSMutableDictionary *cam = [[NSMutableDictionary alloc] init];
-	[cam setValue:@"New camera" forKey:@"description"];
-	[cameras addObject:cam];
+	[cam setValue:NSLocalizedString(@"New camera", @"") forKey:@"description"];
+	[appDelegate.cameras addObject:cam];
 	[cam release];
 	
 	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
@@ -60,10 +47,6 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
-	[cameras writeToFile:filename atomically:NO];
 	[super viewWillDisappear:animated];
 }
 
@@ -81,7 +64,7 @@
 	[super setEditing:editing animated:animated];
 	//[(UITableView*) self.view reloadData];
 	self.navigationItem.leftBarButtonItem.enabled = !editing;
-	if ([cameras count] > 0) {
+	if ([appDelegate.cameras count] > 0) {
 		self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	} else {
 		self.navigationItem.rightBarButtonItem = nil;
@@ -95,7 +78,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [cameras count];
+	return [appDelegate.cameras count];
 }
 
 
@@ -105,17 +88,17 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
-	NSMutableDictionary *cam = [cameras objectAtIndex:indexPath.row];
+	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
 	cell.text = [cam valueForKey:@"description"];
 	return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSMutableDictionary *cam = [cameras objectAtIndex:indexPath.row];
+	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
 	
 	CameraDisplayViewController *cdc = [[[CameraDisplayViewController alloc] initWithNibName:@"CameraDisplayViewController" bundle:nil] autorelease];
 	[cdc setCamera:cam];
@@ -135,7 +118,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		[cameras removeObjectAtIndex:indexPath.row];
+		[appDelegate.cameras removeObjectAtIndex:indexPath.row];
 		//[tableView reloadData];
 		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
 	}   
@@ -144,11 +127,11 @@
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-	if (fromIndexPath.row < [cameras count] && toIndexPath.row <  [cameras count]) {
-		NSDictionary* cam1 = [cameras objectAtIndex:fromIndexPath.row];
+	if (fromIndexPath.row < [appDelegate.cameras count] && toIndexPath.row <  [appDelegate.cameras count]) {
+		NSDictionary* cam1 = [appDelegate.cameras objectAtIndex:fromIndexPath.row];
 		[cam1 retain];
-		[cameras removeObjectAtIndex:fromIndexPath.row];
-		[cameras insertObject:cam1 atIndex:toIndexPath.row];
+		[appDelegate.cameras removeObjectAtIndex:fromIndexPath.row];
+		[appDelegate.cameras insertObject:cam1 atIndex:toIndexPath.row];
 		[cam1 release];
 	}
 	//[(UITableView*) self.view reloadData]; ???

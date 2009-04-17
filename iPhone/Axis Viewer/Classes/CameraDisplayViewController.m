@@ -2,6 +2,8 @@
 #import "CameraEditViewController.h"
 #import "DescriptionCell.h"
 
+#define MAXFAILURES 2
+
 @implementation CameraDisplayViewController
 
 @synthesize camera, webViewLoadedURL;
@@ -9,16 +11,11 @@
 -(void) viewDidLoad
 {
 	[super viewDidLoad];
-	
-	self.title = @"View Camera";
+
+	self.title = NSLocalizedString(@"View Camera", @"");
 	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
 	self.navigationItem.rightBarButtonItem = b; 
 	[b release];
-	
-	receivedData = nil;
-	webViewLoadedURL = nil;
-	parameters = [[NSMutableDictionary alloc] init];
-	fetchedUrls = [[NSMutableDictionary alloc] init];
 }
 
 - (NSString*) createCameraURL  {
@@ -36,6 +33,18 @@
 -(void) updateAxisParameters {
 	// The URL to the parameters list.
 	NSString *params = [[NSString alloc] initWithData:receivedData encoding:NSISOLatin1StringEncoding];
+	
+	// Check if all requests seems to have failed due to authentication
+	NSArray* substrings = [params componentsSeparatedByString:@"401 Unauthorized"];
+	if ([substrings count] > MAXFAILURES * 2) {
+		// Display an alert box notifiying the user of the problem.
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
+								 message:NSLocalizedString(@"NotAuthorized", @"")
+								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
+						       otherButtonTitles: nil] autorelease];
+		[alert show];
+	}
+	
 	// Split by lines...
 	NSArray *lines = [params componentsSeparatedByString:@"\n"];
 	// Sort into a dictionary...
@@ -52,7 +61,7 @@
 {
 	if (![fetchedUrls objectForKey:url]) {
 		[fetchedUrls setObject:@"fetched" forKey:url];
-		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
 		NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
 		if (theConnection && !receivedData) {
 			receivedData = [[NSMutableData alloc] init];
@@ -71,7 +80,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	[connection release];
-	
 	[self updateAxisParameters];
 	[self.tableView reloadData];
 }
@@ -79,6 +87,19 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
 	[connection release];	
+	// Count the number of failures.
+	// When the number of failures reaches the total amount of requests we try to do,
+	// at the moment two, than we can conclude that the camera isn't reachable.
+	static int numFailures = 0;
+	numFailures++;
+	if (numFailures >= MAXFAILURES) {
+		// Display an alert box notifiying the user of the problem.
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
+								 message:NSLocalizedString(@"SettingsIncorrect", @"")
+								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
+						       otherButtonTitles: nil] autorelease];
+		[alert show];
+	}
 }
 
 /**
@@ -90,7 +111,7 @@
 	NSURL *nsurl = [NSURL URLWithString:url];
 	if (![nsurl isEqual:self.webViewLoadedURL]) {
 	// Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
-	NSString* embedHTML = [NSString stringWithFormat: @"<html><body style=\"text-align: center; background-color: black; margin:0\"><img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/></body></html>", url, fps];
+	NSString* embedHTML = [NSString stringWithFormat: @"<html><body style=\"text-align: center; vertical-align: middle; background-color: darkgrey; margin: 2px;\"><img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/></body></html>", url, fps];
 	[webView loadHTMLString:embedHTML baseURL:nil];
 	self.webViewLoadedURL = nsurl;
 	}
@@ -99,6 +120,10 @@
 -(void) viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	receivedData = nil;
+	webViewLoadedURL = nil;
+	parameters = [[NSMutableDictionary alloc] init];
+	fetchedUrls = [[NSMutableDictionary alloc] init];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -113,7 +138,7 @@
 {
 	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
 	[cdc setCamera:camera];
-	[cdc setTitle:@"Edit Camera"];
+	[cdc setTitle:NSLocalizedString(@"Edit Camera", @"")];
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 
@@ -133,40 +158,33 @@
 */
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
+		return 3;
+	else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
 		return 2;
 	else
 		return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	if (section == 0) {
-		return 1;
-	} else {
-		if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
-			return 2;
-		else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
-			return 1;
-		else
-			return 0;
-	}
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString* identifier;
-	if (indexPath.section == 0)
+	if (indexPath.row == 0)
 		identifier = @"CameraCell";
 	else
 		identifier = @"DescriptionCell";
 	
 	UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
-		if (indexPath.section == 0 && indexPath.row == 0) {
+		if (indexPath.row == 0) {
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:identifier] autorelease];
-			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 280, 210)];
+			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 280, 211)];
 			[webView autorelease];
 			[cell.contentView addSubview:webView];
-	} else if (indexPath.section == 1) {
+	} else {
 			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 			for (id object in nib) {
 				if ([object isKindOfClass:[DescriptionCell class]])
@@ -175,7 +193,7 @@
 		}
 	}
 	
-	if (indexPath.section == 0) {
+	if (indexPath.row == 0) {
 		// Only reload webview if absolutely necessary?
 		NSNumber* fps = [camera valueForKey:@"framerate"];
 		if ([fps intValue] == 0) {
@@ -184,16 +202,16 @@
 		}
 		NSString *url = [self createCameraURL];
 		[self updateWebViewForCamera:url withFps:fps];
-	} else if (indexPath.section == 1) {
+	} else {
 		DescriptionCell* dcell = (DescriptionCell*)cell;
-		if (indexPath.row == 0 && [parameters valueForKey:@"root.Image.I0.Text.String"]) {
-			dcell.descriptionLabel.text = @"Description";
+		if (indexPath.row == 1 && [parameters valueForKey:@"root.Image.I0.Text.String"]) {
+			dcell.descriptionLabel.text = NSLocalizedString(@"Description", @"");
 			dcell.valueLabel.text = [parameters valueForKey:@"root.Image.I0.Text.String"];
-		} else if (indexPath.row == 0 && ![parameters valueForKey:@"root.Image.I0.Text.String"] && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
-			dcell.descriptionLabel.text = @"Camera Model";
+		} else if (indexPath.row == 1 && ![parameters valueForKey:@"root.Image.I0.Text.String"] && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+			dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
 			dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
-		} else if (indexPath.row == 1 && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
-			dcell.descriptionLabel.text = @"Camera Model";
+		} else if (indexPath.row == 2 && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+			dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
 			dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
 		}
 	}
@@ -216,8 +234,8 @@
 		}
 	}
 	
-	if (indexPath.section == 0 && indexPath.row == 0)
-		return 230;
+	if (indexPath.row == 0)
+		return 231;
 	else
 		return descriptionCellHeight;
 }

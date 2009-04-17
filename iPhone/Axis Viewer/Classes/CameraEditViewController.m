@@ -19,10 +19,10 @@
 	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
 	[keys retain];
 	descriptions = [[NSMutableDictionary alloc] init];
-	[descriptions setValue:@"Description:" forKey:@"description"];
-	[descriptions setValue:@"Address:" forKey:@"address"];
-	[descriptions setValue:@"User name:" forKey:@"username"];
-	[descriptions setValue:@"Password:" forKey:@"password"];
+	[descriptions setValue:NSLocalizedString(@"Description", @"") forKey:@"description"];
+	[descriptions setValue:NSLocalizedString(@"Address", @"") forKey:@"address"];
+	[descriptions setValue:NSLocalizedString(@"User name", @"") forKey:@"username"];
+	[descriptions setValue:NSLocalizedString(@"Password", @"") forKey:@"password"];
 	
 	[self setEditing:YES];
 }
@@ -104,7 +104,7 @@
 		[cell.value setKeyboardType:UIKeyboardTypeDefault];
 		[cell.value setAutocorrectionType:UITextAutocorrectionTypeDefault];
 		[cell.value setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
-		[cell.value setPlaceholder:@"A description"];
+		[cell.value setPlaceholder:NSLocalizedString(@"A description", @"")];
 	} else if ([key compare:@"address"] == 0) {
 		[cell.value setKeyboardType:UIKeyboardTypeURL];
 		[cell.value setAutocorrectionType:UITextAutocorrectionTypeNo];
@@ -129,7 +129,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	if (section == 0)
-		return @"Basic Settings";
+		return NSLocalizedString(@"Basic Settings", @"");
 	else
 		return nil;
 }
@@ -180,4 +180,3 @@
 }
 
 @end
-
