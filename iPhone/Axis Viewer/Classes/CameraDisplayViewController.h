@@ -6,9 +6,7 @@
 	NSURL* webViewLoadedURL;
 	NSMutableDictionary* camera;
 	NSMutableDictionary* parameters;
-	NSMutableDictionary* fetchedUrls;
-	NSMutableData* receivedData;
-	NSDate* updated;
+	BOOL previewUpdated;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;

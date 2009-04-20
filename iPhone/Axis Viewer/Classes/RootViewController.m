@@ -6,10 +6,12 @@
 //  Copyright Jakob Borg 2009. All rights reserved.
 //
 
+#import "Common.h"
 #import "RootViewController.h"
 #import "Axis_ViewerAppDelegate.h"
 #import "CameraDisplayViewController.h"
 #import "CameraEditViewController.h"
+#import "RootViewCell.h"
 
 @implementation RootViewController
 
@@ -84,15 +86,31 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *CellIdentifier = @"CameraViewCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	static NSString *identifier = @"RootViewCell";
+	RootViewCell *cell = (RootViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	//	cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+	//	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
+		for (id object in nib) {
+			if ([object isKindOfClass:[RootViewCell class]])
+				cell = (RootViewCell *)object;
+		}
 	}
 	
 	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
-	cell.text = [cam valueForKey:@"description"];
+	cell.labelView.text = [cam valueForKey:@"description"];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [cam valueForKey:@"address"]];
+	UIImage *image = [[[UIImage alloc] initWithContentsOfFile:filename] autorelease];
+#ifndef ROUND_CORNERS_ON_SAVE
+	image = roundCornersOfImage(image);
+#endif
+	cell.imageView.image = image;
+	
+	
 	return cell;
 }
 
@@ -142,6 +160,21 @@
 	return YES;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static int descriptionCellHeight = 0;
+	if (descriptionCellHeight == 0) {
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RootViewCell" owner:self options:nil];
+		for (id object in nib) {
+			if ([object isKindOfClass:[RootViewCell class]]) {
+				RootViewCell* cell = (RootViewCell *)object;
+				descriptionCellHeight = cell.frame.size.height;
+			}
+		}
+	}
+	
+	return descriptionCellHeight;
+}
 
 - (void)dealloc {
 	[super dealloc];

@@ -1,22 +1,16 @@
+#import "Common.h"
 #import "CameraDisplayViewController.h"
 #import "CameraEditViewController.h"
 #import "DescriptionCell.h"
+#import "UIImageExtras.h"
 
 #define MAXFAILURES 2
+#define WEBVIEW_WIDTH 280
+#define WEBVIEW_HEIGHT 211
 
 @implementation CameraDisplayViewController
 
 @synthesize camera, webViewLoadedURL;
-
--(void) viewDidLoad
-{
-	[super viewDidLoad];
-
-	self.title = NSLocalizedString(@"View Camera", @"");
-	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
-	self.navigationItem.rightBarButtonItem = b; 
-	[b release];
-}
 
 - (NSString*) createCameraURL  {
 	// Build the base URL depending on authentication settings.
@@ -30,58 +24,96 @@
 	
 }
 
--(void) updateAxisParameters {
-	// The URL to the parameters list.
-	NSString *params = [[NSString alloc] initWithData:receivedData encoding:NSISOLatin1StringEncoding];
+-(void) viewDidLoad
+{
+	[super viewDidLoad];
 	
-	// Check if all requests seems to have failed due to authentication
-	NSArray* substrings = [params componentsSeparatedByString:@"401 Unauthorized"];
-	if ([substrings count] > MAXFAILURES * 2) {
-		// Display an alert box notifiying the user of the problem.
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
-								 message:NSLocalizedString(@"NotAuthorized", @"")
-								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
-						       otherButtonTitles: nil] autorelease];
-		[alert show];
-	}
-	
-	// Split by lines...
-	NSArray *lines = [params componentsSeparatedByString:@"\n"];
-	// Sort into a dictionary...
-	for (NSString *line in lines) {
-		NSArray *parts = [line componentsSeparatedByString:@"="];
-		if ([parts count] == 2)
-			[parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
-	}
-	
-	[params release];
+	self.title = NSLocalizedString(@"View Camera", @"");
+	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
+	self.navigationItem.rightBarButtonItem = b; 
+	[b release];
 }
 
--(void) getAxisParameters:(NSString*) url
+-(void) viewWillAppear:(BOOL)animated
 {
-	if (![fetchedUrls objectForKey:url]) {
-		[fetchedUrls setObject:@"fetched" forKey:url];
-		NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
-		NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-		if (theConnection && !receivedData) {
-			receivedData = [[NSMutableData alloc] init];
+	[super viewWillAppear:animated];
+
+	webViewLoadedURL = nil;
+	parameters = [[NSMutableDictionary alloc] init];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+	[self.tableView reloadData];
+
+	[NSThread detachNewThreadSelector: @selector(getAxisParametersBackgroundThread) toTarget: self withObject: nil];
+	[NSThread detachNewThreadSelector: @selector(savePreviewBackgroundThread) toTarget: self withObject: nil];
+}
+
+/**
+ Retrieve and save a preview for this camera, scaled to the same size as the camera view.
+ Method intended to run as separate thread.
+ **/
+-(void) savePreviewBackgroundThread
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+	
+	NSString* url = [self createCameraURL];
+	NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=0"]]];
+	UIImage *image = [[UIImage alloc] initWithData:imageData];
+	image = [image imageByScalingAndCroppingForSize:CGSizeMake(WEBVIEW_WIDTH - 4, WEBVIEW_HEIGHT - 4)];
+	[imageData release];
+
+	imageData = UIImageJPEGRepresentation(image, 0.5);
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString* filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
+	[imageData writeToFile:filename	atomically:NO];
+	
+	[pool release];
+}
+
+-(void) getAxisParametersBackgroundThread
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+	
+	int failed = 0;
+	NSString* url = [self createCameraURL];
+	NSArray *urls = [NSArray arrayWithObjects:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"], [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"], nil];
+	for (NSString* url in urls) {
+		NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
+		NSURLResponse *response = nil;
+		NSError *error = nil;
+		NSData* receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+		if (receivedData != NO) {
+			NSString *params = [[NSString alloc] initWithData:receivedData encoding:NSISOLatin1StringEncoding];
+			// Split by lines...
+			NSArray *lines = [params componentsSeparatedByString:@"\n"];
+			// Sort into a dictionary...
+			for (NSString *line in lines) {
+				NSArray *parts = [line componentsSeparatedByString:@"="];
+				if ([parts count] == 2)
+					[parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
+			}
+			[params release];
+			
+			// Update the view with new data
+			[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+		} else {
+			failed++;
 		}
 	}
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-	// There is a potential problem here that there are two NSURLConnections updating the data at the same time.
-	// In practice, it seems that data comes in large enough chunks that it's not corrupted, and it's anyway
-	// only the concatenated data that we are interested in.
-	[receivedData appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-	[connection release];
-	[self updateAxisParameters];
-	[self.tableView reloadData];
+	
+	if (failed == [urls count]) {
+		// Every request failed
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
+								 message:NSLocalizedString(@"SettingsIncorrect", @"")
+								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
+						       otherButtonTitles: nil] autorelease];
+		[alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
+	}
+	
+	[pool release];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -108,30 +140,24 @@
  **/
 -(void) updateWebViewForCamera:(NSString*) url withFps:(NSNumber*) fps
 {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSURL *base = [NSURL fileURLWithPath:documentsDirectory];
 	NSURL *nsurl = [NSURL URLWithString:url];
 	if (![nsurl isEqual:self.webViewLoadedURL]) {
-	// Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
-	NSString* embedHTML = [NSString stringWithFormat: @"<html><body style=\"text-align: center; vertical-align: middle; background-color: darkgrey; margin: 2px;\"><img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/></body></html>", url, fps];
-	[webView loadHTMLString:embedHTML baseURL:nil];
-	self.webViewLoadedURL = nsurl;
+		int w = WEBVIEW_WIDTH - 4;
+		int h = WEBVIEW_HEIGHT - 4;
+		// Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
+		NSString* embedHTML = [NSString stringWithFormat: @"<html>\
+				       <body style=\"text-align: center; vertical-align: middle; background-color: darkgrey; margin: 2px;\">\
+				       <div style=\"width: %dpx; height: %dpx; background-image: url('%@.jpg');\">\
+				       <img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&compression=30&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/>\
+				       </div>\
+				       </body>\
+				       </html>", w, h, [camera valueForKey:@"address"], url, fps];
+		[webView loadHTMLString:embedHTML baseURL:base];
+		self.webViewLoadedURL = nsurl;
 	}
-}
-
--(void) viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-	receivedData = nil;
-	webViewLoadedURL = nil;
-	parameters = [[NSMutableDictionary alloc] init];
-	fetchedUrls = [[NSMutableDictionary alloc] init];
-}
-
--(void) viewDidAppear:(BOOL)animated
-{
-	[self.tableView reloadData];
-	NSString *url = [self createCameraURL];
-	[self getAxisParameters: [url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"]];
-	[self getAxisParameters: [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"]];
 }
 
 -(void) editPressed:(id)sender
@@ -141,21 +167,6 @@
 	[cdc setTitle:NSLocalizedString(@"Edit Camera", @"")];
 	[self.navigationController pushViewController:cdc animated:YES];
 }
-
-/*
- -(void) fastRefreshChanged:(id)sender
-{
-	int ifps = 1;
-	//if (fastRefresh.on)
-	//	ifps = 10;
-	
-	NSNumber* fps = [NSNumber numberWithInt:ifps];
-	[camera setValue:fps forKey:@"framerate"];
-	
-	NSString *url = [self createCameraURL];
-	[self updateWebViewForCamera:url withFps:fps];
-}
-*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
@@ -181,10 +192,10 @@
 	if (!cell) {
 		if (indexPath.row == 0) {
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:identifier] autorelease];
-			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 280, 211)];
+			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, WEBVIEW_WIDTH, WEBVIEW_HEIGHT)];
 			[webView autorelease];
 			[cell.contentView addSubview:webView];
-	} else {
+		} else {
 			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 			for (id object in nib) {
 				if ([object isKindOfClass:[DescriptionCell class]])
@@ -195,11 +206,11 @@
 	
 	if (indexPath.row == 0) {
 		// Only reload webview if absolutely necessary?
-		NSNumber* fps = [camera valueForKey:@"framerate"];
-		if ([fps intValue] == 0) {
-			fps = [NSNumber numberWithInt:1];
-			[camera setValue:fps forKey:@"framerate"];
-		}
+		NSNumber* fps = [NSNumber numberWithInt:2]; //[camera valueForKey:@"framerate"];
+		//if ([fps intValue] == 0) {
+		//	fps = [NSNumber numberWithInt:1];
+		//	[camera setValue:fps forKey:@"framerate"];
+		//}
 		NSString *url = [self createCameraURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
@@ -235,7 +246,7 @@
 	}
 	
 	if (indexPath.row == 0)
-		return 231;
+		return WEBVIEW_HEIGHT + 20;
 	else
 		return descriptionCellHeight;
 }
@@ -250,10 +261,9 @@
 
 -(void) dealloc
 {
-	[receivedData release];
 	[parameters release];
-	[fetchedUrls release];
 	[webViewLoadedURL release];
+	
 	[super dealloc];
 }
 
