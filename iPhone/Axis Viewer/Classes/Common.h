@@ -8,7 +8,7 @@
  */
 
 // #define ROUND_CORNERS_ON_SAVE
-#define CORNER_RADIUS 32 // This is in relation to the saved im age size of 220x207 or something like that...
+#define CORNER_RADIUS 32 // This is in relation to the saved image size of 280x211 or something like that...
 void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWidth, float ovalHeight);
 UIImage *roundCornersOfImage(UIImage *source);
 

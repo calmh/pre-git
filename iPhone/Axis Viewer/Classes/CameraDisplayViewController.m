@@ -109,29 +109,20 @@
 		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
 								 message:NSLocalizedString(@"SettingsIncorrect", @"")
 								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
-						       otherButtonTitles: nil] autorelease];
+						       otherButtonTitles: NSLocalizedString(@"Edit", @""), nil] autorelease];
 		[alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
 	}
 	
 	[pool release];
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	[connection release];	
-	// Count the number of failures.
-	// When the number of failures reaches the total amount of requests we try to do,
-	// at the moment two, than we can conclude that the camera isn't reachable.
-	static int numFailures = 0;
-	numFailures++;
-	if (numFailures >= MAXFAILURES) {
-		// Display an alert box notifiying the user of the problem.
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
-								 message:NSLocalizedString(@"SettingsIncorrect", @"")
-								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
-						       otherButtonTitles: nil] autorelease];
-		[alert show];
-	}
+        if (buttonIndex == 1) { // Edit
+                [self editPressed:nil];
+        } else if (buttonIndex == 0) { // OK
+                [self.navigationController popViewControllerAnimated:YES];
+        }
 }
 
 /**
