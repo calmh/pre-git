@@ -183,6 +183,7 @@
 	if (!cell) {
 		if (indexPath.row == 0) {
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:identifier] autorelease];
+                        cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, WEBVIEW_WIDTH, WEBVIEW_HEIGHT)];
 			[webView autorelease];
 			[cell.contentView addSubview:webView];
@@ -248,6 +249,32 @@
 		return [camera valueForKey:@"description"];
 	else
 		return nil;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+	if (section == 0)
+		return NSLocalizedString(@"Touch the camera picture to save a photo.", @"");
+	else
+		return nil;
+}
+
+-(void) saveCameraSnapshot
+{
+        NSString* url = [self createCameraURL];
+        NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
+        UIImage *image = [[UIImage alloc] initWithData:imageData];
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+        if ([indexPath row] == 0) { // The camera image was tapped
+                [self performSelectorInBackground:@selector(saveCameraSnapshot) withObject:nil];
+                [UIView beginAnimations:nil context:NULL];  
+                [UIView setAnimationDuration:0.5];  
+                [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:webView cache:YES];  
+                [UIView commitAnimations]; 
+        }
 }
 
 -(void) dealloc
