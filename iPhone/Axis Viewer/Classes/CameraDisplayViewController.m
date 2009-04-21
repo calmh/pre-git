@@ -261,17 +261,21 @@
 
 -(void) saveCameraSnapshot
 {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+        
         NSString* url = [self createCameraURL];
         NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        
+        [pool release];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         if ([indexPath row] == 0) { // The camera image was tapped
                 [self performSelectorInBackground:@selector(saveCameraSnapshot) withObject:nil];
                 [UIView beginAnimations:nil context:NULL];  
-                [UIView setAnimationDuration:0.5];  
+                [UIView setAnimationDuration:0.75];  
                 [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:webView cache:YES];  
                 [UIView commitAnimations]; 
         }
