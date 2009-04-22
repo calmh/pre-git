@@ -18,11 +18,12 @@
 	
 	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
 	[keys retain];
-	descriptions = [[NSMutableDictionary alloc] init];
-	[descriptions setValue:NSLocalizedString(@"Description", @"") forKey:@"description"];
-	[descriptions setValue:NSLocalizedString(@"Address", @"") forKey:@"address"];
-	[descriptions setValue:NSLocalizedString(@"User name", @"") forKey:@"username"];
-	[descriptions setValue:NSLocalizedString(@"Password", @"") forKey:@"password"];
+	descriptions = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        NSLocalizedString(@"Description", @""), @"description",
+                        NSLocalizedString(@"Address", @""), @"address",
+                        NSLocalizedString(@"User name", @""), @"username",
+                        NSLocalizedString(@"Password", @""), @"password",
+                        nil];
 	
 	[self setEditing:YES];
 }
@@ -47,8 +48,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-	// Release anything that's not essential, such as cached data
+	[super didReceiveMemoryWarning];
 }
 
 #pragma mark Table view methods
@@ -57,7 +57,6 @@
 	return 1;
 }
 
-// Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return [keys count];
 }
@@ -71,7 +70,6 @@
 	return UITableViewCellEditingStyleNone;
 }
 
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
 	static NSString *identifier = @"EditingCell";
 	NSString* labelStr = @"";

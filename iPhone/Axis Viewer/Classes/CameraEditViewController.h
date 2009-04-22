@@ -10,11 +10,11 @@
 
 @interface CameraEditViewController : UITableViewController <UITextFieldDelegate> {
 	NSMutableDictionary* camera;
-	NSMutableDictionary* descriptions;
+	NSDictionary* descriptions;
 	NSArray* keys;
 	BOOL keyboardIsShowing;
 }
 
-@property(nonatomic, retain) NSMutableDictionary* camera;
+@property (retain) NSMutableDictionary* camera;
 
 @end

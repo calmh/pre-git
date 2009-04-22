@@ -24,11 +24,26 @@
 	if (cameras == nil) {
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"cam.filip.morotsmedia.se", @"address", @"Hemma hos Filip & Anna", @"description", @"jb", @"username", nil];
+//		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                       @"cam.filip.morotsmedia.se", @"address",
+//                       @"Hemma hos Filip & Anna", @"description",
+//                       @"jb", @"username",
+//                       nil];
+//		[cameras addObject:cam];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"216.62.222.101", @"address",
+                       @"Rutherford Small Dog Daycare", @"description",
+                       nil];
 		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"152.1.131.130", @"address", @"En skolgård någonstans", @"description", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"mcdcam-dimm.as.utexas.edu", @"address",
+                       @"McDonald Observatory Domes", @"description",
+                       nil];
 		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"216.62.222.101", @"address", @"Ett hundpensionat kanske", @"description", nil];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"eastentrance.tps.ucsb.edu", @"address",
+                       @"East Entrance View of 217", @"description",
+                       nil];
 		[cameras addObject:cam];
 	}
 	
@@ -37,17 +52,15 @@
 	[window setAutoresizingMask: (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)]; 
 	[window setAutoresizesSubviews:YES];
 	[window makeKeyAndVisible];
-	
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
+        // Save the camera list before quitting.
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
 	[cameras writeToFile:filename atomically:NO];
 }
-
 
 - (void)dealloc {
 	[navigationController release];

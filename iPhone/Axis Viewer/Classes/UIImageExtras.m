@@ -2,15 +2,13 @@
 //  UIImageExtras.m
 //  Axis Viewer
 //
-//  Created by Jakob Borg on 4/20/09.
-//  Copyright 2009 Jakob Borg. All rights reserved.
+//  Code taken from an example on the web.
 //
 
 #import "UIImageExtras.h"
 
 @implementation UIImage (Extras)
 
-#pragma mark -
 #pragma mark Scale and crop image
 
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize

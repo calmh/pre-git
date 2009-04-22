@@ -12,8 +12,11 @@
 
 @synthesize camera, webViewLoadedURL;
 
-- (NSString*) createCameraURL  {
-	// Build the base URL depending on authentication settings.
+/**
+ Build the base URL for the depending on authentication settings.
+ */
+-(NSString*) createCameraURL
+{
 	NSString* address = [camera valueForKey:@"address"];
 	NSString* username = [camera valueForKey:@"username"];
 	NSString* password = [camera valueForKey:@"password"];
@@ -24,36 +27,10 @@
 	
 }
 
--(void) viewDidLoad
-{
-	[super viewDidLoad];
-	
-	self.title = NSLocalizedString(@"View Camera", @"");
-	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
-	self.navigationItem.rightBarButtonItem = b; 
-	[b release];
-}
-
--(void) viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-
-	webViewLoadedURL = nil;
-	parameters = [[NSMutableDictionary alloc] init];
-}
-
--(void) viewDidAppear:(BOOL)animated
-{
-	[self.tableView reloadData];
-
-	[NSThread detachNewThreadSelector: @selector(getAxisParametersBackgroundThread) toTarget: self withObject: nil];
-	[NSThread detachNewThreadSelector: @selector(savePreviewBackgroundThread) toTarget: self withObject: nil];
-}
-
 /**
  Retrieve and save a preview for this camera, scaled to the same size as the camera view.
  Method intended to run as separate thread.
- **/
+ */
 -(void) savePreviewBackgroundThread
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
@@ -73,6 +50,25 @@
 	[pool release];
 }
 
+/**
+ Fetch a snapshot from the camera and save it to the camera roll.
+ Intended to run as a background thread.
+ */
+-(void) saveCameraSnapshotBackgroundThread
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+        
+        NSString* url = [self createCameraURL];
+        NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
+        UIImage *image = [[UIImage alloc] initWithData:imageData];
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        
+        [pool release];
+}
+
+/**
+ Fetch Brand and Image parameter sets from the camera and insert them into a NSMutableDictionary.
+ */
 -(void) getAxisParametersBackgroundThread
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
@@ -98,14 +94,14 @@
 			[params release];
 			
 			// Update the view with new data
-			[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+                        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 		} else {
 			failed++;
 		}
 	}
 	
-	if (failed == [urls count]) {
-		// Every request failed
+	if (failed == [urls count] || [[parameters allKeys] count] == 0) {
+		// Every request failed or we got no parameters at all
 		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
 								 message:NSLocalizedString(@"SettingsIncorrect", @"")
 								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
@@ -116,6 +112,9 @@
 	[pool release];
 }
 
+/**
+ Handle buttons presses in the alertview about camera unreachability.
+ */
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
         if (buttonIndex == 1) { // Edit
@@ -127,8 +126,8 @@
 
 /**
  Updates the visible UIWebView with a camera stream from the specified camera.
- For performance reasons, only updates if we are not already viewing the same URL:
- **/
+ Only does the update if we are not already viewing the same URL.
+ */
 -(void) updateWebViewForCamera:(NSString*) url withFps:(NSNumber*) fps
 {
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
@@ -151,6 +150,9 @@
 	}
 }
 
+/**
+ Switch to editing mode when the user touches the Edit button.
+ */
 -(void) editPressed:(id)sender
 {
 	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
@@ -159,11 +161,23 @@
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+// UITableViewDelegate stuff
+
+/**
+ Return the number of sections in the tableview.
+ This is always 1 in this case.
+ */
+-(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
+{
 	return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+/**
+ Return the number of rows in the specified section.
+ This depends on how many extra parameters we have to display under the camera view.
+ */
+-(NSInteger) tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger) section
+{
 	if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
 		return 3;
 	else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
@@ -172,7 +186,12 @@
 		return 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+/**
+ Return the UITableViewCell for a specified row.
+ Creates the camera view from code or description cells from a nib.
+ */
+-(UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *) indexPath
+{
 	NSString* identifier;
 	if (indexPath.row == 0)
 		identifier = @"CameraCell";
@@ -197,7 +216,6 @@
 	}
 	
 	if (indexPath.row == 0) {
-		// Only reload webview if absolutely necessary?
 		NSNumber* fps = [NSNumber numberWithInt:2]; //[camera valueForKey:@"framerate"];
 		//if ([fps intValue] == 0) {
 		//	fps = [NSNumber numberWithInt:1];
@@ -222,8 +240,12 @@
 	return cell;
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/**
+ Return the height for a specified row.
+ Uses the hard coded value for the webView height plus margin, or the height for a description
+ cell fetched from the nib file.
+ */
+-(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath
 {
 	static int descriptionCellHeight = 0;
 	// Find the correct height of a description cell.
@@ -243,7 +265,10 @@
 		return descriptionCellHeight;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+/**
+ Return the header, which is the configured camera name in our case.
+ */
+-(NSString *) tableView:(UITableView *) tableView titleForHeaderInSection: (NSInteger)section
 {
 	if (section == 0)
 		return [camera valueForKey:@"description"];
@@ -251,34 +276,63 @@
 		return nil;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+/**
+ Return the footer, which is a short instruction on how to save a photo.
+ */
+-(NSString *) tableView:(UITableView *) tableView titleForFooterInSection: (NSInteger)section
 {
 	if (section == 0)
-		return NSLocalizedString(@"Touch the camera picture to save a photo.", @"");
+		return NSLocalizedString(@"Touch the camera picture to take a photo.", @"");
 	else
 		return nil;
 }
 
--(void) saveCameraSnapshot
+/**
+ Handle a touch to a table row. The only case we handle is if the camera view was touched,
+ in which case we take a photo in the background and flash the display.
+ */
+-(void) tableView:(UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
-        
-        NSString* url = [self createCameraURL];
-        NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
-        UIImage *image = [[UIImage alloc] initWithData:imageData];
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        
-        [pool release];
+        if ([indexPath row] == 0) { // The camera image was tapped
+                if ([[parameters allKeys] count] > 0) { // We have been able to read some data from the camera
+                        // Start a thread that fetches a JPEG and saves it.
+                        [self performSelectorInBackground:@selector(saveCameraSnapshotBackgroundThread) withObject:nil];
+
+                        // Confirm the touch with a "flash" effect.
+                        webView.alpha = 0.0;
+                        [UIView beginAnimations:nil context:NULL];  
+                        [UIView setAnimationDuration:0.6];  
+                        webView.alpha = 1.0;
+                        [UIView commitAnimations];
+                }
+        }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-        if ([indexPath row] == 0) { // The camera image was tapped
-                [self performSelectorInBackground:@selector(saveCameraSnapshot) withObject:nil];
-                [UIView beginAnimations:nil context:NULL];  
-                [UIView setAnimationDuration:0.75];  
-                [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:webView cache:YES];  
-                [UIView commitAnimations]; 
-        }
+// Setup stuff
+
+-(void) viewDidLoad
+{
+	[super viewDidLoad];
+	
+	self.title = NSLocalizedString(@"View Camera", @"");
+	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
+	self.navigationItem.rightBarButtonItem = b; 
+	[b release];
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+        
+	webViewLoadedURL = nil;
+	parameters = [[NSMutableDictionary alloc] init];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+	[self.tableView reloadData];
+	[NSThread detachNewThreadSelector: @selector(getAxisParametersBackgroundThread) toTarget: self withObject: nil];
+	[NSThread detachNewThreadSelector: @selector(savePreviewBackgroundThread) toTarget: self withObject: nil];
 }
 
 -(void) dealloc
