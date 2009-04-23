@@ -49,7 +49,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 87";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1632;
 		vrLoc = 2348;
@@ -59,7 +59,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 110";
 		rLen = 0;
-		rLoc = 4477;
+		rLoc = 4487;
 		rType = 0;
 		vrLen = 1360;
 		vrLoc = 2333;
@@ -73,7 +73,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 74";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1724;
 		vrLoc = 2367;
@@ -113,7 +113,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 270";
 		rLen = 520;
-		rLoc = 6461;
+		rLoc = 6469;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 11188;
@@ -133,7 +133,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 269";
 		rLen = 620;
-		rLoc = 6364;
+		rLoc = 6372;
 		rType = 0;
 		vrLen = 1364;
 		vrLoc = 11184;
@@ -181,7 +181,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 89";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1899;
 		vrLoc = 2538;
@@ -220,7 +220,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 110";
 		rLen = 0;
-		rLoc = 4477;
+		rLoc = 4487;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 805;
@@ -230,7 +230,7 @@
 		fRef = 292213D00FA0BF1B005EA707 /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 66";
 		rLen = 0;
-		rLoc = 1944;
+		rLoc = 1952;
 		rType = 0;
 		vrLen = 1709;
 		vrLoc = 1690;
@@ -320,7 +320,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 11";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -404,9 +404,9 @@
 	};
 	29094D5D0FA0EF6900846CDE /* AxisCamera.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1446, 2912}}";
-			sepNavSelRange = "{4967, 0}";
-			sepNavVisRange = "{1647, 1136}";
+			sepNavIntBoundsRect = "{{0, 0}, {1446, 2772}}";
+			sepNavSelRange = "{5310, 0}";
+			sepNavVisRange = "{1647, 1262}";
 		};
 	};
 	29094D690FA0EFA600846CDE /* PBXTextBookmark */ = {
@@ -464,7 +464,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 46";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1709;
 		vrLoc = 896;
@@ -474,7 +474,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 68";
 		rLen = 0;
-		rLoc = 3816;
+		rLoc = 4159;
 		rType = 0;
 		vrLen = 1978;
 		vrLoc = 903;
@@ -484,7 +484,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 46";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 2170;
 		vrLoc = 1020;
@@ -536,7 +536,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 7169;
+		rLoc = 7512;
 		rType = 0;
 		vrLen = 1812;
 		vrLoc = 1745;
@@ -566,7 +566,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 46";
 		rLen = 0;
-		rLoc = 1945;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1681;
 		vrLoc = 896;
@@ -576,7 +576,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 134";
 		rLen = 0;
-		rLoc = 7169;
+		rLoc = 7512;
 		rType = 0;
 		vrLen = 2076;
 		vrLoc = 2991;
@@ -596,7 +596,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 246";
 		rLen = 0;
-		rLoc = 10314;
+		rLoc = 10322;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 8602;
@@ -646,7 +646,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 113";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 2056;
 		vrLoc = 3288;
@@ -726,7 +726,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 70";
 		rLen = 0;
-		rLoc = 4094;
+		rLoc = 4437;
 		rType = 0;
 		vrLen = 1854;
 		vrLoc = 3115;
@@ -796,7 +796,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 221";
 		rLen = 0;
-		rLoc = 8706;
+		rLoc = 8714;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 8551;
@@ -859,9 +859,9 @@
 		path = "/Users/jb/projekt/iPhone/Axis Viewer/Classes/CameraDisplayViewController.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 4004}}";
-			sepNavSelRange = "{10254, 0}";
-			sepNavVisRange = "{8662, 1652}";
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 3822}}";
+			sepNavSelRange = "{1583, 0}";
+			sepNavVisRange = "{1985, 1430}";
 		};
 	};
 	29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */ = {
@@ -886,7 +886,7 @@
 		fRef = 29094D310FA0EE1D00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 251";
 		rLen = 0;
-		rLoc = 9322;
+		rLoc = 9330;
 		rType = 0;
 		vrLen = 1538;
 		vrLoc = 7476;
@@ -896,7 +896,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 147";
 		rLen = 0;
-		rLoc = 7861;
+		rLoc = 8204;
 		rType = 0;
 		vrLen = 1755;
 		vrLoc = 4177;
@@ -906,7 +906,7 @@
 		fRef = 29094DB70FA0F4F800846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 98";
 		rLen = 0;
-		rLoc = 3459;
+		rLoc = 3467;
 		rType = 0;
 		vrLen = 1464;
 		vrLoc = 2561;
@@ -916,7 +916,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 152";
 		rLen = 0;
-		rLoc = 7872;
+		rLoc = 8215;
 		rType = 0;
 		vrLen = 1443;
 		vrLoc = 4579;
@@ -926,7 +926,7 @@
 		fRef = 29094DBC0FA0F53000846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 211";
 		rLen = 0;
-		rLoc = 8032;
+		rLoc = 8040;
 		rType = 0;
 		vrLen = 1886;
 		vrLoc = 5338;
@@ -946,7 +946,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 152";
 		rLen = 0;
-		rLoc = 7872;
+		rLoc = 8215;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 4860;
@@ -966,7 +966,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 146";
 		rLen = 2;
-		rLoc = 7752;
+		rLoc = 8095;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 4860;
@@ -996,7 +996,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 251";
 		rLen = 0;
-		rLoc = 10313;
+		rLoc = 10321;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 8784;
@@ -1016,7 +1016,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 235";
 		rLen = 0;
-		rLoc = 9224;
+		rLoc = 9232;
 		rType = 0;
 		vrLen = 1025;
 		vrLoc = 8656;
@@ -1046,7 +1046,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 246";
 		rLen = 0;
-		rLoc = 9377;
+		rLoc = 9385;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 8430;
@@ -1066,7 +1066,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 124";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 4860;
@@ -1076,7 +1076,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 256";
 		rLen = 0;
-		rLoc = 10343;
+		rLoc = 10351;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 8720;
@@ -1096,7 +1096,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 242";
 		rLen = 0;
-		rLoc = 9322;
+		rLoc = 9330;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 8686;
@@ -1116,7 +1116,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 207";
 		rLen = 0;
-		rLoc = 8095;
+		rLoc = 8103;
 		rType = 0;
 		vrLen = 1549;
 		vrLoc = 7218;
@@ -1146,7 +1146,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 85";
 		rLen = 0;
-		rLoc = 4589;
+		rLoc = 4932;
 		rType = 0;
 		vrLen = 1633;
 		vrLoc = 2277;
@@ -1156,7 +1156,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 208";
 		rLen = 0;
-		rLoc = 8231;
+		rLoc = 8239;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 7218;
@@ -1176,7 +1176,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 208";
 		rLen = 0;
-		rLoc = 8233;
+		rLoc = 8241;
 		rType = 0;
 		vrLen = 1477;
 		vrLoc = 7218;
@@ -1186,7 +1186,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 104";
 		rLen = 0;
-		rLoc = 5054;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 2630;
@@ -1196,7 +1196,7 @@
 		fRef = 29094DD10FA0F5BE00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 208";
 		rLen = 0;
-		rLoc = 8231;
+		rLoc = 8239;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 7218;
@@ -1216,7 +1216,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 104";
 		rLen = 0;
-		rLoc = 5054;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 2630;
@@ -1236,7 +1236,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 84";
 		rLen = 0;
-		rLoc = 3817;
+		rLoc = 4160;
 		rType = 0;
 		vrLen = 1900;
 		vrLoc = 1491;
@@ -1256,7 +1256,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 99";
 		rLen = 0;
-		rLoc = 4550;
+		rLoc = 4893;
 		rType = 0;
 		vrLen = 1957;
 		vrLoc = 2549;
@@ -1266,7 +1266,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 110";
 		rLen = 0;
-		rLoc = 4477;
+		rLoc = 4487;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 805;
@@ -1306,7 +1306,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 11";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -1324,7 +1324,7 @@
 		fRef = 29094DC40FA0F58800846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 99";
 		rLen = 0;
-		rLoc = 4550;
+		rLoc = 4893;
 		rType = 0;
 		vrLen = 1957;
 		vrLoc = 2549;
@@ -1334,7 +1334,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 110";
 		rLen = 0;
-		rLoc = 4477;
+		rLoc = 4487;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 805;
@@ -1374,7 +1374,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 11";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -1404,7 +1404,7 @@
 		fRef = 29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 145";
 		rLen = 0;
-		rLoc = 2867;
+		rLoc = 2875;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 5304;
@@ -1666,7 +1666,7 @@
 		ignoreCount = 0;
 		lineNumber = 205;
 		location = "Axis Viewer";
-		modificationTime = 262215409.823887;
+		modificationTime = 262216464.889845;
 		state = 1;
 	};
 	29930B290F923F8300F2FC7E /* CameraEditViewController.m:205 */ = {
@@ -1683,7 +1683,7 @@
 		ignoreCount = 0;
 		lineNumber = 205;
 		location = "Axis Viewer";
-		modificationTime = 262215409.8239;
+		modificationTime = 262216464.889855;
 		state = 1;
 	};
 	29ABBE7A0F9FB3B0001C4596 /* PBXTextBookmark */ = {
@@ -1815,7 +1815,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 2954800E0F65931300ABBCD2 /* Axis Viewer */;
-		activeSDKPreference = iphonesimulator2.2;
+		activeSDKPreference = iphoneos2.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Axis Viewer */;
 		addToTargets = (
 		);
@@ -2317,6 +2317,38 @@
 			29F17A010FA117E100DC00A8 /* PBXTextBookmark */ = 29F17A010FA117E100DC00A8 /* PBXTextBookmark */;
 			29F17A020FA117E100DC00A8 /* PBXTextBookmark */ = 29F17A020FA117E100DC00A8 /* PBXTextBookmark */;
 			29F17A030FA117E100DC00A8 /* PBXTextBookmark */ = 29F17A030FA117E100DC00A8 /* PBXTextBookmark */;
+			29F17A110FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A110FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A120FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A120FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A130FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A130FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A140FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A140FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A150FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A150FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A160FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A160FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A170FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A170FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A180FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A180FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A190FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A190FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A1A0FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A1A0FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A1B0FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A1B0FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A1C0FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A1C0FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A1D0FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A1D0FA119E100DC00A8 /* PBXTextBookmark */;
+			29F17A240FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A240FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A250FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A250FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A260FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A260FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A270FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A270FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A280FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A280FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A290FA11A4000DC00A8 /* PBXTextBookmark */ = 29F17A290FA11A4000DC00A8 /* PBXTextBookmark */;
+			29F17A2E0FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A2E0FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A2F0FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A2F0FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A300FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A300FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A310FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A310FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A320FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A320FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A330FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A330FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A340FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A340FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A350FA11AA200DC00A8 /* PBXTextBookmark */ = 29F17A350FA11AA200DC00A8 /* PBXTextBookmark */;
+			29F17A390FA11AF200DC00A8 /* PBXTextBookmark */ = 29F17A390FA11AF200DC00A8 /* PBXTextBookmark */;
+			29F17A3C0FA11B0C00DC00A8 /* PBXTextBookmark */ = 29F17A3C0FA11B0C00DC00A8 /* PBXTextBookmark */;
+			29F17A3D0FA11B0C00DC00A8 /* PBXTextBookmark */ = 29F17A3D0FA11B0C00DC00A8 /* PBXTextBookmark */;
+			29F17A3E0FA11B0C00DC00A8 /* PBXTextBookmark */ = 29F17A3E0FA11B0C00DC00A8 /* PBXTextBookmark */;
+			29F17A410FA11B2200DC00A8 /* PBXTextBookmark */ = 29F17A410FA11B2200DC00A8 /* PBXTextBookmark */;
 			29F289720F9E681A0015E395 = 29F289720F9E681A0015E395 /* PBXTextBookmark */;
 			29F289730F9E681A0015E395 = 29F289730F9E681A0015E395 /* PBXTextBookmark */;
 			29FE87620F9CCF01000E0DF9 = 29FE87620F9CCF01000E0DF9 /* PBXTextBookmark */;
@@ -2347,7 +2379,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1074, 2702}}";
 			sepNavSelRange = "{4504, 0}";
-			sepNavVisRange = "{4198, 1125}";
+			sepNavVisRange = "{4197, 1153}";
 			sepNavWindowFrame = "{{38, 43}, {1191, 809}}";
 		};
 	};
@@ -2364,8 +2396,8 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 72;
-		modificationTime = 262215510.884109;
-		state = 1;
+		modificationTime = 262216465.10315;
+		state = 0;
 	};
 	29F178880FA0FAB600DC00A8 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -2408,7 +2440,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 108";
 		rLen = 0;
-		rLoc = 5000;
+		rLoc = 5343;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 3067;
@@ -2428,7 +2460,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 108";
 		rLen = 0;
-		rLoc = 5000;
+		rLoc = 5343;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 3067;
@@ -2438,7 +2470,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 108";
 		rLen = 0;
-		rLoc = 5000;
+		rLoc = 5343;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 3067;
@@ -2458,7 +2490,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 82";
 		rLen = 0;
-		rLoc = 3653;
+		rLoc = 3996;
 		rType = 0;
 		vrLen = 1806;
 		vrLoc = 2833;
@@ -2468,7 +2500,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 106";
 		rLen = 0;
-		rLoc = 4843;
+		rLoc = 5186;
 		rType = 0;
 		vrLen = 1425;
 		vrLoc = 3244;
@@ -2478,7 +2510,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 106";
 		rLen = 0;
-		rLoc = 4843;
+		rLoc = 5186;
 		rType = 0;
 		vrLen = 1425;
 		vrLoc = 3244;
@@ -2518,7 +2550,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 147";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 4888;
@@ -2538,7 +2570,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 106";
 		rLen = 0;
-		rLoc = 4843;
+		rLoc = 5186;
 		rType = 0;
 		vrLen = 1692;
 		vrLoc = 3227;
@@ -2558,7 +2590,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 147";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 4888;
@@ -2568,7 +2600,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 244";
 		rLen = 0;
-		rLoc = 9343;
+		rLoc = 9351;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 8626;
@@ -2588,7 +2620,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 147";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 4888;
@@ -2608,7 +2640,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 85";
 		rLen = 0;
-		rLoc = 3797;
+		rLoc = 4140;
 		rType = 0;
 		vrLen = 1973;
 		vrLoc = 1330;
@@ -2618,7 +2650,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 173";
 		rLen = 0;
-		rLoc = 7569;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 5761;
@@ -2628,7 +2660,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 232";
 		rLen = 0;
-		rLoc = 9011;
+		rLoc = 9019;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 8234;
@@ -2648,7 +2680,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 173";
 		rLen = 0;
-		rLoc = 7569;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 5761;
@@ -2658,7 +2690,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 232";
 		rLen = 0;
-		rLoc = 9011;
+		rLoc = 9019;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 8234;
@@ -2688,7 +2720,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 173";
 		rLen = 0;
-		rLoc = 7569;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 5761;
@@ -2708,7 +2740,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 173";
 		rLen = 0;
-		rLoc = 7569;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 1326;
 		vrLoc = 5761;
@@ -2718,7 +2750,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 1187;
 		vrLoc = 8234;
@@ -2728,7 +2760,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 1498;
 		vrLoc = 6943;
@@ -2738,7 +2770,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 173";
 		rLen = 0;
-		rLoc = 7569;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 1242;
 		vrLoc = 5761;
@@ -2748,7 +2780,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 1498;
 		vrLoc = 6943;
@@ -2758,7 +2790,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 162";
 		rLen = 0;
-		rLoc = 7305;
+		rLoc = 7648;
 		rType = 0;
 		vrLen = 1295;
 		vrLoc = 5567;
@@ -2768,7 +2800,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 162";
 		rLen = 0;
-		rLoc = 7305;
+		rLoc = 7648;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 5567;
@@ -2778,7 +2810,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 162";
 		rLen = 0;
-		rLoc = 7305;
+		rLoc = 7648;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 5567;
@@ -2788,7 +2820,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 8629;
@@ -2798,7 +2830,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 8629;
@@ -2808,7 +2840,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 162";
 		rLen = 0;
-		rLoc = 7305;
+		rLoc = 7648;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 5567;
@@ -2818,7 +2850,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 8629;
@@ -2828,7 +2860,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 140";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 2135;
 		vrLoc = 4010;
@@ -2838,7 +2870,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 127";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 2222;
 		vrLoc = 4010;
@@ -2848,7 +2880,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 237";
 		rLen = 0;
-		rLoc = 9185;
+		rLoc = 9193;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 8628;
@@ -2858,7 +2890,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 127";
 		rLen = 0;
-		rLoc = 7150;
+		rLoc = 7493;
 		rType = 0;
 		vrLen = 2222;
 		vrLoc = 4010;
@@ -2868,7 +2900,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 247";
 		rLen = 0;
-		rLoc = 9528;
+		rLoc = 9536;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 8372;
@@ -2886,9 +2918,9 @@
 		path = "/Users/jb/projekt/iPhone/Axis Viewer/Classes/RootViewController.m";
 		sourceTree = "<group>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1074, 3080}}";
-			sepNavSelRange = "{2039, 0}";
-			sepNavVisRange = "{1270, 1280}";
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 2898}}";
+			sepNavSelRange = "{4347, 0}";
+			sepNavVisRange = "{3606, 1632}";
 		};
 	};
 	29F178FC0FA1029100DC00A8 /* PBXTextBookmark */ = {
@@ -2896,7 +2928,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 236";
 		rLen = 0;
-		rLoc = 9176;
+		rLoc = 9184;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 8372;
@@ -2906,7 +2938,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 64";
 		rLen = 0;
-		rLoc = 3056;
+		rLoc = 3204;
 		rType = 0;
 		vrLen = 2009;
 		vrLoc = 1695;
@@ -2933,7 +2965,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 236";
 		rLen = 0;
-		rLoc = 9176;
+		rLoc = 9184;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 8372;
@@ -2943,7 +2975,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 64";
 		rLen = 0;
-		rLoc = 3056;
+		rLoc = 3204;
 		rType = 0;
 		vrLen = 2009;
 		vrLoc = 1695;
@@ -3003,7 +3035,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 64";
 		rLen = 0;
-		rLoc = 2933;
+		rLoc = 3098;
 		rType = 0;
 		vrLen = 2045;
 		vrLoc = 1280;
@@ -3023,7 +3055,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 3642;
+		rLoc = 3985;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 862;
@@ -3033,7 +3065,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 81";
 		rLen = 0;
-		rLoc = 3484;
+		rLoc = 3827;
 		rType = 0;
 		vrLen = 1929;
 		vrLoc = 1280;
@@ -3053,7 +3085,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 3642;
+		rLoc = 3985;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 862;
@@ -3073,7 +3105,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 3642;
+		rLoc = 3985;
 		rType = 0;
 		vrLen = 1936;
 		vrLoc = 1973;
@@ -3103,7 +3135,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 3642;
+		rLoc = 3985;
 		rType = 0;
 		vrLen = 1936;
 		vrLoc = 1973;
@@ -3313,7 +3345,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 87";
 		rLen = 0;
-		rLoc = 3642;
+		rLoc = 3985;
 		rType = 0;
 		vrLen = 2014;
 		vrLoc = 1934;
@@ -3333,7 +3365,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2933;
+		rLoc = 3098;
 		rType = 0;
 		vrLen = 2118;
 		vrLoc = 960;
@@ -3343,7 +3375,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2933;
+		rLoc = 3098;
 		rType = 0;
 		vrLen = 2118;
 		vrLoc = 960;
@@ -3373,7 +3405,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 220";
 		rLen = 0;
-		rLoc = 8629;
+		rLoc = 8637;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 7654;
@@ -3393,7 +3425,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2933;
+		rLoc = 3098;
 		rType = 0;
 		vrLen = 2118;
 		vrLoc = 960;
@@ -3403,7 +3435,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 236";
 		rLen = 0;
-		rLoc = 9176;
+		rLoc = 9184;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 7654;
@@ -3443,7 +3475,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 220";
 		rLen = 0;
-		rLoc = 8629;
+		rLoc = 8637;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 7654;
@@ -3473,7 +3505,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2933;
+		rLoc = 3098;
 		rType = 0;
 		vrLen = 2186;
 		vrLoc = 894;
@@ -3493,7 +3525,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 78";
 		rLen = 0;
-		rLoc = 3373;
+		rLoc = 3415;
 		rType = 0;
 		vrLen = 2006;
 		vrLoc = 1381;
@@ -3503,7 +3535,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 63";
 		rLen = 0;
-		rLoc = 2813;
+		rLoc = 2978;
 		rType = 0;
 		vrLen = 2017;
 		vrLoc = 1381;
@@ -3513,7 +3545,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2932;
+		rLoc = 3097;
 		rType = 0;
 		vrLen = 2017;
 		vrLoc = 1381;
@@ -3523,7 +3555,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 73";
 		rLen = 0;
-		rLoc = 3323;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1935;
 		vrLoc = 1381;
@@ -3533,7 +3565,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 73";
 		rLen = 0;
-		rLoc = 3323;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 1931;
 		vrLoc = 1381;
@@ -3543,7 +3575,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 112";
 		rLen = 0;
-		rLoc = 4827;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 1729;
 		vrLoc = 3351;
@@ -3563,7 +3595,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 102";
 		rLen = 0;
-		rLoc = 4376;
+		rLoc = 4719;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 3024;
@@ -3573,7 +3605,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 102";
 		rLen = 0;
-		rLoc = 4376;
+		rLoc = 4719;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 3024;
@@ -3603,7 +3635,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 68";
 		rLen = 0;
-		rLoc = 2446;
+		rLoc = 2611;
 		rType = 0;
 		vrLen = 1876;
 		vrLoc = 1476;
@@ -3613,7 +3645,7 @@
 		fRef = 29094D7A0FA0F27000846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 68";
 		rLen = 0;
-		rLoc = 2446;
+		rLoc = 2611;
 		rType = 0;
 		vrLen = 1876;
 		vrLoc = 1476;
@@ -3623,7 +3655,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 15";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -3645,7 +3677,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 15";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -3655,7 +3687,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 15";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;
@@ -3665,7 +3697,7 @@
 		fRef = 29F1798F0FA10E3A00DC00A8 /* AxisCamera.m */;
 		name = "AxisCamera.m: 67";
 		rLen = 0;
-		rLoc = 2408;
+		rLoc = 2573;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 1471;
@@ -3675,7 +3707,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 67";
 		rLen = 0;
-		rLoc = 2413;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 1471;
@@ -3685,7 +3717,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 170";
 		rLen = 0;
-		rLoc = 7148;
+		rLoc = 7491;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 5649;
@@ -3695,7 +3727,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 220";
 		rLen = 0;
-		rLoc = 8629;
+		rLoc = 8637;
 		rType = 0;
 		vrLen = 1564;
 		vrLoc = 1218;
@@ -3705,7 +3737,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 67";
 		rLen = 0;
-		rLoc = 2413;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1994;
 		vrLoc = 1471;
@@ -3715,7 +3747,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 220";
 		rLen = 0;
-		rLoc = 8629;
+		rLoc = 8637;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 1200;
@@ -3725,7 +3757,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 170";
 		rLen = 0;
-		rLoc = 7148;
+		rLoc = 7491;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 5649;
@@ -3735,7 +3767,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 61";
 		rLen = 0;
-		rLoc = 1972;
+		rLoc = 1980;
 		rType = 0;
 		vrLen = 1792;
 		vrLoc = 1218;
@@ -3765,7 +3797,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 61";
 		rLen = 0;
-		rLoc = 1972;
+		rLoc = 1980;
 		rType = 0;
 		vrLen = 1930;
 		vrLoc = 1218;
@@ -3775,7 +3807,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 61";
 		rLen = 0;
-		rLoc = 1972;
+		rLoc = 1980;
 		rType = 0;
 		vrLen = 1930;
 		vrLoc = 1218;
@@ -3805,7 +3837,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 259";
 		rLen = 0;
-		rLoc = 10254;
+		rLoc = 10262;
 		rType = 0;
 		vrLen = 1626;
 		vrLoc = 8662;
@@ -3815,7 +3847,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 259";
 		rLen = 0;
-		rLoc = 10254;
+		rLoc = 10262;
 		rType = 0;
 		vrLen = 1652;
 		vrLoc = 8662;
@@ -3845,7 +3877,7 @@
 		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
 		name = "CameraDisplayViewController.m: 259";
 		rLen = 0;
-		rLoc = 10254;
+		rLoc = 10262;
 		rType = 0;
 		vrLen = 1652;
 		vrLoc = 8662;
@@ -3905,7 +3937,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 170";
 		rLen = 0;
-		rLoc = 7148;
+		rLoc = 7491;
 		rType = 0;
 		vrLen = 1690;
 		vrLoc = 5625;
@@ -3925,7 +3957,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 170";
 		rLen = 0;
-		rLoc = 7148;
+		rLoc = 7491;
 		rType = 0;
 		vrLen = 1690;
 		vrLoc = 5625;
@@ -3945,7 +3977,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2112;
+		rLoc = 2277;
 		rType = 0;
 		vrLen = 2267;
 		vrLoc = 1182;
@@ -3995,7 +4027,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 82";
 		rLen = 0;
-		rLoc = 3139;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 2170;
 		vrLoc = 1280;
@@ -4015,7 +4047,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 65";
 		rLen = 0;
-		rLoc = 2112;
+		rLoc = 2277;
 		rType = 0;
 		vrLen = 2267;
 		vrLoc = 1182;
@@ -4155,7 +4187,7 @@
 		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
 		name = "AxisCamera.m: 82";
 		rLen = 0;
-		rLoc = 3139;
+		rLoc = 3205;
 		rType = 0;
 		vrLen = 2170;
 		vrLoc = 1280;
@@ -4193,8 +4225,8 @@
 	29F179FD0FA117C100DC00A8 /* Common.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1074, 545}}";
-			sepNavSelRange = "{209, 0}";
-			sepNavVisRange = "{0, 209}";
+			sepNavSelRange = "{241, 0}";
+			sepNavVisRange = "{0, 266}";
 		};
 	};
 	29F17A000FA117E100DC00A8 /* PBXTextBookmark */ = {
@@ -4232,9 +4264,329 @@
 		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
 		name = "Common.h: 12";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 209;
+		vrLoc = 0;
+	};
+	29F17A110FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 86";
+		rLen = 0;
+		rLoc = 3488;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 2547;
+	};
+	29F17A120FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 14";
+		rLen = 0;
+		rLoc = 228;
+		rType = 0;
+		vrLen = 266;
+		vrLoc = 0;
+	};
+	29F17A130FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29E852A50F9126870000CF84 /* CameraEditViewController.m */;
+		name = "CameraEditViewController.m: 132";
+		rLen = 0;
+		rLoc = 4504;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 4197;
+	};
+	29F17A140FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
+		name = "CameraDisplayViewController.m: 42";
+		rLen = 0;
+		rLoc = 1583;
+		rType = 0;
+		vrLen = 1615;
+		vrLoc = 1985;
+	};
+	29F17A150FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 63";
+		rLen = 0;
+		rLoc = 2039;
+		rType = 0;
+		vrLen = 1280;
+		vrLoc = 1270;
+	};
+	29F17A160FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 12";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 209;
+		vrLoc = 0;
+	};
+	29F17A170FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 82";
+		rLen = 0;
+		rLoc = 3205;
+		rType = 0;
+		vrLen = 2142;
+		vrLoc = 1280;
+	};
+	29F17A180FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 12";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 209;
+		vrLoc = 0;
+	};
+	29F17A190FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 86";
+		rLen = 0;
+		rLoc = 3488;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 2547;
+	};
+	29F17A1A0FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 14";
+		rLen = 0;
+		rLoc = 228;
+		rType = 0;
+		vrLen = 266;
+		vrLoc = 0;
+	};
+	29F17A1B0FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29E852A50F9126870000CF84 /* CameraEditViewController.m */;
+		name = "CameraEditViewController.m: 132";
+		rLen = 0;
+		rLoc = 4504;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 4197;
+	};
+	29F17A1C0FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
+		name = "CameraDisplayViewController.m: 42";
+		rLen = 0;
+		rLoc = 1583;
+		rType = 0;
+		vrLen = 1615;
+		vrLoc = 1985;
+	};
+	29F17A1D0FA119E100DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4341;
+		rType = 0;
+		vrLen = 1628;
+		vrLoc = 3606;
+	};
+	29F17A240FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1598;
+		vrLoc = 3606;
+	};
+	29F17A250FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 62";
+		rLen = 0;
+		rLoc = 2043;
+		rType = 0;
+		vrLen = 2452;
+		vrLoc = 1182;
+	};
+	29F17A260FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4341;
+		rType = 0;
+		vrLen = 1628;
+		vrLoc = 3606;
+	};
+	29F17A270FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 62";
+		rLen = 0;
+		rLoc = 2043;
+		rType = 0;
+		vrLen = 2452;
+		vrLoc = 1182;
+	};
+	29F17A280FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1598;
+		vrLoc = 3606;
+	};
+	29F17A290FA11A4000DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 83";
+		rLen = 25;
+		rLoc = 3354;
+		rType = 0;
+		vrLen = 1908;
+		vrLoc = 2250;
+	};
+	29F17A2E0FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 87";
+		rLen = 0;
+		rLoc = 3638;
+		rType = 0;
+		vrLen = 1790;
+		vrLoc = 2486;
+	};
+	29F17A2F0FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
+		name = "CameraDisplayViewController.m: 42";
+		rLen = 0;
+		rLoc = 1583;
+		rType = 0;
+		vrLen = 1430;
+		vrLoc = 1985;
+	};
+	29F17A300FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1598;
+		vrLoc = 3606;
+	};
+	29F17A310FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 80";
+		rLen = 0;
+		rLoc = 3201;
+		rType = 0;
+		vrLen = 2452;
+		vrLoc = 1182;
+	};
+	29F17A320FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1598;
+		vrLoc = 3606;
+	};
+	29F17A330FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */;
+		name = "AxisCamera.m: 87";
+		rLen = 0;
+		rLoc = 3638;
+		rType = 0;
+		vrLen = 1790;
+		vrLoc = 2486;
+	};
+	29F17A340FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29094DC60FA0F58B00846CDE /* CameraDisplayViewController.m */;
+		name = "CameraDisplayViewController.m: 42";
+		rLen = 0;
+		rLoc = 1583;
+		rType = 0;
+		vrLen = 1430;
+		vrLoc = 1985;
+	};
+	29F17A350FA11AA200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1598;
+		vrLoc = 3606;
+	};
+	29F17A390FA11AF200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1632;
+		vrLoc = 3606;
+	};
+	29F17A3C0FA11B0C00DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1632;
+		vrLoc = 3606;
+	};
+	29F17A3D0FA11B0C00DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F178F80FA1028F00DC00A8 /* RootViewController.m */;
+		name = "RootViewController.m: 133";
+		rLen = 0;
+		rLoc = 4347;
+		rType = 0;
+		vrLen = 1632;
+		vrLoc = 3606;
+	};
+	29F17A3E0FA11B0C00DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 14";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 266;
+		vrLoc = 0;
+	};
+	29F17A410FA11B2200DC00A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29F179FD0FA117C100DC00A8 /* Common.h */;
+		name = "Common.h: 14";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 266;
 		vrLoc = 0;
 	};
 	29F289720F9E681A0015E395 /* PBXTextBookmark */ = {
@@ -4288,7 +4640,7 @@
 		fRef = 29FE87540F9CCDDA000E0DF9 /* Common.h */;
 		name = "Common.h: 10";
 		rLen = 0;
-		rLoc = 209;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 133;
 		vrLoc = 0;

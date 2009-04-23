@@ -58,10 +58,11 @@
 - (BOOL)savePreviewSynchronous {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString* filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
+        NSString* filenamePreview = [NSString stringWithFormat:@"%@/preview-%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
+        NSString* filenameThumbnail = [NSString stringWithFormat:@"%@/thumbnail-%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
 
         NSFileManager *fm = [NSFileManager defaultManager];
-        NSDictionary* attrs = [fm fileAttributesAtPath:filename traverseLink:NO];
+        NSDictionary* attrs = [fm fileAttributesAtPath:filenamePreview traverseLink:NO];
         NSDate* cutoff = [[NSDate date] addTimeInterval:-PREVIEW_AGE];
         NSDate* age = [attrs valueForKey:NSFileModificationDate];
         // Returning YES or NO here is debatable. I define "NO" to mean the preview wasn't updated
@@ -78,13 +79,15 @@
         if (imageData != nil) {
                 UIImage *image = [[UIImage alloc] initWithData:imageData];
                 
-                @synchronized (self) {
-                        UIImage *scaledImage = [image scaleToWidth:WEBVIEW_WIDTH-4 andHeight:WEBVIEW_HEIGHT-4];
-                        imageData = UIImageJPEGRepresentation(scaledImage, 0.5);
-                }
-                [image release];
+                UIImage *scaledImage = [image scaleToWidth:WEBVIEW_WIDTH-4 andHeight:WEBVIEW_HEIGHT-4];
+                imageData = UIImageJPEGRepresentation(scaledImage, 0.8);
+                [imageData writeToFile:filenamePreview atomically:YES];
+
+                scaledImage = [image scaleToWidth:THUMBNAIL_WIDTH andHeight:THUMBNAIL_HEIGHT];
+                imageData = UIImageJPEGRepresentation(scaledImage, 0.95);
+                [imageData writeToFile:filenameThumbnail atomically:YES];
                 
-                [imageData writeToFile:filename	atomically:YES];
+                [image release];
                 return YES;
 	} else
                 return NO;

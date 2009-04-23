@@ -39,7 +39,7 @@
                 // Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
 		NSString* embedHTML = [NSString stringWithFormat: @"<html>\
 				       <body style=\"text-align: center; vertical-align: middle; background-color: darkgrey; margin: 2px;\">\
-				       <div style=\"width: %dpx; height: %dpx; background-image: url('%@.jpg');\">\
+				       <div style=\"width: %dpx; height: %dpx; background-image: url('preview-%@.jpg');\">\
 				       <img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&compression=30&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/>\
 				       </div>\
 				       </body>\
