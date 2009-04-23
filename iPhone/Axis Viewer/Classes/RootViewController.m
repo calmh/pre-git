@@ -120,7 +120,7 @@
 	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
 	
 	CameraDisplayViewController *cdc = [[[CameraDisplayViewController alloc] initWithNibName:@"CameraDisplayViewController" bundle:nil] autorelease];
-	[cdc setCamera:cam];
+	cdc.camera = cam;
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 

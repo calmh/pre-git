@@ -18,14 +18,18 @@
  Build the base URL for the depending on authentication settings.
  */
 - (NSString*)createCameraURL {
-	NSString* address = [camera valueForKey:@"address"];
-	NSString* username = [camera valueForKey:@"username"];
-	NSString* password = [camera valueForKey:@"password"];
-	if (username != nil && password != nil && [username length] > 0 && [password length] > 0)
-		return [NSString stringWithFormat: @"http://%@:%@@%@", username, password, address];
-	else
-		return [NSString stringWithFormat: @"http://%@", address];
-	
+        NSString* address = nil;
+        NSString* username = nil;
+        NSString* password = nil;
+        @synchronized (camera) {
+                address = [camera valueForKey:@"address"];
+                username = [camera valueForKey:@"username"];
+                password = [camera valueForKey:@"password"];
+        }
+        if (username != nil && password != nil && [username length] > 0 && [password length] > 0)
+                return [NSString stringWithFormat: @"http://%@:%@@%@", username, password, address];
+        else
+                return [NSString stringWithFormat: @"http://%@", address];
 }
 
 /**
@@ -40,14 +44,20 @@
 	if (![nsurl isEqual:self.webViewLoadedURL]) {
 		int w = WEBVIEW_WIDTH - 4;
 		int h = WEBVIEW_HEIGHT - 4;
-		// Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
+                NSString* address = nil;
+                @synchronized (camera) {
+                        address = [camera valueForKey:@"address"];
+                }
+		
+                // Load the webview with a short HTML snippet that shows the mjpg stream att 100% size.
 		NSString* embedHTML = [NSString stringWithFormat: @"<html>\
 				       <body style=\"text-align: center; vertical-align: middle; background-color: darkgrey; margin: 2px;\">\
 				       <div style=\"width: %dpx; height: %dpx; background-image: url('%@.jpg');\">\
 				       <img src=\"%@/axis-cgi/mjpg/video.cgi?resolution=320x240&text=0&date=0&clock=0&compression=30&fps=%@\" style=\"max-width: 100%%; max-height: 100%%\"/>\
 				       </div>\
 				       </body>\
-				       </html>", w, h, [camera valueForKey:@"address"], url, fps];
+				       </html>", w, h, address, url, fps];
+                
 		[webView loadHTMLString:embedHTML baseURL:base];
 		self.webViewLoadedURL = nsurl;
 	}
@@ -65,14 +75,19 @@
 	NSString* url = [self createCameraURL];
 	NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=0"]]];
 	UIImage *image = [[UIImage alloc] initWithData:imageData];
-	image = [image imageByScalingAndCroppingForSize:CGSizeMake(WEBVIEW_WIDTH - 4, WEBVIEW_HEIGHT - 4)];
 	[imageData release];
-
-	imageData = UIImageJPEGRepresentation(image, 0.5);
+        
+	UIImage *scaledImage = [image imageByScalingAndCroppingForSize:CGSizeMake(WEBVIEW_WIDTH - 4, WEBVIEW_HEIGHT - 4)];
+        [image release];
+        
+	imageData = UIImageJPEGRepresentation(scaledImage, 0.5);
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString* filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
-	[imageData writeToFile:filename	atomically:NO];
+        NSString* filename = nil;
+        @synchronized (camera) {
+                filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
+        }
+        [imageData writeToFile:filename	atomically:NO];
 	
 	[pool release];
 }
@@ -88,6 +103,8 @@
         NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        [image release];
+        [imageData release];
         
         [pool release];
 }
@@ -113,8 +130,11 @@
 			// Sort into a dictionary...
 			for (NSString *line in lines) {
 				NSArray *parts = [line componentsSeparatedByString:@"="];
-				if ([parts count] == 2)
-					[parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
+				if ([parts count] == 2) {
+                                        @synchronized (parameters) {
+                                                [parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
+                                        }
+                                }
 			}
 			[params release];
 			
@@ -175,12 +195,14 @@
  This depends on how many extra parameters we have to display under the camera view.
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
-	if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
-		return 3;
-	else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
-		return 2;
-	else
-		return 1;
+        int n = 1;
+        @synchronized (parameters) {
+                if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
+                        n = 3;
+                else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
+                        n = 2;
+        }
+        return n;
 }
 
 /**
@@ -220,17 +242,19 @@
 		NSString *url = [self createCameraURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
-		DescriptionCell* dcell = (DescriptionCell*)cell;
-		if (indexPath.row == 1 && [parameters valueForKey:@"root.Image.I0.Text.String"]) {
-			dcell.descriptionLabel.text = NSLocalizedString(@"Description", @"");
-			dcell.valueLabel.text = [parameters valueForKey:@"root.Image.I0.Text.String"];
-		} else if (indexPath.row == 1 && ![parameters valueForKey:@"root.Image.I0.Text.String"] && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
-			dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
-			dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
-		} else if (indexPath.row == 2 && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
-			dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
-			dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
-		}
+                @synchronized (parameters) {
+                        DescriptionCell* dcell = (DescriptionCell*)cell;
+                        if (indexPath.row == 1 && [parameters valueForKey:@"root.Image.I0.Text.String"]) {
+                                dcell.descriptionLabel.text = NSLocalizedString(@"Description", @"");
+                                dcell.valueLabel.text = [parameters valueForKey:@"root.Image.I0.Text.String"];
+                        } else if (indexPath.row == 1 && ![parameters valueForKey:@"root.Image.I0.Text.String"] && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+                                dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
+                                dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
+                        } else if (indexPath.row == 2 && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+                                dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
+                                dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
+                        }
+                }
 	}
 	
 	return cell;
@@ -264,10 +288,12 @@
  Return the header, which is the configured camera name in our case.
  */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	if (section == 0)
-		return [camera valueForKey:@"description"];
-	else
-		return nil;
+        NSString *header = nil;
+        @synchronized (parameters) {
+                if (section == 0)
+                        header = [camera valueForKey:@"description"];
+        }
+        return header;
 }
 
 /**
@@ -286,10 +312,14 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         if ([indexPath row] == 0) { // The camera image was tapped
-                if ([[parameters allKeys] count] > 0) { // We have been able to read some data from the camera
+                int count = 0;
+                @synchronized (parameters) {
+                        count = [[parameters allKeys] count];
+                }
+                if (count > 0) { // We have been able to read some data from the camera
                         // Start a thread that fetches a JPEG and saves it.
                         [self performSelectorInBackground:@selector(saveCameraSnapshotBackgroundThread) withObject:nil];
-
+                        
                         // Confirm the touch with a "flash" effect.
                         webView.alpha = 0.0;
                         [UIView beginAnimations:nil context:NULL];  
@@ -299,6 +329,7 @@
                 }
         }
 }
+
 
 #pragma mark View setup methods
 
@@ -327,6 +358,7 @@
 #pragma mark -
 
 - (void)dealloc {
+        [camera release];
 	[parameters release];
 	[webViewLoadedURL release];
 	
