@@ -15,6 +15,6 @@
 	BOOL keyboardIsShowing;
 }
 
-@property (retain) NSMutableDictionary* camera;
+@property(nonatomic, retain) NSMutableDictionary* camera;
 
 @end

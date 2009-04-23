@@ -15,6 +15,9 @@
 
 @implementation RootViewController
 
+/**
+ The + button was pressed. Create a new camera and go to edit it.
+ */
 - (void)addPressed:(id)sender
 {
 	NSMutableDictionary *cam = [[NSMutableDictionary alloc] init];
@@ -60,8 +63,13 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[super setEditing:editing animated:animated];
-	//[(UITableView*) self.view reloadData];
+
+        // Disable the + button in edit mode.
 	self.navigationItem.leftBarButtonItem.enabled = !editing;
+        
+        // Only show the edit button if there is at least one camera.
+        // We do this here because setEditing is called when the user
+        // ends the editing, and he might have removed cameras.
 	if ([appDelegate.cameras count] > 0) {
 		self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	} else {
@@ -77,6 +85,10 @@
 	return [appDelegate.cameras count];
 }
 
+/**
+ Return a rootviewcel with a thumbnail.
+ Loads the cells from nib.
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *identifier = @"RootViewCell";
 	RootViewCell *cell = (RootViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
@@ -95,14 +107,15 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString *filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [cam valueForKey:@"address"]];
 	UIImage *image = [[[UIImage alloc] initWithContentsOfFile:filename] autorelease];
-#ifndef ROUND_CORNERS_ON_SAVE
 	image = roundCornersOfImage(image);
-#endif
 	cell.imageView.image = image;
 	
 	return cell;
 }
 
+/**
+ Load a camera in display mode.
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
 	
@@ -112,29 +125,31 @@
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-	// No editing style if not editing or the index path is nil.
-	if (self.editing == NO || !indexPath)
-		return UITableViewCellEditingStyleNone;
-	else
-		return UITableViewCellEditingStyleDelete;
+        return UITableViewCellEditingStyleDelete;
 }
 
+/**
+ A row was edited (=deleted).
+ */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
+                // Remove the camera from the data source.
 		[appDelegate.cameras removeObjectAtIndex:indexPath.row];
-		//[tableView reloadData];
+                // Remove the row from the list.
 		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
 	}   
 }
 
+/**
+ Move a row from one position in the list to another.
+ */
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 	if (fromIndexPath.row < [appDelegate.cameras count] && toIndexPath.row <  [appDelegate.cameras count]) {
 		NSDictionary* cam1 = [appDelegate.cameras objectAtIndex:fromIndexPath.row];
-		[cam1 retain];
+                [[cam1 retain] autorelease];
 		[appDelegate.cameras removeObjectAtIndex:fromIndexPath.row];
 		[appDelegate.cameras insertObject:cam1 atIndex:toIndexPath.row];
-		[cam1 release];
 	}
 }
 
@@ -142,6 +157,9 @@
 	return YES;
 }
 
+/**
+ Get the height for a rootviewcell (once) and return it.
+ */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	static int descriptionCellHeight = 0;

@@ -24,12 +24,6 @@
 	if (cameras == nil) {
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
-//		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                       @"cam.filip.morotsmedia.se", @"address",
-//                       @"Hemma hos Filip & Anna", @"description",
-//                       @"jb", @"username",
-//                       nil];
-//		[cameras addObject:cam];
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"216.62.222.101", @"address",
                        @"Rutherford Small Dog Daycare", @"description",

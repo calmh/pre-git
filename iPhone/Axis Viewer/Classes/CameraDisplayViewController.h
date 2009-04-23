@@ -8,8 +8,8 @@
 	NSMutableDictionary* parameters;
 }
 
-@property(retain) NSMutableDictionary* camera;
-@property(retain) NSURL* webViewLoadedURL;
+@property(nonatomic, retain) NSMutableDictionary* camera;
+@property(nonatomic, retain) NSURL* webViewLoadedURL;
 
 @end
 
@@ -17,12 +17,12 @@
 
 @interface CameraDisplayViewController ()
 
--(NSString*) createCameraURL;
--(void) savePreviewBackgroundThread;
--(void) saveCameraSnapshotBackgroundThread;
--(void) getAxisParametersBackgroundThread;
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
--(void) updateWebViewForCamera:(NSString*) url withFps:(NSNumber*) fps;
--(void) editPressed:(id)sender;
+- (NSString*)createCameraURL;
+- (void)savePreviewBackgroundThread;
+- (void)saveCameraSnapshotBackgroundThread;
+- (void)getAxisParametersBackgroundThread;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)updateWebViewForCamera:(NSString*)url withFps:(NSNumber*)fps;
+- (void)editPressed:(id)sender;
 
 @end;

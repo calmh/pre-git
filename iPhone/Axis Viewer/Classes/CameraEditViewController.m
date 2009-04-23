@@ -13,6 +13,8 @@
 
 @synthesize camera;
 
+#pragma mark View setup methods
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
@@ -45,10 +47,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
 }
 
 #pragma mark Table view methods
@@ -118,18 +116,20 @@
 	return cell;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-	NSString* key = [keys objectAtIndex:textField.tag];
-	[camera setValue:textField.text forKey:key];
-}
-
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	if (section == 0)
 		return NSLocalizedString(@"Basic Settings", @"");
 	else
 		return nil;
+}
+
+#pragma mark Editing methods
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+	NSString* key = [keys objectAtIndex:textField.tag];
+	[camera setValue:textField.text forKey:key];
 }
 
 - (void)keyboardWillShow:(NSNotification *)note
@@ -168,6 +168,12 @@
 		self.view.frame = frame;
 		[UIView commitAnimations];
 	}
+}
+
+#pragma mark -
+
+- (void)didReceiveMemoryWarning {
+	[super didReceiveMemoryWarning];
 }
 
 - (void)dealloc {

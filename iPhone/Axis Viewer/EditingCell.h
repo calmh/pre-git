@@ -6,7 +6,7 @@
     UITextField *value;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *prompt;
-@property (nonatomic, retain) IBOutlet UITextField *value;
+@property(nonatomic, retain) IBOutlet UILabel *prompt;
+@property(nonatomic, retain) IBOutlet UITextField *value;
 
 @end

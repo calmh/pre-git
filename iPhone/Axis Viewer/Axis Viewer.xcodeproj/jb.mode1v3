@@ -295,8 +295,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>20</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -340,7 +340,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Axis_ViewerAppDelegate.m</string>
+								<string>Common.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,34 +348,34 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Axis_ViewerAppDelegate.m</string>
+										<string>Common.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29ABBEFE0F9FCA23001C4596</string>
+										<string>29ABBF610FA035DF001C4596</string>
 										<key>history</key>
 										<array>
 											<string>295B659E0F9BCAE800699E1D</string>
-											<string>29FE875C0F9CCF01000E0DF9</string>
-											<string>29FE88270F9CDCBC000E0DF9</string>
-											<string>29FE88400F9CDDE0000E0DF9</string>
-											<string>29F289600F9E66FF0015E395</string>
 											<string>29F289720F9E681A0015E395</string>
 											<string>29ABBE7A0F9FB3B0001C4596</string>
 											<string>29ABBE800F9FB3F3001C4596</string>
-											<string>29ABBEC10F9FC585001C4596</string>
-											<string>29ABBECA0F9FC7C6001C4596</string>
 											<string>29ABBECD0F9FC7C6001C4596</string>
-											<string>29ABBECE0F9FC7C6001C4596</string>
-											<string>29ABBECF0F9FC7C6001C4596</string>
-											<string>29ABBED00F9FC7C6001C4596</string>
-											<string>29ABBED10F9FC7C6001C4596</string>
-											<string>29ABBED20F9FC7C6001C4596</string>
-											<string>29ABBED30F9FC7C6001C4596</string>
-											<string>29ABBED40F9FC7C6001C4596</string>
-											<string>29ABBEEC0F9FC8E9001C4596</string>
-											<string>29ABBEF60F9FC940001C4596</string>
-											<string>29ABBEF70F9FC940001C4596</string>
+											<string>29ABBF160FA032A1001C4596</string>
+											<string>29ABBF300FA033F6001C4596</string>
+											<string>29ABBF310FA033F6001C4596</string>
+											<string>29ABBF320FA033F6001C4596</string>
+											<string>29ABBF330FA033F6001C4596</string>
+											<string>29ABBF340FA033F6001C4596</string>
+											<string>29ABBF350FA033F6001C4596</string>
+											<string>29ABBF360FA033F6001C4596</string>
+											<string>29ABBF370FA033F6001C4596</string>
+											<string>29ABBF380FA033F6001C4596</string>
+											<string>29ABBF390FA033F6001C4596</string>
+											<string>29ABBF3A0FA033F6001C4596</string>
+											<string>29ABBF3B0FA033F6001C4596</string>
+											<string>29ABBF3D0FA033F6001C4596</string>
+											<string>29ABBF580FA0340D001C4596</string>
+											<string>29ABBF590FA0340D001C4596</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -446,6 +446,45 @@
 											<string>29ABBEEF0F9FC8E9001C4596</string>
 											<string>29ABBEF00F9FC8E9001C4596</string>
 											<string>29ABBEF80F9FC940001C4596</string>
+											<string>29ABBF0B0FA030E2001C4596</string>
+											<string>29ABBF0C0FA030E2001C4596</string>
+											<string>29ABBF0D0FA030E2001C4596</string>
+											<string>29ABBF0E0FA030E2001C4596</string>
+											<string>29ABBF0F0FA030E2001C4596</string>
+											<string>29ABBF190FA032A1001C4596</string>
+											<string>29ABBF1A0FA032A1001C4596</string>
+											<string>29ABBF1B0FA032A1001C4596</string>
+											<string>29ABBF1C0FA032A1001C4596</string>
+											<string>29ABBF1D0FA032A1001C4596</string>
+											<string>29ABBF1E0FA032A1001C4596</string>
+											<string>29ABBF1F0FA032A1001C4596</string>
+											<string>29ABBF200FA032A1001C4596</string>
+											<string>29ABBF210FA032A1001C4596</string>
+											<string>29ABBF220FA032A1001C4596</string>
+											<string>29ABBF2C0FA032F7001C4596</string>
+											<string>29ABBF3F0FA033F6001C4596</string>
+											<string>29ABBF400FA033F6001C4596</string>
+											<string>29ABBF410FA033F6001C4596</string>
+											<string>29ABBF420FA033F6001C4596</string>
+											<string>29ABBF430FA033F6001C4596</string>
+											<string>29ABBF440FA033F6001C4596</string>
+											<string>29ABBF450FA033F6001C4596</string>
+											<string>29ABBF460FA033F6001C4596</string>
+											<string>29ABBF470FA033F6001C4596</string>
+											<string>29ABBF480FA033F6001C4596</string>
+											<string>29ABBF490FA033F6001C4596</string>
+											<string>29ABBF4A0FA033F6001C4596</string>
+											<string>29ABBF4B0FA033F6001C4596</string>
+											<string>29ABBF4C0FA033F6001C4596</string>
+											<string>29ABBF4D0FA033F6001C4596</string>
+											<string>29ABBF4E0FA033F6001C4596</string>
+											<string>29ABBF4F0FA033F6001C4596</string>
+											<string>29ABBF500FA033F6001C4596</string>
+											<string>29ABBF510FA033F6001C4596</string>
+											<string>29ABBF520FA033F6001C4596</string>
+											<string>29ABBF530FA033F6001C4596</string>
+											<string>29ABBF540FA033F6001C4596</string>
+											<string>29ABBF5A0FA0340D001C4596</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -624,7 +663,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>262130211.14341599</real>
+	<real>262157791.31468901</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -641,9 +680,9 @@
 	<array>
 		<string>29ABBE6F0F9FB344001C4596</string>
 		<string>29ABBE700F9FB344001C4596</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2954801A0F65932900ABBCD2</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/jb/projekt/iPhone/Axis Viewer/Axis Viewer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -861,7 +900,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
