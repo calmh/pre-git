@@ -124,6 +124,23 @@
 		return nil;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	static int cellHeight = 0;
+	if (cellHeight == 0) {
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EditingCell" owner:self options:nil];
+		for (id object in nib) {
+			if ([object isKindOfClass:[EditingCell class]]) {
+				EditingCell* cell = (EditingCell *)object;
+				cellHeight = cell.frame.size.height;
+			}
+		}
+	}
+
+        return cellHeight;
+}
+
+
+
 #pragma mark Editing methods
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
