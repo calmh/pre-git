@@ -11,6 +11,7 @@
 
 @interface RootViewController : UITableViewController {
 	Axis_ViewerAppDelegate *appDelegate;
+        BOOL updatingPreviews;
 }
 
 -(void)addPressed: (id)sender;

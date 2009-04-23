@@ -4,33 +4,20 @@
 #import "DescriptionCell.h"
 #import "UIImageExtras.h"
 
-#define MAXFAILURES 2
-#define WEBVIEW_WIDTH 280
-#define WEBVIEW_HEIGHT 211
-
 @implementation CameraDisplayViewController
 
 @synthesize camera, webViewLoadedURL;
 
-#pragma mark Utility methods
-
-/**
- Build the base URL for the depending on authentication settings.
- */
-- (NSString*)createCameraURL {
-        NSString* address = nil;
-        NSString* username = nil;
-        NSString* password = nil;
-        @synchronized (camera) {
-                address = [camera valueForKey:@"address"];
-                username = [camera valueForKey:@"username"];
-                password = [camera valueForKey:@"password"];
+- (void)setCamera:(NSMutableDictionary*)icamera
+{
+        if (icamera != camera) {
+                [camera release];
+                [icamera retain];
+                camera = icamera;
         }
-        if (username != nil && password != nil && [username length] > 0 && [password length] > 0)
-                return [NSString stringWithFormat: @"http://%@:%@@%@", username, password, address];
-        else
-                return [NSString stringWithFormat: @"http://%@", address];
 }
+
+#pragma mark Utility methods
 
 /**
  Updates the visible UIWebView with a camera stream from the specified camera.
@@ -45,7 +32,7 @@
 		int w = WEBVIEW_WIDTH - 4;
 		int h = WEBVIEW_HEIGHT - 4;
                 NSString* address = nil;
-                @synchronized (camera) {
+                @synchronized (self) {
                         address = [camera valueForKey:@"address"];
                 }
 		
@@ -61,100 +48,6 @@
 		[webView loadHTMLString:embedHTML baseURL:base];
 		self.webViewLoadedURL = nsurl;
 	}
-}
-
-#pragma mark Background threads
-
-/**
- Retrieve and save a preview for this camera, scaled to the same size as the camera view.
- Method intended to run as separate thread.
- */
-- (void)savePreviewBackgroundThread {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
-	
-	NSString* url = [self createCameraURL];
-	NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=0"]]];
-	UIImage *image = [[UIImage alloc] initWithData:imageData];
-	[imageData release];
-        
-	UIImage *scaledImage = [image imageByScalingAndCroppingForSize:CGSizeMake(WEBVIEW_WIDTH - 4, WEBVIEW_HEIGHT - 4)];
-        [image release];
-        
-	imageData = UIImageJPEGRepresentation(scaledImage, 0.5);
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString* filename = nil;
-        @synchronized (camera) {
-                filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
-        }
-        [imageData writeToFile:filename	atomically:NO];
-	
-	[pool release];
-}
-
-/**
- Fetch a snapshot from the camera and save it to the camera roll.
- Intended to run as a background thread.
- */
-- (void)saveCameraSnapshotBackgroundThread {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
-        
-        NSString* url = [self createCameraURL];
-        NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]]];
-        UIImage *image = [[UIImage alloc] initWithData:imageData];
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        [image release];
-        [imageData release];
-        
-        [pool release];
-}
-
-/**
- Fetch Brand and Image parameter sets from the camera and insert them into a NSMutableDictionary.
- */
-- (void)getAxisParametersBackgroundThread {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
-	
-	int failed = 0;
-	NSString* url = [self createCameraURL];
-	NSArray *urls = [NSArray arrayWithObjects:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"], [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"], nil];
-	for (NSString* url in urls) {
-		NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
-		NSURLResponse *response = nil;
-		NSError *error = nil;
-		NSData* receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-		if (receivedData != NO) {
-			NSString *params = [[NSString alloc] initWithData:receivedData encoding:NSISOLatin1StringEncoding];
-			// Split by lines...
-			NSArray *lines = [params componentsSeparatedByString:@"\n"];
-			// Sort into a dictionary...
-			for (NSString *line in lines) {
-				NSArray *parts = [line componentsSeparatedByString:@"="];
-				if ([parts count] == 2) {
-                                        @synchronized (parameters) {
-                                                [parameters setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
-                                        }
-                                }
-			}
-			[params release];
-			
-			// Update the view with new data
-                        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-		} else {
-			failed++;
-		}
-	}
-	
-	if (failed == [urls count] || [[parameters allKeys] count] == 0) {
-		// Every request failed or we got no parameters at all
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
-								 message:NSLocalizedString(@"SettingsIncorrect", @"")
-								delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
-						       otherButtonTitles: NSLocalizedString(@"Edit", @""), nil] autorelease];
-		[alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
-	}
-	
-	[pool release];
 }
 
 #pragma mark Event methods
@@ -196,10 +89,10 @@
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
         int n = 1;
-        @synchronized (parameters) {
-                if ([parameters valueForKey:@"root.Brand.ProdShortName"] && [parameters valueForKey:@"root.Image.I0.Text.String"])
+        @synchronized (self) {
+                if ([axisCamera parameterForKey:@"root.Brand.ProdShortName"] && [axisCamera parameterForKey:@"root.Image.I0.Text.String"])
                         n = 3;
-                else if ([parameters valueForKey:@"root.Brand.ProdShortName"] || [parameters valueForKey:@"root.Image.I0.Text.String"])
+                else if ([axisCamera parameterForKey:@"root.Brand.ProdShortName"] || [axisCamera parameterForKey:@"root.Image.I0.Text.String"])
                         n = 2;
         }
         return n;
@@ -239,21 +132,19 @@
 		//	fps = [NSNumber numberWithInt:1];
 		//	[camera setValue:fps forKey:@"framerate"];
 		//}
-		NSString *url = [self createCameraURL];
+		NSString *url = [axisCamera createCameraURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
-                @synchronized (parameters) {
                         DescriptionCell* dcell = (DescriptionCell*)cell;
-                        if (indexPath.row == 1 && [parameters valueForKey:@"root.Image.I0.Text.String"]) {
+                        if (indexPath.row == 1 && [axisCamera parameterForKey:@"root.Image.I0.Text.String"]) {
                                 dcell.descriptionLabel.text = NSLocalizedString(@"Description", @"");
-                                dcell.valueLabel.text = [parameters valueForKey:@"root.Image.I0.Text.String"];
-                        } else if (indexPath.row == 1 && ![parameters valueForKey:@"root.Image.I0.Text.String"] && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+                                dcell.valueLabel.text = [axisCamera parameterForKey:@"root.Image.I0.Text.String"];
+                        } else if (indexPath.row == 1 && ![axisCamera parameterForKey:@"root.Image.I0.Text.String"] && [axisCamera parameterForKey:@"root.Brand.ProdShortName"]) {
                                 dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
-                                dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
-                        } else if (indexPath.row == 2 && [parameters valueForKey:@"root.Brand.ProdShortName"]) {
+                                dcell.valueLabel.text = [axisCamera parameterForKey:@"root.Brand.ProdShortName"];
+                        } else if (indexPath.row == 2 && [axisCamera parameterForKey:@"root.Brand.ProdShortName"]) {
                                 dcell.descriptionLabel.text = NSLocalizedString(@"Camera Model", @"");
-                                dcell.valueLabel.text = [parameters valueForKey:@"root.Brand.ProdShortName"];
-                        }
+                                dcell.valueLabel.text = [axisCamera parameterForKey:@"root.Brand.ProdShortName"];
                 }
 	}
 	
@@ -289,7 +180,7 @@
  */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
         NSString *header = nil;
-        @synchronized (parameters) {
+        @synchronized (self) {
                 if (section == 0)
                         header = [camera valueForKey:@"description"];
         }
@@ -312,13 +203,9 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         if ([indexPath row] == 0) { // The camera image was tapped
-                int count = 0;
-                @synchronized (parameters) {
-                        count = [[parameters allKeys] count];
-                }
-                if (count > 0) { // We have been able to read some data from the camera
+                if ([axisCamera numParameters] > 0) { // We have been able to read some data from the camera
                         // Start a thread that fetches a JPEG and saves it.
-                        [self performSelectorInBackground:@selector(saveCameraSnapshotBackgroundThread) withObject:nil];
+                        [axisCamera takeSnapshotInBackground];
                         
                         // Confirm the touch with a "flash" effect.
                         webView.alpha = 0.0;
@@ -344,23 +231,37 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-        
+        [axisCamera release];
+        axisCamera = [[AxisCamera alloc] initWithCamera:camera];
+        axisCamera.delegate = self;
+        [axisCamera getParametersInBackground];
 	webViewLoadedURL = nil;
-	parameters = [[NSMutableDictionary alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[self.tableView reloadData];
-	[NSThread detachNewThreadSelector: @selector(getAxisParametersBackgroundThread) toTarget: self withObject: nil];
-	[NSThread detachNewThreadSelector: @selector(savePreviewBackgroundThread) toTarget: self withObject: nil];
+}
+
+- (void)axisCameraParametersUpdated:(AxisCamera*)cam {
+        // We will be by whatever thread the AxisCamera object has created,
+        // so we need to get back to the main thread for GUI operations.
+        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+}
+
+- (void)axisCameraParametersFailed:(AxisCamera*)camera {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
+                                                         message:NSLocalizedString(@"SettingsIncorrect", @"")
+                                                        delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
+                                               otherButtonTitles: NSLocalizedString(@"Edit", @""), nil] autorelease];
+        [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
 }
 
 #pragma mark -
 
 - (void)dealloc {
         [camera release];
-	[parameters release];
 	[webViewLoadedURL release];
+        [axisCamera release];
 	
 	[super dealloc];
 }

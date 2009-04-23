@@ -32,6 +32,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+        
+        updatingPreviews = NO;
 	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
 	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
@@ -39,6 +41,28 @@
 	[b release];
 	
 	self.title = NSLocalizedString(@"Camera List", @"");
+}
+
+- (void)updatePreviews {
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+        @synchronized (self) {
+                if (updatingPreviews) {
+                        [pool release];
+                        return;
+                }
+                else {
+                        updatingPreviews = YES;
+                }
+        }
+        
+        for (NSDictionary* camera in [[appDelegate.cameras copy] autorelease]) {
+                if ([[[[AxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous])
+                        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+        }
+        updatingPreviews = NO;
+        
+        [pool release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -49,6 +73,7 @@
 	} else {
 		self.navigationItem.rightBarButtonItem = nil;
 	}
+        [self performSelectorInBackground:@selector(updatePreviews) withObject:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -1,11 +1,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "AxisCamera.h"
 
 @interface CameraDisplayViewController : UITableViewController {
 	UIWebView* webView;
 	NSURL* webViewLoadedURL;
         NSMutableDictionary* camera;
-	NSMutableDictionary* parameters;
+        AxisCamera* axisCamera;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;
@@ -17,10 +18,6 @@
 
 @interface CameraDisplayViewController ()
 
-- (NSString*)createCameraURL;
-- (void)savePreviewBackgroundThread;
-- (void)saveCameraSnapshotBackgroundThread;
-- (void)getAxisParametersBackgroundThread;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 - (void)updateWebViewForCamera:(NSString*)url withFps:(NSNumber*)fps;
 - (void)editPressed:(id)sender;

@@ -8,6 +8,6 @@
 
 @interface UIImage (Extras)
 
-- (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
+- (UIImage*)scaleToWidth:(CGFloat)width andHeight:(CGFloat)height;
 
 @end

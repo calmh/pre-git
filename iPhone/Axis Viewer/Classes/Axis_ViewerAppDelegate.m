@@ -25,11 +25,6 @@
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"webcam.oii.ox.ac.uk", @"address",
-                       @"Oxford City Centre", @"description",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"mcdcam-dimm.as.utexas.edu", @"address",
                        @"McDonald Observatory Domes", @"description",
                        nil];

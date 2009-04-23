@@ -15,6 +15,9 @@
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		29094CC80FA0DB3E00846CDE /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 29094CC70FA0DB3E00846CDE /* question.png */; };
+		29094D050FA0E56E00846CDE /* icon-clean.png in Resources */ = {isa = PBXBuildFile; fileRef = 29094D040FA0E56E00846CDE /* icon-clean.png */; };
+		29094D5E0FA0EF6900846CDE /* AxisCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */; };
 		291066060F96787C0099B1D3 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066040F96787C0099B1D3 /* DescriptionCell.m */; };
 		291066340F967D1A0099B1D3 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066330F967D1A0099B1D3 /* DescriptionCell.xib */; };
 		291066840F9683070099B1D3 /* EditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066830F9683070099B1D3 /* EditingCell.xib */; };
@@ -23,12 +26,10 @@
 		295B65980F9BCA1300699E1D /* RootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 295B65970F9BCA1300699E1D /* RootViewCell.m */; };
 		295F7F030F98B2F000CFD313 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F010F98B2F000CFD313 /* Localizable.strings */; };
 		295F7F4C0F98B86000CFD313 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F4B0F98B86000CFD313 /* Default.png */; };
-		29930B650F9243D700F2FC7E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29930B640F9243D700F2FC7E /* icon.png */; };
 		29AC1DAA0F90F84B007F655B /* CameraDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */; };
 		29AC1DAC0F90F869007F655B /* CameraDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */; };
 		29E852A60F9126870000CF84 /* CameraEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E852A50F9126870000CF84 /* CameraEditViewController.m */; };
 		29E852AB0F9126D60000CF84 /* CameraEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */; };
-		29FE87580F9CCEF3000E0DF9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE87570F9CCEF3000E0DF9 /* Common.m */; };
 		29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,10 @@
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		29094CC70FA0DB3E00846CDE /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question.png; sourceTree = "<group>"; };
+		29094D040FA0E56E00846CDE /* icon-clean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-clean.png"; sourceTree = "<group>"; };
+		29094D5C0FA0EF6900846CDE /* AxisCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxisCamera.h; sourceTree = "<group>"; };
+		29094D5D0FA0EF6900846CDE /* AxisCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxisCamera.m; sourceTree = "<group>"; };
 		291066040F96787C0099B1D3 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescriptionCell.m; path = ../DescriptionCell.m; sourceTree = "<group>"; };
 		291066050F96787C0099B1D3 /* DescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescriptionCell.h; path = ../DescriptionCell.h; sourceTree = "<group>"; };
 		291066330F967D1A0099B1D3 /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
@@ -56,7 +61,6 @@
 		295F7F020F98B2F000CFD313 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		295F7F040F98B30800CFD313 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		295F7F4B0F98B86000CFD313 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		29930B640F9243D700F2FC7E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		29AC1DA80F90F84B007F655B /* CameraDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDisplayViewController.h; sourceTree = "<group>"; };
 		29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDisplayViewController.m; sourceTree = "<group>"; };
 		29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraDisplayViewController.xib; sourceTree = "<group>"; };
@@ -64,8 +68,7 @@
 		29E852A40F9126870000CF84 /* CameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraEditViewController.h; sourceTree = "<group>"; };
 		29E852A50F9126870000CF84 /* CameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraEditViewController.m; sourceTree = "<group>"; };
 		29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraEditViewController.xib; sourceTree = "<group>"; };
-		29FE87540F9CCDDA000E0DF9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Classes/Common.h; sourceTree = "<group>"; };
-		29FE87570F9CCEF3000E0DF9 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = Classes/Common.m; sourceTree = "<group>"; };
+		29F179FD0FA117C100DC00A8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtras.h; sourceTree = "<group>"; };
 		29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtras.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +107,9 @@
 				295B65970F9BCA1300699E1D /* RootViewCell.m */,
 				29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */,
 				29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */,
+				29094D5C0FA0EF6900846CDE /* AxisCamera.h */,
+				29094D5D0FA0EF6900846CDE /* AxisCamera.m */,
+				29F179FD0FA117C100DC00A8 /* Common.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -131,8 +137,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				29FE87570F9CCEF3000E0DF9 /* Common.m */,
-				29FE87540F9CCDDA000E0DF9 /* Common.h */,
 				28A0AAE50D9B0CCF005BE974 /* Axis_Viewer_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -142,7 +146,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				29930B640F9243D700F2FC7E /* icon.png */,
+				29094D040FA0E56E00846CDE /* icon-clean.png */,
+				29094CC70FA0DB3E00846CDE /* question.png */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -222,12 +227,13 @@
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
 				29AC1DAC0F90F869007F655B /* CameraDisplayViewController.xib in Resources */,
 				29E852AB0F9126D60000CF84 /* CameraEditViewController.xib in Resources */,
-				29930B650F9243D700F2FC7E /* icon.png in Resources */,
 				291066340F967D1A0099B1D3 /* DescriptionCell.xib in Resources */,
 				291066840F9683070099B1D3 /* EditingCell.xib in Resources */,
 				295F7F030F98B2F000CFD313 /* Localizable.strings in Resources */,
 				295F7F4C0F98B86000CFD313 /* Default.png in Resources */,
 				295B65930F9BC91400699E1D /* RootViewCell.xib in Resources */,
+				29094CC80FA0DB3E00846CDE /* question.png in Resources */,
+				29094D050FA0E56E00846CDE /* icon-clean.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,8 +252,8 @@
 				291066060F96787C0099B1D3 /* DescriptionCell.m in Sources */,
 				291066880F9683D40099B1D3 /* EditingCell.m in Sources */,
 				295B65980F9BCA1300699E1D /* RootViewCell.m in Sources */,
-				29FE87580F9CCEF3000E0DF9 /* Common.m in Sources */,
 				29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */,
+				29094D5E0FA0EF6900846CDE /* AxisCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +304,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -312,7 +319,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
