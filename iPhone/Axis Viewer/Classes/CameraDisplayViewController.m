@@ -132,7 +132,7 @@
 		//	fps = [NSNumber numberWithInt:1];
 		//	[camera setValue:fps forKey:@"framerate"];
 		//}
-		NSString *url = [axisCamera createCameraURL];
+		NSString *url = [axisCamera baseURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
                         DescriptionCell* dcell = (DescriptionCell*)cell;

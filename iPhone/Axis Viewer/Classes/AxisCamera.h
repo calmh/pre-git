@@ -15,7 +15,7 @@
         id delegate;
 }
 
-- (NSString*)createCameraURL;
+- (NSString*)baseURL;
 - (AxisCamera*)initWithCamera:(NSDictionary*)icamera;
 - (NSString*)parameterForKey:(NSString*)key;
 - (int)numParameters;

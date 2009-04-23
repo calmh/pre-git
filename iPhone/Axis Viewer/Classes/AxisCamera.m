@@ -23,15 +23,6 @@
         return self;
 }
 
-- (AxisCamera*) initWithCameraNoThreads:(NSDictionary*)icamera {
-        if (self = [super init]) {
-                camera = [icamera copy];
-                parameters = [[NSMutableDictionary alloc] init];
-                delegate = nil;
-        }
-        return self;
-}
-
 - (void)dealloc {
         [camera dealloc];
         [parameters dealloc];
@@ -41,7 +32,7 @@
 /**
  Build the base URL for the depending on authentication settings.
  */
-- (NSString*)createCameraURL {
+- (NSString*)baseURL {
         NSString* address = [camera valueForKey:@"address"];
         NSString* username = [camera valueForKey:@"username"];
         NSString* password = [camera valueForKey:@"password"];
@@ -70,7 +61,7 @@
         if ([age compare:cutoff] > 0)
                 return NO;
         
-        NSString* url = [self createCameraURL];
+        NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
@@ -109,7 +100,7 @@
 - (void)saveCameraSnapshotBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
         
-        NSString* url = [self createCameraURL];
+        NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
@@ -133,11 +124,11 @@
 /**
  Fetch Brand and Image parameter sets from the camera and insert them into a NSMutableDictionary.
  */
-- (void)getAxisParametersBackgroundThread {
+- (void)loadParametersBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
 	
 	int failed = 0;
-	NSString* url = [self createCameraURL];
+	NSString* url = [self baseURL];
 	NSArray *urls = [NSArray arrayWithObjects:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"], [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"], nil];
 	for (NSString* url in urls) {
 		NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
@@ -185,7 +176,7 @@
 }
 
 - (void)getParametersInBackground {
-        [self performSelectorInBackground:@selector(getAxisParametersBackgroundThread) withObject:nil];
+        [self performSelectorInBackground:@selector(loadParametersBackgroundThread) withObject:nil];
 }
 
 - (NSString*)parameterForKey:(NSString*)key {
