@@ -107,7 +107,7 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString *filename = [NSString stringWithFormat:@"%@/%@.jpg", documentsDirectory, [cam valueForKey:@"address"]];
 	UIImage *image = [[[UIImage alloc] initWithContentsOfFile:filename] autorelease];
-	image = roundCornersOfImage(image);
+	//image = roundCornersOfImage(image);
 	cell.imageView.image = image;
 	
 	return cell;
