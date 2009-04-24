@@ -460,6 +460,7 @@
 		activeSDKPreference = iphoneos2.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Axis Viewer */;
 		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Axis Viewer */,
 		);
 		breakpoints = (
 		);
@@ -614,8 +615,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 262275687;
-			PBXWorkspaceStateSaveDate = 262275687;
+			PBXPerProjectTemplateStateSaveDate = 262276833;
+			PBXWorkspaceStateSaveDate = 262276833;
 		};
 		perUserProjectItems = {
 			29094CD80FA0DF6500846CDE /* PBXBookmark */ = 29094CD80FA0DF6500846CDE /* PBXBookmark */;
@@ -647,6 +648,7 @@
 			29ABBEDE0F9FC7C6001C4596 /* PBXTextBookmark */ = 29ABBEDE0F9FC7C6001C4596 /* PBXTextBookmark */;
 			29ABBF300FA033F6001C4596 /* PBXTextBookmark */ = 29ABBF300FA033F6001C4596 /* PBXTextBookmark */;
 			29ABBF330FA033F6001C4596 /* PBXTextBookmark */ = 29ABBF330FA033F6001C4596 /* PBXTextBookmark */;
+			29C3B6C20FA207B400DCCD4A /* PBXTextBookmark */ = 29C3B6C20FA207B400DCCD4A /* PBXTextBookmark */;
 			29F179A80FA10F8100DC00A8 /* PBXTextBookmark */ = 29F179A80FA10F8100DC00A8 /* PBXTextBookmark */;
 			29F179C30FA1117400DC00A8 /* PBXTextBookmark */ = 29F179C30FA1117400DC00A8 /* PBXTextBookmark */;
 			29F17A130FA119E100DC00A8 /* PBXTextBookmark */ = 29F17A130FA119E100DC00A8 /* PBXTextBookmark */;
@@ -656,7 +658,6 @@
 			29FC78B00FA1E14600F22A14 /* PBXTextBookmark */ = 29FC78B00FA1E14600F22A14 /* PBXTextBookmark */;
 			29FC78E40FA1EA7900F22A14 /* PBXTextBookmark */ = 29FC78E40FA1EA7900F22A14 /* PBXTextBookmark */;
 			29FC78E50FA1EA7900F22A14 /* PBXTextBookmark */ = 29FC78E50FA1EA7900F22A14 /* PBXTextBookmark */;
-			29FC79380FA1F66800F22A14 /* PBXTextBookmark */ = 29FC79380FA1F66800F22A14 /* PBXTextBookmark */;
 			29FC79390FA1F66800F22A14 /* PBXTextBookmark */ = 29FC79390FA1F66800F22A14 /* PBXTextBookmark */;
 			29FC793E0FA1F66800F22A14 /* PBXTextBookmark */ = 29FC793E0FA1F66800F22A14 /* PBXTextBookmark */;
 			29FC79590FA1F89800F22A14 /* PBXTextBookmark */ = 29FC79590FA1F89800F22A14 /* PBXTextBookmark */;
@@ -678,6 +679,16 @@
 			sepNavSelRange = "{263, 0}";
 			sepNavVisRange = "{0, 362}";
 		};
+	};
+	29C3B6C20FA207B400DCCD4A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 14";
+		rLen = 0;
+		rLoc = 263;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 0;
 	};
 	29E852A40F9126870000CF84 /* CameraEditViewController.h */ = {
 		uiCtxt = {
@@ -791,16 +802,6 @@
 		name = AxisCamera.m;
 		path = "/Users/jb/projekt/iPhone/Axis Viewer/Classes/AxisCamera.m";
 		sourceTree = "<absolute>";
-	};
-	29FC79380FA1F66800F22A14 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-		name = "main.m: 14";
-		rLen = 0;
-		rLoc = 263;
-		rType = 0;
-		vrLen = 362;
-		vrLoc = 0;
 	};
 	29FC79390FA1F66800F22A14 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

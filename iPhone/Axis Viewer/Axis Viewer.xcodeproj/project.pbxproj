@@ -28,6 +28,7 @@
 		295F7F4C0F98B86000CFD313 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F4B0F98B86000CFD313 /* Default.png */; };
 		29AC1DAA0F90F84B007F655B /* CameraDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */; };
 		29AC1DAC0F90F869007F655B /* CameraDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */; };
+		29C3B6BF0FA2071F00DCCD4A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 29C3B6BE0FA2071F00DCCD4A /* iTunesArtwork */; };
 		29E852A60F9126870000CF84 /* CameraEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E852A50F9126870000CF84 /* CameraEditViewController.m */; };
 		29E852AB0F9126D60000CF84 /* CameraEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */; };
 		29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */; };
@@ -65,6 +66,7 @@
 		29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDisplayViewController.m; sourceTree = "<group>"; };
 		29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraDisplayViewController.xib; path = Resources/CameraDisplayViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29C3B6BE0FA2071F00DCCD4A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		29E852A40F9126870000CF84 /* CameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraEditViewController.h; sourceTree = "<group>"; };
 		29E852A50F9126870000CF84 /* CameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraEditViewController.m; sourceTree = "<group>"; };
 		29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraEditViewController.xib; path = Resources/CameraEditViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29C3B6BE0FA2071F00DCCD4A /* iTunesArtwork */,
 				29094D040FA0E56E00846CDE /* icon-clean.png */,
 				29094CC70FA0DB3E00846CDE /* question.png */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
@@ -249,6 +252,7 @@
 				295B65930F9BC91400699E1D /* RootViewCell.xib in Resources */,
 				29094CC80FA0DB3E00846CDE /* question.png in Resources */,
 				29094D050FA0E56E00846CDE /* icon-clean.png in Resources */,
+				29C3B6BF0FA2071F00DCCD4A /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +322,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 43;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphoneos2.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_BUILDER = jb;
 			};
@@ -336,14 +340,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 43;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphoneos2.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_BUILDER = jb;
 			};

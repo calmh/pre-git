@@ -279,7 +279,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>45</integer>
+									<integer>28</integer>
+									<integer>27</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -320,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>main.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,7 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>main.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>29C3B6C20FA207B400DCCD4A</string>
 										<key>history</key>
 										<array>
 											<string>29ABBE7A0F9FB3B0001C4596</string>
@@ -347,7 +353,6 @@
 											<string>29FC78B00FA1E14600F22A14</string>
 											<string>29FC78E40FA1EA7900F22A14</string>
 											<string>29FC78E50FA1EA7900F22A14</string>
-											<string>29FC79380FA1F66800F22A14</string>
 											<string>29FC79390FA1F66800F22A14</string>
 											<string>29FC79590FA1F89800F22A14</string>
 											<string>29FC79720FA1FBB600F22A14</string>
@@ -355,6 +360,7 @@
 											<string>29FC79A70FA1FF8F00F22A14</string>
 											<string>29FC79D50FA2009600F22A14</string>
 											<string>29FC79D60FA2009600F22A14</string>
+											<string>29FC793E0FA1F66800F22A14</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -382,7 +388,6 @@
 											<string>29094D190FA0E7D800846CDE</string>
 											<string>29094D6A0FA0EFA600846CDE</string>
 											<string>29094D6B0FA0EFA600846CDE</string>
-											<string>29FC793E0FA1F66800F22A14</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -440,9 +445,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29FC79F20FA2026E00F22A14</string>
+				<string>29C3B6B60FA206F700DCCD4A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>29FC79F30FA2026E00F22A14</string>
+				<string>29C3B6B70FA206F700DCCD4A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -576,11 +581,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>29FC7A010FA202AF00F22A14</string>
-		<string>29FC79FD0FA2026E00F22A14</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>2954801A0F65932900ABBCD2</string>
 		<string>/Users/jb/projekt/iPhone/Axis Viewer/Axis Viewer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -783,13 +784,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>29FC79F50FA2026E00F22A14</string>
+				<string>29C3B6B80FA206F700DCCD4A</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>29FC79F60FA2026E00F22A14</string>
-				<string>29FC79F70FA2026E00F22A14</string>
-				<string>29FC79F80FA2026E00F22A14</string>
-				<string>29FC79F90FA2026E00F22A14</string>
-				<string>29FC79FA0FA2026E00F22A14</string>
+				<string>29C3B6B90FA206F700DCCD4A</string>
+				<string>29C3B6BA0FA206F700DCCD4A</string>
+				<string>29C3B6BB0FA206F700DCCD4A</string>
+				<string>29C3B6BC0FA206F700DCCD4A</string>
+				<string>29C3B6BD0FA206F700DCCD4A</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
