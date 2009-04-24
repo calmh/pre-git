@@ -39,18 +39,23 @@
                        nil];
 		[cameras addObject:cam];
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                       @"ravensview.unbc.ca", @"address",
+                       @"UNBC Agora Courtyard", @"description",
+                       nil];                
+		[cameras addObject:cam];
+		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        @"216.62.222.101", @"address",
                        @"Rutherford Small Dog Daycare", @"description",
                        nil];
 		[cameras addObject:cam];
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"terrascam.heerenvanbeijerland.nl", @"address",
-                       @"Heeren van Beijerland Terrascamera", @"description",
+                       @"eastentrance.tps.ucsb.edu", @"address",
+                       @"East Entrance View of 217", @"description",
                        nil];
 		[cameras addObject:cam];
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"eastentrance.tps.ucsb.edu", @"address",
-                       @"East Entrance View of 217", @"description",
+                       @"62.153.175.52", @"address",
+                       @"Fleesensee Golf & Country Club", @"description",
                        nil];
 		[cameras addObject:cam];
 	}

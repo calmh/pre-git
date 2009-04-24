@@ -6,7 +6,6 @@
 //  Copyright Jakob Borg 2009. All rights reserved.
 //
 
-#import "Common.h"
 #import "RootViewController.h"
 #import "Axis_ViewerAppDelegate.h"
 #import "CameraDisplayViewController.h"
@@ -120,8 +119,8 @@
                 camera = nil;
                 @synchronized (self) {
                         if ([camerasToUpdate count] > 0) {
-                                camera = [camerasToUpdate lastObject];
-                                [camerasToUpdate removeLastObject];
+                                camera = [camerasToUpdate objectAtIndex:0];
+                                [camerasToUpdate removeObjectAtIndex:0];
                         }
                 }
                 

@@ -7,7 +7,6 @@
 //
 
 #import "AxisCamera.h"
-#import "Common.h"
 #import "UIImageExtras.h"
 
 @implementation AxisCamera
@@ -63,7 +62,7 @@
         
         NSLog(@"[AxisCamera.savePreviewSynchronous] Is old, fetching");
         NSString* url = [self baseURL];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
         NSData* imageData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
@@ -108,7 +107,7 @@
         NSLog(@"[AxisCamera.saveCameraSnapshotBackgroundThread] Starting");
 
         NSString* url = [self baseURL];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
         NSData* imageData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
