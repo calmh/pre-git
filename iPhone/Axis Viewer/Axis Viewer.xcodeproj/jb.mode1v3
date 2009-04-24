@@ -283,7 +283,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 124}, {283, 760}}</string>
+							<string>{{0, 0}, {283, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -576,7 +576,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>29FC79FC0FA2026E00F22A14</string>
+		<string>29FC7A010FA202AF00F22A14</string>
 		<string>29FC79FD0FA2026E00F22A14</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
