@@ -20,8 +20,12 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
-	cameras = [[NSMutableArray alloc] initWithContentsOfFile:filename];	
+        NSLog(@"[Axis_ViewerAppDelegate.applicationDidFinishLaunching] Loading cameras");
+        cameras = [[NSMutableArray alloc] initWithContentsOfFile:filename];	
+        
+        // A default list of cameras in case this is the first run
 	if (cameras == nil) {
+                NSLog(@"[Axis_ViewerAppDelegate.applicationDidFinishLaunchin] No cameras, using default set");
 		cameras = [[NSMutableArray alloc] init];
 		NSMutableDictionary *cam;
 		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -60,6 +64,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
         // Save the camera list before quitting.
+        NSLog(@"[Axis_ViewerAppDelegate.applicationWillTerminate] Saving cameras");
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];

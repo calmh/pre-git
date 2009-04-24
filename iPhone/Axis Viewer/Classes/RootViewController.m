@@ -15,6 +15,35 @@
 
 @implementation RootViewController
 
+#pragma mark View handling stuff
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+        
+	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
+	
+	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
+	self.navigationItem.leftBarButtonItem = b; 
+	[b release];
+	
+	self.title = NSLocalizedString(@"Camera List", @"");
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.tableView reloadData];
+	if ([appDelegate.cameras count] > 0) {
+		self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	} else {
+		self.navigationItem.rightBarButtonItem = nil;
+	}
+        [self performSelectorInBackground:@selector(updateAllPreviews) withObject:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+}
+
 /**
  The + button was pressed. Create a new camera and go to edit it.
  */
@@ -30,59 +59,86 @@
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
+#pragma mark -
+
+#pragma mark Preview updating stuff
+
+- (void)updateAllPreviews {
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSLog(@"[RootViewController.updateAllPreviews] Starting");
+
+        // Check if there already is a queue being worked on
+        @synchronized (self) {
+                if (camerasToUpdate)
+                        return;
+                camerasToUpdate = [[NSMutableArray alloc] initWithArray:appDelegate.cameras];
+        }
         
-        updatingPreviews = NO;
-	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
-	
-	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
-	self.navigationItem.leftBarButtonItem = b; 
-	[b release];
-	
-	self.title = NSLocalizedString(@"Camera List", @"");
+        // Not sure if it's a good idea to twiddle this one from a background thread, but it
+        // seems to work so far.
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
+        // Start a reasonable number of threads to fetch the images.
+        // Things to keep in mind are that the cameras are often quite slow to respond,
+        // that the bandwidth is probably low, and that we don't want to choke the poor
+        // little phone with threads.
+        NSMutableArray *threads = [[NSMutableArray alloc] init];
+        int nthreads = [camerasToUpdate count] / 2 + 1;
+        if (nthreads > 5)
+                nthreads = 5;
+        
+        for (int i = 0; i < nthreads; i++) {
+                NSLog(@"[RootViewController.updateAllPreviews] Starting thread %d", i);
+                NSThread* thread = [[NSThread alloc] initWithTarget:self selector:@selector(updatePreviewsBackgroundThread) object:nil];
+                [threads addObject:thread];
+                [thread start];
+        }
+        
+        int stillWorking;
+        do {
+                sleep(2);
+                stillWorking = 0;
+                for (int i = 0; i < nthreads; i++) {
+                        NSThread* thread = [threads objectAtIndex:i];
+                        if (![thread isFinished])
+                                stillWorking++;
+                }
+        } while (stillWorking > 0);
+        
+        camerasToUpdate = nil;
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        NSLog(@"[RootViewController.updateAllPreviews] Finished");
+        [pool release];
 }
 
-- (void)updatePreviews {
+- (void)updatePreviewsBackgroundThread {
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSLog(@"[updatePreviewsBackgroundThread] Starting");
 
-        @synchronized (self) {
-                if (updatingPreviews) {
-                        [pool release];
-                        return;
+        NSDictionary* camera;
+        do {
+                camera = nil;
+                @synchronized (self) {
+                        if ([camerasToUpdate count] > 0) {
+                                camera = [camerasToUpdate lastObject];
+                                [camerasToUpdate removeLastObject];
+                        }
                 }
-                else {
-                        updatingPreviews = YES;
+                
+                if (camera) {
+                        NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Fetching preview");
+                        if ([[[[AxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous]) {
+                                NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Notifying tableView");
+                                [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+                        }
                 }
-        }
-        
-        for (NSDictionary* camera in [[appDelegate.cameras copy] autorelease]) {
-                if ([[[[AxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous])
-                        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-        }
-        updatingPreviews = NO;
+        } while (camera);
+        NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Finished");
         
         [pool release];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.tableView reloadData];
-	if ([appDelegate.cameras count] > 0) {
-		self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	} else {
-		self.navigationItem.rightBarButtonItem = nil;
-	}
-        [self performSelectorInBackground:@selector(updatePreviews) withObject:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-}
+#pragma mark -
 
 #pragma mark Table view methods
 
@@ -132,7 +188,6 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString *filename = [NSString stringWithFormat:@"%@/thumbnail-%@.jpg", documentsDirectory, [cam valueForKey:@"address"]];
 	UIImage *image = [[[UIImage alloc] initWithContentsOfFile:filename] autorelease];
-	//image = roundCornersOfImage(image);
 	cell.imageView.image = image;
 	
 	return cell;
@@ -199,6 +254,14 @@
 	}
 	
 	return descriptionCellHeight;
+}
+
+#pragma mark -
+
+#pragma mark Deallocation
+
+- (void)didReceiveMemoryWarning {
+	[super didReceiveMemoryWarning];
 }
 
 - (void)dealloc {

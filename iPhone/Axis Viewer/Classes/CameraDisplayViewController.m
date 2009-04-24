@@ -24,11 +24,13 @@
  Only does the update if we are not already viewing the same URL.
  */
 - (void)updateWebViewForCamera:(NSString*)url withFps:(NSNumber*) fps {
+        NSLog(@"[CameraViewDisplayController.updateWebViewForCamera] Starting");
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSURL *base = [NSURL fileURLWithPath:documentsDirectory];
 	NSURL *nsurl = [NSURL URLWithString:url];
 	if (![nsurl isEqual:self.webViewLoadedURL]) {
+                NSLog(@"[CameraViewDisplayController.updateWebViewForCamera] Needs update");
 		int w = WEBVIEW_WIDTH - 4;
 		int h = WEBVIEW_HEIGHT - 4;
                 NSString* address = nil;
@@ -47,6 +49,7 @@
                 
 		[webView loadHTMLString:embedHTML baseURL:base];
 		self.webViewLoadedURL = nsurl;
+                NSLog(@"[CameraViewDisplayController.updateWebViewForCamera] Loaded");
 	}
 }
 
@@ -57,8 +60,10 @@
  */
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
         if (buttonIndex == 1) { // Edit
+                NSLog(@"[CameraViewDisplayController.alertView:clickedButtonAtIndex] User chose Edit");
                 [self editPressed:nil];
         } else if (buttonIndex == 0) { // OK
+                NSLog(@"[CameraViewDisplayController.alertView:clickedButtonAtIndex] User chose OK");
                 [self.navigationController popViewControllerAnimated:YES];
         }
 }
@@ -67,6 +72,7 @@
  Switch to editing mode when the user touches the Edit button.
  */
 - (void)editPressed:(id)sender {
+        NSLog(@"[CameraViewDisplayController.editPressed] Editing");
 	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
 	[cdc setCamera:camera];
 	[cdc setTitle:NSLocalizedString(@"Edit Camera", @"")];
@@ -242,6 +248,10 @@
 	[self.tableView reloadData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+        axisCamera.delegate = nil;
+}
+
 - (void)axisCameraParametersUpdated:(AxisCamera*)cam {
         // We will be by whatever thread the AxisCamera object has created,
         // so we need to get back to the main thread for GUI operations.
@@ -249,6 +259,11 @@
 }
 
 - (void)axisCameraParametersFailed:(AxisCamera*)camera {
+        [self performSelectorOnMainThread:@selector(showNotReachableAlert) withObject:nil waitUntilDone:NO];
+}
+
+- (void)showNotReachableAlert
+{
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connectivity Problem", @"")
                                                          message:NSLocalizedString(@"SettingsIncorrect", @"")
                                                         delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")

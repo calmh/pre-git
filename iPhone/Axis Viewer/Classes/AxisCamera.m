@@ -61,6 +61,7 @@
         if ([age compare:cutoff] > 0)
                 return NO;
         
+        NSLog(@"[AxisCamera.savePreviewSynchronous] Is old, fetching");
         NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
@@ -68,6 +69,7 @@
         NSData* imageData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
         if (imageData != nil) {
+                NSLog(@"[AxisCamera.savePreviewSynchronous] Saving");
                 UIImage *image = [[UIImage alloc] initWithData:imageData];
                 
                 UIImage *scaledImage = [image scaleToWidth:WEBVIEW_WIDTH-4 andHeight:WEBVIEW_HEIGHT-4];
@@ -80,16 +82,20 @@
                 
                 [image release];
                 return YES;
-	} else
+	} else {
+                NSLog(@"[AxisCamera.savePreviewSynchronous] Image get failed");
                 return NO;
+        }
 }
 
 - (void)savePreviewBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+        NSLog(@"[AxisCamera.savePreviewBackgroundThread] Starting");
         
         if ([self savePreviewSynchronous] && delegate && [delegate respondsToSelector:@selector(axisCamerapPreviewUpdated:)])
                         [delegate axisCameraPreviewUpdated:self];
         
+        NSLog(@"[AxisCamera.savePreviewBackgroundThread] Starting");
 	[pool release];
 }
 
@@ -99,7 +105,8 @@
  */
 - (void)saveCameraSnapshotBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
-        
+        NSLog(@"[AxisCamera.saveCameraSnapshotBackgroundThread] Starting");
+
         NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?text=0&date=0&clock=0&color=1"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
@@ -118,6 +125,7 @@
                         [delegate axisCameraSnapshotTaken:self];
         }
         
+        NSLog(@"[AxisCamera.saveCameraSnapshotBackgroundThread] Finished");
         [pool release];
 }
 
@@ -126,6 +134,7 @@
  */
 - (void)loadParametersBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
+        NSLog(@"[AxisCamera.loadParametersBackgroundThread] Starting");
 	
 	int failed = 0;
 	NSString* url = [self baseURL];
@@ -164,6 +173,7 @@
                         [delegate axisCameraParametersFailed:self];
         }
 	
+        NSLog(@"[AxisCamera.loadParametersBackgroundThread] Finished");
 	[pool release];
 }
 

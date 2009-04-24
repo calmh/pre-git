@@ -11,7 +11,7 @@
 
 @interface RootViewController : UITableViewController {
 	Axis_ViewerAppDelegate *appDelegate;
-        BOOL updatingPreviews;
+        NSMutableArray *camerasToUpdate;
 }
 
 -(void)addPressed: (id)sender;
