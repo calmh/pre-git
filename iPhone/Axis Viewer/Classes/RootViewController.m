@@ -14,6 +14,8 @@
 
 @implementation RootViewController
 
+@synthesize lastAcceleration;
+
 #pragma mark View handling stuff
 
 - (void)viewDidLoad {
@@ -36,10 +38,14 @@
 	} else {
 		self.navigationItem.rightBarButtonItem = nil;
 	}
+        
+        [UIAccelerometer sharedAccelerometer].delegate = self;
+        [UIAccelerometer sharedAccelerometer].updateInterval = (1.0 / 15);
         [self performSelectorInBackground:@selector(updateAllPreviews) withObject:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+        [UIAccelerometer sharedAccelerometer].delegate = nil;
 	[super viewWillDisappear:animated];
 }
 
@@ -265,6 +271,42 @@
 
 - (void)dealloc {
 	[super dealloc];
+}
+
+#pragma mark Shaking stuff
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+        if (self.lastAcceleration) {
+                if ([self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7] && shakeCount >= 9) {
+                        shakeCount = 0;
+                        NSString* bundleVer = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+                        NSString* marketVer = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+                        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Axis Viewer", @"")
+                                                                         message:[NSString stringWithFormat:@"Version %@\nBuild %@", marketVer, bundleVer]
+                                                                        delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
+                                                               otherButtonTitles:nil] autorelease];
+                        [alert show];
+                } else if ([self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7]) {
+                        shakeCount = shakeCount + 1;
+                }else if (![self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.2]) {
+                        if (shakeCount > 0) {
+                                shakeCount--;
+                        }
+                }
+        }
+        self.lastAcceleration = acceleration;
+}
+
+- (BOOL) AccelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold {
+        double
+        deltaX = fabs(last.x - current.x),
+        deltaY = fabs(last.y - current.y),
+        deltaZ = fabs(last.z - current.z);
+        
+        return
+        (deltaX > threshold && deltaY > threshold) ||
+        (deltaX > threshold && deltaZ > threshold) ||
+        (deltaY > threshold && deltaZ > threshold);
 }
 
 @end

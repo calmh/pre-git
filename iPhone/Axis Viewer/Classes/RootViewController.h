@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Axis_ViewerAppDelegate.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <UIAccelerometerDelegate> {
 	Axis_ViewerAppDelegate *appDelegate;
         NSMutableArray *camerasToUpdate;
+        UIAcceleration *lastAcceleration;
+        int shakeCount;
 }
 
--(void)addPressed: (id)sender;
+@property (nonatomic, retain) UIAcceleration *lastAcceleration;
+
+- (void)addPressed: (id)sender;
+- (BOOL)AccelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold;
 
 @end
