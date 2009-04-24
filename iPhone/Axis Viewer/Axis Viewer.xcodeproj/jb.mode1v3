@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29C3B6C20FA207B400DCCD4A</string>
+										<string>29CA2AC10FA2084300A9693B</string>
 										<key>history</key>
 										<array>
 											<string>29ABBE7A0F9FB3B0001C4596</string>
@@ -360,7 +360,7 @@
 											<string>29FC79A70FA1FF8F00F22A14</string>
 											<string>29FC79D50FA2009600F22A14</string>
 											<string>29FC79D60FA2009600F22A14</string>
-											<string>29FC793E0FA1F66800F22A14</string>
+											<string>29C3B6C20FA207B400DCCD4A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -445,9 +445,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29C3B6B60FA206F700DCCD4A</string>
+				<string>29CA2ABF0FA2082100A9693B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>29C3B6B70FA206F700DCCD4A</string>
+				<string>29CA2AC00FA2082100A9693B</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -581,7 +581,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/jb/projekt/iPhone/Axis Viewer/Axis Viewer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

@@ -66,7 +66,7 @@
 		29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDisplayViewController.m; sourceTree = "<group>"; };
 		29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraDisplayViewController.xib; path = Resources/CameraDisplayViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29C3B6BE0FA2071F00DCCD4A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		29C3B6BE0FA2071F00DCCD4A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		29E852A40F9126870000CF84 /* CameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraEditViewController.h; sourceTree = "<group>"; };
 		29E852A50F9126870000CF84 /* CameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraEditViewController.m; sourceTree = "<group>"; };
 		29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraEditViewController.xib; path = Resources/CameraEditViewController.xib; sourceTree = "<group>"; };
