@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'GPS Logger' target in the 'GPS Logger' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#define FILTER_DISTANCE 25
+#define MINIMUM_PRECISION (3*FILTER_DISTANCE)
