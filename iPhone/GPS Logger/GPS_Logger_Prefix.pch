@@ -7,5 +7,5 @@
     #import <UIKit/UIKit.h>
 #endif
 
-#define FILTER_DISTANCE 25
+#define FILTER_DISTANCE 30
 #define MINIMUM_PRECISION (3*FILTER_DISTANCE)

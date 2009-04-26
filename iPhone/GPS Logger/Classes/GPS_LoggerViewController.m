@@ -30,15 +30,41 @@
  */
 
 
+- (void)beginGPX {
+        NSString* start = @"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<gpx\nversion=\"1.1\"\ncreator=\"TrailRunner http://www.TrailRunnerx.com\"\nxmlns=\"http://www.topografix.com/GPX/1/1\"\nxmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\nxsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\">\n<trk>\n<trkseg>\n";
+        [start writeToFile:filename atomically:NO encoding:NSASCIIStringEncoding error:nil];
+}
+
+- (void)endGPX {
+        NSString* end = @"</trkseg>\n</trk>\n</gpx>\n";
+        NSFileHandle *aFileHandle;
+        aFileHandle = [NSFileHandle fileHandleForWritingAtPath:filename];
+        [aFileHandle truncateFileAtOffset:[aFileHandle seekToEndOfFile]];
+        [aFileHandle writeData:[end dataUsingEncoding:NSUTF8StringEncoding]];
+        [aFileHandle closeFile];
+}
+
+- (void)pointInGPX:(CLLocation*)loc {
+        NSString* ts = [loc.timestamp descriptionWithCalendarFormat:@"%Y-%m-%dT%H:%M:%SZ" timeZone:nil locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
+        
+        NSString* data = [NSString stringWithFormat:@"<trkpt lat=\"%f\" lon=\"%f\">\n<time>%@</time>\n</trkpt>\n",
+                          loc.coordinate.latitude, loc.coordinate.longitude, ts];
+
+        NSFileHandle *aFileHandle;
+        aFileHandle = [NSFileHandle fileHandleForWritingAtPath:filename];
+        [aFileHandle truncateFileAtOffset:[aFileHandle seekToEndOfFile]];
+        [aFileHandle writeData:[data dataUsingEncoding:NSUTF8StringEncoding]];
+        [aFileHandle closeFile];
+}
+        
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
         [super viewDidLoad];
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	filename = [NSString stringWithFormat:@"%@/track-%@.kml", documentsDirectory, [[NSDate date] description]];
+	filename = [NSString stringWithFormat:@"%@/track-%@.gpx", documentsDirectory, [[NSDate date] description]];
         [filename retain];
-        [@"<?xml version='1.0' encoding='UTF-8'?>\n<kml xmlns='http://www.opengis.net/kml/2.2'>\n<Document>\n<name>default.kml</name>\n<open>1</open>\n<Style id='linestyle'><LineStyle><color>af0000ff</color><width>4</width></LineStyle></Style>\n<Placemark>\n<name>extruded</name>\n<styleUrl>#linestyle</styleUrl>\n<LineString>\n<extrude>0</extrude>\n<tessellate>1</tessellate>\n<altitudeMode>clampToGround</altitudeMode>\n<coordinates>\n" writeToFile:filename atomically:NO encoding:NSASCIIStringEncoding error:nil];
         
         lastTen = [[NSMutableArray alloc] init];
         self.locationManager = [[[CLLocationManager alloc] init] autorelease];
@@ -49,21 +75,21 @@
         distance = 0;
         
         [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+        [[UIApplication sharedApplication] setProximitySensingEnabled:YES];
+        
+        [self beginGPX];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
+        [self endGPX];
+        
         [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+        [[UIApplication sharedApplication] setProximitySensingEnabled:NO];
         
         [self.locationManager stopUpdatingLocation];
         self.locationManager.delegate = nil;
-        
-        NSFileHandle *aFileHandle;
-        aFileHandle = [NSFileHandle fileHandleForWritingAtPath:filename];
-        [aFileHandle truncateFileAtOffset:[aFileHandle seekToEndOfFile]];
-        [aFileHandle writeData:[@"</coordinates>\n</LineString>\n</Placemark>\n</Document>\n</kml>" dataUsingEncoding:NSASCIIStringEncoding]];
-        [aFileHandle closeFile];
-        
+                
         [super viewWillDisappear:animated];
 }
 
@@ -177,21 +203,12 @@
                 speed.text = [NSString stringWithFormat:@"%.1f km/h", avgspeed];
                 timePer10km.text = [self formatTimestamp:10.0 / avgspeed * 3600.0];
                 
-                NSMutableString *record = [[NSMutableString alloc] init];
-                [record appendFormat:@"%f,", newLocation.coordinate.longitude];
-                [record appendFormat:@"%f\n", newLocation.coordinate.latitude];
-                
-                NSFileHandle *aFileHandle;
-                aFileHandle = [NSFileHandle fileHandleForWritingAtPath:filename];
-                [aFileHandle truncateFileAtOffset:[aFileHandle seekToEndOfFile]];
-                [aFileHandle writeData:[record dataUsingEncoding:NSASCIIStringEncoding]];
-                [aFileHandle closeFile];
-                [record release];
-                
                 if (last)
                         [last release];
                 last = newLocation;
                 [last retain];
+
+                [self pointInGPX:newLocation];
         }
 }
 
