@@ -14,9 +14,11 @@
 	NSMutableArray *cameras;
 }
 
+- (NSMutableArray*) arrayOfDefaultCameras;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
-@property (readonly) NSMutableArray* cameras;
+@property (nonatomic, retain) NSMutableArray* cameras;
 
 @end
 

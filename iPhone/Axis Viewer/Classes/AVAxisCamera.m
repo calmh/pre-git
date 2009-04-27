@@ -31,7 +31,7 @@
 /**
  Build the base URL for the depending on authentication settings.
  */
-- (NSString*)baseURL {
+- (NSString*)stringWithBaseURL {
         NSString* address = [camera valueForKey:@"address"];
         NSString* username = [camera valueForKey:@"username"];
         NSString* password = [camera valueForKey:@"password"];
@@ -45,12 +45,12 @@
  Retrieve and save a preview for this camera, scaled to the same size as the camera view.
  Method intended to run as separate thread.
  */
-- (BOOL)savePreviewSynchronous {
+- (BOOL)savePreviewSynchronously {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString* filenamePreview = [NSString stringWithFormat:@"%@/preview-%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
         NSString* filenameThumbnail = [NSString stringWithFormat:@"%@/thumbnail-%@.jpg", documentsDirectory, [camera valueForKey:@"address"]];
-
+        
         NSFileManager *fm = [NSFileManager defaultManager];
         NSDictionary* attrs = [fm fileAttributesAtPath:filenamePreview traverseLink:NO];
         NSDate* cutoff = [[NSDate date] addTimeInterval:-PREVIEW_AGE];
@@ -61,21 +61,21 @@
                 return NO;
         
         NSLog(@"[AxisCamera.savePreviewSynchronous] Is old, fetching");
-        NSString* url = [self baseURL];
+        NSString* url = [self stringWithBaseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
         NSData* imageData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
+        
         if (imageData != nil) {
                 NSLog(@"[AxisCamera.savePreviewSynchronous] Saving");
                 UIImage *image = [[UIImage alloc] initWithData:imageData];
                 
-                UIImage *scaledImage = [image scaleToWidth:WEBVIEW_WIDTH-4 andHeight:WEBVIEW_HEIGHT-4];
+                UIImage *scaledImage = [image imageByScalingToWidth:WEBVIEW_WIDTH-4 andHeight:WEBVIEW_HEIGHT-4];
                 imageData = UIImageJPEGRepresentation(scaledImage, 0.8);
                 [imageData writeToFile:filenamePreview atomically:YES];
-
-                scaledImage = [image scaleToWidth:THUMBNAIL_WIDTH andHeight:THUMBNAIL_HEIGHT];
+                
+                scaledImage = [image imageByScalingToWidth:THUMBNAIL_WIDTH andHeight:THUMBNAIL_HEIGHT];
                 imageData = UIImageJPEGRepresentation(scaledImage, 0.95);
                 [imageData writeToFile:filenameThumbnail atomically:YES];
                 
@@ -91,8 +91,8 @@
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
         NSLog(@"[AxisCamera.savePreviewBackgroundThread] Starting");
         
-        if ([self savePreviewSynchronous] && delegate && [delegate respondsToSelector:@selector(axisCamerapPreviewUpdated:)])
-                        [delegate axisCameraPreviewUpdated:self];
+        if ([self savePreviewSynchronously] && delegate && [delegate respondsToSelector:@selector(axisCamerapPreviewUpdated:)])
+                [delegate axisCameraPreviewUpdated:self];
         
         NSLog(@"[AxisCamera.savePreviewBackgroundThread] Starting");
 	[pool release];
@@ -105,8 +105,8 @@
 - (void)saveCameraSnapshotBackgroundThread {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
         NSLog(@"[AxisCamera.saveCameraSnapshotBackgroundThread] Starting");
-
-        NSString* url = [self baseURL];
+        
+        NSString* url = [self stringWithBaseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
@@ -136,7 +136,7 @@
         NSLog(@"[AxisCamera.loadParametersBackgroundThread] Starting");
 	
 	int failed = 0;
-	NSString* url = [self baseURL];
+	NSString* url = [self stringWithBaseURL];
 	NSArray *urls = [NSArray arrayWithObjects:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"], [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"], nil];
 	for (NSString* url in urls) {
 		NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];

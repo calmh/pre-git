@@ -15,13 +15,13 @@
         id delegate;
 }
 
-- (NSString*)baseURL;
+- (NSString*)stringWithBaseURL;
 - (AVAxisCamera*)initWithCamera:(NSDictionary*)icamera;
 - (NSString*)parameterForKey:(NSString*)key;
 - (int)numParameters;
 - (void)takeSnapshotInBackground;
 - (void)savePreviewInBackground;
-- (BOOL)savePreviewSynchronous;
+- (BOOL)savePreviewSynchronously;
 - (void)getParametersInBackground;
 
 @property (nonatomic, assign) id delegate;

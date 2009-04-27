@@ -23,9 +23,8 @@
         
 	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
-	UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
-	self.navigationItem.leftBarButtonItem = b; 
-	[b release];
+	UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)] autorelease];
+	self.navigationItem.leftBarButtonItem = addButton; 
 	
 	self.title = NSLocalizedString(@"Camera List", @"");
 }
@@ -41,6 +40,7 @@
         
         [UIAccelerometer sharedAccelerometer].delegate = self;
         [UIAccelerometer sharedAccelerometer].updateInterval = (1.0 / 15);
+        
         [self performSelectorInBackground:@selector(updateAllPreviews) withObject:nil];
 }
 
@@ -54,14 +54,16 @@
  */
 - (void)addPressed:(id)sender
 {
-	NSMutableDictionary *cam = [[NSMutableDictionary alloc] init];
-	[cam setValue:NSLocalizedString(@"New camera", @"") forKey:@"description"];
-	[appDelegate.cameras addObject:cam];
-	[cam release];
+        // Create a new camera
+	NSMutableDictionary *camera = [[NSMutableDictionary alloc] init];
+	[camera setValue:NSLocalizedString(@"New camera", @"") forKey:@"description"];
+	[appDelegate.cameras addObject:camera];
+	[camera release];
 	
-	AVCameraEditViewController *cdc = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
-	cdc.camera = cam;
-	[self.navigationController pushViewController:cdc animated:YES];
+        // And let the user edit it
+	AVCameraEditViewController *editor = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
+	editor.camera = camera;
+	[self.navigationController pushViewController:editor animated:YES];
 }
 
 #pragma mark -
@@ -132,7 +134,7 @@
                 
                 if (camera) {
                         NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Fetching preview");
-                        if ([[[[AVAxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous]) {
+                        if ([[[[AVAxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronously]) {
                                 NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Notifying tableView");
                                 [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
                         }
@@ -202,10 +204,10 @@
  Load a camera in display mode.
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
+	NSMutableDictionary *camera = [appDelegate.cameras objectAtIndex:indexPath.row];
 	
 	AVCameraDisplayViewController *cdc = [[[AVCameraDisplayViewController alloc] initWithNibName:@"AVCameraDisplayViewController" bundle:nil] autorelease];
-	cdc.camera = cam;
+	cdc.camera = camera;
 	[self.navigationController pushViewController:cdc animated:YES];
 }
 
@@ -231,10 +233,11 @@
  */
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 	if (fromIndexPath.row < [appDelegate.cameras count] && toIndexPath.row <  [appDelegate.cameras count]) {
-		NSDictionary* cam1 = [appDelegate.cameras objectAtIndex:fromIndexPath.row];
-                [[cam1 retain] autorelease];
+		NSDictionary* camera = [appDelegate.cameras objectAtIndex:fromIndexPath.row];
+                [camera retain];
 		[appDelegate.cameras removeObjectAtIndex:fromIndexPath.row];
-		[appDelegate.cameras insertObject:cam1 atIndex:toIndexPath.row];
+		[appDelegate.cameras insertObject:camera atIndex:toIndexPath.row];
+                [camera release];
 	}
 }
 

@@ -11,9 +11,7 @@
 
 @implementation Axis_ViewerAppDelegate
 
-@synthesize window;
-@synthesize navigationController;
-@synthesize cameras;
+@synthesize window, navigationController, cameras;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	// Load the camera list
@@ -21,50 +19,12 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
         NSLog(@"[Axis_ViewerAppDelegate.applicationDidFinishLaunching] Loading cameras");
-        cameras = [[NSMutableArray alloc] initWithContentsOfFile:filename];	
+        self.cameras = [[[NSMutableArray alloc] initWithContentsOfFile:filename] autorelease];	
         
         // A default list of cameras in case this is the first run
-	if (cameras == nil) {
+	if (self.cameras == nil) {
                 NSLog(@"[Axis_ViewerAppDelegate.applicationDidFinishLaunchin] No cameras, using default set");
-		cameras = [[NSMutableArray alloc] init];
-		NSMutableDictionary *cam;
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"81.88.9.88", @"address",
-                       @"Jakobs kontor på Ideon", @"description",
-                       @"root", @"username",
-                       @"jakob", @"password",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"mcdcam-dimm.as.utexas.edu", @"address",
-                       @"McDonald Observatory Domes", @"description",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"campuscentercam.its.wesleyan.edu", @"address",
-                       @"Wesleyan Campus Center", @"description",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"ravensview.unbc.ca", @"address",
-                       @"UNBC Agora Courtyard", @"description",
-                       nil];                
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"216.62.222.101", @"address",
-                       @"Rutherford Small Dog Daycare", @"description",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"eastentrance.tps.ucsb.edu", @"address",
-                       @"East Entrance View of 217", @"description",
-                       nil];
-		[cameras addObject:cam];
-		cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                       @"62.153.175.52", @"address",
-                       @"Fleesensee Golf & Country Club", @"description",
-                       nil];
-		[cameras addObject:cam];
+                self.cameras = [self arrayOfDefaultCameras];
 	}
 	
 	// Configure and show the window
@@ -80,7 +40,50 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	NSString* filename = [NSString stringWithFormat:@"%@/cameras.plist", documentsDirectory];
-	[cameras writeToFile:filename atomically:NO];
+	[self.cameras writeToFile:filename atomically:NO];
+}
+
+- (NSMutableArray*) arrayOfDefaultCameras {
+        NSMutableArray *defaultCameras = [[[NSMutableArray alloc] init] autorelease];
+        NSMutableDictionary *cam;
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"81.88.9.88", @"address",
+               @"Jakobs kontor på Ideon", @"description",
+               @"root", @"username",
+               @"jakob", @"password",
+               nil];
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"mcdcam-dimm.as.utexas.edu", @"address",
+               @"McDonald Observatory Domes", @"description",
+               nil];
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"campuscentercam.its.wesleyan.edu", @"address",
+               @"Wesleyan Campus Center", @"description",
+               nil];
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"ravensview.unbc.ca", @"address",
+               @"UNBC Agora Courtyard", @"description",
+               nil];                
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"216.62.222.101", @"address",
+               @"Rutherford Small Dog Daycare", @"description",
+               nil];
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"eastentrance.tps.ucsb.edu", @"address",
+               @"East Entrance View of 217", @"description",
+               nil];
+        [defaultCameras addObject:cam];
+        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+               @"62.153.175.52", @"address",
+               @"Fleesensee Golf & Country Club", @"description",
+               nil];
+        [defaultCameras addObject:cam];
+        return defaultCameras;
 }
 
 - (void)dealloc {

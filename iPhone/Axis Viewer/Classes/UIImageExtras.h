@@ -8,6 +8,6 @@
 
 @interface UIImage (Extras)
 
-- (UIImage*)scaleToWidth:(CGFloat)width andHeight:(CGFloat)height;
+- (UIImage*)imageByScalingToWidth:(CGFloat)width andHeight:(CGFloat)height;
 
 @end

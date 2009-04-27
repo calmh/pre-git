@@ -11,7 +11,7 @@
 
 #pragma mark Scale and crop image
 
-- (UIImage*)scaleToWidth:(CGFloat)width andHeight:(CGFloat)height {
+- (UIImage*)imageByScalingToWidth:(CGFloat)width andHeight:(CGFloat)height {
         CGRect imageRect;
         imageRect.origin = CGPointMake(0, 0);
         imageRect.size = CGSizeMake(width, height);

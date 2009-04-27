@@ -7,15 +7,6 @@
 
 @synthesize camera, webViewLoadedURL;
 
-- (void)setCamera:(NSMutableDictionary*)icamera
-{
-        if (icamera != camera) {
-                [camera release];
-                [icamera retain];
-                camera = icamera;
-        }
-}
-
 #pragma mark Utility methods
 
 /**
@@ -72,10 +63,10 @@
  */
 - (void)editPressed:(id)sender {
         NSLog(@"[CameraViewDisplayController.editPressed] Editing");
-	AVCameraEditViewController *cdc = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
-	[cdc setCamera:camera];
-	[cdc setTitle:NSLocalizedString(@"Edit Camera", @"")];
-	[self.navigationController pushViewController:cdc animated:YES];
+	AVCameraEditViewController *editor = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
+	editor.camera = self.camera;
+	editor.title = NSLocalizedString(@"Edit Camera", @"");
+	[self.navigationController pushViewController:editor animated:YES];
 }
 
 #pragma mark Table view methods
@@ -137,7 +128,7 @@
 		//	fps = [NSNumber numberWithInt:1];
 		//	[camera setValue:fps forKey:@"framerate"];
 		//}
-		NSString *url = [axisCamera baseURL];
+		NSString *url = [axisCamera stringWithBaseURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
                         AVDescriptionCell* dcell = (AVDescriptionCell*)cell;
@@ -187,7 +178,7 @@
         NSString *header = nil;
         @synchronized (self) {
                 if (section == 0)
-                        header = [camera valueForKey:@"description"];
+                        header = [self.camera valueForKey:@"description"];
         }
         return header;
 }

@@ -47,8 +47,8 @@
 		28C286DF0D94DF7D0034E888 /* AVRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVRootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* AVRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVRootViewController.m; sourceTree = "<group>"; };
 		29094CC70FA0DB3E00846CDE /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = Resources/question.png; sourceTree = "<group>"; };
-		29094D5C0FA0EF6900846CDE /* AVAxisCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAxisCamera.h; sourceTree = "<group>"; };
-		29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAxisCamera.m; sourceTree = "<group>"; };
+		29094D5C0FA0EF6900846CDE /* AVAxisCamera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = AVAxisCamera.h; sourceTree = "<group>"; };
+		29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = AVAxisCamera.m; sourceTree = "<group>"; };
 		291066040F96787C0099B1D3 /* AVDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVDescriptionCell.m; path = ../Cells/AVDescriptionCell.m; sourceTree = "<group>"; };
 		291066050F96787C0099B1D3 /* AVDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVDescriptionCell.h; path = ../Cells/AVDescriptionCell.h; sourceTree = "<group>"; };
 		291066330F967D1A0099B1D3 /* AVDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVDescriptionCell.xib; path = Resources/AVDescriptionCell.xib; sourceTree = "<group>"; };
