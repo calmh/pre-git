@@ -1,12 +1,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "AxisCamera.h"
+#import "AVAxisCamera.h"
 
-@interface CameraDisplayViewController : UITableViewController {
+@interface AVCameraDisplayViewController : UITableViewController {
 	UIWebView* webView;
 	NSURL* webViewLoadedURL;
         NSMutableDictionary* camera;
-        AxisCamera* axisCamera;
+        AVAxisCamera* axisCamera;
 }
 
 @property(nonatomic, retain) NSMutableDictionary* camera;
@@ -16,7 +16,7 @@
 
 // Hidden methods
 
-@interface CameraDisplayViewController ()
+@interface AVCameraDisplayViewController ()
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 - (void)updateWebViewForCamera:(NSString*)url withFps:(NSNumber*)fps;

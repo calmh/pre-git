@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface DescriptionCell : UITableViewCell {
+@interface AVDescriptionCell : UITableViewCell {
     UILabel *descriptionLabel;
     UILabel *valueLabel;
 }

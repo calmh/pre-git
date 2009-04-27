@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Axis_ViewerAppDelegate.h"
 
-@interface RootViewController : UITableViewController <UIAccelerometerDelegate> {
+@interface AVRootViewController : UITableViewController <UIAccelerometerDelegate> {
 	Axis_ViewerAppDelegate *appDelegate;
         NSMutableArray *camerasToUpdate;
         UIAcceleration *lastAcceleration;

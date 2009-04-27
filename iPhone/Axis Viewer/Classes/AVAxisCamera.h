@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface AxisCamera : NSObject {
+@interface AVAxisCamera : NSObject {
         NSDictionary *camera;
         NSMutableDictionary *parameters;
         id delegate;
 }
 
 - (NSString*)baseURL;
-- (AxisCamera*)initWithCamera:(NSDictionary*)icamera;
+- (AVAxisCamera*)initWithCamera:(NSDictionary*)icamera;
 - (NSString*)parameterForKey:(NSString*)key;
 - (int)numParameters;
 - (void)takeSnapshotInBackground;
@@ -30,9 +30,9 @@
 
 @interface NSObject (AxisCameraDelegate)
 
-- (void)axisCameraParametersUpdated:(AxisCamera*)camera;
-- (void)axisCameraParametersFailed:(AxisCamera*)camera;
-- (void)axisCameraPreviewUpdated:(AxisCamera*)camera;
-- (void)axisCameraSnapshotTaken:(AxisCamera*)camera;
+- (void)axisCameraParametersUpdated:(AVAxisCamera*)camera;
+- (void)axisCameraParametersFailed:(AVAxisCamera*)camera;
+- (void)axisCameraPreviewUpdated:(AVAxisCamera*)camera;
+- (void)axisCameraSnapshotTaken:(AVAxisCamera*)camera;
 
 @end

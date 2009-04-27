@@ -6,10 +6,10 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "CameraEditViewController.h"
-#import "EditingCell.h"
+#import "AVCameraEditViewController.h"
+#import "AVEditingCell.h"
 
-@implementation CameraEditViewController
+@implementation AVCameraEditViewController
 
 @synthesize camera;
 
@@ -69,7 +69,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
-	static NSString *identifier = @"EditingCell";
+	static NSString *identifier = @"AVEditingCell";
 	NSString* labelStr = @"";
 	NSString* valueStr = @"";
 	int row = [indexPath indexAtPosition:1];
@@ -77,12 +77,12 @@
 	labelStr = [descriptions valueForKey:key];
 	valueStr = [camera valueForKey:key];
 	
-	EditingCell *cell=  (EditingCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
+	AVEditingCell *cell=  (AVEditingCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (cell == nil) { 
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 		for (id object in nib) {
-			if ([object isKindOfClass:[EditingCell class]])
-				cell = (EditingCell *)object;
+			if ([object isKindOfClass:[AVEditingCell class]])
+				cell = (AVEditingCell *)object;
 		}
 		cell.value.delegate = self;
 	}
@@ -127,10 +127,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static int cellHeight = 0;
 	if (cellHeight == 0) {
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EditingCell" owner:self options:nil];
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AVEditingCell" owner:self options:nil];
 		for (id object in nib) {
-			if ([object isKindOfClass:[EditingCell class]]) {
-				EditingCell* cell = (EditingCell *)object;
+			if ([object isKindOfClass:[AVEditingCell class]]) {
+				AVEditingCell* cell = (AVEditingCell *)object;
 				cellHeight = cell.frame.size.height;
 			}
 		}

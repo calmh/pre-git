@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AxisCamera.h"
+#import "AVAxisCamera.h"
 
-@interface CameraEditViewController : UITableViewController <UITextFieldDelegate> {
+@interface AVCameraEditViewController : UITableViewController <UITextFieldDelegate> {
 	NSMutableDictionary* camera;
 	NSDictionary* descriptions;
 	NSArray* keys;

@@ -7,7 +7,7 @@
 //
 
 #import "Axis_ViewerAppDelegate.h"
-#import "RootViewController.h"
+#import "AVRootViewController.h"
 
 @implementation Axis_ViewerAppDelegate
 

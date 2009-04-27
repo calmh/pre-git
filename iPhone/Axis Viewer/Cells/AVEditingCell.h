@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface EditingCell : UITableViewCell {
+@interface AVEditingCell : UITableViewCell {
     UILabel *prompt;
     UITextField *value;
 }

@@ -6,10 +6,10 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "RootViewCell.h"
+#import "AVRootViewCell.h"
 
 
-@implementation RootViewCell
+@implementation AVRootViewCell
 
 @synthesize labelView, imageView;
 

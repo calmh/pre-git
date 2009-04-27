@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface RootViewCell : UITableViewCell {
+@interface AVRootViewCell : UITableViewCell {
 	UIImageView *imageView;
 	UILabel *labelView;	
 }

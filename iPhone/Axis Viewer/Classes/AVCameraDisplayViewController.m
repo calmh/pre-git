@@ -1,9 +1,9 @@
-#import "CameraDisplayViewController.h"
-#import "CameraEditViewController.h"
-#import "DescriptionCell.h"
+#import "AVCameraDisplayViewController.h"
+#import "AVCameraEditViewController.h"
+#import "AVDescriptionCell.h"
 #import "UIImageExtras.h"
 
-@implementation CameraDisplayViewController
+@implementation AVCameraDisplayViewController
 
 @synthesize camera, webViewLoadedURL;
 
@@ -72,7 +72,7 @@
  */
 - (void)editPressed:(id)sender {
         NSLog(@"[CameraViewDisplayController.editPressed] Editing");
-	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
+	AVCameraEditViewController *cdc = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
 	[cdc setCamera:camera];
 	[cdc setTitle:NSLocalizedString(@"Edit Camera", @"")];
 	[self.navigationController pushViewController:cdc animated:YES];
@@ -110,9 +110,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString* identifier;
 	if (indexPath.row == 0)
-		identifier = @"CameraCell";
+		identifier = @"AVCameraCell";
 	else
-		identifier = @"DescriptionCell";
+		identifier = @"AVDescriptionCell";
 	
 	UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
@@ -125,8 +125,8 @@
 		} else {
 			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 			for (id object in nib) {
-				if ([object isKindOfClass:[DescriptionCell class]])
-					cell = (DescriptionCell *)object;
+				if ([object isKindOfClass:[AVDescriptionCell class]])
+					cell = (AVDescriptionCell *)object;
 			}
 		}
 	}
@@ -140,7 +140,7 @@
 		NSString *url = [axisCamera baseURL];
 		[self updateWebViewForCamera:url withFps:fps];
 	} else {
-                        DescriptionCell* dcell = (DescriptionCell*)cell;
+                        AVDescriptionCell* dcell = (AVDescriptionCell*)cell;
                         if (indexPath.row == 1 && [axisCamera parameterForKey:@"root.Image.I0.Text.String"]) {
                                 dcell.descriptionLabel.text = NSLocalizedString(@"Description", @"");
                                 dcell.valueLabel.text = [axisCamera parameterForKey:@"root.Image.I0.Text.String"];
@@ -165,10 +165,10 @@
 	static int descriptionCellHeight = 0;
 	// Find the correct height of a description cell.
 	if (descriptionCellHeight == 0) {
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DescriptionCell" owner:self options:nil];
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AVDescriptionCell" owner:self options:nil];
 		for (id object in nib) {
-			if ([object isKindOfClass:[DescriptionCell class]]) {
-				DescriptionCell* cell = (DescriptionCell *)object;
+			if ([object isKindOfClass:[AVDescriptionCell class]]) {
+				AVDescriptionCell* cell = (AVDescriptionCell *)object;
 				descriptionCellHeight = cell.frame.size.height;
 			}
 		}
@@ -237,7 +237,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
         [axisCamera release];
-        axisCamera = [[AxisCamera alloc] initWithCamera:camera];
+        axisCamera = [[AVAxisCamera alloc] initWithCamera:camera];
         axisCamera.delegate = self;
         [axisCamera getParametersInBackground];
 	webViewLoadedURL = nil;
@@ -251,13 +251,13 @@
         axisCamera.delegate = nil;
 }
 
-- (void)axisCameraParametersUpdated:(AxisCamera*)cam {
+- (void)axisCameraParametersUpdated:(AVAxisCamera*)cam {
         // We will be by whatever thread the AxisCamera object has created,
         // so we need to get back to the main thread for GUI operations.
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 }
 
-- (void)axisCameraParametersFailed:(AxisCamera*)camera {
+- (void)axisCameraParametersFailed:(AVAxisCamera*)camera {
         [self performSelectorOnMainThread:@selector(showNotReachableAlert) withObject:nil waitUntilDone:NO];
 }
 

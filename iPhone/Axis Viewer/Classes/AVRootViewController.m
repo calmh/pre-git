@@ -6,13 +6,13 @@
 //  Copyright Jakob Borg 2009. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "AVRootViewController.h"
 #import "Axis_ViewerAppDelegate.h"
-#import "CameraDisplayViewController.h"
-#import "CameraEditViewController.h"
-#import "RootViewCell.h"
+#import "AVCameraDisplayViewController.h"
+#import "AVCameraEditViewController.h"
+#import "AVRootViewCell.h"
 
-@implementation RootViewController
+@implementation AVRootViewController
 
 @synthesize lastAcceleration;
 
@@ -59,7 +59,7 @@
 	[appDelegate.cameras addObject:cam];
 	[cam release];
 	
-	CameraEditViewController *cdc = [[[CameraEditViewController alloc] initWithNibName:@"CameraEditViewController" bundle:nil] autorelease];
+	AVCameraEditViewController *cdc = [[[AVCameraEditViewController alloc] initWithNibName:@"AVCameraEditViewController" bundle:nil] autorelease];
 	cdc.camera = cam;
 	[self.navigationController pushViewController:cdc animated:YES];
 }
@@ -132,7 +132,7 @@
                 
                 if (camera) {
                         NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Fetching preview");
-                        if ([[[[AxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous]) {
+                        if ([[[[AVAxisCamera alloc] initWithCamera:camera] autorelease] savePreviewSynchronous]) {
                                 NSLog(@"[RootViewController.updatePreviewsBackgroundThread] Notifying tableView");
                                 [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
                         }
@@ -176,13 +176,13 @@
  Loads the cells from nib.
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *identifier = @"RootViewCell";
-	RootViewCell *cell = (RootViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+	static NSString *identifier = @"AVRootViewCell";
+	AVRootViewCell *cell = (AVRootViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
 	if (cell == nil) {
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 		for (id object in nib) {
-			if ([object isKindOfClass:[RootViewCell class]])
-				cell = (RootViewCell *)object;
+			if ([object isKindOfClass:[AVRootViewCell class]])
+				cell = (AVRootViewCell *)object;
 		}
 	}
 	
@@ -204,7 +204,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSMutableDictionary *cam = [appDelegate.cameras objectAtIndex:indexPath.row];
 	
-	CameraDisplayViewController *cdc = [[[CameraDisplayViewController alloc] initWithNibName:@"CameraDisplayViewController" bundle:nil] autorelease];
+	AVCameraDisplayViewController *cdc = [[[AVCameraDisplayViewController alloc] initWithNibName:@"AVCameraDisplayViewController" bundle:nil] autorelease];
 	cdc.camera = cam;
 	[self.navigationController pushViewController:cdc animated:YES];
 }
@@ -249,10 +249,10 @@
 {
 	static int descriptionCellHeight = 0;
 	if (descriptionCellHeight == 0) {
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RootViewCell" owner:self options:nil];
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AVRootViewCell" owner:self options:nil];
 		for (id object in nib) {
-			if ([object isKindOfClass:[RootViewCell class]]) {
-				RootViewCell* cell = (RootViewCell *)object;
+			if ([object isKindOfClass:[AVRootViewCell class]]) {
+				AVRootViewCell* cell = (AVRootViewCell *)object;
 				descriptionCellHeight = cell.frame.size.height;
 			}
 		}

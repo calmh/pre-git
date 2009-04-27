@@ -12,25 +12,25 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
+		2899E5600DE3E45000AC0155 /* AVRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* AVRootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28C286E10D94DF7D0034E888 /* AVRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* AVRootViewController.m */; };
 		29094CC80FA0DB3E00846CDE /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 29094CC70FA0DB3E00846CDE /* question.png */; };
-		29094D5E0FA0EF6900846CDE /* AxisCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 29094D5D0FA0EF6900846CDE /* AxisCamera.m */; };
-		291066060F96787C0099B1D3 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066040F96787C0099B1D3 /* DescriptionCell.m */; };
-		291066340F967D1A0099B1D3 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066330F967D1A0099B1D3 /* DescriptionCell.xib */; };
-		291066840F9683070099B1D3 /* EditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066830F9683070099B1D3 /* EditingCell.xib */; };
-		291066880F9683D40099B1D3 /* EditingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066870F9683D40099B1D3 /* EditingCell.m */; };
+		29094D5E0FA0EF6900846CDE /* AVAxisCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */; };
+		291066060F96787C0099B1D3 /* AVDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066040F96787C0099B1D3 /* AVDescriptionCell.m */; };
+		291066340F967D1A0099B1D3 /* AVDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066330F967D1A0099B1D3 /* AVDescriptionCell.xib */; };
+		291066840F9683070099B1D3 /* AVEditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066830F9683070099B1D3 /* AVEditingCell.xib */; };
+		291066880F9683D40099B1D3 /* AVEditingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066870F9683D40099B1D3 /* AVEditingCell.m */; };
 		29544CB20FA3385800FFFDB1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29544CB00FA3385800FFFDB1 /* icon.png */; };
 		29544CB30FA3385800FFFDB1 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 29544CB10FA3385800FFFDB1 /* iTunesArtwork */; };
-		295B65930F9BC91400699E1D /* RootViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295B65920F9BC91400699E1D /* RootViewCell.xib */; };
-		295B65980F9BCA1300699E1D /* RootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 295B65970F9BCA1300699E1D /* RootViewCell.m */; };
+		295B65930F9BC91400699E1D /* AVRootViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295B65920F9BC91400699E1D /* AVRootViewCell.xib */; };
+		295B65980F9BCA1300699E1D /* AVRootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 295B65970F9BCA1300699E1D /* AVRootViewCell.m */; };
 		295F7F030F98B2F000CFD313 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F010F98B2F000CFD313 /* Localizable.strings */; };
 		295F7F4C0F98B86000CFD313 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F4B0F98B86000CFD313 /* Default.png */; };
-		29AC1DAA0F90F84B007F655B /* CameraDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */; };
-		29AC1DAC0F90F869007F655B /* CameraDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */; };
-		29E852A60F9126870000CF84 /* CameraEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E852A50F9126870000CF84 /* CameraEditViewController.m */; };
-		29E852AB0F9126D60000CF84 /* CameraEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */; };
+		29AC1DAA0F90F84B007F655B /* AVCameraDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AC1DA90F90F84B007F655B /* AVCameraDisplayViewController.m */; };
+		29AC1DAC0F90F869007F655B /* AVCameraDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */; };
+		29E852A60F9126870000CF84 /* AVCameraEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E852A50F9126870000CF84 /* AVCameraEditViewController.m */; };
+		29E852AB0F9126D60000CF84 /* AVCameraEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */; };
 		29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */; };
 /* End PBXBuildFile section */
 
@@ -41,35 +41,35 @@
 		1D6058910D05DD3D006BFB54 /* Axis Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Axis Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RootViewController.xib; path = Resources/RootViewController.xib; sourceTree = "<group>"; };
+		2899E55F0DE3E45000AC0155 /* AVRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVRootViewController.xib; path = Resources/AVRootViewController.xib; sourceTree = "<group>"; };
 		28A0AAE50D9B0CCF005BE974 /* Axis_Viewer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Axis_Viewer_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = "<group>"; };
-		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* AVRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVRootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* AVRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVRootViewController.m; sourceTree = "<group>"; };
 		29094CC70FA0DB3E00846CDE /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = Resources/question.png; sourceTree = "<group>"; };
-		29094D5C0FA0EF6900846CDE /* AxisCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxisCamera.h; sourceTree = "<group>"; };
-		29094D5D0FA0EF6900846CDE /* AxisCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxisCamera.m; sourceTree = "<group>"; };
-		291066040F96787C0099B1D3 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescriptionCell.m; path = ../Cells/DescriptionCell.m; sourceTree = "<group>"; };
-		291066050F96787C0099B1D3 /* DescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescriptionCell.h; path = ../Cells/DescriptionCell.h; sourceTree = "<group>"; };
-		291066330F967D1A0099B1D3 /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DescriptionCell.xib; path = Resources/DescriptionCell.xib; sourceTree = "<group>"; };
-		291066830F9683070099B1D3 /* EditingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditingCell.xib; path = Resources/EditingCell.xib; sourceTree = "<group>"; };
-		291066860F9683D40099B1D3 /* EditingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditingCell.h; path = ../Cells/EditingCell.h; sourceTree = "<group>"; };
-		291066870F9683D40099B1D3 /* EditingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditingCell.m; path = ../Cells/EditingCell.m; sourceTree = "<group>"; };
+		29094D5C0FA0EF6900846CDE /* AVAxisCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAxisCamera.h; sourceTree = "<group>"; };
+		29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAxisCamera.m; sourceTree = "<group>"; };
+		291066040F96787C0099B1D3 /* AVDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVDescriptionCell.m; path = ../Cells/AVDescriptionCell.m; sourceTree = "<group>"; };
+		291066050F96787C0099B1D3 /* AVDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVDescriptionCell.h; path = ../Cells/AVDescriptionCell.h; sourceTree = "<group>"; };
+		291066330F967D1A0099B1D3 /* AVDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVDescriptionCell.xib; path = Resources/AVDescriptionCell.xib; sourceTree = "<group>"; };
+		291066830F9683070099B1D3 /* AVEditingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVEditingCell.xib; path = Resources/AVEditingCell.xib; sourceTree = "<group>"; };
+		291066860F9683D40099B1D3 /* AVEditingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVEditingCell.h; path = ../Cells/AVEditingCell.h; sourceTree = "<group>"; };
+		291066870F9683D40099B1D3 /* AVEditingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVEditingCell.m; path = ../Cells/AVEditingCell.m; sourceTree = "<group>"; };
 		29544CB00FA3385800FFFDB1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icon.png; sourceTree = "<group>"; };
 		29544CB10FA3385800FFFDB1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
-		295B65920F9BC91400699E1D /* RootViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RootViewCell.xib; path = Resources/RootViewCell.xib; sourceTree = "<group>"; };
-		295B65960F9BCA1300699E1D /* RootViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewCell.h; path = ../Cells/RootViewCell.h; sourceTree = "<group>"; };
-		295B65970F9BCA1300699E1D /* RootViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewCell.m; path = ../Cells/RootViewCell.m; sourceTree = "<group>"; };
+		295B65920F9BC91400699E1D /* AVRootViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVRootViewCell.xib; path = Resources/AVRootViewCell.xib; sourceTree = "<group>"; };
+		295B65960F9BCA1300699E1D /* AVRootViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVRootViewCell.h; path = ../Cells/AVRootViewCell.h; sourceTree = "<group>"; };
+		295B65970F9BCA1300699E1D /* AVRootViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVRootViewCell.m; path = ../Cells/AVRootViewCell.m; sourceTree = "<group>"; };
 		295F7F020F98B2F000CFD313 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		295F7F040F98B30800CFD313 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		295F7F4B0F98B86000CFD313 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		29AC1DA80F90F84B007F655B /* CameraDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDisplayViewController.h; sourceTree = "<group>"; };
-		29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDisplayViewController.m; sourceTree = "<group>"; };
-		29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraDisplayViewController.xib; path = Resources/CameraDisplayViewController.xib; sourceTree = "<group>"; };
+		29AC1DA80F90F84B007F655B /* AVCameraDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCameraDisplayViewController.h; sourceTree = "<group>"; };
+		29AC1DA90F90F84B007F655B /* AVCameraDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCameraDisplayViewController.m; sourceTree = "<group>"; };
+		29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVCameraDisplayViewController.xib; path = Resources/AVCameraDisplayViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29E852A40F9126870000CF84 /* CameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraEditViewController.h; sourceTree = "<group>"; };
-		29E852A50F9126870000CF84 /* CameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraEditViewController.m; sourceTree = "<group>"; };
-		29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CameraEditViewController.xib; path = Resources/CameraEditViewController.xib; sourceTree = "<group>"; };
+		29E852A40F9126870000CF84 /* AVCameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCameraEditViewController.h; sourceTree = "<group>"; };
+		29E852A50F9126870000CF84 /* AVCameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCameraEditViewController.m; sourceTree = "<group>"; };
+		29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVCameraEditViewController.xib; path = Resources/AVCameraEditViewController.xib; sourceTree = "<group>"; };
 		29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtras.h; sourceTree = "<group>"; };
 		29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtras.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,16 +94,16 @@
 			children = (
 				1D3623240D0F684500981E51 /* Axis_ViewerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* Axis_ViewerAppDelegate.m */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
-				29AC1DA80F90F84B007F655B /* CameraDisplayViewController.h */,
-				29AC1DA90F90F84B007F655B /* CameraDisplayViewController.m */,
-				29E852A40F9126870000CF84 /* CameraEditViewController.h */,
-				29E852A50F9126870000CF84 /* CameraEditViewController.m */,
+				28C286DF0D94DF7D0034E888 /* AVRootViewController.h */,
+				28C286E00D94DF7D0034E888 /* AVRootViewController.m */,
+				29AC1DA80F90F84B007F655B /* AVCameraDisplayViewController.h */,
+				29AC1DA90F90F84B007F655B /* AVCameraDisplayViewController.m */,
+				29E852A40F9126870000CF84 /* AVCameraEditViewController.h */,
+				29E852A50F9126870000CF84 /* AVCameraEditViewController.m */,
 				29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */,
 				29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */,
-				29094D5C0FA0EF6900846CDE /* AxisCamera.h */,
-				29094D5D0FA0EF6900846CDE /* AxisCamera.m */,
+				29094D5C0FA0EF6900846CDE /* AVAxisCamera.h */,
+				29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -145,14 +145,14 @@
 				29544CB00FA3385800FFFDB1 /* icon.png */,
 				29544CB10FA3385800FFFDB1 /* iTunesArtwork */,
 				29094CC70FA0DB3E00846CDE /* question.png */,
-				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				2899E55F0DE3E45000AC0155 /* AVRootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				29AC1DAB0F90F869007F655B /* CameraDisplayViewController.xib */,
-				29E852AA0F9126D60000CF84 /* CameraEditViewController.xib */,
-				291066330F967D1A0099B1D3 /* DescriptionCell.xib */,
-				291066830F9683070099B1D3 /* EditingCell.xib */,
+				29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */,
+				29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */,
+				291066330F967D1A0099B1D3 /* AVDescriptionCell.xib */,
+				291066830F9683070099B1D3 /* AVEditingCell.xib */,
 				295F7F4B0F98B86000CFD313 /* Default.png */,
-				295B65920F9BC91400699E1D /* RootViewCell.xib */,
+				295B65920F9BC91400699E1D /* AVRootViewCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -170,12 +170,12 @@
 		29F17A4F0FA1219B00DC00A8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				291066860F9683D40099B1D3 /* EditingCell.h */,
-				291066870F9683D40099B1D3 /* EditingCell.m */,
-				291066040F96787C0099B1D3 /* DescriptionCell.m */,
-				291066050F96787C0099B1D3 /* DescriptionCell.h */,
-				295B65960F9BCA1300699E1D /* RootViewCell.h */,
-				295B65970F9BCA1300699E1D /* RootViewCell.m */,
+				291066860F9683D40099B1D3 /* AVEditingCell.h */,
+				291066870F9683D40099B1D3 /* AVEditingCell.m */,
+				291066040F96787C0099B1D3 /* AVDescriptionCell.m */,
+				291066050F96787C0099B1D3 /* AVDescriptionCell.h */,
+				295B65960F9BCA1300699E1D /* AVRootViewCell.h */,
+				295B65970F9BCA1300699E1D /* AVRootViewCell.m */,
 			);
 			name = Cells;
 			path = Classes;
@@ -242,14 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
-				29AC1DAC0F90F869007F655B /* CameraDisplayViewController.xib in Resources */,
-				29E852AB0F9126D60000CF84 /* CameraEditViewController.xib in Resources */,
-				291066340F967D1A0099B1D3 /* DescriptionCell.xib in Resources */,
-				291066840F9683070099B1D3 /* EditingCell.xib in Resources */,
+				2899E5600DE3E45000AC0155 /* AVRootViewController.xib in Resources */,
+				29AC1DAC0F90F869007F655B /* AVCameraDisplayViewController.xib in Resources */,
+				29E852AB0F9126D60000CF84 /* AVCameraEditViewController.xib in Resources */,
+				291066340F967D1A0099B1D3 /* AVDescriptionCell.xib in Resources */,
+				291066840F9683070099B1D3 /* AVEditingCell.xib in Resources */,
 				295F7F030F98B2F000CFD313 /* Localizable.strings in Resources */,
 				295F7F4C0F98B86000CFD313 /* Default.png in Resources */,
-				295B65930F9BC91400699E1D /* RootViewCell.xib in Resources */,
+				295B65930F9BC91400699E1D /* AVRootViewCell.xib in Resources */,
 				29094CC80FA0DB3E00846CDE /* question.png in Resources */,
 				29544CB20FA3385800FFFDB1 /* icon.png in Resources */,
 				29544CB30FA3385800FFFDB1 /* iTunesArtwork in Resources */,
@@ -265,14 +265,14 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* Axis_ViewerAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				29AC1DAA0F90F84B007F655B /* CameraDisplayViewController.m in Sources */,
-				29E852A60F9126870000CF84 /* CameraEditViewController.m in Sources */,
-				291066060F96787C0099B1D3 /* DescriptionCell.m in Sources */,
-				291066880F9683D40099B1D3 /* EditingCell.m in Sources */,
-				295B65980F9BCA1300699E1D /* RootViewCell.m in Sources */,
+				28C286E10D94DF7D0034E888 /* AVRootViewController.m in Sources */,
+				29AC1DAA0F90F84B007F655B /* AVCameraDisplayViewController.m in Sources */,
+				29E852A60F9126870000CF84 /* AVCameraEditViewController.m in Sources */,
+				291066060F96787C0099B1D3 /* AVDescriptionCell.m in Sources */,
+				291066880F9683D40099B1D3 /* AVEditingCell.m in Sources */,
+				295B65980F9BCA1300699E1D /* AVRootViewCell.m in Sources */,
 				29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */,
-				29094D5E0FA0EF6900846CDE /* AxisCamera.m in Sources */,
+				29094D5E0FA0EF6900846CDE /* AVAxisCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

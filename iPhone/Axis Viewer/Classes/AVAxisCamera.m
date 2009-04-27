@@ -6,14 +6,14 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "AxisCamera.h"
+#import "AVAxisCamera.h"
 #import "UIImageExtras.h"
 
-@implementation AxisCamera
+@implementation AVAxisCamera
 
 @synthesize delegate;
 
-- (AxisCamera*) initWithCamera:(NSDictionary*)icamera {
+- (AVAxisCamera*) initWithCamera:(NSDictionary*)icamera {
         if (self = [super init]) {
                 camera = [icamera copy];
                 parameters = [[NSMutableDictionary alloc] init];
