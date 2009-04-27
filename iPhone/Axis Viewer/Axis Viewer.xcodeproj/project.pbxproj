@@ -100,10 +100,10 @@
 				29AC1DA90F90F84B007F655B /* AVCameraDisplayViewController.m */,
 				29E852A40F9126870000CF84 /* AVCameraEditViewController.h */,
 				29E852A50F9126870000CF84 /* AVCameraEditViewController.m */,
-				29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */,
-				29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */,
 				29094D5C0FA0EF6900846CDE /* AVAxisCamera.h */,
 				29094D5D0FA0EF6900846CDE /* AVAxisCamera.m */,
+				29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */,
+				29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -142,17 +142,17 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				29544CB00FA3385800FFFDB1 /* icon.png */,
-				29544CB10FA3385800FFFDB1 /* iTunesArtwork */,
-				29094CC70FA0DB3E00846CDE /* question.png */,
-				2899E55F0DE3E45000AC0155 /* AVRootViewController.xib */,
-				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */,
-				29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */,
+				295B65920F9BC91400699E1D /* AVRootViewCell.xib */,
 				291066330F967D1A0099B1D3 /* AVDescriptionCell.xib */,
 				291066830F9683070099B1D3 /* AVEditingCell.xib */,
+				2899E55F0DE3E45000AC0155 /* AVRootViewController.xib */,
+				29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */,
+				29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				295F7F4B0F98B86000CFD313 /* Default.png */,
-				295B65920F9BC91400699E1D /* AVRootViewCell.xib */,
+				29094CC70FA0DB3E00846CDE /* question.png */,
+				29544CB00FA3385800FFFDB1 /* icon.png */,
+				29544CB10FA3385800FFFDB1 /* iTunesArtwork */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 			children = (
 				291066860F9683D40099B1D3 /* AVEditingCell.h */,
 				291066870F9683D40099B1D3 /* AVEditingCell.m */,
-				291066040F96787C0099B1D3 /* AVDescriptionCell.m */,
 				291066050F96787C0099B1D3 /* AVDescriptionCell.h */,
+				291066040F96787C0099B1D3 /* AVDescriptionCell.m */,
 				295B65960F9BCA1300699E1D /* AVRootViewCell.h */,
 				295B65970F9BCA1300699E1D /* AVRootViewCell.m */,
 			);
