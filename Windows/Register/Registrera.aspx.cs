@@ -59,7 +59,7 @@ public partial class UserPage : ProtectedPage
 
             Manager.Instance.GetClub(clubId).Students.Add(s);
             Manager.Instance.Save();
-            Response.Redirect("/");
+            Response.Redirect("/registrerad");
         }
         catch (Exception ex)
         {
