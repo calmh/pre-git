@@ -11,6 +11,10 @@ public partial class UserPage : ProtectedPage
         if (!IsPostBack)
         {
             ddClubs.Items.Clear();
+            ListItem def = new ListItem();
+            def.Text = "(ej vald)";
+            def.Value = "";
+            ddClubs.Items.Add(def);
             foreach (Club c in Manager.Instance.AllClubs())
             {
                 ListItem i = new ListItem();
@@ -39,7 +43,8 @@ public partial class UserPage : ProtectedPage
                 throw new InvalidOperationException("Ett lösenord måste anges för att kunna redigera uppgifter senare.");
             if (tbPass1.Text != tbPass2.Text)
                 throw new InvalidOperationException("Du har inte angivit samma lösenord i de två lösenordsfälten.");
-
+            if (ddClubs.SelectedValue == "")
+                throw new InvalidOperationException("Du måste ange vilken förening du tillhör.");
             Guid clubId = new Guid(ddClubs.SelectedValue);
             tbZipCode.Text = tbZipCode.Text.Replace(" ", "");
             s.PersonalNumber = tbPersonalNr.Text;
