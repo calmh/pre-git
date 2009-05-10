@@ -43,8 +43,8 @@ public partial class UserPage : ProtectedPage
             Guid clubId = new Guid(ddClubs.SelectedValue);
             tbZipCode.Text = tbZipCode.Text.Replace(" ", "");
             s.PersonalNumber = tbPersonalNr.Text;
-            s.FName = tbSName.Text;
-            s.SName = tbFName.Text;
+            s.FName = tbFName.Text;
+            s.SName = tbSName.Text;
             s.City = tbCity.Text;
             s.Email = tbEmail.Text;
             s.HomePhone = tbHomePhone.Text;
