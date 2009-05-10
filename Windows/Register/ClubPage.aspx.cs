@@ -45,7 +45,9 @@ public partial class ClubPage : ProtectedPage
     {
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
         cbFilterActive.Checked = (current.GetDefaultValue("ClubPage", "cbFilterActive") == "true");
+        cbFilterMatching.Checked = (current.GetDefaultValue("ClubPage", "cbFilterInvert") == "true");
         ddSumMonths.SelectedValue = current.GetDefaultValue("ClubPage", "ddSumMonths");
+        tbFilterString.Text = current.GetDefaultValue("ClubPage", "tbFilterString");
 
     }
 
@@ -56,7 +58,12 @@ public partial class ClubPage : ProtectedPage
             current.SetDefaultValue("ClubPage", "cbFilterActive", "true");
         else
             current.SetDefaultValue("ClubPage", "cbFilterActive", "false");
+        if (cbFilterMatching.Checked)
+            current.SetDefaultValue("ClubPage", "cbFilterInvert", "true");
+        else
+            current.SetDefaultValue("ClubPage", "cbFilterInvert", "false");
         current.SetDefaultValue("ClubPage", "ddSumMonths", ddSumMonths.SelectedValue);
+        current.SetDefaultValue("ClubPage", "tbFilterString", tbFilterString.Text);
     }
 
     private double yearsOld(string personalNumber)
@@ -73,19 +80,13 @@ public partial class ClubPage : ProtectedPage
         tabStatistics.Rows.Clear();
         tabPayments.Rows.Clear();
 
+        List<Student> all = filterStudents(club.Students);
         List<Student> withPersonalNumber;
         List<Student> withBirthDateOnly;
-        if (cbFilterActive.Checked)
-        {
-            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13 && s.Active; });
-            withBirthDateOnly = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 8 && s.Active; });
-        }
-        else {
-            withPersonalNumber = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13; });
-            withBirthDateOnly = club.Students.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 8; });
-        }
+        withPersonalNumber = all.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 13; });
+        withBirthDateOnly = all.FindAll(delegate(Student s) { return s.PersonalNumber != null && s.PersonalNumber.Length == 8; });
 
-        List<Student> men = withPersonalNumber.FindAll(delegate(Student s) { return  (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 1; });
+        List<Student> men = withPersonalNumber.FindAll(delegate(Student s) { return (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 1; });
         List<Student> women = withPersonalNumber.FindAll(delegate(Student s) { return (int.Parse(s.PersonalNumber.Substring(11, 1)) % 2) == 0; });
         int men0to6 = men.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 7.0; }).Count;
         int men7to14 = men.FindAll(delegate(Student s) { return yearsOld(s.PersonalNumber) < 15.0; }).Count - men0to6;
@@ -259,7 +260,7 @@ public partial class ClubPage : ProtectedPage
         // Inbetalningar
         DateTime cutoff = DateTime.Now.AddMonths(-int.Parse(ddSumMonths.SelectedValue));
         Dictionary<string, double> payments = new Dictionary<string, double>();
-        foreach (Student s in club.Students)
+        foreach (Student s in all)
         {
             foreach (Payment p in s.Payments)
             {
@@ -305,9 +306,7 @@ public partial class ClubPage : ProtectedPage
     {
         Guid uId = (Guid)Session["user"];
         club.Tidy();
-        List<Student> students = new List<Student>(club.Students);
-        if (cbFilterActive.Checked)
-            students = students.FindAll(delegate(Student s) { return s.Active; });
+        List<Student> students = filterStudents(club.Students);
 
         if (Session["clubPageSort"] != null)
         {
@@ -432,6 +431,30 @@ public partial class ClubPage : ProtectedPage
         gvStudents.DataBind();
     }
 
+    private List<Student> filterStudents(List<Student> students)
+    {
+        List<Student> filtered = new List<Student>(students);
+
+        if (cbFilterActive.Checked)
+            filtered = filtered.FindAll(delegate(Student s) { return s.Active; });
+
+        if (Session["filterString"] != null)
+        {
+            string filterString = tbFilterString.Text;
+            bool invertFilter = cbFilterMatching.Checked;
+            filtered = filtered.FindAll(delegate(Student s) {
+                bool match = s.Name.ToLower().Contains(filterString) ||
+                    s.LatestPayment.ToLower().Contains(filterString);
+                if (invertFilter)
+                    return !match;
+                else
+                    return match;
+            });
+        }
+
+        return filtered;
+    }
+
     protected void commandClicked(object sender, CommandEventArgs args)
     {
         if (args.CommandName == "CSV")
@@ -483,6 +506,14 @@ public partial class ClubPage : ProtectedPage
             Session["selectedStudents"] = selected;
             RefreshStudentsTable(Manager.Instance.GetClub(cId));
         }
+    }
+
+    private void updateFiltering()
+    {
+        SaveDefaults();
+        Guid cId = (Guid)Session["club"];
+        RefreshStudentsTable(Manager.Instance.GetClub(cId));
+        RefreshStatisticsTable(Manager.Instance.GetClub(cId));
     }
 
     protected void gvStudents_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -626,11 +657,7 @@ public partial class ClubPage : ProtectedPage
 
     protected void cbFilterActive_CheckedChanged(object sender, EventArgs e)
     {
-        //cbFilterActive.Checked = !cbFilterActive.Checked;
-        SaveDefaults();
-        Club club = Manager.Instance.GetClub((Guid) Session["club"]);
-        RefreshStudentsTable(club);
-        RefreshStatisticsTable(club);
+        updateFiltering();
     }
 
     protected void ddSumMonths_SelectedIndexChanged(object sender, EventArgs e)
@@ -638,5 +665,15 @@ public partial class ClubPage : ProtectedPage
         SaveDefaults();
         Club club = Manager.Instance.GetClub((Guid)Session["club"]);
         RefreshStatisticsTable(club);
+    }
+
+    protected void tbFilterString_TextChanged(object sender, EventArgs e)
+    {
+        updateFiltering();
+    }
+
+    protected void cbFilterMatching_CheckedChanged(object sender, EventArgs e)
+    {
+        updateFiltering();
     }
 }
