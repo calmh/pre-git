@@ -438,19 +438,17 @@ public partial class ClubPage : ProtectedPage
         if (cbFilterActive.Checked)
             filtered = filtered.FindAll(delegate(Student s) { return s.Active; });
 
-        if (Session["filterString"] != null)
+        string filterString = tbFilterString.Text;
+        bool invertFilter = cbFilterMatching.Checked;
+        filtered = filtered.FindAll(delegate(Student s)
         {
-            string filterString = tbFilterString.Text;
-            bool invertFilter = cbFilterMatching.Checked;
-            filtered = filtered.FindAll(delegate(Student s) {
-                bool match = s.Name.ToLower().Contains(filterString) ||
-                    s.LatestPayment.ToLower().Contains(filterString);
-                if (invertFilter)
-                    return !match;
-                else
-                    return match;
-            });
-        }
+            bool match = s.Name.ToLower().Contains(filterString) ||
+                s.LatestPayment.ToLower().Contains(filterString);
+            if (invertFilter)
+                return !match;
+            else
+                return match;
+        });
 
         return filtered;
     }
@@ -511,9 +509,9 @@ public partial class ClubPage : ProtectedPage
     private void updateFiltering()
     {
         SaveDefaults();
-        Guid cId = (Guid)Session["club"];
-        RefreshStudentsTable(Manager.Instance.GetClub(cId));
-        RefreshStatisticsTable(Manager.Instance.GetClub(cId));
+        //Guid cId = (Guid)Session["club"];
+        //RefreshStudentsTable(Manager.Instance.GetClub(cId));
+        //RefreshStatisticsTable(Manager.Instance.GetClub(cId));
     }
 
     protected void gvStudents_RowCommand(object sender, GridViewCommandEventArgs e)
