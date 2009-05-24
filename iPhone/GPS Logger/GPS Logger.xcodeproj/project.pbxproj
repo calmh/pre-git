@@ -15,7 +15,16 @@
 		2899E5220DE3E06400AC0155 /* GPS_LoggerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* GPS_LoggerViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* GPS_LoggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* GPS_LoggerViewController.m */; };
+		2920EF390FC9C6CB00944747 /* JBSoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2920EF380FC9C6CB00944747 /* JBSoundEffect.m */; };
+		2920EF450FC9C71200944747 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2920EF440FC9C71200944747 /* AudioToolbox.framework */; };
+		2920EF4F0FC9C7DC00944747 /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4D0FC9C7DC00944747 /* Basso.aiff */; };
+		2920EF500FC9C7DC00944747 /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4E0FC9C7DC00944747 /* Purr.aiff */; };
+		294FB8750FA77CB5006F88C5 /* JBLinePlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */; };
 		29596A720FA3562E00C7553D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29596A710FA3562E00C7553D /* CoreLocation.framework */; };
+		29C52F990FA83E04004B252E /* JBPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C52F980FA83E04004B252E /* JBPlotDataSource.m */; };
+		29C530B70FA84BF0004B252E /* green-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B40FA84BF0004B252E /* green-sphere.png */; };
+		29C530B80FA84BF0004B252E /* red-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B50FA84BF0004B252E /* red-sphere.png */; };
+		29C530B90FA84BF0004B252E /* yellow-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B60FA84BF0004B252E /* yellow-sphere.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +38,20 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* GPS_LoggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPS_LoggerViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* GPS_LoggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPS_LoggerViewController.m; sourceTree = "<group>"; };
+		2920EF370FC9C6CB00944747 /* JBSoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSoundEffect.h; sourceTree = "<group>"; };
+		2920EF380FC9C6CB00944747 /* JBSoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSoundEffect.m; sourceTree = "<group>"; };
+		2920EF440FC9C71200944747 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2920EF4D0FC9C7DC00944747 /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
+		2920EF4E0FC9C7DC00944747 /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Purr.aiff; sourceTree = "<group>"; };
+		294FB8730FA77CB5006F88C5 /* JBLinePlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLinePlotView.h; sourceTree = "<group>"; };
+		294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLinePlotView.m; sourceTree = "<group>"; };
 		29596A710FA3562E00C7553D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29C52F970FA83E04004B252E /* JBPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPlotDataSource.h; sourceTree = "<group>"; };
+		29C52F980FA83E04004B252E /* JBPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBPlotDataSource.m; sourceTree = "<group>"; };
+		29C530B40FA84BF0004B252E /* green-sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-sphere.png"; sourceTree = "<group>"; };
+		29C530B50FA84BF0004B252E /* red-sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-sphere.png"; sourceTree = "<group>"; };
+		29C530B60FA84BF0004B252E /* yellow-sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-sphere.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GPS_Logger_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPS_Logger_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +65,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				29596A720FA3562E00C7553D /* CoreLocation.framework in Frameworks */,
+				2920EF450FC9C71200944747 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +79,12 @@
 				1D3623250D0F684500981E51 /* GPS_LoggerAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* GPS_LoggerViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* GPS_LoggerViewController.m */,
+				294FB8730FA77CB5006F88C5 /* JBLinePlotView.h */,
+				294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */,
+				29C52F970FA83E04004B252E /* JBPlotDataSource.h */,
+				29C52F980FA83E04004B252E /* JBPlotDataSource.m */,
+				2920EF370FC9C6CB00944747 /* JBSoundEffect.h */,
+				2920EF380FC9C6CB00944747 /* JBSoundEffect.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -93,6 +121,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2920EF4D0FC9C7DC00944747 /* Basso.aiff */,
+				2920EF4E0FC9C7DC00944747 /* Purr.aiff */,
+				29C530B40FA84BF0004B252E /* green-sphere.png */,
+				29C530B50FA84BF0004B252E /* red-sphere.png */,
+				29C530B60FA84BF0004B252E /* yellow-sphere.png */,
 				2899E5210DE3E06400AC0155 /* GPS_LoggerViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -103,6 +136,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2920EF440FC9C71200944747 /* AudioToolbox.framework */,
 				29596A710FA3562E00C7553D /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -155,6 +189,11 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* GPS_LoggerViewController.xib in Resources */,
+				29C530B70FA84BF0004B252E /* green-sphere.png in Resources */,
+				29C530B80FA84BF0004B252E /* red-sphere.png in Resources */,
+				29C530B90FA84BF0004B252E /* yellow-sphere.png in Resources */,
+				2920EF4F0FC9C7DC00944747 /* Basso.aiff in Resources */,
+				2920EF500FC9C7DC00944747 /* Purr.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +207,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* GPS_LoggerAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* GPS_LoggerViewController.m in Sources */,
+				294FB8750FA77CB5006F88C5 /* JBLinePlotView.m in Sources */,
+				29C52F990FA83E04004B252E /* JBPlotDataSource.m in Sources */,
+				2920EF390FC9C6CB00944747 /* JBSoundEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
