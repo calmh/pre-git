@@ -39,7 +39,18 @@
                     </td>
                     <td class="value">
                         <asp:DropDownList ID="ddGrade" runat="server">
-                            <asp:ListItem Value="1">Röd I</asp:ListItem>
+                            <asp:ListItem Value="-11">Röd I (J)</asp:ListItem>
+                            <asp:ListItem Value="-10">Röd II (J)</asp:ListItem>
+                            <asp:ListItem Value="-9">Gul I (J)</asp:ListItem>
+                            <asp:ListItem Value="-8">Gul II (J)</asp:ListItem>
+                            <asp:ListItem Value="-7">Grön I (J)</asp:ListItem>
+                            <asp:ListItem Value="-6">Grön II (J)</asp:ListItem>
+                            <asp:ListItem Value="-5">Blå I (J)</asp:ListItem>
+                            <asp:ListItem Value="-4">Blå II (J)</asp:ListItem>
+                            <asp:ListItem Value="-3">Svart I (J)</asp:ListItem>
+                            <asp:ListItem Value="-2">Svart II (J)</asp:ListItem>
+                            <asp:ListItem Value="-1">Svart III (J)</asp:ListItem>
+                            <asp:ListItem Value="1" Selected="True">Röd I</asp:ListItem>
                             <asp:ListItem Value="2">Röd II</asp:ListItem>
                             <asp:ListItem Value="3">Gul I</asp:ListItem>
                             <asp:ListItem Value="4">Gul II</asp:ListItem>
@@ -50,6 +61,7 @@
                             <asp:ListItem Value="9">Svart I</asp:ListItem>
                             <asp:ListItem Value="10">Svart II</asp:ListItem>
                             <asp:ListItem Value="11">Svart III</asp:ListItem>
+                            <asp:ListItem Value="12">Svart IIII</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
