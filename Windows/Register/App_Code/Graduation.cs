@@ -40,17 +40,14 @@ public class Graduation
         get
         {
             string[] grades = {
-            "Röd I (J)",
-            "Röd II (J)",
-            "Gul I (J)",
-            "Gul II (J)",
-            "Grön I (J)",
-            "Grön II (J)",
-            "Blå I (J)",
-            "Blå II (J)",
-            "Svart I (J)",
-            "Svart II (J)",
-            "Svart III (J)",
+            "Jun. Röd",
+            "Jun. Gul",
+            "Jun. Grön",
+            "Jun. Blå",
+            "Jun. Svart",
+            "Jun. Silver I",
+            "Jun. Silver II",
+            "Jun. Silver III",
             "(ej registrerad)",
             "Röd I",
             "Röd II",
@@ -65,7 +62,7 @@ public class Graduation
             "Svart III",
             "Svart IIII"
         };
-            return grades[_grade + 11]; // 0 == ej registrerad
+            return grades[_grade + 7]; // 0 == ej registrerad
         }
     }
 
