@@ -90,12 +90,12 @@
                     </td>
                     <td class="value">
                         <asp:DropDownList ID="ddGrade" runat="server">
-                            <asp:ListItem Value="-7">Jun. Röd</asp:ListItem>
-                            <asp:ListItem Value="-6">Jun. Gul</asp:ListItem>
-                            <asp:ListItem Value="-5">Jun. Grön</asp:ListItem>
-                            <asp:ListItem Value="-4">Jun. Blå</asp:ListItem>
-                            <asp:ListItem Value="-3">Jun. Svart</asp:ListItem>
-                            <asp:ListItem Value="-2">Jun. Silver I</asp:ListItem>
+                            <asp:ListItem Value="-8">Jun. Röd</asp:ListItem>
+                            <asp:ListItem Value="-7">Jun. Gul</asp:ListItem>
+                            <asp:ListItem Value="-6">Jun. Grön</asp:ListItem>
+                            <asp:ListItem Value="-5">Jun. Blå</asp:ListItem>
+                            <asp:ListItem Value="-4">Jun. Svart</asp:ListItem>
+                            <asp:ListItem Value="-3">Jun. Silver I</asp:ListItem>
                             <asp:ListItem Value="-2">Jun. Silver II</asp:ListItem>
                             <asp:ListItem Value="-1">Jun. Silver III</asp:ListItem>
                             <asp:ListItem Value="1" Selected="True">Röd I</asp:ListItem>
