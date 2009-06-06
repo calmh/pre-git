@@ -62,7 +62,7 @@ public class Graduation
             "Svart III",
             "Svart IIII"
         };
-            return grades[_grade + 7]; // 0 == ej registrerad
+            return grades[_grade + 8]; // 0 == ej registrerad
         }
     }
 
