@@ -22,7 +22,6 @@
 		291066840F9683070099B1D3 /* AVEditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291066830F9683070099B1D3 /* AVEditingCell.xib */; };
 		291066880F9683D40099B1D3 /* AVEditingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291066870F9683D40099B1D3 /* AVEditingCell.m */; };
 		29544CB20FA3385800FFFDB1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29544CB00FA3385800FFFDB1 /* icon.png */; };
-		29544CB30FA3385800FFFDB1 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 29544CB10FA3385800FFFDB1 /* iTunesArtwork */; };
 		295B65930F9BC91400699E1D /* AVRootViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295B65920F9BC91400699E1D /* AVRootViewCell.xib */; };
 		295B65980F9BCA1300699E1D /* AVRootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 295B65970F9BCA1300699E1D /* AVRootViewCell.m */; };
 		295F7F030F98B2F000CFD313 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 295F7F010F98B2F000CFD313 /* Localizable.strings */; };
@@ -31,6 +30,7 @@
 		29AC1DAC0F90F869007F655B /* AVCameraDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AC1DAB0F90F869007F655B /* AVCameraDisplayViewController.xib */; };
 		29E852A60F9126870000CF84 /* AVCameraEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E852A50F9126870000CF84 /* AVCameraEditViewController.m */; };
 		29E852AB0F9126D60000CF84 /* AVCameraEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */; };
+		29FD45420FB09B2000A78797 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29FD45410FB09B2000A78797 /* Settings.bundle */; };
 		29FE88260F9CDC87000E0DF9 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,6 @@
 		291066860F9683D40099B1D3 /* AVEditingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVEditingCell.h; path = ../Cells/AVEditingCell.h; sourceTree = "<group>"; };
 		291066870F9683D40099B1D3 /* AVEditingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVEditingCell.m; path = ../Cells/AVEditingCell.m; sourceTree = "<group>"; };
 		29544CB00FA3385800FFFDB1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icon.png; sourceTree = "<group>"; };
-		29544CB10FA3385800FFFDB1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		295B65920F9BC91400699E1D /* AVRootViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVRootViewCell.xib; path = Resources/AVRootViewCell.xib; sourceTree = "<group>"; };
 		295B65960F9BCA1300699E1D /* AVRootViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVRootViewCell.h; path = ../Cells/AVRootViewCell.h; sourceTree = "<group>"; };
 		295B65970F9BCA1300699E1D /* AVRootViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVRootViewCell.m; path = ../Cells/AVRootViewCell.m; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		29E852A40F9126870000CF84 /* AVCameraEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCameraEditViewController.h; sourceTree = "<group>"; };
 		29E852A50F9126870000CF84 /* AVCameraEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCameraEditViewController.m; sourceTree = "<group>"; };
 		29E852AA0F9126D60000CF84 /* AVCameraEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AVCameraEditViewController.xib; path = Resources/AVCameraEditViewController.xib; sourceTree = "<group>"; };
+		29FD45410FB09B2000A78797 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		29FE88240F9CDC87000E0DF9 /* UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtras.h; sourceTree = "<group>"; };
 		29FE88250F9CDC87000E0DF9 /* UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtras.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				29FD45410FB09B2000A78797 /* Settings.bundle */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -152,7 +153,6 @@
 				295F7F4B0F98B86000CFD313 /* Default.png */,
 				29094CC70FA0DB3E00846CDE /* question.png */,
 				29544CB00FA3385800FFFDB1 /* icon.png */,
-				29544CB10FA3385800FFFDB1 /* iTunesArtwork */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 				295B65930F9BC91400699E1D /* AVRootViewCell.xib in Resources */,
 				29094CC80FA0DB3E00846CDE /* question.png in Resources */,
 				29544CB20FA3385800FFFDB1 /* icon.png in Resources */,
-				29544CB30FA3385800FFFDB1 /* iTunesArtwork in Resources */,
+				29FD45420FB09B2000A78797 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

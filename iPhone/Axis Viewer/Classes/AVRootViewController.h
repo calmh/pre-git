@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Axis_ViewerAppDelegate.h"
+#import "AVCameraDisplayViewController.h"
+#import "AVCameraEditViewController.h"
+#import "AVRootViewCell.h"
 
 @interface AVRootViewController : UITableViewController <UIAccelerometerDelegate> {
 	Axis_ViewerAppDelegate *appDelegate;
@@ -16,9 +19,9 @@
         int shakeCount;
 }
 
-@property (nonatomic, retain) UIAcceleration *lastAcceleration;
+@property (retain) UIAcceleration *lastAcceleration;
 
-- (void)addPressed: (id)sender;
-- (BOOL)AccelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold;
+- (void)addWasPressed: (id)sender;
+- (BOOL)accelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold;
 
 @end

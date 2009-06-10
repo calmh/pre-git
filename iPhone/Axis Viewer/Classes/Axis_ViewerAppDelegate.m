@@ -7,7 +7,6 @@
 //
 
 #import "Axis_ViewerAppDelegate.h"
-#import "AVRootViewController.h"
 
 @implementation Axis_ViewerAppDelegate
 
@@ -45,44 +44,44 @@
 
 - (NSMutableArray*) arrayOfDefaultCameras {
         NSMutableArray *defaultCameras = [[[NSMutableArray alloc] init] autorelease];
-        NSMutableDictionary *cam;
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        NSMutableDictionary *camera;
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"81.88.9.88", @"address",
                @"Jakobs kontor på Ideon", @"description",
                @"root", @"username",
                @"jakob", @"password",
                nil];
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"mcdcam-dimm.as.utexas.edu", @"address",
                @"McDonald Observatory Domes", @"description",
                nil];
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"campuscentercam.its.wesleyan.edu", @"address",
                @"Wesleyan Campus Center", @"description",
                nil];
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"ravensview.unbc.ca", @"address",
                @"UNBC Agora Courtyard", @"description",
                nil];                
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"216.62.222.101", @"address",
                @"Rutherford Small Dog Daycare", @"description",
                nil];
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"eastentrance.tps.ucsb.edu", @"address",
                @"East Entrance View of 217", @"description",
                nil];
-        [defaultCameras addObject:cam];
-        cam = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        [defaultCameras addObject:camera];
+        camera = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                @"62.153.175.52", @"address",
                @"Fleesensee Golf & Country Club", @"description",
                nil];
-        [defaultCameras addObject:cam];
+        [defaultCameras addObject:camera];
         return defaultCameras;
 }
 

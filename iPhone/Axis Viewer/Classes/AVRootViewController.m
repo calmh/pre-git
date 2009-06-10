@@ -7,10 +7,6 @@
 //
 
 #import "AVRootViewController.h"
-#import "Axis_ViewerAppDelegate.h"
-#import "AVCameraDisplayViewController.h"
-#import "AVCameraEditViewController.h"
-#import "AVRootViewCell.h"
 
 @implementation AVRootViewController
 
@@ -23,7 +19,7 @@
         
 	appDelegate = (Axis_ViewerAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
-	UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)] autorelease];
+	UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addWasPressed:)] autorelease];
 	self.navigationItem.leftBarButtonItem = addButton; 
 	
 	self.title = NSLocalizedString(@"Camera List", @"");
@@ -52,7 +48,7 @@
 /**
  The + button was pressed. Create a new camera and go to edit it.
  */
-- (void)addPressed:(id)sender
+- (void)addWasPressed:(id)sender
 {
         // Create a new camera
 	NSMutableDictionary *camera = [[NSMutableDictionary alloc] init];
@@ -280,7 +276,7 @@
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
         if (self.lastAcceleration) {
-                if ([self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7] && shakeCount >= 9) {
+                if ([self accelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7] && shakeCount >= 9) {
                         shakeCount = 0;
                         NSString* bundleVer = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
                         NSString* marketVer = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
@@ -289,9 +285,9 @@
                                                                         delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"")
                                                                otherButtonTitles:nil] autorelease];
                         [alert show];
-                } else if ([self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7]) {
+                } else if ([self accelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7]) {
                         shakeCount = shakeCount + 1;
-                }else if (![self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.2]) {
+                }else if (![self accelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.2]) {
                         if (shakeCount > 0) {
                                 shakeCount--;
                         }
@@ -300,7 +296,7 @@
         self.lastAcceleration = acceleration;
 }
 
-- (BOOL) AccelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold {
+- (BOOL) accelerationIsShakingLast:(UIAcceleration *)last current:(UIAcceleration *)current threshold:(double)threshold {
         double
         deltaX = fabs(last.x - current.x),
         deltaY = fabs(last.y - current.y),

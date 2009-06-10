@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AVAxisCamera.h"
+#import "AVEditingCell.h"
 
 @interface AVCameraEditViewController : UITableViewController <UITextFieldDelegate> {
 	NSMutableDictionary* camera;
@@ -16,6 +17,8 @@
 	BOOL keyboardIsShowing;
 }
 
-@property(nonatomic, retain) NSMutableDictionary* camera;
-
+@property (retain) NSMutableDictionary* camera;
+@property (retain) NSDictionary* descriptions;
+@property (retain) NSArray* keys;
+@property BOOL keyboardIsShowing;
 @end

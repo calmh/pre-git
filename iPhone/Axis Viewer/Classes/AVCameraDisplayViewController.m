@@ -123,13 +123,10 @@
 	}
 	
 	if (indexPath.row == 0) {
-		NSNumber* fps = [NSNumber numberWithInt:2]; //[camera valueForKey:@"framerate"];
-		//if ([fps intValue] == 0) {
-		//	fps = [NSNumber numberWithInt:1];
-		//	[camera setValue:fps forKey:@"framerate"];
-		//}
-		NSString *url = [axisCamera stringWithBaseURL];
-		[self updateWebViewForCamera:url withFps:fps];
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                int fps = (int) [defaults floatForKey:@"framerate_preference"];
+		NSString *url = [axisCamera baseURL];
+		[self updateWebViewForCamera:url withFps:[NSNumber numberWithInt:fps]];
 	} else {
                         AVDescriptionCell* dcell = (AVDescriptionCell*)cell;
                         if (indexPath.row == 1 && [axisCamera parameterForKey:@"root.Image.I0.Text.String"]) {
@@ -242,7 +239,7 @@
         axisCamera.delegate = nil;
 }
 
-- (void)axisCameraParametersUpdated:(AVAxisCamera*)cam {
+- (void)axisCameraParametersUpdated:(AVAxisCamera*)camera {
         // We will be by whatever thread the AxisCamera object has created,
         // so we need to get back to the main thread for GUI operations.
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];

@@ -9,8 +9,8 @@
         AVAxisCamera* axisCamera;
 }
 
-@property(nonatomic, retain) NSMutableDictionary* camera;
-@property(nonatomic, retain) NSURL* webViewLoadedURL;
+@property (retain) NSMutableDictionary* camera;
+@property (retain) NSURL* webViewLoadedURL;
 
 @end
 

@@ -7,7 +7,6 @@
 //
 
 #import "AVAxisCamera.h"
-#import "UIImageExtras.h"
 
 @implementation AVAxisCamera
 
@@ -31,7 +30,7 @@
 /**
  Build the base URL for the depending on authentication settings.
  */
-- (NSString*)stringWithBaseURL {
+- (NSString*)baseURL {
         NSString* address = [camera valueForKey:@"address"];
         NSString* username = [camera valueForKey:@"username"];
         NSString* password = [camera valueForKey:@"password"];
@@ -43,7 +42,6 @@
 
 /**
  Retrieve and save a preview for this camera, scaled to the same size as the camera view.
- Method intended to run as separate thread.
  */
 - (BOOL)savePreviewSynchronously {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
@@ -61,7 +59,7 @@
                 return NO;
         
         NSLog(@"[AxisCamera.savePreviewSynchronous] Is old, fetching");
-        NSString* url = [self stringWithBaseURL];
+        NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
@@ -106,7 +104,7 @@
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc ] init];
         NSLog(@"[AxisCamera.saveCameraSnapshotBackgroundThread] Starting");
         
-        NSString* url = [self stringWithBaseURL];
+        NSString* url = [self baseURL];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAppendingString:@"/axis-cgi/jpg/image.cgi?clock=0&date=0&text=0"]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         NSURLResponse *response = nil;
         NSError *error = nil;
@@ -136,7 +134,7 @@
         NSLog(@"[AxisCamera.loadParametersBackgroundThread] Starting");
 	
 	int failed = 0;
-	NSString* url = [self stringWithBaseURL];
+	NSString* url = [self baseURL];
 	NSArray *urls = [NSArray arrayWithObjects:[url stringByAppendingString:@"/axis-cgi/view/param.cgi?action=list&group=Brand"], [url stringByAppendingString:@"/axis-cgi/operator/param.cgi?action=list&group=Image"], nil];
 	for (NSString* url in urls) {
 		NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
@@ -192,12 +190,14 @@
         @synchronized (self) {
                 return [[[parameters valueForKey:key] copy] autorelease];
         }
+        return nil; // To avoid braindead Xcode warning
 }
 
 - (int)numParameters {
         @synchronized (self) {
                 return [[parameters allKeys] count];
         }
+        return 0; // To avoid braindead Xcode warning
 }
 
 @end

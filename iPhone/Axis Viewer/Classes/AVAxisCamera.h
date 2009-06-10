@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "UIImageExtras.h"
 
 @interface AVAxisCamera : NSObject {
         NSDictionary *camera;
@@ -15,7 +16,7 @@
         id delegate;
 }
 
-- (NSString*)stringWithBaseURL;
+- (NSString*)baseURL;
 - (AVAxisCamera*)initWithCamera:(NSDictionary*)icamera;
 - (NSString*)parameterForKey:(NSString*)key;
 - (int)numParameters;
@@ -24,7 +25,7 @@
 - (BOOL)savePreviewSynchronously;
 - (void)getParametersInBackground;
 
-@property (nonatomic, assign) id delegate;
+@property (assign) id delegate;
 
 @end
 

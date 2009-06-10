@@ -10,18 +10,7 @@
 
 @implementation GPS_LoggerViewController
 
-@synthesize locationManager, speedOverTime, altitudeOverTime, statusIndicator, positionLabel, elapsedTimeLabel, currentSpeedLabel, currentTimePerKmLabel, totalDistanceLabel, totalDistanceUnitLabel, statusLabel, averageSpeedLabel, slopeLabel, accuracyLabel, lastPosition;
-
- - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-         if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-                badSound = [[JBSoundEffect alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Basso" ofType:@"aiff"]];
-                 goodSound = [[JBSoundEffect alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Purr" ofType:@"aiff"]];
-                 stateGood = NO;
-                 directMeasurements = 0;
-                 averagedMeasurements = 0;
-         }
-         return self;
- }
+@synthesize locationManager, speedOverTime, altitudeOverTime, statusIndicator, positionLabel, elapsedTimeLabel, currentSpeedLabel, currentTimePerKmLabel, totalDistanceLabel, totalDistanceUnitLabel, statusLabel, averageSpeedLabel, slopeLabel, accuracyLabel, lastPosition, unitSetSelector;
 
 /*
  // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -61,6 +50,30 @@
 - (void)viewDidLoad {
         [super viewDidLoad];
         
+        badSound = [[JBSoundEffect alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Basso" ofType:@"aiff"]];
+        goodSound = [[JBSoundEffect alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Purr" ofType:@"aiff"]];
+        stateGood = NO;
+        directMeasurements = 0;
+        averagedMeasurements = 0;
+        
+        NSDictionary *metric = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                @"%.01f km/h", @"speedFormat",
+                                @"%.02f km", @"distFormat",
+                                [NSNumber numberWithFloat:1.0], @"distFactor",
+                                [NSNumber numberWithFloat:1.0], @"speedFactor",
+                                nil
+                                ];
+        NSDictionary *nautical = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                  @"%.01f kn", @"speedFormat",
+                                  @"%.02f M", @"distFormat",
+                                  [NSNumber numberWithFloat:1.0/1.852], @"distFactor",
+                                  [NSNumber numberWithFloat:1.0/1.852], @"speedFactor",
+                                  nil
+                                  ];
+        unitSets = [NSArray arrayWithObjects:metric, nautical, nil];
+        [unitSets retain];
+        unitSetIndex = 0;
+        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);	
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	filename = [NSString stringWithFormat:@"%@/track-%@.gpx", documentsDirectory, [[NSDate date] description]];
@@ -77,11 +90,13 @@
         [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
         [[UIApplication sharedApplication] setProximitySensingEnabled:YES];
         
-        averageSpeedDS = [[[JBPlotDataSource alloc] init] autorelease];
-        self.speedOverTime.delegate = averageSpeedDS;
-        
-        averageAltitudeDS = [[[JBPlotDataSource alloc] init] autorelease];
-        self.altitudeOverTime.delegate = averageAltitudeDS;
+        /*
+         averageSpeedDS = [[[JBPlotDataSource alloc] init] autorelease];
+         self.speedOverTime.delegate = averageSpeedDS;
+         
+         averageAltitudeDS = [[[JBPlotDataSource alloc] init] autorelease];
+         self.altitudeOverTime.delegate = averageAltitudeDS;
+         */
         
         [self beginGPX];
 }
@@ -124,7 +139,7 @@
         for (int i = start; i <= end; i++) {
                 CLLocation *loc = [locations objectAtIndex:i];
                 if (last) {
-                        double dist = [self distanceBetweenLocation:last andLocation:loc];
+                        double dist = [self distanceBetweenLocation:last andLocation:loc] * 1000.0;
                         double delta = loc.altitude - last.altitude;
                         dslope += delta / dist;
                         segments++;
@@ -160,7 +175,10 @@
                 }
                 last = loc;
         }
-        return dspeed / segments;
+        if (!segments)
+                return 0.0;
+        else
+                return dspeed / segments;
 }
 
 - (double) averageSpeed {
@@ -218,8 +236,10 @@
            fromLocation:(CLLocation *)oldLocation
 {
         static NSMutableArray *lastLocations = nil;
-
-        if (newLocation.horizontalAccuracy > MINIMUM_PRECISION) {
+        static double minPrec = MINIMUM_PRECISION;
+        static double filterDistance = FILTER_DISTANCE;
+        
+        if (newLocation.horizontalAccuracy > minPrec) {
                 // Precision is too bad to do anything useful.
                 statusIndicator.image = [UIImage imageNamed:@"red-sphere.png"];
                 if (stateGood) {
@@ -228,7 +248,7 @@
                 }
         }
         else {
-                if (newLocation.horizontalAccuracy > FILTER_DISTANCE * MULTIPLIER)
+                if (newLocation.horizontalAccuracy > filterDistance * MULTIPLIER)
                         statusIndicator.image = [UIImage imageNamed:@"yellow-sphere.png"];
                 else
                         statusIndicator.image = [UIImage imageNamed:@"green-sphere.png"];
@@ -240,10 +260,10 @@
         }
         
         positionLabel.text = [NSString stringWithFormat:@"%@\n%@\n%.0f m", [self formatLat: newLocation.coordinate.latitude], [self formatLon: newLocation.coordinate.longitude], newLocation.altitude];
-        accuracyLabel.text = [NSString stringWithFormat:@"%.0f", newLocation.horizontalAccuracy];
+        accuracyLabel.text = [NSString stringWithFormat:@"%.0f m", newLocation.horizontalAccuracy];
         
         // If we don't have the required accuracy, end things here.
-        if (newLocation.horizontalAccuracy < 0 || newLocation.horizontalAccuracy > MINIMUM_PRECISION)
+        if (newLocation.horizontalAccuracy < 0 || newLocation.horizontalAccuracy > minPrec)
                 return;
         
         // Set the start time if we haven't
@@ -254,7 +274,6 @@
         if (!lastLocations)
                 lastLocations = [[NSMutableArray alloc] init]; 
         
-
         // Save a "direct measurement"
         [lastLocations addObject:newLocation];
         directMeasurements++;
@@ -264,6 +283,12 @@
         
         // If we have enough points for an averaged measurement, ...
         if ([lastLocations count] == MULTIPLIER) {
+                NSDictionary* units = [unitSets objectAtIndex:[unitSetSelector selectedSegmentIndex]];
+                double distFactor = [[units objectForKey:@"distFactor"] floatValue];
+                double speedFactor = [[units objectForKey:@"speedFactor"] floatValue];
+                NSString* distFormat = [units objectForKey:@"distFormat"];
+                NSString* speedFormat = [units objectForKey:@"speedFormat"];
+                
                 // Get the average position from the array, and release the array
                 newLocation = [self averageLocationFromArray:lastLocations];
                 [lastLocations release];
@@ -275,40 +300,53 @@
                 distance += [self distanceBetweenLocation:self.lastPosition andLocation:newLocation];
                 self.lastPosition = newLocation;
                 
-                // Calculate our curren speed and slope
+                // Calculate our current speed and slope
                 double curSpeed = [self averageSpeedOverLast:3];
                 double curSlope = [self averageSlopeOverLast:3];
                 
                 // Save the averaged reading
                 [locations addObject:newLocation];
                 
-                // Save our current speed to the datastore for the speed grah and redraw
-                [averageSpeedDS addValue:curSpeed];
-                [speedOverTime setNeedsDisplay];
-                
-                // Save our current altitude for that graph and redraw
-                [averageAltitudeDS addValue:newLocation.altitude];
-                [altitudeOverTime setNeedsDisplay];
+                /*
+                 // Save our current speed to the datastore for the speed grah and redraw
+                 [averageSpeedDS addValue:curSpeed];
+                 [speedOverTime setNeedsDisplay];
+                 
+                 // Save our current altitude for that graph and redraw
+                 [averageAltitudeDS addValue:newLocation.altitude];
+                 [altitudeOverTime setNeedsDisplay];
+                 */
                 
                 // Update the total distance travelled, in units of meters or kilometers, depending...
-                if (distance >= 1000) {
-                        totalDistanceLabel.text = [NSString stringWithFormat:@"%.02f", distance];
-                        totalDistanceUnitLabel.text = @"km (tot)";
-                } else {
-                        totalDistanceLabel.text = [NSString stringWithFormat:@"%.0f", distance];
-                        totalDistanceUnitLabel.text = @"m (tot)";
-                }
+                totalDistanceLabel.text = [NSString stringWithFormat:distFormat, distance*distFactor];
+                totalDistanceUnitLabel.text = @"dist";
                 // Update the other readings on the display
-                currentSpeedLabel.text = [NSString stringWithFormat:@"%.01f", curSpeed];
-                averageSpeedLabel.text = [NSString stringWithFormat:@"%.01f", [self averageSpeed]];
-                currentTimePerKmLabel.text = [self formatTimestamp:10 * 3600.0 / curSpeed];
-                slopeLabel.text = [NSString stringWithFormat:@"%.01f%%", curSlope * 100];
+                currentSpeedLabel.text = [NSString stringWithFormat:speedFormat, curSpeed*speedFactor];
+                averageSpeedLabel.text = [NSString stringWithFormat:speedFormat, [self averageSpeed]*speedFactor];
+                if (curSpeed > 0.0)
+                        currentTimePerKmLabel.text = [self formatTimestamp:10 * 3600.0 / curSpeed];
+                slopeLabel.text = [NSString stringWithFormat:@"%.01f %%", curSlope * 100];
                 
                 [self pointInGPX:newLocation];
+                
+                // We want roughly MULTIPLIER position updates every 15 s.
+                double newFilterDistance = curSpeed / 3.6 * 15 / MULTIPLIER;
+                // But not more than every FILTER_DISTANCE/10 m
+                if (newFilterDistance < FILTER_DISTANCE / 10.0)
+                        newFilterDistance = FILTER_DISTANCE / 10.0;
+                // or less than every FILTER_DISTANCE*10 m
+                else if (newFilterDistance > FILTER_DISTANCE * 10.0)
+                        newFilterDistance = FILTER_DISTANCE * 10.0;
+                // If the desired filter distance is off by more than 15%, correct it
+                if (manager.distanceFilter / newFilterDistance < 0.85 || manager.distanceFilter / newFilterDistance > 1.15) {
+                        [manager setDistanceFilter:newFilterDistance];
+                        filterDistance = newFilterDistance;
+                        minPrec = filterDistance * MULTIPLIER * 2.0;
+                }
         }
-
+        
         // Update the status with the current number of saved readings.
-        statusLabel.text = [NSString stringWithFormat:@"%d direct, %d averaged", directMeasurements, averagedMeasurements];
+        statusLabel.text = [NSString stringWithFormat:@"%d dir, %d avg, %.01f filt", directMeasurements, averagedMeasurements, manager.distanceFilter];
 }
 
 

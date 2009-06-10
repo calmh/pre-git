@@ -15,6 +15,8 @@
 @interface GPS_LoggerViewController : UIViewController <CLLocationManagerDelegate> {
         CLLocationManager *locationManager;
         CLLocation* lastPosition;
+        NSArray *unitSets;
+        int unitSetIndex;
         
         NSMutableArray *locations;
         NSString *filename;
@@ -41,6 +43,7 @@
         UILabel *statusLabel;
         UILabel *slopeLabel;
         UILabel *accuracyLabel;
+        UISegmentedControl *unitSetSelector;
 }
 
 @property (retain) CLLocationManager *locationManager;
@@ -58,6 +61,7 @@
 @property (retain) IBOutlet UILabel *slopeLabel;
 @property (retain) IBOutlet UILabel *accuracyLabel;
 @property (retain) IBOutlet CLLocation* lastPosition;
+@property (retain) IBOutlet UISegmentedControl *unitSetSelector;
 
 @end
 

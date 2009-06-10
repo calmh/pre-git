@@ -7,20 +7,18 @@
 //
 
 #import "AVCameraEditViewController.h"
-#import "AVEditingCell.h"
 
 @implementation AVCameraEditViewController
 
-@synthesize camera;
+@synthesize camera, descriptions, keys, keyboardIsShowing;
 
 #pragma mark View setup methods
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
-	[keys retain];
-	descriptions = [[NSDictionary alloc] initWithObjectsAndKeys:
+	self.keys = [NSArray arrayWithObjects:@"description", @"address", @"username", @"password", nil]; // @"framerate", nil];
+	self.descriptions = [[NSDictionary alloc] initWithObjectsAndKeys:
                         NSLocalizedString(@"Description", @""), @"description",
                         NSLocalizedString(@"Address", @""), @"address",
                         NSLocalizedString(@"User name", @""), @"username",
@@ -56,7 +54,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [keys count];
+	return [self.keys count];
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,11 +71,11 @@
 	NSString* labelStr = @"";
 	NSString* valueStr = @"";
 	int row = [indexPath indexAtPosition:1];
-	NSString* key = [keys objectAtIndex:row];
-	labelStr = [descriptions valueForKey:key];
-	valueStr = [camera valueForKey:key];
+	NSString* key = [self.keys objectAtIndex:row];
+	labelStr = [self.descriptions valueForKey:key];
+	valueStr = [self.camera valueForKey:key];
 	
-	AVEditingCell *cell=  (AVEditingCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
+	AVEditingCell *cell = (AVEditingCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (cell == nil) { 
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
 		for (id object in nib) {
@@ -145,8 +143,8 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-	NSString* key = [keys objectAtIndex:textField.tag];
-	[camera setValue:textField.text forKey:key];
+	NSString* key = [self.keys objectAtIndex:textField.tag];
+	[self.camera setValue:textField.text forKey:key];
 }
 
 - (void)keyboardWillShow:(NSNotification *)note
@@ -154,9 +152,9 @@
 	CGRect keyboardBounds;
 	[[note.userInfo valueForKey:UIKeyboardBoundsUserInfoKey] getValue: &keyboardBounds];
 	int keyboardHeight = keyboardBounds.size.height;
-	if (keyboardIsShowing == NO)
+	if (self.keyboardIsShowing == NO)
 	{
-		keyboardIsShowing = YES;
+		self.keyboardIsShowing = YES;
 		CGRect frame = self.view.frame;
 		frame.size.height -= keyboardHeight;
 		
@@ -173,9 +171,9 @@
 	CGRect keyboardBounds;
 	[[note.userInfo valueForKey:UIKeyboardBoundsUserInfoKey] getValue: &keyboardBounds];
 	int keyboardHeight = keyboardBounds.size.height;
-	if (keyboardIsShowing == YES)
+	if (self.keyboardIsShowing == YES)
 	{
-		keyboardIsShowing = NO;
+		self.keyboardIsShowing = NO;
 		CGRect frame = self.view.frame;
 		frame.size.height += keyboardHeight;
 		
