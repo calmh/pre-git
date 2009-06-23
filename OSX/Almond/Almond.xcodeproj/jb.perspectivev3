@@ -255,10 +255,12 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>185</real>
+								<real>22</real>
+								<real>163</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
+								<string>SCMStatusColumn</string>
 								<string>MainColumn</string>
 							</array>
 						</dict>
@@ -275,7 +277,6 @@
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1058C7A0FEA54F0111CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>2990853F0FF0CEB50010B9E6</string>
 								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -300,8 +301,10 @@
 						<string>{{0, 0}, {202, 778}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
+							<string>SCMStatusColumn</string>
+							<real>22</real>
 							<string>MainColumn</string>
-							<real>185</real>
+							<real>163</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 59 1440 819 0 0 1440 878 </string>
@@ -334,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>299087280FF14BDB0010B9E6</string>
+										<string>2928486E0FF14D1700EA26F2</string>
 										<key>history</key>
 										<array>
 											<string>292EAF1F0FEEEACA0064E8C2</string>
@@ -342,7 +345,7 @@
 											<string>299087240FF14BDB0010B9E6</string>
 											<string>299087250FF14BDB0010B9E6</string>
 											<string>299087260FF14BDB0010B9E6</string>
-											<string>299087270FF14BDB0010B9E6</string>
+											<string>299087280FF14BDB0010B9E6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -356,18 +359,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1233, 668}}</string>
+								<string>{{0, 0}, {1233, 665}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>668pt</string>
+							<string>665pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>105pt</string>
+							<string>108pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -381,7 +384,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1233, 78}}</string>
+										<string>{{10, 27}, {1233, 81}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
@@ -409,6 +412,27 @@
 									<dict>
 										<key>PBXCVSModuleFilterTypeKey</key>
 										<integer>1032</integer>
+										<key>PBXCVSModuleTreeModuleColumnData</key>
+										<dict>
+											<key>PBXCVSModuleTreeModuleColumnWidthsKey</key>
+											<array>
+												<real>200</real>
+												<real>56.66162109375</real>
+												<real>63</real>
+												<real>60</real>
+												<real>63</real>
+												<real>139.556640625</real>
+											</array>
+											<key>PBXCVSModuleTreeModuleColumnsKey</key>
+											<array>
+												<string>Name</string>
+												<string>Status</string>
+												<string>Update</string>
+												<string>Revision</string>
+												<string>Author</string>
+												<string>Date</string>
+											</array>
+										</dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CA23EE10692099D00951B8B</string>
 										<key>PBXProjectModuleLabel</key>
@@ -465,11 +489,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2990854A0FF0CF310010B9E6</string>
+				<string>2928486B0FF14D1700EA26F2</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>2990854B0FF0CF310010B9E6</string>
+				<string>2928486C0FF14D1700EA26F2</string>
 				<string>292EAF0D0FEEE05A0064E8C2</string>
-				<string>2990854C0FF0CF310010B9E6</string>
+				<string>2928486D0FF14D1700EA26F2</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -659,9 +683,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>299087290FF14BDB0010B9E6</string>
-		<string>299085540FF0CF310010B9E6</string>
-		<string>299085550FF0CF310010B9E6</string>
 		<string>/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
