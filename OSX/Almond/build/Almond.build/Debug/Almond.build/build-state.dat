@@ -1,407 +1,0 @@
-TAlmond
-v7
-r0
-t267471835.048023
-cCheck dependencies
-cProcessInfoPlistFile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Info.plist" Almond-Info.plist
-cCopyStringsFile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
-cCompileXIB "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib"
-cProcessPCH /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch.gch Almond_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cDataModelCompile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel"
-cCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cLd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond" normal x86_64
-cPBXCp build/Debug/Almond.app/Contents/Resources/Default.almond Default.almond
-cTouch "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app"
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004A23203600000000000000EE
-t1243815990
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/assert.h
-c000000004A1F861D0000000000000DCB
-t1243579933
-s3531
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
-c000000004A11E82F00000000000004F1
-t1242687535
-s1265
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/readline/history.h
-c000000004A11A2FC0000000000001C28
-t1242669820
-s7208
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/readline/readline.h
-c000000004A11A2FC0000000000001C28
-t1242669820
-s7208
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004A1F861E0000000000004174
-t1243579934
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
-c000000004A1F861E000000000000563E
-t1243579934
-s22078
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
-c000000004A11EB240000000000000C7E
-t1242688292
-s3198
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
-c000000004A11EB2400000000000010DD
-t1242688292
-s4317
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
-c000000004A11EB240000000000003197
-t1242688292
-s12695
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/jb/lua-5.1.4/include/lauxlib.h
-c000000004773A2610000000000001691
-t1198760545
-s5777
-i<stddef.h>
-i<stdio.h>
-i"lua.h"
-
-N/Users/jb/lua-5.1.4/include/lua.h
-c000000004899A7640000000000002DA8
-t1218029412
-s11688
-i<stdarg.h>
-i<stddef.h>
-i"luaconf.h"
-
-N/Users/jb/lua-5.1.4/include/luaconf.h
-c0000000047B076E4000000000000571B
-t1202747108
-s22299
-i<limits.h>
-i<stddef.h>
-i<unistd.h>
-i<io.h>
-i<stdio.h>
-i<stdio.h>
-i<readline/readline.h>
-i<readline/history.h>
-i<assert.h>
-i<math.h>
-i<unistd.h>
-
-N/Users/jb/lua-5.1.4/include/lualib.h
-c000000004773A2610000000000000402
-t1198760545
-s1026
-i"lua.h"
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.h
-c000000004A3EB3950000000000000316
-t1245623189
-s790
-i<Cocoa/Cocoa.h>
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m
-c000000004A4114570000000000003104
-t1245779031
-s12548
-i"Almond_AppDelegate.h"
-i"lua.h"
-i"lualib.h"
-i"lauxlib.h"
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel
-c000000004A40B6A50000000000000088
-t1245755045
-s136
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_Prefix.pch
-c000000004A3EA8C9000000000000008F
-t1245620425
-s143
-i<Cocoa/Cocoa.h>
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almond
-c000000004A4112A6000000000000054D
-t1245778598
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almondlib
-c000000004A4112A6000000000000054D
-t1245778598
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/InfoPlist.strings
-c000000004A3EA8C9000000000000005A
-t1245620425
-s90
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib
-c000000004A4113300000000000037A2E
-t1245778736
-s227886
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond.LinkFileList
-c000000004A3EAF3D00000000000000F8
-t1245622077
-s248
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o
-t1245779032
-s55864
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o
-t1245694887
-s5008
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app
-t1245779032
-s102
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Info.plist
-t1245622077
-s883
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond
-t1245779032
-s209392
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/foo.lua
-t1245701371
-s92
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/PkgInfo
-t1245622077
-s8
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom
-t1245755045
-s4404
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Default.almond
-t1245778948
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Default.almondlib
-t1245778934
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1245622077
-s90
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/MainMenu.nib
-t1245778746
-s48316
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/foo.lua
-t1245778598
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/foo.lua
-c000000004A4112A6000000000000054D
-t1245778598
-s1357
-
-N/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m
-c000000004A3EA8C900000000000000F3
-t1245620425
-s243
-i<Cocoa/Cocoa.h>
-
-N/var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-cudwzrqzsaztkzbclrcwiyranbiu/Almond_Prefix.pch.gch
-t1245622081
-s54228752
-
-N/var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch.gch
-t1245694887
-s54228752
-
-NAlmond-Info.plist
-c000000004A3EA8C900000000000003F3
-t1245620425
-s1011
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies267471835#267471835#0(0"0(0#1#0"4301066776#0"0#
-
-CCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s267471832.314050
-e267471832.497035
-r1
-xCompileC
-xbuild/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m: In function '-[Almond_AppDelegate loadPlugin:]':
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: 'NSManagedObject' may not respond to '-setPath:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: (Messages without a matching method signature
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: will be assumed to return 'id' and accept
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: '...' as arguments.)
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:284: warning: 'NSManagedObject' may not respond to '-setDescr:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:285: warning: 'NSManagedObject' may not respond to '-setCopyright:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:286: warning: 'NSManagedObject' may not respond to '-setLastUpdated:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:291: warning: 'NSManagedObject' may not respond to '-addMethodsObject:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:292: warning: 'NSManagedObject' may not respond to '-setName:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:293: warning: 'NSManagedObject' may not respond to '-setDescr:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:294: warning: 'NSManagedObject' may not respond to '-setType:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:299: warning: 'NSManagedObject' may not respond to '-addParametersObject:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:300: warning: 'NSManagedObject' may not respond to '-setOrder:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:301: warning: 'NSManagedObject' may not respond to '-setDescr:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:302: warning: 'NSManagedObject' may not respond to '-setType:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:303: warning: 'NSManagedObject' may not respond to '-setDefault:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:304: warning: 'NSManagedObject' may not respond to '-setMin:'
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:305: warning: 'NSManagedObject' may not respond to '-setMax:'
-lSLF07#2@78"Compile /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471832#267471832#0(2533"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m: In function '-[Almond_AppDelegate loadPlugin:]':/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: 'NSManagedObject' may not respond to '-setPath:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: (Messages without a matching method signature/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: will be assumed to return 'id' and accept/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:283: warning: '...' as arguments.)/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:284: warning: 'NSManagedObject' may not respond to '-setDescr:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:285: warning: 'NSManagedObject' may not respond to '-setCopyright:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:286: warning: 'NSManagedObject' may not respond to '-setLastUpdated:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:291: warning: 'NSManagedObject' may not respond to '-addMethodsObject:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:292: warning: 'NSManagedObject' may not respond to '-setName:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:293: warning: 'NSManagedObject' may not respond to '-setDescr:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:294: warning: 'NSManagedObject' may not respond to '-setType:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:299: warning: 'NSManagedObject' may not respond to '-addParametersObject:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:300: warning: 'NSManagedObject' may not respond to '-setOrder:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:301: warning: 'NSManagedObject' may not respond to '-setDescr:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:302: warning: 'NSManagedObject' may not respond to '-setType:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:303: warning: 'NSManagedObject' may not respond to '-setDefault:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:304: warning: 'NSManagedObject' may not respond to '-setMin:'/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m:305: warning: 'NSManagedObject' may not respond to '-setMax:'16(22@48"'NSManagedObject' may not respond to '-setPath:'267471832#121#134#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#283#0#283#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)267471832#255#131#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#283#0#283#0#0"0(22@49"'NSManagedObject' may not respond to '-setDescr:'267471832#619#135#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#284#0#284#0#26"'*' may not respond to '*'0(22@53"'NSManagedObject' may not respond to '-setCopyright:'267471832#754#139#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#285#0#285#0#26"'*' may not respond to '*'0(22@55"'NSManagedObject' may not respond to '-setLastUpdated:'267471832#893#141#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#286#0#286#0#26"'*' may not respond to '*'0(22@57"'NSManagedObject' may not respond to '-addMethodsObject:'267471832#1034#143#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#291#0#291#0#26"'*' may not respond to '*'0(22@48"'NSManagedObject' may not respond to '-setName:'267471832#1177#134#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#292#0#292#0#26"'*' may not respond to '*'0(22@49"'NSManagedObject' may not respond to '-setDescr:'267471832#1311#135#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#293#0#293#0#26"'*' may not respond to '*'0(22@48"'NSManagedObject' may not respond to '-setType:'267471832#1446#134#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#294#0#294#0#26"'*' may not respond to '*'0(22@60"'NSManagedObject' may not respond to '-addParametersObject:'267471832#1580#146#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#299#0#299#0#26"'*' may not respond to '*'0(22@49"'NSManagedObject' may not respond to '-setOrder:'267471832#1726#135#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#300#0#300#0#26"'*' may not respond to '*'0(22@49"'NSManagedObject' may not respond to '-setDescr:'267471832#1861#135#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#301#0#301#0#26"'*' may not respond to '*'0(22@48"'NSManagedObject' may not respond to '-setType:'267471832#1996#134#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#302#0#302#0#26"'*' may not respond to '*'0(22@51"'NSManagedObject' may not respond to '-setDefault:'267471832#2130#137#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#303#0#303#0#26"'*' may not respond to '*'0(22@47"'NSManagedObject' may not respond to '-setMin:'267471832#2267#133#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#304#0#304#0#26"'*' may not respond to '*'0(22@47"'NSManagedObject' may not respond to '-setMax:'267471832#2400#133#0(6@70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m267471831#305#0#305#0#26"'*' may not respond to '*'0(0#0#70"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m4301066776#1237"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap" "-F/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/include" -I/Users/jb/lua-5.1.4/include "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources" -include /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch -c "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_AppDelegate.m" -o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o"0#
-
-CCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s267387687.623401
-e267387687.757102
-r1
-xCompileC
-xbuild/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@64"Compile /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m267387687#267387687#0(0"0(0#0#56"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m4301066776#1209"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap" "-F/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/include" -I/Users/jb/lua-5.1.4/include "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources" -include /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch -c "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/main.m" -o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o"0#
-
-CCompileXIB "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib"
-s267471545.697635
-e267471546.322124
-r1
-xCompileXIB
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib267471545#267471546#0(0"0(0#0#76"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib4301066776#365"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/MainMenu.nib" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/MainMenu.xib"0#
-
-CCopyStringsFile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
-s267314877.030824
-e267314877.242468
-r1
-xCopyStringsFile
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings267314877#267314877#0(0"0(0#0#81"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/English.lproj/InfoPlist.strings4301066776#391"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj"0#
-
-CDataModelCompile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel"
-s267447845.739796
-e267447846.033848
-r1
-xDataModelCompile
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel:Method.parameters: warning: Method.parameters -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 
-o/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel:Plugin.methods: warning: Plugin.methods -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 
-lSLF07#2@86"Compile /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel267447845#267447846#0(548"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel:Method.parameters: warning: Method.parameters -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel:Plugin.methods: warning: Plugin.methods -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 2(22@169"Method.parameters -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 267447846#18446744073709551615#0#0(6@78"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel267447845#0#0#0#0#0"0(22@166"Plugin.methods -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 267447846#18446744073709551615#0#0(6@78"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel267447845#0#0#0#0#0"0(0#0#78"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel4301066776#312"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_DataModel.xcdatamodel" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom"0#
-
-CLd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond" normal x86_64
-s267471832.497127
-e267471832.546671
-r1
-xLd
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond
-xnormal
-xx86_64
-lSLF07#2@99"Link /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond267471832#267471832#0(0"0(0#0#0"4301066776#634"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" -L/Users/jb/lua-5.1.4/lib "-F/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" -filelist "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond.LinkFileList" -mmacosx-version-min=10.6 -llua -framework Cocoa -o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS/Almond"0#
-
-CPBXCp build/Debug/Almond.app/Contents/MacOS/foo.lua foo.lua
-s267394171.068799
-e267394171.072876
-r1
-xPBXCp
-xbuild/Debug/Almond.app/Contents/MacOS/foo.lua
-xfoo.lua
-lSLF07#2@12"Copy foo.lua267394171#267394171#0(0"0(0#0#57"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/foo.lua4301066776#357"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/foo.lua" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/MacOS"0#
-
-CPBXCp build/Debug/Almond.app/Contents/Resources/Default.almond Default.almond
-s267471748.853931
-e267471748.857877
-r1
-xPBXCp
-xbuild/Debug/Almond.app/Contents/Resources/Default.almond
-xDefault.almond
-lSLF07#2@19"Copy Default.almond267471748#267471748#0(0"0(0#0#64"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almond4301066776#368"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almond" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources"0#
-
-CPBXCp build/Debug/Almond.app/Contents/Resources/Default.almondlib Default.almondlib
-s267471734.624313
-e267471734.628281
-r1
-xPBXCp
-xbuild/Debug/Almond.app/Contents/Resources/Default.almondlib
-xDefault.almondlib
-lSLF07#2@22"Copy Default.almondlib267471734#267471734#0(0"0(0#0#67"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almondlib4301066776#371"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Default.almondlib" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources"0#
-
-CPBXCp build/Debug/Almond.app/Contents/Resources/foo.lua foo.lua
-s267471398.574349
-e267471398.603449
-r1
-xPBXCp
-xbuild/Debug/Almond.app/Contents/Resources/foo.lua
-xfoo.lua
-lSLF07#2@12"Copy foo.lua267471398#267471398#0(0"0(0#0#57"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/foo.lua4301066776#361"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/foo.lua" "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Resources"0#
-
-CProcessInfoPlistFile "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Info.plist" Almond-Info.plist
-s267314877.011005
-e267314877.030722
-r1
-xProcessInfoPlistFile
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Info.plist
-xAlmond-Info.plist
-lSLF07#2@25"Process Almond-Info.plist267314877#267314877#0(0"0(0#0#67"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond-Info.plist4711065280#346"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    builtin-infoPlistUtility Almond-Info.plist -genpkginfo "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app/Contents/Info.plist"0#
-
-CProcessPCH /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-cudwzrqzsaztkzbclrcwiyranbiu/Almond_Prefix.pch.gch Almond_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s267314877.595248
-e267314881.240122
-r1
-xProcessPCH
-x/var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-cudwzrqzsaztkzbclrcwiyranbiu/Almond_Prefix.pch.gch
-xAlmond_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Almond_Prefix.pch267314877#267314881#0(0"0(0#0#67"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_Prefix.pch4301066776#1073"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap" "-F/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/include" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources" -c "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_Prefix.pch" -o /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-cudwzrqzsaztkzbclrcwiyranbiu/Almond_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch.gch Almond_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s267387684.390630
-e267387687.623013
-r1
-xProcessPCH
-x/var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch.gch
-xAlmond_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Almond_Prefix.pch267387684#267387687#0(0"0(0#0#67"/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_Prefix.pch4729648672#1103"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap" "-F/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/include" -I/Users/jb/lua-5.1.4/include "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64" "-I/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Almond.build/Debug/Almond.build/DerivedSources" -c "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/Almond_Prefix.pch" -o /var/folders/em/emiUhLcOFLWVSSYv168yZk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-enfrwcftnfoeqsapfxbtvgtlohrv/Almond_Prefix.pch.gch0#
-
-CTouch "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app"
-s267471832.546845
-e267471832.549278
-r1
-xTouch
-x/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app
-lSLF07#2@78"Touch /Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app267471832#267471832#0(0"0(0#0#0"4301066776#156"    cd "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond"    /usr/bin/touch -c "/Volumes/Macintosh HD/Users/jb/projekt/OSX/Almond/build/Debug/Almond.app"0#
-
