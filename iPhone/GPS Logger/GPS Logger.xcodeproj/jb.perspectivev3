@@ -278,9 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>33</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -333,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>295CDD300FE02B0C00251F37</string>
+										<string>29CDEB7C0FF2D5A400B7E05B</string>
 										<key>history</key>
 										<array>
 											<string>29C530970FA84676004B252E</string>
@@ -345,9 +343,9 @@
 											<string>29BB67B30FD97CF7000BECF9</string>
 											<string>2958E0E20FDC36EA00BB4BE9</string>
 											<string>295CDD220FE02B0C00251F37</string>
-											<string>295CDD230FE02B0C00251F37</string>
 											<string>295CDD240FE02B0C00251F37</string>
-											<string>295CDD250FE02B0C00251F37</string>
+											<string>29CDEB5F0FF2D34B00B7E05B</string>
+											<string>29CDEB600FF2D34B00B7E05B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -363,16 +361,10 @@
 											<string>2920EF670FC9D1C200944747</string>
 											<string>2920EF680FC9D1C200944747</string>
 											<string>2920EF690FC9D1C200944747</string>
-											<string>295CDD260FE02B0C00251F37</string>
-											<string>295CDD270FE02B0C00251F37</string>
-											<string>295CDD280FE02B0C00251F37</string>
-											<string>295CDD290FE02B0C00251F37</string>
-											<string>295CDD2A0FE02B0C00251F37</string>
-											<string>295CDD2B0FE02B0C00251F37</string>
-											<string>295CDD2C0FE02B0C00251F37</string>
-											<string>295CDD2D0FE02B0C00251F37</string>
-											<string>295CDD2E0FE02B0C00251F37</string>
-											<string>295CDD2F0FE02B0C00251F37</string>
+											<string>29CDEB610FF2D34B00B7E05B</string>
+											<string>29CDEB620FF2D34B00B7E05B</string>
+											<string>29CDEB630FF2D34B00B7E05B</string>
+											<string>29CDEB640FF2D34B00B7E05B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -516,11 +508,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295CDD310FE02B0C00251F37</string>
+				<string>29CDEB500FF2CFDA00B7E05B</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>295CDD320FE02B0C00251F37</string>
+				<string>29CDEB510FF2CFDA00B7E05B</string>
 				<string>294A987F0FA659F700717299</string>
-				<string>295CDD330FE02B0C00251F37</string>
+				<string>29CDEB520FF2CFDA00B7E05B</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -667,14 +659,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295CDD340FE02B0C00251F37</string>
+				<string>29CDEB530FF2CFDA00B7E05B</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>295CDD350FE02B0C00251F37</string>
-				<string>295CDD360FE02B0C00251F37</string>
-				<string>295CDD370FE02B0C00251F37</string>
-				<string>295CDD380FE02B0C00251F37</string>
-				<string>295CDD390FE02B0C00251F37</string>
+				<string>29CDEB540FF2CFDA00B7E05B</string>
+				<string>29CDEB550FF2CFDA00B7E05B</string>
+				<string>29CDEB560FF2CFDA00B7E05B</string>
+				<string>29CDEB570FF2CFDA00B7E05B</string>
+				<string>29CDEB580FF2CFDA00B7E05B</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -704,8 +696,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>295CDD3A0FE02B0C00251F37</string>
-		<string>295CDD3B0FE02B0C00251F37</string>
+		<string>29CDEB760FF2D55500B7E05B</string>
+		<string>29CDEB710FF2D4E400B7E05B</string>
 		<string>/Users/jb/projekt/iPhone/GPS Logger/GPS Logger.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
