@@ -272,7 +272,8 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>29B97323FDCFA39411CA2CEA</string>
+								<string>295E7A290FF398E800497774</string>
+								<string>295E7AAE0FF3A0D000497774</string>
 								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -333,21 +334,24 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>295E79360FF3946300497774</string>
+										<string>295E7ACB0FF3A35B00497774</string>
 										<key>history</key>
 										<array>
-											<string>29C530970FA84676004B252E</string>
 											<string>2920EF600FC9D1C200944747</string>
 											<string>2920EF610FC9D1C200944747</string>
 											<string>2920EF640FC9D1C200944747</string>
 											<string>2920EF9A0FC9E0D700944747</string>
 											<string>29BB67B30FD97CF7000BECF9</string>
 											<string>295CDD220FE02B0C00251F37</string>
-											<string>295E79310FF3946300497774</string>
-											<string>295E79320FF3946300497774</string>
-											<string>295E79330FF3946300497774</string>
-											<string>295E79340FF3946300497774</string>
-											<string>295E79350FF3946300497774</string>
+											<string>295E7AC00FF3A35B00497774</string>
+											<string>295E7AC10FF3A35B00497774</string>
+											<string>295E7AC20FF3A35B00497774</string>
+											<string>295E7AC40FF3A35B00497774</string>
+											<string>295E7AC50FF3A35B00497774</string>
+											<string>295E7AC60FF3A35B00497774</string>
+											<string>295E7AC70FF3A35B00497774</string>
+											<string>295E7AC90FF3A35B00497774</string>
+											<string>295E7ACA0FF3A35B00497774</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,18 +365,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {963, 696}}</string>
+								<string>{{0, 0}, {963, 773}}</string>
 								<key>RubberWindowFrame</key>
 								<string>256 59 1170 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>696pt</string>
+							<string>773pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>77pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -461,7 +465,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {963, 50}}</string>
+										<string>{{10, 27}, {963, -27}}</string>
 										<key>RubberWindowFrame</key>
 										<string>256 59 1170 819 0 0 1440 878 </string>
 									</dict>
@@ -683,7 +687,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>295E79400FF3946300497774</string>
 		<string>295E79410FF3946300497774</string>
 		<string>295E79420FF3946300497774</string>
 		<string>/Volumes/Macintosh HD/Users/jb/projekt/iPhone/GPS Logger/GPS Logger.xcodeproj</string>
