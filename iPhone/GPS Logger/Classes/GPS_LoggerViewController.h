@@ -14,7 +14,6 @@
 
 @interface GPS_LoggerViewController : UIViewController <CLLocationManagerDelegate> {
         CLLocationManager *locationManager;
-        CLLocation* lastPosition;
         NSArray *unitSets;
         int unitSetIndex;
         
@@ -29,8 +28,11 @@
         JBSoundEffect *goodSound;
         JBSoundEffect *badSound;
         bool stateGood;
-        int directMeasurements;
         int averagedMeasurements;
+        CLLocation* lastLocation;
+        CLLocation* currentLocation;
+        NSMutableArray* directMeasurements;
+        int lastSampleSize;
         
         UIImageView *statusIndicator;
         UILabel *positionLabel;
@@ -43,7 +45,7 @@
         UILabel *statusLabel;
         UILabel *slopeLabel;
         UILabel *accuracyLabel;
-        UISegmentedControl *unitSetSelector;
+        UIProgressView* averageProgress;
 }
 
 @property (retain) CLLocationManager *locationManager;
@@ -60,8 +62,9 @@
 @property (retain) IBOutlet UILabel *statusLabel;
 @property (retain) IBOutlet UILabel *slopeLabel;
 @property (retain) IBOutlet UILabel *accuracyLabel;
-@property (retain) IBOutlet CLLocation* lastPosition;
-@property (retain) IBOutlet UISegmentedControl *unitSetSelector;
+@property (retain) IBOutlet UIProgressView* averageProgress;
+@property (retain) CLLocation* lastLocation;
+@property (retain) CLLocation* currentLocation;
 
 @end
 

@@ -9,18 +9,20 @@
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* GPS_LoggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* GPS_LoggerAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* GPS_LoggerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* GPS_LoggerViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* GPS_LoggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* GPS_LoggerViewController.m */; };
 		2920EF390FC9C6CB00944747 /* JBSoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2920EF380FC9C6CB00944747 /* JBSoundEffect.m */; };
-		2920EF450FC9C71200944747 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2920EF440FC9C71200944747 /* AudioToolbox.framework */; };
 		2920EF4F0FC9C7DC00944747 /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4D0FC9C7DC00944747 /* Basso.aiff */; };
 		2920EF500FC9C7DC00944747 /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4E0FC9C7DC00944747 /* Purr.aiff */; };
 		294FB8750FA77CB5006F88C5 /* JBLinePlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */; };
-		29596A720FA3562E00C7553D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29596A710FA3562E00C7553D /* CoreLocation.framework */; };
+		295E79EE0FF396F800497774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79ED0FF396F800497774 /* Foundation.framework */; };
+		295E79F40FF3971300497774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79F30FF3971300497774 /* UIKit.framework */; };
+		295E79FE0FF3973800497774 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79FD0FF3973800497774 /* CoreGraphics.framework */; };
+		295E7A040FF3974C00497774 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E7A030FF3974C00497774 /* AudioToolbox.framework */; };
+		295E7A0A0FF3976100497774 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E7A090FF3976100497774 /* CoreLocation.framework */; };
+		295E7A2A0FF398E800497774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 295E7A290FF398E800497774 /* Settings.bundle */; };
+		295E7AA60FF39FF000497774 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 295E7AA50FF39FF000497774 /* Default.png */; };
 		29C52F990FA83E04004B252E /* JBPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C52F980FA83E04004B252E /* JBPlotDataSource.m */; };
 		29C530B70FA84BF0004B252E /* green-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B40FA84BF0004B252E /* green-sphere.png */; };
 		29C530B80FA84BF0004B252E /* red-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B50FA84BF0004B252E /* red-sphere.png */; };
@@ -28,24 +30,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* GPS_LoggerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPS_LoggerAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* GPS_LoggerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPS_LoggerAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* GPS Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* GPS_LoggerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPS_LoggerViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* GPS_LoggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPS_LoggerViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* GPS_LoggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPS_LoggerViewController.m; sourceTree = "<group>"; };
 		2920EF370FC9C6CB00944747 /* JBSoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSoundEffect.h; sourceTree = "<group>"; };
 		2920EF380FC9C6CB00944747 /* JBSoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSoundEffect.m; sourceTree = "<group>"; };
-		2920EF440FC9C71200944747 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2920EF4D0FC9C7DC00944747 /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
 		2920EF4E0FC9C7DC00944747 /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Purr.aiff; sourceTree = "<group>"; };
 		294FB8730FA77CB5006F88C5 /* JBLinePlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLinePlotView.h; sourceTree = "<group>"; };
 		294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLinePlotView.m; sourceTree = "<group>"; };
-		29596A710FA3562E00C7553D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		295E79ED0FF396F800497774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		295E79F30FF3971300497774 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		295E79FD0FF3973800497774 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		295E7A030FF3974C00497774 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		295E7A090FF3976100497774 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		295E7A290FF398E800497774 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		295E7AA50FF39FF000497774 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29C52F970FA83E04004B252E /* JBPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPlotDataSource.h; sourceTree = "<group>"; };
 		29C52F980FA83E04004B252E /* JBPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBPlotDataSource.m; sourceTree = "<group>"; };
@@ -61,11 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				29596A720FA3562E00C7553D /* CoreLocation.framework in Frameworks */,
-				2920EF450FC9C71200944747 /* AudioToolbox.framework in Frameworks */,
+				295E79EE0FF396F800497774 /* Foundation.framework in Frameworks */,
+				295E79F40FF3971300497774 /* UIKit.framework in Frameworks */,
+				295E79FE0FF3973800497774 /* CoreGraphics.framework in Frameworks */,
+				295E7A040FF3974C00497774 /* AudioToolbox.framework in Frameworks */,
+				295E7A0A0FF3976100497774 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,8 @@
 				2899E5210DE3E06400AC0155 /* GPS_LoggerViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				295E7A290FF398E800497774 /* Settings.bundle */,
+				295E7AA50FF39FF000497774 /* Default.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -136,11 +142,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2920EF440FC9C71200944747 /* AudioToolbox.framework */,
-				29596A710FA3562E00C7553D /* CoreLocation.framework */,
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				295E79ED0FF396F800497774 /* Foundation.framework */,
+				295E79F30FF3971300497774 /* UIKit.framework */,
+				295E79FD0FF3973800497774 /* CoreGraphics.framework */,
+				295E7A030FF3974C00497774 /* AudioToolbox.framework */,
+				295E7A090FF3976100497774 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 				29C530B90FA84BF0004B252E /* yellow-sphere.png in Resources */,
 				2920EF4F0FC9C7DC00944747 /* Basso.aiff in Resources */,
 				2920EF500FC9C7DC00944747 /* Purr.aiff in Resources */,
+				295E7A2A0FF398E800497774 /* Settings.bundle in Resources */,
+				295E7AA60FF39FF000497774 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +229,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -235,6 +247,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GPS_Logger_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;

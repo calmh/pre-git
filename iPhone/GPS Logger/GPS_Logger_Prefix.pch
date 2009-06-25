@@ -7,6 +7,11 @@
     #import <UIKit/UIKit.h>
 #endif
 
-#define FILTER_DISTANCE 50
-#define MULTIPLIER 5
-#define MINIMUM_PRECISION (FILTER_DISTANCE * MULTIPLIER * 2)
+#define FILTER_DISTANCE 5
+#define MINIMUM_MULTIPLIER 3
+#define DESIRED_MULTIPLIER 12
+#define MEASUREMENT_INTERVAL [[NSUserDefaults standardUserDefaults] floatForKey:@"average_interval"]
+#define UPDATE_INTERVAL 0.5
+#define MINIMUM_PRECISION [[NSUserDefaults standardUserDefaults] floatForKey:@"gps_minprec"]
+#define UNITSET ((int)[[NSUserDefaults standardUserDefaults] floatForKey:@"units"])
+
