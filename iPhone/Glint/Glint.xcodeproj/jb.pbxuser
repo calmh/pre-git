@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* GlintAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 338}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 133}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Glint */ = {
+		activeExec = 0;
+		executables = (
+			29FE31C90FF4353700E9FE05 /* Glint */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* GlintViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {745, 858}}";
+			sepNavSelRange = "{224, 0}";
+			sepNavVisRange = "{0, 1413}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* GlintViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2847, 4511}}";
+			sepNavSelRange = "{4631, 0}";
+			sepNavVisRange = "{2830, 2541}";
+		};
+	};
+	297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* GlintViewController.m */;
+		name = "GlintViewController.m: 96";
+		rLen = 0;
+		rLoc = 4631;
+		rType = 0;
+		vrLen = 2544;
+		vrLoc = 2830;
+	};
+	297DDC1F0FF7732E00A6C74D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 29FE32690FF43A2E00E9FE05 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			5,
+			Type,
+		);
+		name = "/Volumes/Macintosh HD/Users/jb/projekt/iPhone/Glint/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	297DDC200FF7732E00A6C74D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 17";
+		rLen = 0;
+		rLoc = 665;
+		rType = 0;
+		vrLen = 756;
+		vrLoc = 0;
+	};
+	297DDC220FF7732E00A6C74D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 13";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 0;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Glint */,
+		);
+		breakpoints = (
+			29FE32610FF43A2C00E9FE05 /* GlintViewController.m:96 */,
+			29FE32740FF43A4A00E9FE05 /* GlintViewController.m:98 */,
+		);
+		codeSenseManager = 29FE31DB0FF4354400E9FE05 /* Code sense */;
+		executables = (
+			29FE31C90FF4353700E9FE05 /* Glint */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					364,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 267874929;
+			PBXWorkspaceStateSaveDate = 267874929;
+		};
+		perUserProjectItems = {
+			297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */ = 297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */;
+			297DDC1F0FF7732E00A6C74D /* PlistBookmark */ = 297DDC1F0FF7732E00A6C74D /* PlistBookmark */;
+			297DDC200FF7732E00A6C74D /* PBXTextBookmark */ = 297DDC200FF7732E00A6C74D /* PBXTextBookmark */;
+			297DDC220FF7732E00A6C74D /* PBXTextBookmark */ = 297DDC220FF7732E00A6C74D /* PBXTextBookmark */;
+			29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */;
+			29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 29FE31DA0FF4354400E9FE05 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29FE31C90FF4353700E9FE05 /* Glint */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Glint;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	29FE31DA0FF4354400E9FE05 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "Projekt (Acro)";
+			};
+		};
+	};
+	29FE31DB0FF4354400E9FE05 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	29FE32610FF43A2C00E9FE05 /* GlintViewController.m:96 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 28D7ACF70DDB3853001CB0EB /* GlintViewController.m */;
+		functionName = "-viewDidLoad";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 96;
+		location = Glint;
+		modificationTime = 267664419.250457;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* GlintAppDelegate.h */;
+		name = "GlintAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 133;
+		vrLoc = 0;
+	};
+	29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* GlintViewController.h */;
+		name = "GlintViewController.h: 12";
+		rLen = 0;
+		rLoc = 224;
+		rType = 0;
+		vrLen = 1413;
+		vrLoc = 0;
+	};
+	29FE32690FF43A2E00E9FE05 /* Root.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Root.plist;
+		path = "/Volumes/Macintosh HD/Users/jb/projekt/iPhone/Glint/Settings.bundle/Root.plist";
+		sourceTree = "<absolute>";
+	};
+	29FE32740FF43A4A00E9FE05 /* GlintViewController.m:98 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 28D7ACF70DDB3853001CB0EB /* GlintViewController.m */;
+		functionName = "-viewDidLoad";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 98;
+		location = Glint;
+		modificationTime = 267664419.756865;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {745, 601}}";
+			sepNavSelRange = "{292, 0}";
+			sepNavVisRange = "{0, 755}";
+		};
+	};
+}
