@@ -89,8 +89,10 @@
         [self.locationManager startUpdatingLocation];
         distance = 0;
         
-        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-        [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
+        if (DISABLE_IDLE)
+                [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+        if (ENABLE_PROXIMITY)
+                [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
         
         [self beginGPX];
         

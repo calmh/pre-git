@@ -16,13 +16,13 @@
 		2920EF4F0FC9C7DC00944747 /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4D0FC9C7DC00944747 /* Basso.aiff */; };
 		2920EF500FC9C7DC00944747 /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2920EF4E0FC9C7DC00944747 /* Purr.aiff */; };
 		294FB8750FA77CB5006F88C5 /* JBLinePlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */; };
-		295E79EE0FF396F800497774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79ED0FF396F800497774 /* Foundation.framework */; };
-		295E79F40FF3971300497774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79F30FF3971300497774 /* UIKit.framework */; };
-		295E79FE0FF3973800497774 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E79FD0FF3973800497774 /* CoreGraphics.framework */; };
-		295E7A040FF3974C00497774 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E7A030FF3974C00497774 /* AudioToolbox.framework */; };
-		295E7A0A0FF3976100497774 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E7A090FF3976100497774 /* CoreLocation.framework */; };
 		295E7A2A0FF398E800497774 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 295E7A290FF398E800497774 /* Settings.bundle */; };
 		295E7AA60FF39FF000497774 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 295E7AA50FF39FF000497774 /* Default.png */; };
+		2965ED660FF3E0950089E2D8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2965ED650FF3E0950089E2D8 /* AudioToolbox.framework */; };
+		2965ED680FF3E0950089E2D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2965ED670FF3E0950089E2D8 /* CoreGraphics.framework */; };
+		2965ED6A0FF3E0950089E2D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2965ED690FF3E0950089E2D8 /* CoreLocation.framework */; };
+		2965ED6E0FF3E0950089E2D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2965ED6D0FF3E0950089E2D8 /* UIKit.framework */; };
+		2965EE6D0FF3E2CE0089E2D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2965EE6C0FF3E2CE0089E2D8 /* Foundation.framework */; };
 		29C52F990FA83E04004B252E /* JBPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C52F980FA83E04004B252E /* JBPlotDataSource.m */; };
 		29C530B70FA84BF0004B252E /* green-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B40FA84BF0004B252E /* green-sphere.png */; };
 		29C530B80FA84BF0004B252E /* red-sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C530B50FA84BF0004B252E /* red-sphere.png */; };
@@ -43,13 +43,13 @@
 		2920EF4E0FC9C7DC00944747 /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Purr.aiff; sourceTree = "<group>"; };
 		294FB8730FA77CB5006F88C5 /* JBLinePlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLinePlotView.h; sourceTree = "<group>"; };
 		294FB8740FA77CB5006F88C5 /* JBLinePlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLinePlotView.m; sourceTree = "<group>"; };
-		295E79ED0FF396F800497774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		295E79F30FF3971300497774 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		295E79FD0FF3973800497774 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		295E7A030FF3974C00497774 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		295E7A090FF3976100497774 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		295E7A290FF398E800497774 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		295E7AA50FF39FF000497774 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2965ED650FF3E0950089E2D8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		2965ED670FF3E0950089E2D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2965ED690FF3E0950089E2D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		2965ED6D0FF3E0950089E2D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2965EE6C0FF3E2CE0089E2D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29C52F970FA83E04004B252E /* JBPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBPlotDataSource.h; sourceTree = "<group>"; };
 		29C52F980FA83E04004B252E /* JBPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBPlotDataSource.m; sourceTree = "<group>"; };
@@ -65,11 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				295E79EE0FF396F800497774 /* Foundation.framework in Frameworks */,
-				295E79F40FF3971300497774 /* UIKit.framework in Frameworks */,
-				295E79FE0FF3973800497774 /* CoreGraphics.framework in Frameworks */,
-				295E7A040FF3974C00497774 /* AudioToolbox.framework in Frameworks */,
-				295E7A0A0FF3976100497774 /* CoreLocation.framework in Frameworks */,
+				2965ED660FF3E0950089E2D8 /* AudioToolbox.framework in Frameworks */,
+				2965ED680FF3E0950089E2D8 /* CoreGraphics.framework in Frameworks */,
+				2965ED6A0FF3E0950089E2D8 /* CoreLocation.framework in Frameworks */,
+				2965ED6E0FF3E0950089E2D8 /* UIKit.framework in Frameworks */,
+				2965EE6D0FF3E2CE0089E2D8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,11 +142,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				295E79ED0FF396F800497774 /* Foundation.framework */,
-				295E79F30FF3971300497774 /* UIKit.framework */,
-				295E79FD0FF3973800497774 /* CoreGraphics.framework */,
-				295E7A030FF3974C00497774 /* AudioToolbox.framework */,
-				295E7A090FF3976100497774 /* CoreLocation.framework */,
+				2965ED650FF3E0950089E2D8 /* AudioToolbox.framework */,
+				2965ED670FF3E0950089E2D8 /* CoreGraphics.framework */,
+				2965ED690FF3E0950089E2D8 /* CoreLocation.framework */,
+				2965ED6D0FF3E0950089E2D8 /* UIKit.framework */,
+				2965EE6C0FF3E2CE0089E2D8 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +232,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks\"",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -250,6 +251,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks\"",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GPS_Logger_Prefix.pch;
@@ -269,7 +271,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3C6039D-4221-490D-A88D-3B47798A01B7";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};
@@ -283,7 +285,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3C6039D-4221-490D-A88D-3B47798A01B7";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
 		};

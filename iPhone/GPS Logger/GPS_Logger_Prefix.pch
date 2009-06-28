@@ -14,4 +14,6 @@
 #define UPDATE_INTERVAL 0.5
 #define MINIMUM_PRECISION [[NSUserDefaults standardUserDefaults] floatForKey:@"gps_minprec"]
 #define UNITSET ((int)[[NSUserDefaults standardUserDefaults] floatForKey:@"units"])
+#define ENABLE_PROXIMITY ((int)[[NSUserDefaults standardUserDefaults] floatForKey:@"enable_proximity"])
+#define DISABLE_IDLE ((int)[[NSUserDefaults standardUserDefaults] floatForKey:@"disable_idle"])
 
