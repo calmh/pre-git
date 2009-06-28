@@ -71,9 +71,38 @@
 		vrLen = 755;
 		vrLoc = 0;
 	};
+	29874F810FF7744C0080E20D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 13";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 0;
+	};
+	29874F950FF7763D0080E20D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 13";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 0;
+	};
+	29874F960FF7763D0080E20D /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29874F8E0FF7761E0080E20D /* iTunesArtwork */;
+	};
+	29874F970FF7763D0080E20D /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29874F8E0FF7761E0080E20D /* iTunesArtwork */;
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
+		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Glint */,
@@ -109,16 +138,20 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 267875202;
-			PBXWorkspaceStateSaveDate = 267875202;
+			PBXPerProjectTemplateStateSaveDate = 267875349;
+			PBXWorkspaceStateSaveDate = 267875349;
 		};
 		perUserProjectItems = {
-			293E7F500FF7738E004C7524 /* PBXTextBookmark */ = 293E7F500FF7738E004C7524 /* PBXTextBookmark */;
-			297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */ = 297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */;
-			297DDC1F0FF7732E00A6C74D /* PlistBookmark */ = 297DDC1F0FF7732E00A6C74D /* PlistBookmark */;
-			297DDC220FF7732E00A6C74D /* PBXTextBookmark */ = 297DDC220FF7732E00A6C74D /* PBXTextBookmark */;
-			29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */;
-			29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */;
+			293E7F500FF7738E004C7524 = 293E7F500FF7738E004C7524 /* PBXTextBookmark */;
+			297DDC0C0FF7727B00A6C74D = 297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */;
+			297DDC1F0FF7732E00A6C74D = 297DDC1F0FF7732E00A6C74D /* PlistBookmark */;
+			297DDC220FF7732E00A6C74D = 297DDC220FF7732E00A6C74D /* PBXTextBookmark */;
+			29874F810FF7744C0080E20D /* PBXTextBookmark */ = 29874F810FF7744C0080E20D /* PBXTextBookmark */;
+			29874F950FF7763D0080E20D /* PBXTextBookmark */ = 29874F950FF7763D0080E20D /* PBXTextBookmark */;
+			29874F960FF7763D0080E20D /* PBXBookmark */ = 29874F960FF7763D0080E20D /* PBXBookmark */;
+			29874F970FF7763D0080E20D /* PBXBookmark */ = 29874F970FF7763D0080E20D /* PBXBookmark */;
+			29FE32650FF43A2E00E9FE05 = 29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */;
+			29FE32660FF43A2E00E9FE05 = 29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 29FE31DA0FF4354400E9FE05 /* Source Control */;
 		userBuildSettings = {
