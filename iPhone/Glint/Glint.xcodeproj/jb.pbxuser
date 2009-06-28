@@ -27,6 +27,16 @@
 			sepNavVisRange = "{2830, 2541}";
 		};
 	};
+	293E7F500FF7738E004C7524 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 13";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 0;
+	};
 	297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* GlintViewController.m */;
@@ -49,17 +59,7 @@
 		);
 		name = "/Volumes/Macintosh HD/Users/jb/projekt/iPhone/Glint/Settings.bundle/Root.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	297DDC200FF7732E00A6C74D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
-		name = "Glint_Prefix.pch: 17";
-		rLen = 0;
-		rLoc = 665;
-		rType = 0;
-		vrLen = 756;
-		vrLoc = 0;
+		rLoc = 9223372036854775808;
 	};
 	297DDC220FF7732E00A6C74D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -109,13 +109,13 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 267874929;
-			PBXWorkspaceStateSaveDate = 267874929;
+			PBXPerProjectTemplateStateSaveDate = 267875202;
+			PBXWorkspaceStateSaveDate = 267875202;
 		};
 		perUserProjectItems = {
+			293E7F500FF7738E004C7524 /* PBXTextBookmark */ = 293E7F500FF7738E004C7524 /* PBXTextBookmark */;
 			297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */ = 297DDC0C0FF7727B00A6C74D /* PBXTextBookmark */;
 			297DDC1F0FF7732E00A6C74D /* PlistBookmark */ = 297DDC1F0FF7732E00A6C74D /* PlistBookmark */;
-			297DDC200FF7732E00A6C74D /* PBXTextBookmark */ = 297DDC200FF7732E00A6C74D /* PBXTextBookmark */;
 			297DDC220FF7732E00A6C74D /* PBXTextBookmark */ = 297DDC220FF7732E00A6C74D /* PBXTextBookmark */;
 			29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32650FF43A2E00E9FE05 /* PBXTextBookmark */;
 			29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */ = 29FE32660FF43A2E00E9FE05 /* PBXTextBookmark */;

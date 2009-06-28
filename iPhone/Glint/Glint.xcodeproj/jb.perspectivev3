@@ -255,10 +255,12 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>185</real>
+								<real>22</real>
+								<real>163</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
+								<string>SCMStatusColumn</string>
 								<string>MainColumn</string>
 							</array>
 						</dict>
@@ -295,8 +297,10 @@
 						<string>{{0, 0}, {202, 638}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
+							<string>SCMStatusColumn</string>
+							<real>22</real>
 							<string>MainColumn</string>
-							<real>185</real>
+							<real>163</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>311 107 1013 679 0 0 1440 878 </string>
@@ -329,14 +333,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>297DDC220FF7732E00A6C74D</string>
+										<string>293E7F500FF7738E004C7524</string>
 										<key>history</key>
 										<array>
 											<string>29FE32650FF43A2E00E9FE05</string>
 											<string>29FE32660FF43A2E00E9FE05</string>
 											<string>297DDC0C0FF7727B00A6C74D</string>
 											<string>297DDC1F0FF7732E00A6C74D</string>
-											<string>297DDC200FF7732E00A6C74D</string>
+											<string>297DDC220FF7732E00A6C74D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -408,11 +412,11 @@
 											<key>PBXCVSModuleTreeModuleColumnWidthsKey</key>
 											<array>
 												<real>200</real>
-												<real>56.66162109375</real>
+												<real>56</real>
 												<real>63</real>
 												<real>60</real>
 												<real>63</real>
-												<real>139.556640625</real>
+												<real>139</real>
 											</array>
 											<key>PBXCVSModuleTreeModuleColumnsKey</key>
 											<array>
@@ -480,11 +484,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>297DDC0E0FF7727B00A6C74D</string>
+				<string>293E7F470FF7738E004C7524</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>297DDC0F0FF7727B00A6C74D</string>
+				<string>293E7F480FF7738E004C7524</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>297DDC100FF7727B00A6C74D</string>
+				<string>293E7F490FF7738E004C7524</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -633,14 +637,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>297DDC110FF7727B00A6C74D</string>
+				<string>293E7F4A0FF7738E004C7524</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>297DDC120FF7727B00A6C74D</string>
-				<string>297DDC130FF7727B00A6C74D</string>
-				<string>297DDC140FF7727B00A6C74D</string>
-				<string>297DDC150FF7727B00A6C74D</string>
-				<string>297DDC160FF7727B00A6C74D</string>
+				<string>293E7F4B0FF7738E004C7524</string>
+				<string>293E7F4C0FF7738E004C7524</string>
+				<string>293E7F4D0FF7738E004C7524</string>
+				<string>293E7F4E0FF7738E004C7524</string>
+				<string>293E7F4F0FF7738E004C7524</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
