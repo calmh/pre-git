@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ADFolderCollection.h"
 
 @interface Almond_AppDelegate : NSObject 
 {
@@ -15,9 +16,11 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+        ADFolderCollection *folderCollection;
 }
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;
+@property (nonatomic, retain) IBOutlet ADFolderCollection *folderCollection;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
@@ -25,5 +28,6 @@
 
 - (IBAction)saveAction:sender;
 - (IBAction)buttonClicked:sender;
+- (IBAction)browseForPath:sender;
 
 @end

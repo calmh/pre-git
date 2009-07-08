@@ -14,7 +14,10 @@
 
 @implementation Almond_AppDelegate
 
-@synthesize window;
+@synthesize window, folderCollection;
+
+- (void)applicationDidFinishLaunching:(NSNotification*)notification {
+}
 
 /**
  Returns the support directory for the application, used to store the Core Data
@@ -24,7 +27,6 @@
  */
 
 - (NSString *)applicationSupportDirectory {
-        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
         NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
         return [basePath stringByAppendingPathComponent:@"Almond"];
@@ -342,6 +344,19 @@
                                 [mi addParameterValuesObject:pv];
                         }
                 }
+}
+
+- (IBAction)browseForPath:(id)sender {
+        NSOpenPanel *dialog = [[NSOpenPanel alloc] init];
+        [dialog setCanChooseFiles:NO];
+        [dialog setCanChooseDirectories:YES];
+        [dialog setResolvesAliases:YES];
+        [dialog setCanCreateDirectories:YES];
+        [dialog setAllowsMultipleSelection:NO];
+        [dialog runModal];
+        
+        NSManagedObject *folder = [NSEntityDescription insertNewObjectForEntityForName:@"Folder" inManagedObjectContext:[self managedObjectContext]];
+        [folder setPath:[[dialog filenames] objectAtIndex:0]];
 }
 
 @end

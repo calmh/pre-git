@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		296C2D720FF169DA0084C67C /* ADMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 296C2D710FF169DA0084C67C /* ADMethodInvocation.m */; };
+		29888CE7100476E0007FFCEA /* ADFolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6100476E0007FFCEA /* ADFolderView.m */; };
+		29888CEF10047840007FFCEA /* ADFolderCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CEE10047840007FFCEA /* ADFolderCollection.m */; };
+		29888D571004A804007FFCEA /* ADMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888D561004A804007FFCEA /* ADMainView.m */; };
 		298AC2FA0FF015B900C7EA95 /* Default.almond in CopyFiles */ = {isa = PBXBuildFile; fileRef = 298AC2F80FF0157C00C7EA95 /* Default.almond */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */; };
@@ -35,6 +38,12 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		296C2D700FF169DA0084C67C /* ADMethodInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMethodInvocation.h; sourceTree = "<group>"; };
 		296C2D710FF169DA0084C67C /* ADMethodInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMethodInvocation.m; sourceTree = "<group>"; };
+		29888CE5100476E0007FFCEA /* ADFolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFolderView.h; sourceTree = "<group>"; };
+		29888CE6100476E0007FFCEA /* ADFolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFolderView.m; sourceTree = "<group>"; };
+		29888CED10047840007FFCEA /* ADFolderCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFolderCollection.h; sourceTree = "<group>"; };
+		29888CEE10047840007FFCEA /* ADFolderCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFolderCollection.m; sourceTree = "<group>"; };
+		29888D551004A804007FFCEA /* ADMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMainView.h; sourceTree = "<group>"; };
+		29888D561004A804007FFCEA /* ADMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMainView.m; sourceTree = "<group>"; };
 		298AC2F80FF0157C00C7EA95 /* Default.almond */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Default.almond; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -68,6 +77,12 @@
 				77C8280C06725ACE000B614F /* Almond_AppDelegate.m */,
 				296C2D700FF169DA0084C67C /* ADMethodInvocation.h */,
 				296C2D710FF169DA0084C67C /* ADMethodInvocation.m */,
+				29888CE5100476E0007FFCEA /* ADFolderView.h */,
+				29888CE6100476E0007FFCEA /* ADFolderView.m */,
+				29888CED10047840007FFCEA /* ADFolderCollection.h */,
+				29888CEE10047840007FFCEA /* ADFolderCollection.m */,
+				29888D551004A804007FFCEA /* ADMainView.h */,
+				29888D561004A804007FFCEA /* ADMainView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -216,6 +231,9 @@
 				77C8280E06725ACE000B614F /* Almond_AppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */,
 				296C2D720FF169DA0084C67C /* ADMethodInvocation.m in Sources */,
+				29888CE7100476E0007FFCEA /* ADFolderView.m in Sources */,
+				29888CEF10047840007FFCEA /* ADFolderCollection.m in Sources */,
+				29888D571004A804007FFCEA /* ADMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +273,10 @@
 				GCC_PREFIX_HEADER = Almond_Prefix.pch;
 				INFOPLIST_FILE = "Almond-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lua-5.1.4/lib\"",
+				);
 				PRODUCT_NAME = Almond;
 				WRAPPER_EXTENSION = app;
 			};
@@ -270,6 +292,10 @@
 				GCC_PREFIX_HEADER = Almond_Prefix.pch;
 				INFOPLIST_FILE = "Almond-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lua-5.1.4/lib\"",
+				);
 				PRODUCT_NAME = Almond;
 				WRAPPER_EXTENSION = app;
 			};
@@ -278,7 +304,7 @@
 		26FC0A890875C7B200E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -287,22 +313,23 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-llua";
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
 		26FC0A8A0875C7B200E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "~/lua-5.1.4/include";
 				LIBRARY_SEARCH_PATHS = "~/lua-5.1.4/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-llua";
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
