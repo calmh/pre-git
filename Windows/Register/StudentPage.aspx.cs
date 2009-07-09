@@ -55,6 +55,7 @@ public partial class StudentPage : ProtectedPage
                     tbCity.Text = s.City;
                     tbEmail.Text = s.Email;
                     ddTitle.SelectedValue = ((int)s.Title).ToString();
+                    tbMailingLists.Text = s.MailingLists;
                     tbComments.Text = s.Comments;
                     ddGroup.Items.Clear();
                     ddGroup.Items.Add("(ingen grupp)");
@@ -85,6 +86,7 @@ public partial class StudentPage : ProtectedPage
                 tbZipCode.ReadOnly = true;
                 bSave.Visible = false;
                 cbPersonalPassword.Visible = false;
+                tbMailingLists.ReadOnly = true;
             }
         }
     }
@@ -124,6 +126,7 @@ public partial class StudentPage : ProtectedPage
             s.City = tbCity.Text;
             s.Title = (Student.TitleEnum)int.Parse(ddTitle.SelectedValue);
             s.Email = tbEmail.Text;
+            s.MailingLists = tbMailingLists.Text;
             s.Comments = tbComments.Text;
             if (tbGroup.Text != "")
                 s.Group = tbGroup.Text;

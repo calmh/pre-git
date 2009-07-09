@@ -27,7 +27,7 @@
                         Förnamn
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbFName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbFName" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -35,7 +35,7 @@
                         Efternamn
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbSName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbSName" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -43,7 +43,7 @@
                         Personnummer
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbPersonalID" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbPersonalID" runat="server" Width="200px"></asp:TextBox>
                         (YYYYMMDD, YYYYMMDD-XXXX eller blankt)
                     </td>
                 </tr>
@@ -52,7 +52,7 @@
                         Epostadress
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbEmail" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -60,7 +60,7 @@
                         Telefonnummer (hem)
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbHomePhone" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbHomePhone" runat="server" Width="200px"></asp:TextBox>
                         (046-123456)
                     </td>
                 </tr>
@@ -69,7 +69,7 @@
                         Telefonnummer (mobil)
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbMobilePhone" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbMobilePhone" runat="server" Width="200px"></asp:TextBox>
                         (0708-123456)
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
                         Gatuadress
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbStreetAddress" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbStreetAddress" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -86,7 +86,7 @@
                         Postnummer
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbZipCode" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbZipCode" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -94,7 +94,7 @@
                         Postort
                     </td>
                     <td class="value">
-                        <asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbCity" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -130,6 +130,15 @@
                     <td class="value">
                         <asp:Label ID="lPersonalPassword" runat="server" Text="Nej"></asp:Label>
                         <asp:CheckBox ID="cbPersonalPassword" runat="server" Visible="false" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prompt">
+                        E-postlistor
+                    </td>
+                    <td class="value">
+                        <asp:TextBox ID="tbMailingLists" runat="server" Width="200px"></asp:TextBox>
+                        Kommaseparerad lista.
                     </td>
                 </tr>
                 <tr>

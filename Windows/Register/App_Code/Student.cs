@@ -255,6 +255,14 @@ public class Student
         set { _group = value; }
     }
 
+    private string _mailingLists;
+    [XmlAttribute]
+    public string MailingLists
+    {
+        get { return _mailingLists; }
+        set { _mailingLists = value; }
+    }
+
     private List<Payment> _payments;
     public List<Payment> Payments
     {
