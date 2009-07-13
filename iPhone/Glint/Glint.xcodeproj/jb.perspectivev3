@@ -281,7 +281,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -322,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>JBSoundEffect.h</string>
+								<string>GlintViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +330,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>JBSoundEffect.h</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>2999E1181008AF55006A2F81</string>
+										<string>GlintViewController.m</string>
 										<key>history</key>
 										<array>
 											<string>2968BAB40FFA39C200674501</string>
@@ -346,8 +342,8 @@
 											<string>2999E0D11008ABF0006A2F81</string>
 											<string>2999E0F11008AEB4006A2F81</string>
 											<string>2999E0F21008AEB4006A2F81</string>
-											<string>2999E0F31008AEB4006A2F81</string>
-											<string>2999E1171008AF55006A2F81</string>
+											<string>29E66FAC100A013100E5BA7B</string>
+											<string>296BFF4A100A63C90083D184</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -362,6 +358,7 @@
 											<string>2957D25F1007FA09002ABA53</string>
 											<string>2957D2651007FA09002ABA53</string>
 											<string>2999E0F41008AEB4006A2F81</string>
+											<string>29E66FAD100A013100E5BA7B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -505,11 +502,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2999E1191008AF55006A2F81</string>
+				<string>2987914E100BBA880007C85C</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>2999E11A1008AF55006A2F81</string>
+				<string>2987914F100BBA880007C85C</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>2999E11B1008AF55006A2F81</string>
+				<string>29879150100BBA880007C85C</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -658,14 +655,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2999E11C1008AF55006A2F81</string>
+				<string>29879151100BBA880007C85C</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>2999E11D1008AF55006A2F81</string>
-				<string>2999E11E1008AF55006A2F81</string>
-				<string>2999E11F1008AF55006A2F81</string>
-				<string>2999E1201008AF55006A2F81</string>
-				<string>2999E10C1008AF48006A2F81</string>
+				<string>29879152100BBA880007C85C</string>
+				<string>29879153100BBA880007C85C</string>
+				<string>29879154100BBA880007C85C</string>
+				<string>29879155100BBA880007C85C</string>
+				<string>29879156100BBA880007C85C</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -699,6 +696,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>29879157100BBA880007C85C</string>
+		<string>29879159100BBA880007C85C</string>
 		<string>/Users/jb/projekt/iPhone/Glint/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1075,7 +1075,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>29153ECA1004DC520052387C</string>
+				<string>2987915A100BBA8A0007C85C</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
