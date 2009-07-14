@@ -1,0 +1,12 @@
+﻿2009-03-12
+* Möjlighet att gruppera elever.
+* Ett flertal förbättringar kring statistiken.
+* Fixade problem med sorteringsordning.
+* Möjlighet att redigera även datum på inbetalningar.
+* Möjlighet att få mata in datum som text i stället för i kalender.
+
+2009-02-21
+* Lade till möjlighet att radera elever ur registret (med all tillhörande data) och en rättighet som kontrollerar motsvarande.
+
+2009-02-12
+= Release v1.1
