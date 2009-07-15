@@ -7,13 +7,14 @@
 //
 
 #import "ADFolderCollection.h"
+#import "ADIconTransformer.h"
 
 @implementation ADFolderCollection
 
 - (void)awakeFromNib {
         NSSize size;
         size.width = 0;
-        size.height = 75;
+        size.height = 100;
         [self setMaxItemSize:size];
 }
 

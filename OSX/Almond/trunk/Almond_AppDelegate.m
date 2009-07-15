@@ -11,10 +11,18 @@
 #import "lualib.h"
 #import "lauxlib.h"
 #import "ADMethodInvocation.h"
+#import "ADIconTransformer.h"
 
 @implementation Almond_AppDelegate
 
 @synthesize window, folderCollection;
+
++ (void)initialize {
+                // Register our transformers
+                [NSValueTransformer setValueTransformer:[[[ADIconTransformer alloc] init] autorelease] forName:@"IconTransformer"];
+        [NSValueTransformer setValueTransformer:[[[ADNumChildrenTransformer alloc] init] autorelease] forName:@"NumChildrenTransformer"];
+        [NSValueTransformer setValueTransformer:[[[ADSizeTransformer alloc] init] autorelease] forName:@"SizeTransformer"];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
 }

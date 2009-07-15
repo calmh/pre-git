@@ -7,10 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "ADIconTransformer.h"
 
 @interface ADFolderView : NSView {
-
+        NSImageView *iconView;
+        BOOL selected;
 }
+
+@property (retain, nonatomic) IBOutlet NSImageView *iconView;
+@property (assign, nonatomic) BOOL selected;
 
 @end
