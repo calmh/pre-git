@@ -11,17 +11,17 @@
 #import "lualib.h"
 #import "lauxlib.h"
 #import "ADMethodInvocation.h"
-#import "ADIconTransformer.h"
+#import "IconImageTransformer.h"
 
 @implementation Almond_AppDelegate
 
 @synthesize window, folderCollection;
 
 + (void)initialize {
-                // Register our transformers
-                [NSValueTransformer setValueTransformer:[[[ADIconTransformer alloc] init] autorelease] forName:@"IconTransformer"];
-        [NSValueTransformer setValueTransformer:[[[ADNumChildrenTransformer alloc] init] autorelease] forName:@"NumChildrenTransformer"];
-        [NSValueTransformer setValueTransformer:[[[ADSizeTransformer alloc] init] autorelease] forName:@"SizeTransformer"];
+        // Register our transformers
+        [NSValueTransformer setValueTransformer:[[[IconImageTransformer alloc] init] autorelease] forName:@"IconImageTransformer"];
+        [NSValueTransformer setValueTransformer:[[[NumChildrenTransformer alloc] init] autorelease] forName:@"NumChildrenTransformer"];
+        [NSValueTransformer setValueTransformer:[[[DirectorySizeTransformer alloc] init] autorelease] forName:@"DirectorySizeTransformer"];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
@@ -297,8 +297,8 @@
         [request setPredicate:predicate];
         NSError *error = nil;
         NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
-                for (NSManagedObject *obj in array)
-                        [[self managedObjectContext] deleteObject:obj];
+        for (NSManagedObject *obj in array)
+                [[self managedObjectContext] deleteObject:obj];
         
         // Create a new plugin instance
         NSManagedObject* plugin = [NSEntityDescription insertNewObjectForEntityForName:@"Plugin" inManagedObjectContext:[self managedObjectContext]];
@@ -333,25 +333,25 @@
 
 - (IBAction)buttonClicked:(id)sender {
         [self loadPlugin:[[NSBundle mainBundle] pathForResource:@"Default" ofType:@"almond"]];
-
+        
         NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
         [request setEntity:[NSEntityDescription entityForName:@"Method" inManagedObjectContext:[self managedObjectContext]]];
         //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"path LIKE %@", path];
         //[request setPredicate:predicate];
         NSError *error = nil;
         NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
-                for (NSManagedObject *method in array) {
-                        ADMethodInvocation* mi = [NSEntityDescription insertNewObjectForEntityForName:@"MethodInvocation" inManagedObjectContext:[self managedObjectContext]];
-                        [mi setMethod:method];
-                        for (NSManagedObject *parm in [method parameters])
-                        {
-                                NSManagedObject* pv = [NSEntityDescription insertNewObjectForEntityForName:@"ParameterValue" inManagedObjectContext:[self managedObjectContext]];
-                                [pv setOrder:[parm order]];
-                                [pv setValue:[parm default]];
-                                [pv setTypename:[parm typename]];
-                                [mi addParameterValuesObject:pv];
-                        }
+        for (NSManagedObject *method in array) {
+                ADMethodInvocation* mi = [NSEntityDescription insertNewObjectForEntityForName:@"MethodInvocation" inManagedObjectContext:[self managedObjectContext]];
+                [mi setMethod:method];
+                for (NSManagedObject *parm in [method parameters])
+                {
+                        NSManagedObject* pv = [NSEntityDescription insertNewObjectForEntityForName:@"ParameterValue" inManagedObjectContext:[self managedObjectContext]];
+                        [pv setOrder:[parm order]];
+                        [pv setValue:[parm default]];
+                        [pv setTypename:[parm typename]];
+                        [mi addParameterValuesObject:pv];
                 }
+        }
 }
 
 - (IBAction)browseForPath:(id)sender {

@@ -6,10 +6,10 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "ADIconTransformer.h"
+#import "IconImageTransformer.h"
 
 
-@implementation ADIconTransformer
+@implementation IconImageTransformer
 
 + (Class)transformedValueClass
 {
@@ -31,7 +31,7 @@
 
 @end
 
-@implementation ADNumChildrenTransformer
+@implementation NumChildrenTransformer
 
 + (Class)transformedValueClass
 {
@@ -51,7 +51,7 @@
 }
 @end
 
-@implementation ADSizeTransformer
+@implementation DirectorySizeTransformer
 
 + (Class)transformedValueClass
 {

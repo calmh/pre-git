@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		290E30EB100E5FD700316485 /* ADIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 290E30EA100E5FD700316485 /* ADIconTransformer.m */; };
 		292A8C71100E79E6009B1E94 /* ADFolderViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A8C70100E79E6009B1E94 /* ADFolderViewItem.m */; };
 		296C2D720FF169DA0084C67C /* ADMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 296C2D710FF169DA0084C67C /* ADMethodInvocation.m */; };
 		29888CE7100476E0007FFCEA /* ADFolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6100476E0007FFCEA /* ADFolderView.m */; };
@@ -38,8 +37,6 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		290E30E9100E5FD700316485 /* ADIconTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADIconTransformer.h; sourceTree = "<group>"; };
-		290E30EA100E5FD700316485 /* ADIconTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADIconTransformer.m; sourceTree = "<group>"; };
 		292A8C6F100E79E6009B1E94 /* ADFolderViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFolderViewItem.h; sourceTree = "<group>"; };
 		292A8C70100E79E6009B1E94 /* ADFolderViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFolderViewItem.m; sourceTree = "<group>"; };
 		296C2D700FF169DA0084C67C /* ADMethodInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMethodInvocation.h; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 				29888CEE10047840007FFCEA /* ADFolderCollection.m */,
 				29888D551004A804007FFCEA /* ADMainView.h */,
 				29888D561004A804007FFCEA /* ADMainView.m */,
-				290E30E9100E5FD700316485 /* ADIconTransformer.h */,
-				290E30EA100E5FD700316485 /* ADIconTransformer.m */,
 				292A8C6F100E79E6009B1E94 /* ADFolderViewItem.h */,
 				292A8C70100E79E6009B1E94 /* ADFolderViewItem.m */,
 			);
@@ -244,7 +239,6 @@
 				29888CE7100476E0007FFCEA /* ADFolderView.m in Sources */,
 				29888CEF10047840007FFCEA /* ADFolderCollection.m in Sources */,
 				29888D571004A804007FFCEA /* ADMainView.m in Sources */,
-				290E30EB100E5FD700316485 /* ADIconTransformer.m in Sources */,
 				292A8C71100E79E6009B1E94 /* ADFolderViewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,19 +9,19 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ADIconTransformer : NSValueTransformer {
+@interface IconImageTransformer : NSValueTransformer {
 
 }
 
 @end
 
-@interface ADNumChildrenTransformer : NSValueTransformer {
+@interface NumChildrenTransformer : NSValueTransformer {
         
 }
 
 @end
 
-@interface ADSizeTransformer : NSValueTransformer {
+@interface DirectorySizeTransformer : NSValueTransformer {
         
 }
 

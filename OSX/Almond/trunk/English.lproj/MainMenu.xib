@@ -8,9 +8,9 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1073"/>
 			<integer value="29"/>
 			<integer value="1077"/>
+			<integer value="1073"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2282,26 +2282,6 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: representedObject.path</string>
-						<reference key="source" ref="204591533"/>
-						<reference key="destination" ref="29217856"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="204591533"/>
-							<reference key="NSDestination" ref="29217856"/>
-							<string key="NSLabel">value: representedObject.path</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">representedObject.path</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSValueTransformerName</string>
-								<string key="NS.object.0">IconTransformer</string>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1133</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: representedObject.path</string>
 						<reference key="source" ref="457377446"/>
 						<reference key="destination" ref="29217856"/>
 						<object class="NSNibBindingConnector" key="connector">
@@ -2314,26 +2294,6 @@
 						</object>
 					</object>
 					<int key="connectionID">1163</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: representedObject.path</string>
-						<reference key="source" ref="492409468"/>
-						<reference key="destination" ref="29217856"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="492409468"/>
-							<reference key="NSDestination" ref="29217856"/>
-							<string key="NSLabel">value: representedObject.path</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">representedObject.path</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSValueTransformerName</string>
-								<string key="NS.object.0">SizeTransformer</string>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1166</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -2354,6 +2314,46 @@
 						</object>
 					</object>
 					<int key="connectionID">1171</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: representedObject.path</string>
+						<reference key="source" ref="204591533"/>
+						<reference key="destination" ref="29217856"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="204591533"/>
+							<reference key="NSDestination" ref="29217856"/>
+							<string key="NSLabel">value: representedObject.path</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">representedObject.path</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValueTransformerName</string>
+								<string key="NS.object.0">IconImageTransformer</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1180</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: representedObject.path</string>
+						<reference key="source" ref="492409468"/>
+						<reference key="destination" ref="29217856"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="492409468"/>
+							<reference key="NSDestination" ref="29217856"/>
+							<string key="NSLabel">value: representedObject.path</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">representedObject.path</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValueTransformerName</string>
+								<string key="NS.object.0">DirectorySizeTransformer</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1181</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3947,7 +3947,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">1179</int>
+			<int key="maxID">1181</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
