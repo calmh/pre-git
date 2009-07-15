@@ -6,12 +6,12 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "ADMethodInvocation.h"
+#import "LuaMethodInvocation.h"
 #import "lua.h"
 #import "lualib.h"
 #import "lauxlib.h"
 
-@implementation ADMethodInvocation
+@implementation LuaMethodInvocation
 
 - (BOOL) executeForFilename:(NSString*)filename {
         int result = 0;
@@ -38,6 +38,5 @@
         lua_close(L);
         return result != 0;
 }
-
 
 @end

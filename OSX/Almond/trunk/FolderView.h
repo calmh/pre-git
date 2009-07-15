@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ADIconTransformer.h"
 
-@interface ADFolderView : NSView {
+@interface FolderView : NSView {
         NSImageView *iconView;
         BOOL selected;
 }

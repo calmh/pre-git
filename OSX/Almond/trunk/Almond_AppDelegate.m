@@ -10,8 +10,8 @@
 #import "lua.h"
 #import "lualib.h"
 #import "lauxlib.h"
-#import "ADMethodInvocation.h"
-#import "IconImageTransformer.h"
+#import "LuaMethodInvocation.h"
+#import "ValueTransformers.h"
 
 @implementation Almond_AppDelegate
 
@@ -341,7 +341,7 @@
         NSError *error = nil;
         NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
         for (NSManagedObject *method in array) {
-                ADMethodInvocation* mi = [NSEntityDescription insertNewObjectForEntityForName:@"MethodInvocation" inManagedObjectContext:[self managedObjectContext]];
+                LuaMethodInvocation* mi = [NSEntityDescription insertNewObjectForEntityForName:@"MethodInvocation" inManagedObjectContext:[self managedObjectContext]];
                 [mi setMethod:method];
                 for (NSManagedObject *parm in [method parameters])
                 {

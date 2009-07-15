@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ADMethodInvocation : NSManagedObject {
+@interface LuaMethodInvocation : NSManagedObject {
 }
 
 - (BOOL) executeForFilename:(NSString*)filename;

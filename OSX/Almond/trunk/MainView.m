@@ -6,10 +6,10 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "ADMainView.h"
+#import "MainView.h"
 
 
-@implementation ADMainView
+@implementation MainView
 
 - (void)drawRect:(NSRect)rect {
         // Draw background

@@ -6,10 +6,9 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "ADFolderCollection.h"
-#import "ADIconTransformer.h"
+#import "FolderCollectionView.h"
 
-@implementation ADFolderCollection
+@implementation FolderCollectionView
 
 - (void)awakeFromNib {
         NSSize size;

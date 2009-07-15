@@ -6,13 +6,13 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "ADFolderViewItem.h"
-#import "ADFolderView.h"
+#import "FolderViewItem.h"
+#import "FolderView.h"
 
-@implementation ADFolderViewItem
+@implementation FolderViewItem
 -(void)setSelected:(BOOL)flag {
         [super setSelected:flag];
-        [(ADFolderView*) [self view] setSelected:flag];
+        [(FolderView*) [self view] setSelected:flag];
         [[self view] setNeedsDisplay:YES];
 }
 

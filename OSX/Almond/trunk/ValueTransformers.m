@@ -6,7 +6,7 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "IconImageTransformer.h"
+#import "ValueTransformers.h"
 
 
 @implementation IconImageTransformer
