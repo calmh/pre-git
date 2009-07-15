@@ -19,35 +19,47 @@
 
 - (void)drawRect:(NSRect)rect {
         [[NSColor colorWithDeviceWhite:0.95 alpha:1.0] setFill];
-        NSGradient *background = [[NSGradient alloc] initWithColorsAndLocations:
-                                  [NSColor colorWithDeviceWhite:1.0 alpha:1.0], 0.0,
-                                  [NSColor colorWithDeviceWhite:0.97 alpha:1.0], 0.2,
-                                  [NSColor colorWithDeviceWhite:0.95 alpha:1.0], 0.7,
-                                  [NSColor colorWithDeviceWhite:0.92 alpha:1.0], 1.0,
-                                  nil];
+        NSGradient *background = nil;
 
         
+        double margin = 0;
         NSBezierPath *border = [NSBezierPath new];
-        double margin = 5.5;
         NSShadow *shadow = [NSShadow new];
+        
         if (selected) {
-                [[NSColor colorWithDeviceRed:0.0 green:0.5 blue:1.0 alpha:1.0] setStroke];
-                [border setLineWidth:3.0];
                 margin = 6.5;
+                [border setLineWidth:3.0];
                 [shadow setShadowBlurRadius:4.0];
                 [shadow setShadowOffset:NSMakeSize(3.0, -3.0)];
+
+                [[NSColor colorWithDeviceRed:0.0 green:0.5 blue:1.0 alpha:1.0] setStroke];
+                background  = [[NSGradient alloc] initWithColorsAndLocations:
+                               [NSColor colorWithDeviceWhite:1.0 alpha:1.0], 0.0,
+                               [NSColor colorWithDeviceWhite:0.97 alpha:1.0], 0.1,
+                               [NSColor colorWithDeviceWhite:0.95 alpha:1.0], 0.8,
+                               [NSColor colorWithDeviceWhite:0.92 alpha:1.0], 1.0,
+                               nil];
         } else {
-                [[NSColor colorWithDeviceWhite:0.3 alpha:1.0] setStroke];
+                margin = 5.5;
                 [border setLineWidth:1.0];
                 [shadow setShadowBlurRadius:3.0];
                 [shadow setShadowOffset:NSMakeSize(2.0, -2.0)];
+
+                [[NSColor colorWithDeviceWhite:0.3 alpha:1.0] setStroke];
+                background  = [[NSGradient alloc] initWithColorsAndLocations:
+                               [NSColor colorWithDeviceWhite:0.95 alpha:1.0], 0.0,
+                               [NSColor colorWithDeviceWhite:0.92 alpha:1.0], 0.1,
+                               [NSColor colorWithDeviceWhite:0.90 alpha:1.0], 0.8,
+                               [NSColor colorWithDeviceWhite:0.87 alpha:1.0], 1.0,
+                               nil];
         }
-        [shadow set];
+        
         NSPoint bl = self.bounds.origin; bl.x += margin; bl.y += margin;
         NSPoint br = bl; br.x += self.bounds.size.width - margin * 2;
         NSPoint tl = bl; tl.y += self.bounds.size.height - margin * 2;
         NSPoint tr = tl; tr.x += self.bounds.size.width - margin * 2;
         
+        [shadow set];
         [border setLineJoinStyle:NSRoundLineJoinStyle];
         [border moveToPoint:bl];
         [border lineToPoint:br];

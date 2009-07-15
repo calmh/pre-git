@@ -278,7 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
+									<integer>15</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -321,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>292EAF0D0FEEE05A0064E8C2</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FolderViewItem.m</string>
+								<string>FolderCollectionView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,15 +329,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>292EAF0E0FEEE05A0064E8C2</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FolderViewItem.m</string>
+										<string>FolderCollectionView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>294C889E100E826600002CFC</string>
+										<string>294C88CB100E86CF00002CFC</string>
 										<key>history</key>
 										<array>
 											<string>292EAF1F0FEEEACA0064E8C2</string>
-											<string>299087240FF14BDB0010B9E6</string>
 											<string>299087250FF14BDB0010B9E6</string>
 											<string>29888D05100478B3007FFCEA</string>
 											<string>29888D5C1004A82B007FFCEA</string>
@@ -349,12 +348,13 @@
 											<string>294C887F100E821900002CFC</string>
 											<string>294C8880100E821900002CFC</string>
 											<string>294C8881100E821900002CFC</string>
-											<string>294C8882100E821900002CFC</string>
-											<string>294C8883100E821900002CFC</string>
 											<string>294C8884100E821900002CFC</string>
-											<string>294C8895100E825200002CFC</string>
 											<string>294C889B100E826600002CFC</string>
-											<string>294C889C100E826600002CFC</string>
+											<string>294C88A7100E837900002CFC</string>
+											<string>294C88A8100E837900002CFC</string>
+											<string>294C88A9100E837900002CFC</string>
+											<string>294C88B9100E84C300002CFC</string>
+											<string>294C88BA100E84C300002CFC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -385,6 +385,10 @@
 											<string>294C8891100E823600002CFC</string>
 											<string>294C8897100E825200002CFC</string>
 											<string>294C889D100E826600002CFC</string>
+											<string>294C88AB100E837900002CFC</string>
+											<string>294C88AC100E837900002CFC</string>
+											<string>294C88AD100E837900002CFC</string>
+											<string>294C88BB100E84C300002CFC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
