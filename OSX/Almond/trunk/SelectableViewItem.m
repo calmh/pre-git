@@ -6,14 +6,14 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "FolderViewItem.h"
-#import "FolderDetailView.h"
+#import "SelectableViewItem.h"
+#import "SelectableDetailView.h"
 
-@implementation FolderViewItem
+@implementation SelectableViewItem
 
 -(void)setSelected:(BOOL)flag {
         [super setSelected:flag];
-        [(FolderDetailView*) [self view] setSelected:flag];
+        [(SelectableDetailView*) [self view] setSelected:flag];
         [[self view] setNeedsDisplay:YES];
 }
 

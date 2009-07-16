@@ -6,9 +6,9 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "FolderCollectionView.h"
+#import "SelectableCollectionView.h"
 
-@implementation FolderCollectionView
+@implementation SelectableCollectionView
 
 - (void)awakeFromNib {
         NSSize size;

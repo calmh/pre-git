@@ -8,12 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface FolderDetailView : NSView {
-        NSImageView *iconView;
+@interface SelectableDetailView : NSView {
         BOOL selected;
 }
 
-@property (retain, nonatomic) IBOutlet NSImageView *iconView;
 @property (assign, nonatomic) BOOL selected;
 
 @end

@@ -6,14 +6,13 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "FolderDetailView.h"
+#import "SelectableDetailView.h"
 
-@implementation FolderDetailView
+@implementation SelectableDetailView
 
-@synthesize iconView, selected;
+@synthesize selected;
 
 - (void)dealloc {
-        self.iconView = nil;
         [super dealloc];
 }
 

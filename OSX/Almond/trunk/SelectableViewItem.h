@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface FolderViewItem : NSCollectionViewItem {
+@interface SelectableViewItem : NSCollectionViewItem {
 
 }
 

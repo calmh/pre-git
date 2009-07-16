@@ -8,7 +8,6 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1250"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1690,7 +1689,7 @@
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSView" id="951866230">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1723,7 +1722,6 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{356, 153}</string>
-				<reference key="NSSuperview"/>
 			</object>
 			<object class="NSCollectionViewItem" id="1037982559">
 				<reference key="NSView" ref="951866230"/>
@@ -3675,6 +3673,7 @@
 						<int key="objectID">1078</int>
 						<reference key="object" ref="29217856"/>
 						<reference key="parent" ref="258037466"/>
+						<string key="objectName">Folder View Item</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1116</int>
@@ -4068,6 +4067,7 @@
 					<string>1250.CustomClassName</string>
 					<string>1250.IBEditorWindowLastContentRect</string>
 					<string>1250.IBPluginDependency</string>
+					<string>1251.CustomClassName</string>
 					<string>1251.IBPluginDependency</string>
 					<string>1266.IBPluginDependency</string>
 					<string>1267.IBPluginDependency</string>
@@ -4261,13 +4261,13 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FolderCollectionView</string>
+					<string>SelectableCollectionView</string>
 					<reference ref="373683272"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FolderDetailView</string>
+					<string>SelectableDetailView</string>
 					<string>{{309, 218}, {286, 100}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>FolderViewItem</string>
+					<string>SelectableViewItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4309,11 +4309,12 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>RuleCollectionView</string>
+					<string>SelectableCollectionView</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>RuleDetailView</string>
+					<string>SelectableDetailView</string>
 					<string>{{308, 117}, {356, 153}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>SelectableViewItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4575,54 +4576,6 @@
 					<string key="className">FolderCollectionView</string>
 					<string key="superclassName">NSCollectionView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">FolderCollectionView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FolderCollectionView</string>
-					<string key="superclassName">NSCollectionView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBUserSource</string>
-						<string key="minorKey"/>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FolderDetailView</string>
-					<string key="superclassName">NSView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">iconView</string>
-						<string key="NS.object.0">NSImageView</string>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">FolderDetailView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FolderDetailView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBUserSource</string>
-						<string key="minorKey"/>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FolderViewItem</string>
-					<string key="superclassName">NSCollectionViewItem</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">openClicked:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">FolderViewItem.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FolderViewItem</string>
-					<string key="superclassName">NSCollectionViewItem</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>
 					</object>
@@ -4644,23 +4597,59 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">RuleCollectionView</string>
+					<string key="className">SelectableCollectionView</string>
 					<string key="superclassName">NSCollectionView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">RuleCollectionView.h</string>
+						<string key="minorKey">SelectableCollectionView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">RuleDetailView</string>
+					<string key="className">SelectableCollectionView</string>
+					<string key="superclassName">NSCollectionView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SelectableDetailView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">SelectableDetailView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SelectableDetailView</string>
 					<string key="superclassName">NSView</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">iconView</string>
 						<string key="NS.object.0">NSImageView</string>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SelectableViewItem</string>
+					<string key="superclassName">NSCollectionViewItem</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">openClicked:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">RuleDetailView.h</string>
+						<string key="minorKey">SelectableViewItem.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SelectableViewItem</string>
+					<string key="superclassName">NSCollectionViewItem</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBUserSource</string>
+						<string key="minorKey"/>
 					</object>
 				</object>
 			</object>
