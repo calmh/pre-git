@@ -548,8 +548,8 @@
 	29888CE6100476E0007FFCEA /* FolderDetailView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1113, 1176}}";
-			sepNavSelRange = "{2773, 0}";
-			sepNavVisRange = "{73, 1215}";
+			sepNavSelRange = "{445, 0}";
+			sepNavVisRange = "{0, 1039}";
 		};
 	};
 	29888CED10047840007FFCEA /* FolderCollectionView.h */ = {
@@ -1747,6 +1747,20 @@
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 73;
+	};
+	29C7C014100F620D00D9AC0C /* RuleDetailView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1113, 509}}";
+			sepNavSelRange = "{169, 0}";
+			sepNavVisRange = "{0, 361}";
+		};
+	};
+	29C7C015100F620D00D9AC0C /* RuleDetailView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1113, 1092}}";
+			sepNavSelRange = "{177, 0}";
+			sepNavVisRange = "{0, 1035}";
+		};
 	};
 	32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */ = {
 		uiCtxt = {
