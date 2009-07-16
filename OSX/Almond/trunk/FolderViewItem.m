@@ -7,13 +7,18 @@
 //
 
 #import "FolderViewItem.h"
-#import "FolderView.h"
+#import "FolderDetailView.h"
 
 @implementation FolderViewItem
+
 -(void)setSelected:(BOOL)flag {
         [super setSelected:flag];
-        [(FolderView*) [self view] setSelected:flag];
+        [(FolderDetailView*) [self view] setSelected:flag];
         [[self view] setNeedsDisplay:YES];
+}
+
+-(IBAction)openClicked:(id)sender {
+        [[NSWorkspace sharedWorkspace] openFile:[[self representedObject] path]];
 }
 
 @end

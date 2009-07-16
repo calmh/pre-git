@@ -12,7 +12,9 @@
 @interface Almond_AppDelegate : NSObject 
 {
     NSWindow *window;
-    
+        NSView *folderView;
+        NSView *rulesView;
+        
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
@@ -21,13 +23,16 @@
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;
 @property (nonatomic, retain) IBOutlet FolderCollectionView *folderCollection;
+@property (nonatomic, retain) IBOutlet NSView *folderView;
+@property (nonatomic, retain) IBOutlet NSView *rulesView;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
-- (IBAction)saveAction:sender;
-- (IBAction)buttonClicked:sender;
-- (IBAction)browseForPath:sender;
+- (IBAction)saveAction:(id)sender;
+- (IBAction)buttonClicked:(id)sender;
+- (IBAction)browseForPath:(id)sender;
+- (IBAction)showRulesView:(id)sender;
 
 @end

@@ -13,9 +13,14 @@
 #import "LuaMethodInvocation.h"
 #import "ValueTransformers.h"
 
+@interface Almond_AppDelegate ()
+- (void)showFoldersView;
+@end
+
+
 @implementation Almond_AppDelegate
 
-@synthesize window, folderCollection;
+@synthesize window, folderCollection, folderView, rulesView;
 
 + (void)initialize {
         // Register our transformers
@@ -25,6 +30,25 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
+        [self showFoldersView];
+}
+
+- (void)showFoldersView {
+        NSArray *subViews = [NSArray arrayWithObject:folderView];
+        [(NSView*) [self.window contentView] setSubviews:subViews];
+        NSRect contentBounds = [[self.window contentView] bounds];
+        contentBounds.size.height -= 20;
+        contentBounds.origin.y += 20;
+        [folderView setFrame:contentBounds];
+}
+
+- (IBAction)showRulesView:(id)sender {
+        NSArray *subViews = [NSArray arrayWithObject:rulesView];
+        [(NSView*) [self.window contentView] setSubviews:subViews];
+        NSRect contentBounds = [[self.window contentView] bounds];
+        contentBounds.size.height -= 20;
+        contentBounds.origin.y += 20;
+        [rulesView setFrame:contentBounds];
 }
 
 /**

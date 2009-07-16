@@ -10,7 +10,7 @@
 		292A8C71100E79E6009B1E94 /* FolderViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A8C70100E79E6009B1E94 /* FolderViewItem.m */; };
 		294C885F100E815F00002CFC /* ValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 294C885E100E815F00002CFC /* ValueTransformers.m */; };
 		296C2D720FF169DA0084C67C /* LuaMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */; };
-		29888CE7100476E0007FFCEA /* FolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6100476E0007FFCEA /* FolderView.m */; };
+		29888CE7100476E0007FFCEA /* FolderDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6100476E0007FFCEA /* FolderDetailView.m */; };
 		29888CEF10047840007FFCEA /* FolderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888CEE10047840007FFCEA /* FolderCollectionView.m */; };
 		29888D571004A804007FFCEA /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888D561004A804007FFCEA /* MainView.m */; };
 		298AC2FA0FF015B900C7EA95 /* Default.almond in CopyFiles */ = {isa = PBXBuildFile; fileRef = 298AC2F80FF0157C00C7EA95 /* Default.almond */; };
@@ -44,8 +44,8 @@
 		294C885E100E815F00002CFC /* ValueTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTransformers.m; sourceTree = "<group>"; };
 		296C2D700FF169DA0084C67C /* LuaMethodInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaMethodInvocation.h; sourceTree = "<group>"; };
 		296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaMethodInvocation.m; sourceTree = "<group>"; };
-		29888CE5100476E0007FFCEA /* FolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderView.h; sourceTree = "<group>"; };
-		29888CE6100476E0007FFCEA /* FolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderView.m; sourceTree = "<group>"; };
+		29888CE5100476E0007FFCEA /* FolderDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderDetailView.h; sourceTree = "<group>"; };
+		29888CE6100476E0007FFCEA /* FolderDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderDetailView.m; sourceTree = "<group>"; };
 		29888CED10047840007FFCEA /* FolderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderCollectionView.h; sourceTree = "<group>"; };
 		29888CEE10047840007FFCEA /* FolderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderCollectionView.m; sourceTree = "<group>"; };
 		29888D551004A804007FFCEA /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 				77C8280C06725ACE000B614F /* Almond_AppDelegate.m */,
 				296C2D700FF169DA0084C67C /* LuaMethodInvocation.h */,
 				296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */,
-				29888CE5100476E0007FFCEA /* FolderView.h */,
-				29888CE6100476E0007FFCEA /* FolderView.m */,
+				29888CE5100476E0007FFCEA /* FolderDetailView.h */,
+				29888CE6100476E0007FFCEA /* FolderDetailView.m */,
 				29888CED10047840007FFCEA /* FolderCollectionView.h */,
 				29888CEE10047840007FFCEA /* FolderCollectionView.m */,
 				29888D551004A804007FFCEA /* MainView.h */,
@@ -241,7 +241,7 @@
 				77C8280E06725ACE000B614F /* Almond_AppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */,
 				296C2D720FF169DA0084C67C /* LuaMethodInvocation.m in Sources */,
-				29888CE7100476E0007FFCEA /* FolderView.m in Sources */,
+				29888CE7100476E0007FFCEA /* FolderDetailView.m in Sources */,
 				29888CEF10047840007FFCEA /* FolderCollectionView.m in Sources */,
 				29888D571004A804007FFCEA /* MainView.m in Sources */,
 				292A8C71100E79E6009B1E94 /* FolderViewItem.m in Sources */,

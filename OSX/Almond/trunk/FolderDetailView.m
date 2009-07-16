@@ -6,9 +6,9 @@
 //  Copyright 2009 Jakob Borg. All rights reserved.
 //
 
-#import "FolderView.h"
+#import "FolderDetailView.h"
 
-@implementation FolderView
+@implementation FolderDetailView
 
 @synthesize iconView, selected;
 

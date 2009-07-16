@@ -8,25 +8,29 @@
 
 #import "MainView.h"
 
-
 @implementation MainView
 
 - (void)drawRect:(NSRect)rect {
-        // Draw background
-        [[NSColor colorWithCalibratedWhite:0.9 alpha:1.0] drawSwatchInRect:[self bounds]];
+        float bottomMargin = 20;
+        NSPoint bl = self.bounds.origin;
+        bl.y += bottomMargin + 0.5;
+        NSPoint br = bl;
+        br.x += self.bounds.size.width;
+        NSPoint tl = bl;
+        NSPoint tr = br;
+        tl.y += self.bounds.size.height - bottomMargin - 1;
+        tr.y += self.bounds.size.height - bottomMargin - 1;
 
-        [[NSColor blackColor] setStroke];
+        NSRect drect = NSMakeRect(bl.x, bl.y, self.bounds.size.width, self.bounds.size.height - bottomMargin);
+        [[NSColor colorWithCalibratedWhite:0.9 alpha:1.0] drawSwatchInRect:drect];
+
+        [[NSColor darkGrayColor] setStroke];
         NSBezierPath *path = [NSBezierPath bezierPath];
-        [path setLineWidth:2.0];
-        NSPoint a = self.bounds.origin;
-        NSPoint b = a;
-        b.x += self.bounds.size.width;
-        [path moveToPoint:a];
-        [path lineToPoint:b];
-        a.y += self.bounds.size.height;
-        b.y += self.bounds.size.height;
-        [path moveToPoint:a];
-        [path lineToPoint:b];
+        [path setLineWidth:1.0];
+        [path moveToPoint:bl];
+        [path lineToPoint:br];
+        [path moveToPoint:tl];
+        [path lineToPoint:tr];
         [path stroke];
 }
 

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface FolderView : NSView {
+@interface FolderDetailView : NSView {
         NSImageView *iconView;
         BOOL selected;
 }

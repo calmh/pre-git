@@ -13,4 +13,7 @@
 
 }
 
+-(void)setSelected:(BOOL)flag;
+-(IBAction)openClicked:(id)sender;
+
 @end
