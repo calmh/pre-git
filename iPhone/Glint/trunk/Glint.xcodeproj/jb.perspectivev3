@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -268,6 +270,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>29D191931011E2DA00B9E8CF</string>
 								<string>29CD70FB100FB16B001150A1</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
@@ -280,13 +283,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>12</integer>
+									<integer>33</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 141}, {185, 760}}</string>
+							<string>{{0, 324}, {185, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -316,14 +319,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GlintCompassView.m</string>
+								<string>Localizable.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GlintCompassView.m</string>
+										<string>Localizable.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29D1917E1011DF8B00B9E8CF</string>
+										<string>29D191AF1011E52200B9E8CF</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -356,7 +357,8 @@
 											<string>29D191721011DE5200B9E8CF</string>
 											<string>29D191781011DF8B00B9E8CF</string>
 											<string>29D191791011DF8B00B9E8CF</string>
-											<string>29D1917A1011DF8B00B9E8CF</string>
+											<string>29D191AC1011E52200B9E8CF</string>
+											<string>29D191AD1011E52200B9E8CF</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -412,6 +414,7 @@
 											<string>29D1917B1011DF8B00B9E8CF</string>
 											<string>29D1917C1011DF8B00B9E8CF</string>
 											<string>29D1917D1011DF8B00B9E8CF</string>
+											<string>29D191AE1011E52200B9E8CF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
