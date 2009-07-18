@@ -519,7 +519,7 @@
 	29C7910410027A8E00EA28CC /* GlintCompassView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 2016}}";
-			sepNavSelRange = "{1822, 0}";
+			sepNavSelRange = "{5466, 0}";
 			sepNavVisRange = "{4646, 1332}";
 			sepNavWindowFrame = "{{15, 64}, {1191, 809}}";
 		};
