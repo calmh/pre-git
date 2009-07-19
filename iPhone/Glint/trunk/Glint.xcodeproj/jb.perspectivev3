@@ -281,14 +281,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>38</integer>
-									<integer>37</integer>
-									<integer>34</integer>
-									<integer>0</integer>
+									<integer>57</integer>
+									<integer>56</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 201}, {185, 760}}</string>
+							<string>{{0, 332}, {185, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -335,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>294C47A41013B2A400114A40</string>
+										<string>29FFE0731013B9450091ACC8</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -361,7 +359,7 @@
 											<string>29256DB11013ADC000C96361</string>
 											<string>29256DE31013B13400C96361</string>
 											<string>294C47A11013B2A400114A40</string>
-											<string>294C47A21013B2A400114A40</string>
+											<string>29FFE0401013B5BA0091ACC8</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -389,7 +387,6 @@
 											<string>2993C6F21011EE27000A1594</string>
 											<string>29256CDB10137DD500C96361</string>
 											<string>29256CDC10137DD500C96361</string>
-											<string>294C47A31013B2A400114A40</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -533,11 +530,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>294C47A61013B2A400114A40</string>
+				<string>29FFE0421013B5BA0091ACC8</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>294C47A71013B2A400114A40</string>
+				<string>29FFE0431013B5BA0091ACC8</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>294C47A81013B2A400114A40</string>
+				<string>29FFE0441013B5BA0091ACC8</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -686,14 +683,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>294C47A91013B2A400114A40</string>
+				<string>29FFE04E1013B6690091ACC8</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>294C47AA1013B2A400114A40</string>
-				<string>294C47AB1013B2A400114A40</string>
-				<string>294C47AC1013B2A400114A40</string>
-				<string>294C47AD1013B2A400114A40</string>
-				<string>294C47AE1013B2A400114A40</string>
+				<string>29FFE04F1013B6690091ACC8</string>
+				<string>29FFE0501013B6690091ACC8</string>
+				<string>29FFE0511013B6690091ACC8</string>
+				<string>29FFE0521013B6690091ACC8</string>
+				<string>29FFE0531013B6690091ACC8</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -727,8 +724,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>294C47AF1013B2A400114A40</string>
-		<string>294C47B01013B2A400114A40</string>
+		<string>29FFE0751013B9450091ACC8</string>
+		<string>29FFE0711013B8E30091ACC8</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

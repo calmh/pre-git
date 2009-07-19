@@ -156,7 +156,7 @@
 		ignoreCount = 0;
 		lineNumber = 92;
 		location = Glint;
-		modificationTime = 269726254.479504;
+		modificationTime = 269727978.421218;
 		state = 1;
 	};
 	29256C731013793F00C96361 /* SendFilesViewController.m:81 */ = {
@@ -173,7 +173,7 @@
 		ignoreCount = 0;
 		lineNumber = 81;
 		location = Glint;
-		modificationTime = 269726254.479638;
+		modificationTime = 269727978.421401;
 		state = 1;
 	};
 	29256C761013794200C96361 /* PBXTextBookmark */ = {
@@ -214,7 +214,7 @@
 		ignoreCount = 0;
 		lineNumber = 32;
 		location = Glint;
-		modificationTime = 269726254.479772;
+		modificationTime = 269727978.42167;
 		state = 1;
 	};
 	29256CD610137DD500C96361 /* PBXTextBookmark */ = {
@@ -347,43 +347,9 @@
 		vrLen = 1702;
 		vrLoc = 14150;
 	};
-	294C47A21013B2A400114A40 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 29055431100FD64F00329FF7 /* Root.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			PreferenceSpecifiers,
-			3,
-			DefaultValue,
-		);
-		name = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
-		rLen = 0;
-		rLoc = 2147483647;
-	};
-	294C47A31013B2A400114A40 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* GlintViewController.m */;
-		name = "GlintViewController.m: 318";
-		rLen = 0;
-		rLoc = 14426;
-		rType = 0;
-		vrLen = 1702;
-		vrLoc = 14150;
-	};
-	294C47A41013B2A400114A40 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 294C47A51013B2A400114A40 /* Root.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
-		rLen = 0;
-		rLoc = 2147483647;
-	};
 	294C47A51013B2A400114A40 /* Root.plist */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
 		name = Root.plist;
 		path = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
 		sourceTree = "<absolute>";
@@ -434,7 +400,7 @@
 		ignoreCount = 0;
 		lineNumber = 170;
 		location = Glint;
-		modificationTime = 269726254.479228;
+		modificationTime = 269727978.420884;
 		state = 1;
 	};
 	298E979A10105D8D00B85C10 /* SendFilesViewController.m:178 */ = {
@@ -451,7 +417,7 @@
 		ignoreCount = 0;
 		lineNumber = 178;
 		location = Glint;
-		modificationTime = 269726254.479364;
+		modificationTime = 269727978.42107;
 		state = 1;
 	};
 	2993C6EE1011EE27000A1594 /* PBXTextBookmark */ = {
@@ -475,7 +441,7 @@
 		vrLoc = 0;
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
 		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
@@ -542,8 +508,30 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 269726017;
-			PBXWorkspaceStateSaveDate = 269726017;
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					954,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 269727148;
+			PBXWorkspaceStateSaveDate = 269727148;
 		};
 		perUserProjectItems = {
 			29055430100FD64F00329FF7 /* PlistBookmark */ = 29055430100FD64F00329FF7 /* PlistBookmark */;
@@ -570,9 +558,6 @@
 			293B4C41100BDBA400FFB78D /* PBXTextBookmark */ = 293B4C41100BDBA400FFB78D /* PBXTextBookmark */;
 			293B4C46100BDBA400FFB78D /* PBXTextBookmark */ = 293B4C46100BDBA400FFB78D /* PBXTextBookmark */;
 			294C47A11013B2A400114A40 /* PBXTextBookmark */ = 294C47A11013B2A400114A40 /* PBXTextBookmark */;
-			294C47A21013B2A400114A40 /* PlistBookmark */ = 294C47A21013B2A400114A40 /* PlistBookmark */;
-			294C47A31013B2A400114A40 /* PBXTextBookmark */ = 294C47A31013B2A400114A40 /* PBXTextBookmark */;
-			294C47A41013B2A400114A40 /* PlistBookmark */ = 294C47A41013B2A400114A40 /* PlistBookmark */;
 			2957D25F1007FA09002ABA53 /* PlistBookmark */ = 2957D25F1007FA09002ABA53 /* PlistBookmark */;
 			2957D2651007FA09002ABA53 /* PlistBookmark */ = 2957D2651007FA09002ABA53 /* PlistBookmark */;
 			29888D7E1004A892007FFCEA /* PBXTextBookmark */ = 29888D7E1004A892007FFCEA /* PBXTextBookmark */;
@@ -596,6 +581,8 @@
 			29E48F6C1004F59D003B6D29 /* PBXTextBookmark */ = 29E48F6C1004F59D003B6D29 /* PBXTextBookmark */;
 			29E66FAC100A013100E5BA7B /* PBXTextBookmark */ = 29E66FAC100A013100E5BA7B /* PBXTextBookmark */;
 			29E66FAD100A013100E5BA7B /* PBXTextBookmark */ = 29E66FAD100A013100E5BA7B /* PBXTextBookmark */;
+			29FFE0401013B5BA0091ACC8 /* PlistBookmark */ = 29FFE0401013B5BA0091ACC8 /* PlistBookmark */;
+			29FFE0731013B9450091ACC8 /* PlistBookmark */ = 29FFE0731013B9450091ACC8 /* PlistBookmark */;
 		};
 		sourceControlManager = 29FE31DA0FF4354400E9FE05 /* Source Control */;
 		userBuildSettings = {
@@ -834,7 +821,7 @@
 		ignoreCount = 0;
 		lineNumber = 116;
 		location = Glint;
-		modificationTime = 269726254.478834;
+		modificationTime = 269727978.420026;
 		state = 2;
 	};
 	29CE3DF61007B19500AEC5A4 /* GlintLocationManager.m:65 */ = {
@@ -850,7 +837,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 65;
-		modificationTime = 269726254.723725;
+		modificationTime = 269727978.693318;
 		state = 0;
 	};
 	29D191601011DDCF00B9E8CF /* PBXTextBookmark */ = {
@@ -963,6 +950,34 @@
 			sepNavSelRange = "{262, 0}";
 			sepNavVisRange = "{0, 594}";
 		};
+	};
+	29FFE0401013B5BA0091ACC8 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 294C47A51013B2A400114A40 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	29FFE0731013B9450091ACC8 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 29FFE0741013B9450091ACC8 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	29FFE0741013B9450091ACC8 /* Root.plist */ = {
+		isa = PBXFileReference;
+		name = Root.plist;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Settings.bundle/Root.plist;
+		sourceTree = "<absolute>";
 	};
 	32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */ = {
 		uiCtxt = {
