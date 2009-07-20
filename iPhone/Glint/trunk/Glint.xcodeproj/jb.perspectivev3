@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -317,8 +319,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -333,10 +333,6 @@
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>GlintViewController.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>29981D5D101421C000EA41A3</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -361,7 +357,7 @@
 											<string>29256DE31013B13400C96361</string>
 											<string>29981D2B1014205E00EA41A3</string>
 											<string>29981D571014217200EA41A3</string>
-											<string>29981D581014217200EA41A3</string>
+											<string>29F6463F1014224400B9E24B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -389,9 +385,6 @@
 											<string>2993C6F21011EE27000A1594</string>
 											<string>29256CDB10137DD500C96361</string>
 											<string>29256CDC10137DD500C96361</string>
-											<string>29981D591014217200EA41A3</string>
-											<string>29981D5A1014217200EA41A3</string>
-											<string>29981D5B1014217200EA41A3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -535,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29981D4B1014213500EA41A3</string>
+				<string>293BDE2E1014A48800FE030E</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>29981D4C1014213500EA41A3</string>
+				<string>293BDE2F1014A48800FE030E</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>29981D4D1014213500EA41A3</string>
+				<string>293BDE301014A48800FE030E</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -688,14 +681,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29981D4E1014213500EA41A3</string>
+				<string>293BDE311014A48800FE030E</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>29981D4F1014213500EA41A3</string>
-				<string>29981D501014213500EA41A3</string>
-				<string>29981D511014213500EA41A3</string>
-				<string>29981D521014213500EA41A3</string>
-				<string>29981D531014213500EA41A3</string>
+				<string>293BDE321014A48800FE030E</string>
+				<string>293BDE331014A48800FE030E</string>
+				<string>293BDE341014A48800FE030E</string>
+				<string>293BDE351014A48800FE030E</string>
+				<string>293BDE361014A48800FE030E</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
