@@ -324,7 +324,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GlintCompassView.m</string>
+								<string>GlintViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GlintCompassView.m</string>
+										<string>GlintViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29BE93A11016487D0066D5B6</string>
+										<string>2994D6B01016563E00A80986</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -361,8 +361,8 @@
 											<string>29BE92BD1016346F0066D5B6</string>
 											<string>29BE92BE1016346F0066D5B6</string>
 											<string>29BE92BF1016346F0066D5B6</string>
-											<string>29BE9356101637270066D5B6</string>
-											<string>29BE9357101637270066D5B6</string>
+											<string>29AB7297101649B300A1ABCC</string>
+											<string>29AB72A6101649B500A1ABCC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -389,17 +389,7 @@
 											<string>2993C6F21011EE27000A1594</string>
 											<string>29256CDB10137DD500C96361</string>
 											<string>29256CDC10137DD500C96361</string>
-											<string>29BE926A10162AF70066D5B6</string>
-											<string>29BE928310162C3B0066D5B6</string>
-											<string>29BE928F10162CF20066D5B6</string>
-											<string>29BE92C21016346F0066D5B6</string>
-											<string>29BE92C41016346F0066D5B6</string>
-											<string>29BE92C51016346F0066D5B6</string>
-											<string>29BE92C71016346F0066D5B6</string>
-											<string>29BE92C91016346F0066D5B6</string>
-											<string>29BE92D5101634AC0066D5B6</string>
-											<string>29BE93021016353B0066D5B6</string>
-											<string>29BE9358101637270066D5B6</string>
+											<string>29AB7298101649B300A1ABCC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -543,11 +533,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29BE926C10162AF70066D5B6</string>
+				<string>2994D6B11016563E00A80986</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>29BE926D10162AF70066D5B6</string>
+				<string>2994D6B21016563E00A80986</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>29BE926E10162AF70066D5B6</string>
+				<string>2994D6B31016563E00A80986</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -696,14 +686,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29BE926F10162AF70066D5B6</string>
+				<string>29AB729D101649B300A1ABCC</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>29BE927010162AF70066D5B6</string>
-				<string>29BE927110162AF70066D5B6</string>
-				<string>29BE927210162AF70066D5B6</string>
-				<string>29BE927310162AF70066D5B6</string>
-				<string>29BE927410162AF70066D5B6</string>
+				<string>29AB729E101649B300A1ABCC</string>
+				<string>29AB729F101649B300A1ABCC</string>
+				<string>29AB72A0101649B300A1ABCC</string>
+				<string>29AB72A1101649B300A1ABCC</string>
+				<string>29AB72A2101649B300A1ABCC</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -737,9 +727,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>29BE927610162AF70066D5B6</string>
-		<string>29BE927710162AF70066D5B6</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1116,7 +1103,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>29BE93A21016487D0066D5B6</string>
+				<string>29AB72A7101649B500A1ABCC</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
