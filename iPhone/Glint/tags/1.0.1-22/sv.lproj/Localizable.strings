@@ -1,0 +1,64 @@
+﻿/*
+** Send mail
+*/
+
+"Message failed" = "Kund inte skicka";
+"Message sent" = "Skickade meddelande";
+"Recorded track from Glint" = "Inspelad fil från Glint";
+"The message was sent successfully." = "Meddelandet gick iväg som det skulle.";
+"This message contains an attached GPX file that was recorded in Glint." = "Det här meddelandet innehåller en bifogad GPX-fil som spelades in i Glint.";
+"You need to enter a valid email address in Settings." = "Du måste ställa in en giltig epostadress i Inställningar.";
+
+/*
+** Compass
+*/
+
+"E" = "O";
+"ENE" = "ONO";
+"ESE" = "OSO";
+"N" = "N";
+"NE" = "NO";
+"NNE" = "NNO";
+"NNW" = "NNV";
+"NW" = "NV";
+"S" = "S";
+"SE" = "SO";
+"SSE" = "SSO";
+"SSW" = "SSV";
+"SW" = "SV";
+"W" = "V";
+"WNW" = "VNV";
+"WSW" = "VSV";
+
+/*
+** Home screen
+*/
+
+"elapsed" = "tid";
+"total distance" = "avstånd";
+"cur speed" = "nuv. hastighet";
+"avg speed" = "genomsn. hast.";
+"measurements" = "mätningar";
+"per" = "per";
+
+"Files" = "Filer";
+"Record" = "Spela in";
+"Stop Recording" = "Stanna inspelning";
+"Unlock" = "Lås upp";
+
+/*
+** Misc
+*/
+
+"OK" = "OK";
+
+/*
+** Send files screen
+*/
+
+"Today" = "Idag";
+"Yesterday" = "Igår";
+"This Week" = "Denna vecka";
+"Last Week" = "Förra veckan";
+"This Month" = "Denna månad";
+"Earlier" = "Tidigare";
