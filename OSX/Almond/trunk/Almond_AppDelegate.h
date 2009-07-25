@@ -7,24 +7,28 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FolderCollectionView.h"
+#import <QuartzCore/QuartzCore.h>
+#import "SelectableCollectionView.h"
 
 @interface Almond_AppDelegate : NSObject 
 {
-    NSWindow *window;
+        NSWindow *window;
         NSView *folderView;
         NSView *rulesView;
+        NSDrawer *availableRulesDrawer;
+        int visibleSubview;
         
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;
-        FolderCollectionView *folderCollection;
+        NSPersistentStoreCoordinator *persistentStoreCoordinator;
+        NSManagedObjectModel *managedObjectModel;
+        NSManagedObjectContext *managedObjectContext;
+        SelectableCollectionView *folderCollection;
 }
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;
-@property (nonatomic, retain) IBOutlet FolderCollectionView *folderCollection;
+@property (nonatomic, retain) IBOutlet SelectableCollectionView *folderCollection;
 @property (nonatomic, retain) IBOutlet NSView *folderView;
 @property (nonatomic, retain) IBOutlet NSView *rulesView;
+@property (nonatomic, retain) IBOutlet NSDrawer *availableRulesDrawer;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
@@ -34,5 +38,6 @@
 - (IBAction)buttonClicked:(id)sender;
 - (IBAction)browseForPath:(id)sender;
 - (IBAction)showRulesView:(id)sender;
+- (IBAction)showFoldersView:(id)sender;
 
 @end

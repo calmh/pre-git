@@ -26,7 +26,7 @@
         NSShadow *shadow = [NSShadow new];
         
         if (selected) {
-                margin = 6.5;
+                margin = 6;
                 [border setLineWidth:3.0];
                 [shadow setShadowBlurRadius:4.0];
                 [shadow setShadowOffset:NSMakeSize(3.0, -3.0)];
@@ -39,7 +39,7 @@
                                [NSColor colorWithDeviceWhite:0.92 alpha:1.0], 1.0,
                                nil];
         } else {
-                margin = 5.5;
+                margin = 5;
                 [border setLineWidth:1.0];
                 [shadow setShadowBlurRadius:3.0];
                 [shadow setShadowOffset:NSMakeSize(2.0, -2.0)];
@@ -53,10 +53,11 @@
                                nil];
         }
         
-        NSPoint bl = self.bounds.origin; bl.x += margin; bl.y += margin;
-        NSPoint br = bl; br.x += self.bounds.size.width - margin * 2;
-        NSPoint tl = bl; tl.y += self.bounds.size.height - margin * 2;
-        NSPoint tr = tl; tr.x += self.bounds.size.width - margin * 2;
+        NSRect bounds = [self centerScanRect:self.bounds];
+        NSPoint bl = bounds.origin; bl.x += margin; bl.y += margin;
+        NSPoint br = bl; br.x += bounds.size.width - margin * 2;
+        NSPoint tl = bl; tl.y += bounds.size.height - margin * 2;
+        NSPoint tr = tl; tr.x += bounds.size.width - margin * 2;
         
         [shadow set];
         [border setLineJoinStyle:NSRoundLineJoinStyle];

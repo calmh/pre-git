@@ -14,13 +14,12 @@
 #import "ValueTransformers.h"
 
 @interface Almond_AppDelegate ()
-- (void)showFoldersView;
+- (void)animateToSubview:(int)subviewNumber;
 @end
-
 
 @implementation Almond_AppDelegate
 
-@synthesize window, folderCollection, folderView, rulesView;
+@synthesize window, folderCollection, folderView, rulesView, availableRulesDrawer;
 
 + (void)initialize {
         // Register our transformers
@@ -30,26 +29,44 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
-        [self showFoldersView];
-}
+        [availableRulesDrawer setPreferredEdge:NSMaxXEdge];
 
-- (void)showFoldersView {
-        NSArray *subViews = [NSArray arrayWithObject:folderView];
+        NSArray *subViews = [NSArray arrayWithObjects:folderView, rulesView, nil];
         [(NSView*) [self.window contentView] setSubviews:subViews];
         NSRect contentBounds = [[self.window contentView] bounds];
         contentBounds.size.height -= 20;
         contentBounds.origin.y += 20;
         [folderView setFrame:contentBounds];
+        [rulesView setFrame:contentBounds];
+
+        visibleSubview = 0;
+        //[self showFoldersView:nil];
+        [rulesView setHidden:YES];
+}
+
+- (IBAction)showFoldersView:(id)sender {
+        [availableRulesDrawer close];
+        [self animateToSubview:0];
 }
 
 - (IBAction)showRulesView:(id)sender {
-        NSArray *subViews = [NSArray arrayWithObject:rulesView];
-        [(NSView*) [self.window contentView] setSubviews:subViews];
-        NSRect contentBounds = [[self.window contentView] bounds];
-        contentBounds.size.height -= 20;
-        contentBounds.origin.y += 20;
-        [rulesView setFrame:contentBounds];
+        [availableRulesDrawer open];
+        [self animateToSubview:1];
 }
+
+- (void)animateToSubview:(int)subviewNumber {
+        NSView *currentSubview = [[[window contentView] subviews] objectAtIndex:visibleSubview];
+        NSView *newSubview = [[[window contentView] subviews] objectAtIndex:subviewNumber];
+        [newSubview setAlphaValue:0.0];
+        [newSubview setHidden:NO];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:0.25];
+        [[newSubview animator] setAlphaValue:1.0];
+        [[currentSubview animator] setAlphaValue:0.0];
+        [[currentSubview animator] setHidden:YES];
+        [NSAnimationContext endGrouping];
+        visibleSubview = subviewNumber;
+}        
 
 /**
  Returns the support directory for the application, used to store the Core Data
@@ -237,7 +254,6 @@
  */
 
 - (void)dealloc {
-        
         [window release];
         [managedObjectContext release];
         [persistentStoreCoordinator release];

@@ -10,6 +10,11 @@
 
 @implementation MainView
 
+- (void)setFrameSize:(NSSize)newSize {
+        [super setFrameSize:newSize];
+        [self setNeedsDisplay:YES];
+}
+
 - (void)drawRect:(NSRect)rect {
         float bottomMargin = 20;
         NSPoint bl = self.bounds.origin;
@@ -24,14 +29,35 @@
         NSRect drect = NSMakeRect(bl.x, bl.y, self.bounds.size.width, self.bounds.size.height - bottomMargin);
         [[NSColor colorWithCalibratedWhite:0.9 alpha:1.0] drawSwatchInRect:drect];
 
-        [[NSColor darkGrayColor] setStroke];
-        NSBezierPath *path = [NSBezierPath bezierPath];
+        NSBezierPath *path;
+
+        [[NSColor blackColor] setStroke];
+        path = [NSBezierPath bezierPath];
         [path setLineWidth:1.0];
         [path moveToPoint:bl];
         [path lineToPoint:br];
         [path moveToPoint:tl];
         [path lineToPoint:tr];
         [path stroke];
+        
+        path = [NSBezierPath bezierPath];
+        [[NSColor grayColor] setStroke];
+        [path setLineWidth:1.0];
+        bl.y -= 1;
+        br.y -= 1;
+        [path moveToPoint:bl];
+        [path lineToPoint:br];
+        [path stroke];
+
+/*        path = [NSBezierPath bezierPath];
+        [[NSColor darkGrayColor] setStroke];
+        [path setLineWidth:1.0];
+        tl.y += 1;
+        tr.y += 1;
+        [path moveToPoint:tl];
+        [path lineToPoint:tr];
+        [path stroke];
+ */
 }
 
 @end
