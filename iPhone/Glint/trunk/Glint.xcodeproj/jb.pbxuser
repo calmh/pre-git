@@ -325,7 +325,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 196";
 		rLen = 10;
-		rLoc = 11237;
+		rLoc = 9222;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 8515;
@@ -505,7 +505,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 228";
 		rLen = 0;
-		rLoc = 12590;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 2149;
 		vrLoc = 6545;
@@ -525,7 +525,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 196";
 		rLen = 10;
-		rLoc = 11237;
+		rLoc = 9222;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 8515;
@@ -755,7 +755,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 196";
 		rLen = 10;
-		rLoc = 11237;
+		rLoc = 9222;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 8515;
@@ -1491,7 +1491,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 142";
 		rLen = 0;
-		rLoc = 6851;
+		rLoc = 6912;
 		rType = 0;
 		vrLen = 2194;
 		vrLoc = 5519;
@@ -1631,7 +1631,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 196";
 		rLen = 10;
-		rLoc = 11237;
+		rLoc = 9222;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 8515;
@@ -1651,7 +1651,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 141";
 		rLen = 0;
-		rLoc = 6633;
+		rLoc = 6694;
 		rType = 0;
 		vrLen = 2239;
 		vrLoc = 5519;
@@ -1671,7 +1671,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 142";
 		rLen = 0;
-		rLoc = 6851;
+		rLoc = 6912;
 		rType = 0;
 		vrLen = 2194;
 		vrLoc = 5519;
@@ -1691,7 +1691,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 449";
 		rLen = 0;
-		rLoc = 22357;
+		rLoc = 20415;
 		rType = 0;
 		vrLen = 3362;
 		vrLoc = 17558;
@@ -1701,7 +1701,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 452";
 		rLen = 0;
-		rLoc = 22757;
+		rLoc = 20815;
 		rType = 0;
 		vrLen = 3426;
 		vrLoc = 17416;
@@ -1711,7 +1711,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 450";
 		rLen = 0;
-		rLoc = 22539;
+		rLoc = 20597;
 		rType = 0;
 		vrLen = 3426;
 		vrLoc = 17416;
@@ -1741,7 +1741,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 450";
 		rLen = 0;
-		rLoc = 22539;
+		rLoc = 20597;
 		rType = 0;
 		vrLen = 3408;
 		vrLoc = 17434;
@@ -1751,7 +1751,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 450";
 		rLen = 0;
-		rLoc = 22539;
+		rLoc = 20597;
 		rType = 0;
 		vrLen = 3426;
 		vrLoc = 17416;
@@ -1781,7 +1781,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 3252;
 		vrLoc = 18244;
@@ -1791,7 +1791,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 3252;
 		vrLoc = 18244;
@@ -1801,7 +1801,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 3033;
 		vrLoc = 18931;
@@ -1837,7 +1837,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 20625;
@@ -1880,7 +1880,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 20625;
@@ -1916,7 +1916,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 3319;
 		vrLoc = 18931;
@@ -2066,7 +2066,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 463";
 		rLen = 0;
-		rLoc = 24564;
+		rLoc = 22708;
 		rType = 0;
 		vrLen = 3319;
 		vrLoc = 18931;
@@ -2086,7 +2086,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 465";
 		rLen = 0;
-		rLoc = 24270;
+		rLoc = 22414;
 		rType = 0;
 		vrLen = 3147;
 		vrLoc = 18662;
@@ -2106,7 +2106,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 249";
 		rLen = 36;
-		rLoc = 13069;
+		rLoc = 11055;
 		rType = 0;
 		vrLen = 1843;
 		vrLoc = 10648;
@@ -2116,7 +2116,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 249";
 		rLen = 36;
-		rLoc = 13069;
+		rLoc = 11055;
 		rType = 0;
 		vrLen = 1843;
 		vrLoc = 10648;
@@ -2136,7 +2136,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 262";
 		rLen = 0;
-		rLoc = 13914;
+		rLoc = 11900;
 		rType = 0;
 		vrLen = 2302;
 		vrLoc = 9854;
@@ -2146,7 +2146,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 471";
 		rLen = 0;
-		rLoc = 24303;
+		rLoc = 22447;
 		rType = 0;
 		vrLen = 3521;
 		vrLoc = 19423;
@@ -2156,7 +2156,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 469";
 		rLen = 0;
-		rLoc = 23895;
+		rLoc = 22039;
 		rType = 0;
 		vrLen = 3431;
 		vrLoc = 19349;
@@ -2166,7 +2166,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 516";
 		rLen = 0;
-		rLoc = 24182;
+		rLoc = 22326;
 		rType = 0;
 		vrLen = 3367;
 		vrLoc = 21321;
@@ -2176,7 +2176,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 509";
 		rLen = 0;
-		rLoc = 23639;
+		rLoc = 21783;
 		rType = 0;
 		vrLen = 3366;
 		vrLoc = 21321;
@@ -2186,7 +2186,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 164";
 		rLen = 0;
-		rLoc = 7695;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 1897;
 		vrLoc = 6341;
@@ -2196,7 +2196,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 166";
 		rLen = 0;
-		rLoc = 7808;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 2064;
 		vrLoc = 6341;
@@ -2206,7 +2206,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 188";
 		rLen = 0;
-		rLoc = 8791;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 2043;
 		vrLoc = 6855;
@@ -2226,7 +2226,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 184";
 		rLen = 0;
-		rLoc = 8573;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 2071;
 		vrLoc = 6855;
@@ -2236,7 +2236,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 184";
 		rLen = 0;
-		rLoc = 8573;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 2071;
 		vrLoc = 6855;
@@ -2256,7 +2256,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 311";
 		rLen = 0;
-		rLoc = 13889;
+		rLoc = 11875;
 		rType = 0;
 		vrLen = 2061;
 		vrLoc = 12140;
@@ -2266,7 +2266,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 185";
 		rLen = 0;
-		rLoc = 8613;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 1987;
 		vrLoc = 6939;
@@ -2276,7 +2276,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 188";
 		rLen = 0;
-		rLoc = 8799;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 1987;
 		vrLoc = 6939;
@@ -2296,7 +2296,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 184";
 		rLen = 0;
-		rLoc = 8573;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 2045;
 		vrLoc = 6881;
@@ -2316,7 +2316,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 170";
 		rLen = 0;
-		rLoc = 7900;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 1970;
 		vrLoc = 6881;
@@ -2346,7 +2346,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 65";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2284;
 		rType = 0;
 		vrLen = 2106;
 		vrLoc = 504;
@@ -2366,7 +2366,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 170";
 		rLen = 0;
-		rLoc = 7900;
+		rLoc = 6916;
 		rType = 0;
 		vrLen = 1971;
 		vrLoc = 6881;
@@ -2396,7 +2396,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 65";
 		rLen = 0;
-		rLoc = 2223;
+		rLoc = 2284;
 		rType = 0;
 		vrLen = 2106;
 		vrLoc = 504;
@@ -2735,7 +2735,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 228";
 		rLen = 0;
-		rLoc = 12590;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 9391;
@@ -2765,7 +2765,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
 		name = "MainScreenViewController.m: 228";
 		rLen = 0;
-		rLoc = 12590;
+		rLoc = 10575;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 9391;
@@ -3434,9 +3434,9 @@
 	};
 	29CD711D100FB9F2001150A1 /* SendFilesViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1992, 4130}}";
-			sepNavSelRange = "{6149, 0}";
-			sepNavVisRange = "{3680, 3182}";
+			sepNavIntBoundsRect = "{{0, 0}, {1992, 4074}}";
+			sepNavSelRange = "{795, 0}";
+			sepNavVisRange = "{6886, 2219}";
 		};
 	};
 	29CD7126100FBA04001150A1 /* PBXTextBookmark */ = {
