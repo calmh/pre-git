@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		292A8C71100E79E6009B1E94 /* SelectableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A8C70100E79E6009B1E94 /* SelectableViewItem.m */; };
+		293BDE831014DD0C00FE030E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293BDE821014DD0C00FE030E /* QuartzCore.framework */; };
+		2940BD16101B20C800F5A322 /* AMCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BD12101B20C800F5A322 /* AMCollectionView.m */; };
+		2940BD17101B20C800F5A322 /* AMCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BD14101B20C800F5A322 /* AMCollectionViewItem.m */; };
+		2940BD80101B328F00F5A322 /* almond.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2940BD7F101B328F00F5A322 /* almond.icns */; };
+		294C885F100E815F00002CFC /* ValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 294C885E100E815F00002CFC /* ValueTransformers.m */; };
+		296C2D720FF169DA0084C67C /* LuaMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */; };
+		29888D571004A804007FFCEA /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29888D561004A804007FFCEA /* MainView.m */; };
+		298AC2FA0FF015B900C7EA95 /* Default.almond in CopyFiles */ = {isa = PBXBuildFile; fileRef = 298AC2F80FF0157C00C7EA95 /* Default.almond */; };
+		29C7C016100F620D00D9AC0C /* SelectableDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C7C015100F620D00D9AC0C /* SelectableDetailView.m */; };
+		29C7C01E100F62A200D9AC0C /* SelectableCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C7C01D100F62A200D9AC0C /* SelectableCollectionView.m */; };
+		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */; };
+		77C8280E06725ACE000B614F /* Almond_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		298AC3070FF015BD00C7EA95 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				298AC2FA0FF015B900C7EA95 /* Default.almond in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		292A8C6F100E79E6009B1E94 /* SelectableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableViewItem.h; sourceTree = "<group>"; };
+		292A8C70100E79E6009B1E94 /* SelectableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableViewItem.m; sourceTree = "<group>"; };
+		293BDE821014DD0C00FE030E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		2940BD11101B20C800F5A322 /* AMCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCollectionView.h; path = AMCollectionView/AMCollectionView.h; sourceTree = "<group>"; };
+		2940BD12101B20C800F5A322 /* AMCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMCollectionView.m; path = AMCollectionView/AMCollectionView.m; sourceTree = "<group>"; };
+		2940BD13101B20C800F5A322 /* AMCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCollectionViewItem.h; path = AMCollectionView/AMCollectionViewItem.h; sourceTree = "<group>"; };
+		2940BD14101B20C800F5A322 /* AMCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMCollectionViewItem.m; path = AMCollectionView/AMCollectionViewItem.m; sourceTree = "<group>"; };
+		2940BD15101B20C800F5A322 /* AMCollectionViewItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCollectionViewItemProtocol.h; path = AMCollectionView/AMCollectionViewItemProtocol.h; sourceTree = "<group>"; };
+		2940BD7F101B328F00F5A322 /* almond.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = almond.icns; sourceTree = "<group>"; };
+		294C885D100E815F00002CFC /* ValueTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueTransformers.h; sourceTree = "<group>"; };
+		294C885E100E815F00002CFC /* ValueTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTransformers.m; sourceTree = "<group>"; };
+		296C2D700FF169DA0084C67C /* LuaMethodInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaMethodInvocation.h; sourceTree = "<group>"; };
+		296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaMethodInvocation.m; sourceTree = "<group>"; };
+		29888D551004A804007FFCEA /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		29888D561004A804007FFCEA /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		298AC2F80FF0157C00C7EA95 /* Default.almond */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Default.almond; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		29C7C014100F620D00D9AC0C /* SelectableDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableDetailView.h; sourceTree = "<group>"; };
+		29C7C015100F620D00D9AC0C /* SelectableDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableDetailView.m; sourceTree = "<group>"; };
+		29C7C01C100F62A200D9AC0C /* SelectableCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableCollectionView.h; sourceTree = "<group>"; };
+		29C7C01D100F62A200D9AC0C /* SelectableCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableCollectionView.m; sourceTree = "<group>"; };
+		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Almond_Prefix.pch; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Almond_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		77C8280B06725ACE000B614F /* Almond_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Almond_AppDelegate.h; sourceTree = "<group>"; };
+		77C8280C06725ACE000B614F /* Almond_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Almond_AppDelegate.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Almond-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Almond-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Almond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almond.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				293BDE831014DD0C00FE030E /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				77C8280B06725ACE000B614F /* Almond_AppDelegate.h */,
+				77C8280C06725ACE000B614F /* Almond_AppDelegate.m */,
+				29888D551004A804007FFCEA /* MainView.h */,
+				29888D561004A804007FFCEA /* MainView.m */,
+				294C885D100E815F00002CFC /* ValueTransformers.h */,
+				294C885E100E815F00002CFC /* ValueTransformers.m */,
+				296C2D700FF169DA0084C67C /* LuaMethodInvocation.h */,
+				296C2D710FF169DA0084C67C /* LuaMethodInvocation.m */,
+				29C7C01C100F62A200D9AC0C /* SelectableCollectionView.h */,
+				29C7C01D100F62A200D9AC0C /* SelectableCollectionView.m */,
+				29C7C014100F620D00D9AC0C /* SelectableDetailView.h */,
+				29C7C015100F620D00D9AC0C /* SelectableDetailView.m */,
+				292A8C6F100E79E6009B1E94 /* SelectableViewItem.h */,
+				292A8C70100E79E6009B1E94 /* SelectableViewItem.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				293BDE821014DD0C00FE030E /* QuartzCore.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C82804067257F0000B614F /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Almond.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2940BD0F101B20B100F5A322 /* AMCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2940BD11101B20C800F5A322 /* AMCollectionView.h */,
+				2940BD12101B20C800F5A322 /* AMCollectionView.m */,
+				2940BD13101B20C800F5A322 /* AMCollectionViewItem.h */,
+				2940BD14101B20C800F5A322 /* AMCollectionViewItem.m */,
+				2940BD15101B20C800F5A322 /* AMCollectionViewItemProtocol.h */,
+			);
+			name = AMCollectionView;
+			sourceTree = "<group>";
+		};
+		298AC2F60FF0156600C7EA95 /* LUA */ = {
+			isa = PBXGroup;
+			children = (
+				298AC2F80FF0157C00C7EA95 /* Default.almond */,
+			);
+			name = LUA;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Almond */ = {
+			isa = PBXGroup;
+			children = (
+				2940BD0F101B20B100F5A322 /* AMCollectionView */,
+				298AC2F60FF0156600C7EA95 /* LUA */,
+				7756732906782D8800D1FEB8 /* Models */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Almond;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2940BD7F101B328F00F5A322 /* almond.icns */,
+				8D1107310486CEB800E47090 /* Almond-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7756732906782D8800D1FEB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Almond */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Almond" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				298AC3070FF015BD00C7EA95 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Almond;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Almond;
+			productReference = 8D1107320486CEB800E47090 /* Almond.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Almond" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Almond */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Almond */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				2940BD80101B328F00F5A322 /* almond.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				77C8280E06725ACE000B614F /* Almond_AppDelegate.m in Sources */,
+				770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */,
+				296C2D720FF169DA0084C67C /* LuaMethodInvocation.m in Sources */,
+				29888D571004A804007FFCEA /* MainView.m in Sources */,
+				292A8C71100E79E6009B1E94 /* SelectableViewItem.m in Sources */,
+				294C885F100E815F00002CFC /* ValueTransformers.m in Sources */,
+				29C7C016100F620D00D9AC0C /* SelectableDetailView.m in Sources */,
+				29C7C01E100F62A200D9AC0C /* SelectableCollectionView.m in Sources */,
+				2940BD16101B20C800F5A322 /* AMCollectionView.m in Sources */,
+				2940BD17101B20C800F5A322 /* AMCollectionViewItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7446980DB6B7EA00F9684A /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FC0A850875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Almond_Prefix.pch;
+				INFOPLIST_FILE = "Almond-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lua-5.1.4/lib\"",
+				);
+				PRODUCT_NAME = Almond;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		26FC0A860875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Almond_Prefix.pch;
+				INFOPLIST_FILE = "Almond-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lua-5.1.4/lib\"",
+				);
+				PRODUCT_NAME = Almond;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		26FC0A890875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CURRENT_PROJECT_VERSION = 2;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "lua-5.1.4/include";
+				LIBRARY_SEARCH_PATHS = "lua-5.1.4/lib";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-llua";
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		26FC0A8A0875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "lua-5.1.4/include";
+				LIBRARY_SEARCH_PATHS = "lua-5.1.4/lib";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-llua";
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Almond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A850875C7B200E6366F /* Debug */,
+				26FC0A860875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Almond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A890875C7B200E6366F /* Debug */,
+				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
