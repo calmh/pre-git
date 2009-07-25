@@ -335,10 +335,6 @@
 										<string>292EAF0E0FEEE05A0064E8C2</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>almond</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>295F3BEF101B33510055BCD0</string>
 										<key>history</key>
 										<array>
 											<string>292EAF1F0FEEEACA0064E8C2</string>
@@ -364,7 +360,7 @@
 											<string>2940BD7B101B324F00F5A322</string>
 											<string>2940BD84101B32D500F5A322</string>
 											<string>2940BD85101B32D500F5A322</string>
-											<string>295F3BEE101B33510055BCD0</string>
+											<string>29CAAE55101B33C0008C65F4</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -532,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295F3BE1101B32E20055BCD0</string>
+				<string>29CAAE6D101B33CF008C65F4</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>295F3BE2101B32E20055BCD0</string>
+				<string>29CAAE6E101B33CF008C65F4</string>
 				<string>292EAF0D0FEEE05A0064E8C2</string>
-				<string>295F3BE3101B32E20055BCD0</string>
+				<string>29CAAE6F101B33CF008C65F4</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -685,14 +681,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295F3BE4101B32E20055BCD0</string>
+				<string>29CAAE5A101B33C0008C65F4</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>295F3BE5101B32E20055BCD0</string>
-				<string>295F3BE6101B32E20055BCD0</string>
-				<string>295F3BE7101B32E20055BCD0</string>
-				<string>295F3BE8101B32E20055BCD0</string>
-				<string>295F3BE9101B32E20055BCD0</string>
+				<string>29CAAE5B101B33C0008C65F4</string>
+				<string>29CAAE5C101B33C0008C65F4</string>
+				<string>29CAAE5D101B33C0008C65F4</string>
+				<string>29CAAE5E101B33C0008C65F4</string>
+				<string>29CAAE5F101B33C0008C65F4</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>

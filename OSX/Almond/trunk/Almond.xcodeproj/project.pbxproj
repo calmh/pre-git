@@ -347,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -356,6 +357,7 @@
 				OTHER_LDFLAGS = "-llua";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
