@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* GlintAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* GlintAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */; };
+		29001EE8101B7E2400B22F74 /* GPXReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29001EE7101B7E2400B22F74 /* GPXReader.m */; };
+		291C24D510011B7B0086EE86 /* unitsets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 291C24D410011B7B0086EE86 /* unitsets.plist */; };
+		2974372C101C617F00DDBB6A /* reference.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2974372B101C617F00DDBB6A /* reference.gpx */; };
+		2974373F101C61A700DDBB6A /* JBLocationMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2974373E101C61A700DDBB6A /* JBLocationMath.m */; };
+		2974387E101C727800DDBB6A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2974387D101C727800DDBB6A /* Default.png */; };
+		29874F9A0FF776EB0080E20D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29874F990FF776EB0080E20D /* Icon.png */; };
+		29C7910510027A8E00EA28CC /* CompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C7910410027A8E00EA28CC /* CompassView.m */; };
+		29C9A4F51011E9CA004CCBDD /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C9A4F41011E9CA004CCBDD /* MainScreenViewController.xib */; };
+		29CD7102100FB704001150A1 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD70FF100FB704001150A1 /* NSStream+SKPSMTPExtensions.m */; };
+		29CD7103100FB704001150A1 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD7101100FB704001150A1 /* SKPSMTPMessage.m */; };
+		29CD7107100FB733001150A1 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD7106100FB733001150A1 /* NSData+Base64Additions.m */; };
+		29CD710A100FB74A001150A1 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD7109100FB74A001150A1 /* HSK_CFUtilities.m */; };
+		29CD710E100FB766001150A1 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD710D100FB766001150A1 /* Base64Transcoder.m */; };
+		29CD7111100FB8B4001150A1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CD7110100FB8B4001150A1 /* CFNetwork.framework */; };
+		29CD711F100FB9F2001150A1 /* SendFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD711D100FB9F2001150A1 /* SendFilesViewController.m */; };
+		29CD7120100FB9F2001150A1 /* SendFilesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29CD711E100FB9F2001150A1 /* SendFilesViewController.xib */; };
+		29CE3C9510079BAD00AEC5A4 /* GPXWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE3C9410079BAD00AEC5A4 /* GPXWriter.m */; };
+		29D191951011E2DA00B9E8CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D191931011E2DA00B9E8CF /* Localizable.strings */; };
+		29FE31E30FF4359D00E9FE05 /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 29FE31DD0FF4359D00E9FE05 /* Basso.aiff */; };
+		29FE31E60FF4359D00E9FE05 /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 29FE31E00FF4359D00E9FE05 /* Purr.aiff */; };
+		29FE31EB0FF435DB00E9FE05 /* JBSoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FE31EA0FF435DB00E9FE05 /* JBSoundEffect.m */; };
+		29FE32110FF436AC00E9FE05 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29FE32100FF436AC00E9FE05 /* Settings.bundle */; };
+		29FE32180FF436EF00E9FE05 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FE32170FF436EF00E9FE05 /* AudioToolbox.framework */; };
+		29FE32280FF4370200E9FE05 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FE32270FF4370200E9FE05 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* GlintAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlintAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* GlintAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlintAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Glint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
+		29001EE6101B7E2300B22F74 /* GPXReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPXReader.h; sourceTree = "<group>"; };
+		29001EE7101B7E2400B22F74 /* GPXReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPXReader.m; sourceTree = "<group>"; };
+		291C24D410011B7B0086EE86 /* unitsets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = unitsets.plist; sourceTree = "<group>"; };
+		2974372B101C617F00DDBB6A /* reference.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = reference.gpx; path = Resources/reference.gpx; sourceTree = "<group>"; };
+		2974373D101C61A700DDBB6A /* JBLocationMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLocationMath.h; sourceTree = "<group>"; };
+		2974373E101C61A700DDBB6A /* JBLocationMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLocationMath.m; sourceTree = "<group>"; };
+		2974387D101C727800DDBB6A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		29874F990FF776EB0080E20D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29C7910310027A8E00EA28CC /* CompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassView.h; sourceTree = "<group>"; };
+		29C7910410027A8E00EA28CC /* CompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassView.m; sourceTree = "<group>"; };
+		29C9A4F41011E9CA004CCBDD /* MainScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainScreenViewController.xib; path = Resources/MainScreenViewController.xib; sourceTree = "<group>"; };
+		29CD70FE100FB704001150A1 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStream+SKPSMTPExtensions.h"; path = "SMTPClient/NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		29CD70FF100FB704001150A1 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStream+SKPSMTPExtensions.m"; path = "SMTPClient/NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		29CD7100100FB704001150A1 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKPSMTPMessage.h; path = SMTPClient/SKPSMTPMessage.h; sourceTree = "<group>"; };
+		29CD7101100FB704001150A1 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKPSMTPMessage.m; path = SMTPClient/SKPSMTPMessage.m; sourceTree = "<group>"; };
+		29CD7105100FB733001150A1 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64Additions.h"; path = "SMTPClient/NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		29CD7106100FB733001150A1 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64Additions.m"; path = "SMTPClient/NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		29CD7108100FB74A001150A1 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSK_CFUtilities.h; path = SMTPClient/HSK_CFUtilities.h; sourceTree = "<group>"; };
+		29CD7109100FB74A001150A1 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSK_CFUtilities.m; path = SMTPClient/HSK_CFUtilities.m; sourceTree = "<group>"; };
+		29CD710C100FB766001150A1 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = SMTPClient/Base64Transcoder.h; sourceTree = "<group>"; };
+		29CD710D100FB766001150A1 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64Transcoder.m; path = SMTPClient/Base64Transcoder.m; sourceTree = "<group>"; };
+		29CD7110100FB8B4001150A1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		29CD711C100FB9F2001150A1 /* SendFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendFilesViewController.h; sourceTree = "<group>"; };
+		29CD711D100FB9F2001150A1 /* SendFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendFilesViewController.m; sourceTree = "<group>"; };
+		29CD711E100FB9F2001150A1 /* SendFilesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SendFilesViewController.xib; path = Resources/SendFilesViewController.xib; sourceTree = "<group>"; };
+		29CE3C9310079BAD00AEC5A4 /* GPXWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPXWriter.h; sourceTree = "<group>"; };
+		29CE3C9410079BAD00AEC5A4 /* GPXWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPXWriter.m; sourceTree = "<group>"; };
+		29D191941011E2DA00B9E8CF /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29D191981011E31600B9E8CF /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29FE31DD0FF4359D00E9FE05 /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Basso.aiff; path = Resources/Basso.aiff; sourceTree = "<group>"; };
+		29FE31E00FF4359D00E9FE05 /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Purr.aiff; path = Resources/Purr.aiff; sourceTree = "<group>"; };
+		29FE31E90FF435DB00E9FE05 /* JBSoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSoundEffect.h; sourceTree = "<group>"; };
+		29FE31EA0FF435DB00E9FE05 /* JBSoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSoundEffect.m; sourceTree = "<group>"; };
+		29FE32100FF436AC00E9FE05 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		29FE32170FF436EF00E9FE05 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		29FE32270FF4370200E9FE05 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glint_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Glint-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Glint-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				29FE32180FF436EF00E9FE05 /* AudioToolbox.framework in Frameworks */,
+				29FE32280FF4370200E9FE05 /* CoreLocation.framework in Frameworks */,
+				29CD7111100FB8B4001150A1 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				29FE31E90FF435DB00E9FE05 /* JBSoundEffect.h */,
+				29FE31EA0FF435DB00E9FE05 /* JBSoundEffect.m */,
+				2974373D101C61A700DDBB6A /* JBLocationMath.h */,
+				2974373E101C61A700DDBB6A /* JBLocationMath.m */,
+				29001EE6101B7E2300B22F74 /* GPXReader.h */,
+				29001EE7101B7E2400B22F74 /* GPXReader.m */,
+				29CE3C9310079BAD00AEC5A4 /* GPXWriter.h */,
+				29CE3C9410079BAD00AEC5A4 /* GPXWriter.m */,
+				1D3623240D0F684500981E51 /* GlintAppDelegate.h */,
+				1D3623250D0F684500981E51 /* GlintAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* MainScreenViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */,
+				29CD711C100FB9F2001150A1 /* SendFilesViewController.h */,
+				29CD711D100FB9F2001150A1 /* SendFilesViewController.m */,
+				29C7910310027A8E00EA28CC /* CompassView.h */,
+				29C7910410027A8E00EA28CC /* CompassView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Glint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				29D191931011E2DA00B9E8CF /* Localizable.strings */,
+				29CD70FB100FB16B001150A1 /* SMTP Client */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				291C24D410011B7B0086EE86 /* unitsets.plist */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29FE32100FF436AC00E9FE05 /* Settings.bundle */,
+				8D1107310486CEB800E47090 /* Glint-Info.plist */,
+				29874F990FF776EB0080E20D /* Icon.png */,
+				29C9A4F41011E9CA004CCBDD /* MainScreenViewController.xib */,
+				29CD711E100FB9F2001150A1 /* SendFilesViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				29FE31DD0FF4359D00E9FE05 /* Basso.aiff */,
+				29FE31E00FF4359D00E9FE05 /* Purr.aiff */,
+				2974372B101C617F00DDBB6A /* reference.gpx */,
+				2974387D101C727800DDBB6A /* Default.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29CD7110100FB8B4001150A1 /* CFNetwork.framework */,
+				29FE32170FF436EF00E9FE05 /* AudioToolbox.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				29FE32270FF4370200E9FE05 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29CD70FB100FB16B001150A1 /* SMTP Client */ = {
+			isa = PBXGroup;
+			children = (
+				29CD710C100FB766001150A1 /* Base64Transcoder.h */,
+				29CD710D100FB766001150A1 /* Base64Transcoder.m */,
+				29CD7108100FB74A001150A1 /* HSK_CFUtilities.h */,
+				29CD7109100FB74A001150A1 /* HSK_CFUtilities.m */,
+				29CD7105100FB733001150A1 /* NSData+Base64Additions.h */,
+				29CD7106100FB733001150A1 /* NSData+Base64Additions.m */,
+				29CD70FE100FB704001150A1 /* NSStream+SKPSMTPExtensions.h */,
+				29CD70FF100FB704001150A1 /* NSStream+SKPSMTPExtensions.m */,
+				29CD7100100FB704001150A1 /* SKPSMTPMessage.h */,
+				29CD7101100FB704001150A1 /* SKPSMTPMessage.m */,
+			);
+			name = "SMTP Client";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Glint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Glint" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Glint;
+			productName = Glint;
+			productReference = 1D6058910D05DD3D006BFB54 /* Glint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Glint" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				sv,
+				se,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Glint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				29FE31E30FF4359D00E9FE05 /* Basso.aiff in Resources */,
+				29FE31E60FF4359D00E9FE05 /* Purr.aiff in Resources */,
+				29FE32110FF436AC00E9FE05 /* Settings.bundle in Resources */,
+				29874F9A0FF776EB0080E20D /* Icon.png in Resources */,
+				291C24D510011B7B0086EE86 /* unitsets.plist in Resources */,
+				29CD7120100FB9F2001150A1 /* SendFilesViewController.xib in Resources */,
+				29D191951011E2DA00B9E8CF /* Localizable.strings in Resources */,
+				29C9A4F51011E9CA004CCBDD /* MainScreenViewController.xib in Resources */,
+				2974372C101C617F00DDBB6A /* reference.gpx in Resources */,
+				2974387E101C727800DDBB6A /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* GlintAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* MainScreenViewController.m in Sources */,
+				29FE31EB0FF435DB00E9FE05 /* JBSoundEffect.m in Sources */,
+				29C7910510027A8E00EA28CC /* CompassView.m in Sources */,
+				29CE3C9510079BAD00AEC5A4 /* GPXWriter.m in Sources */,
+				29CD7102100FB704001150A1 /* NSStream+SKPSMTPExtensions.m in Sources */,
+				29CD7103100FB704001150A1 /* SKPSMTPMessage.m in Sources */,
+				29CD7107100FB733001150A1 /* NSData+Base64Additions.m in Sources */,
+				29CD710A100FB74A001150A1 /* HSK_CFUtilities.m in Sources */,
+				29CD710E100FB766001150A1 /* Base64Transcoder.m in Sources */,
+				29CD711F100FB9F2001150A1 /* SendFilesViewController.m in Sources */,
+				29001EE8101B7E2400B22F74 /* GPXReader.m in Sources */,
+				2974373F101C61A700DDBB6A /* JBLocationMath.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29D191931011E2DA00B9E8CF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29D191941011E2DA00B9E8CF /* en */,
+				29D191981011E31600B9E8CF /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Glint_Prefix.pch;
+				INFOPLIST_FILE = "Glint-Info.plist";
+				PRODUCT_NAME = Glint;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Glint_Prefix.pch;
+				INFOPLIST_FILE = "Glint-Info.plist";
+				PRODUCT_NAME = Glint;
+			};
+			name = Release;
+		};
+		29FFE05B1013B8570091ACC8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 24;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Distribution;
+		};
+		29FFE05C1013B8570091ACC8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Glint_Prefix.pch;
+				INFOPLIST_FILE = "Glint-Info.plist";
+				PRODUCT_NAME = Glint;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 24;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 24;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Glint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				29FFE05C1013B8570091ACC8 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Glint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				29FFE05B1013B8570091ACC8 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
