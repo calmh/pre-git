@@ -37,6 +37,12 @@
 		};
 	};
 	29001EE6101B7E2300B22F74 /* JBGPXReader.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = JBGPXReader.h;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBGPXReader.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{463, 0}";
@@ -44,6 +50,12 @@
 		};
 	};
 	29001EE7101B7E2400B22F74 /* JBGPXReader.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = JBGPXReader.m;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBGPXReader.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 1470}}";
 			sepNavSelRange = "{239, 0}";
@@ -215,6 +227,12 @@
 		};
 	};
 	2974373D101C61A700DDBB6A /* JBLocationMath.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = JBLocationMath.h;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBLocationMath.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{225, 0}";
@@ -222,6 +240,12 @@
 		};
 	};
 	2974373E101C61A700DDBB6A /* JBLocationMath.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = JBLocationMath.m;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBLocationMath.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 2198}}";
 			sepNavSelRange = "{6961, 0}";
@@ -559,6 +583,26 @@
 		vrLen = 646;
 		vrLoc = 0;
 	};
+	29886673101C95F50051F368 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29CE3C9310079BAD00AEC5A4 /* JBGPXWriter.h */;
+		name = "JBGPXWriter.h: 30";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 0;
+	};
+	29886683101C96480051F368 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 52";
+		rLen = 0;
+		rLoc = 2069;
+		rType = 0;
+		vrLen = 2087;
+		vrLoc = 0;
+	};
 	29888D7E1004A892007FFCEA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29C7910310027A8E00EA28CC /* CompassView.h */;
@@ -818,6 +862,8 @@
 			29886656101C95CD0051F368 /* PBXTextBookmark */ = 29886656101C95CD0051F368 /* PBXTextBookmark */;
 			29886657101C95CD0051F368 /* PBXTextBookmark */ = 29886657101C95CD0051F368 /* PBXTextBookmark */;
 			29886658101C95CD0051F368 /* PBXTextBookmark */ = 29886658101C95CD0051F368 /* PBXTextBookmark */;
+			29886673101C95F50051F368 /* PBXTextBookmark */ = 29886673101C95F50051F368 /* PBXTextBookmark */;
+			29886683101C96480051F368 /* PBXTextBookmark */ = 29886683101C96480051F368 /* PBXTextBookmark */;
 			29888D7E1004A892007FFCEA = 29888D7E1004A892007FFCEA /* PBXTextBookmark */;
 			29893640101991B1009F98C3 = 29893640101991B1009F98C3 /* PBXTextBookmark */;
 			2989364D101991B1009F98C3 = 2989364D101991B1009F98C3 /* PBXTextBookmark */;
@@ -1054,6 +1100,12 @@
 		vrLoc = 0;
 	};
 	29CE3C9310079BAD00AEC5A4 /* JBGPXWriter.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = JBGPXWriter.h;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBGPXWriter.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{646, 0}";
@@ -1062,6 +1114,12 @@
 		};
 	};
 	29CE3C9410079BAD00AEC5A4 /* JBGPXWriter.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = JBGPXWriter.m;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBGPXWriter.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1728, 1428}}";
 			sepNavSelRange = "{1337, 0}";
@@ -1268,6 +1326,12 @@
 		indexTemplatePath = "";
 	};
 	29FE31E90FF435DB00E9FE05 /* JBSoundEffect.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = JBSoundEffect.h;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBSoundEffect.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{32, 0}";
@@ -1275,6 +1339,12 @@
 		};
 	};
 	29FE31EA0FF435DB00E9FE05 /* JBSoundEffect.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = JBSoundEffect.m;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/Classes/JBSoundEffect.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{257, 0}";
