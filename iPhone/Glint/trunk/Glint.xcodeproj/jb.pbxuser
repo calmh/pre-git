@@ -183,6 +183,14 @@
 		vrLen = 936;
 		vrLoc = 0;
 	};
+	291C24D410011B7B0086EE86 /* unitsets.plist */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.plist.xml;
+		name = unitsets.plist;
+		path = /Users/jb/projekt/iPhone/Glint/trunk/unitsets.plist;
+		sourceTree = "<absolute>";
+	};
 	291C24E310011D910086EE86 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 29874F990FF776EB0080E20D /* Icon.png */;
@@ -603,6 +611,58 @@
 		vrLen = 2087;
 		vrLoc = 0;
 	};
+	29886687101C966A0051F368 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 52";
+		rLen = 0;
+		rLoc = 2069;
+		rType = 0;
+		vrLen = 2087;
+		vrLoc = 0;
+	};
+	29886688101C966A0051F368 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 291C24D410011B7B0086EE86 /* unitsets.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/jb/projekt/iPhone/Glint/trunk/unitsets.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	29886689101C966A0051F368 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 52";
+		rLen = 0;
+		rLoc = 2069;
+		rType = 0;
+		vrLen = 2087;
+		vrLoc = 0;
+	};
+	2988668A101C966A0051F368 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 291C24D410011B7B0086EE86 /* unitsets.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/jb/projekt/iPhone/Glint/trunk/unitsets.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2988668D101C968B0051F368 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 52";
+		rLen = 0;
+		rLoc = 2069;
+		rType = 0;
+		vrLen = 2087;
+		vrLoc = 0;
+	};
 	29888D7E1004A892007FFCEA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29C7910310027A8E00EA28CC /* CompassView.h */;
@@ -722,7 +782,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
-		activeSDKPreference = iphoneos3.0;
+		activeSDKPreference = iphonesimulator3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Glint */,
@@ -864,6 +924,11 @@
 			29886658101C95CD0051F368 /* PBXTextBookmark */ = 29886658101C95CD0051F368 /* PBXTextBookmark */;
 			29886673101C95F50051F368 /* PBXTextBookmark */ = 29886673101C95F50051F368 /* PBXTextBookmark */;
 			29886683101C96480051F368 /* PBXTextBookmark */ = 29886683101C96480051F368 /* PBXTextBookmark */;
+			29886687101C966A0051F368 /* PBXTextBookmark */ = 29886687101C966A0051F368 /* PBXTextBookmark */;
+			29886688101C966A0051F368 /* PlistBookmark */ = 29886688101C966A0051F368 /* PlistBookmark */;
+			29886689101C966A0051F368 /* PBXTextBookmark */ = 29886689101C966A0051F368 /* PBXTextBookmark */;
+			2988668A101C966A0051F368 /* PlistBookmark */ = 2988668A101C966A0051F368 /* PlistBookmark */;
+			2988668D101C968B0051F368 /* PBXTextBookmark */ = 2988668D101C968B0051F368 /* PBXTextBookmark */;
 			29888D7E1004A892007FFCEA = 29888D7E1004A892007FFCEA /* PBXTextBookmark */;
 			29893640101991B1009F98C3 = 29893640101991B1009F98C3 /* PBXTextBookmark */;
 			2989364D101991B1009F98C3 = 2989364D101991B1009F98C3 /* PBXTextBookmark */;
