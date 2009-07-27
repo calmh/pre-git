@@ -32,7 +32,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1248, 8414}}";
 			sepNavSelRange = "{26750, 0}";
-			sepNavVisRange = "{24721, 2260}";
+			sepNavVisRange = "{21196, 3439}";
 			sepNavWindowFrame = "{{621, 69}, {1191, 809}}";
 		};
 	};
@@ -696,7 +696,7 @@
 		fRef = 29CD711D100FB9F2001150A1 /* SendFilesViewController.m */;
 		name = "SendFilesViewController.m: 198";
 		rLen = 0;
-		rLoc = 9757;
+		rLoc = 8986;
 		rType = 0;
 		vrLen = 2606;
 		vrLoc = 7210;
@@ -706,7 +706,7 @@
 		fRef = 29CD711D100FB9F2001150A1 /* SendFilesViewController.m */;
 		name = "SendFilesViewController.m: 198";
 		rLen = 0;
-		rLoc = 9757;
+		rLoc = 8986;
 		rType = 0;
 		vrLen = 708;
 		vrLoc = 8383;
@@ -716,7 +716,7 @@
 		fRef = 29CD711D100FB9F2001150A1 /* SendFilesViewController.m */;
 		name = "SendFilesViewController.m: 216";
 		rLen = 0;
-		rLoc = 9757;
+		rLoc = 8986;
 		rType = 0;
 		vrLen = 3054;
 		vrLoc = 7435;
@@ -756,7 +756,7 @@
 		fRef = 29CD711D100FB9F2001150A1 /* SendFilesViewController.m */;
 		name = "SendFilesViewController.m: 216";
 		rLen = 0;
-		rLoc = 9757;
+		rLoc = 8986;
 		rType = 0;
 		vrLen = 3054;
 		vrLoc = 7435;
