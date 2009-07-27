@@ -99,9 +99,9 @@
 	};
 	291C0DCE101E23C500393E77 /* TestCases.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 1764}}";
-			sepNavSelRange = "{2603, 0}";
-			sepNavVisRange = "{1682, 553}";
+			sepNavIntBoundsRect = "{{0, 0}, {1112, 2184}}";
+			sepNavSelRange = "{6814, 0}";
+			sepNavVisRange = "{5801, 1754}";
 		};
 	};
 	291C0E11101E29CD00393E77 /* PBXTextBookmark */ = {
@@ -179,7 +179,7 @@
 		fRef = 291C0DCE101E23C500393E77 /* TestCases.m */;
 		name = "TestCases.m: 14";
 		rLen = 27;
-		rLoc = 259;
+		rLoc = 296;
 		rType = 0;
 		vrLen = 1744;
 		vrLoc = 0;
@@ -277,16 +277,6 @@
 		rType = 0;
 		vrLen = 2246;
 		vrLoc = 21367;
-	};
-	291D8373101E46AA00CE92DA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
-		name = "Glint_Prefix.pch: 56";
-		rLen = 0;
-		rLoc = 2286;
-		rType = 0;
-		vrLen = 1707;
-		vrLoc = 575;
 	};
 	2957D2651007FA09002ABA53 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -468,7 +458,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
-		activeSDKPreference = iphoneos3.0;
+		activeSDKPreference = iphonesimulator3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
 		addToTargets = (
 			291C0DB5101E22F600393E77 /* Tests */,
@@ -557,8 +547,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 270419867;
-			PBXWorkspaceStateSaveDate = 270419867;
+			PBXPerProjectTemplateStateSaveDate = 270421475;
+			PBXWorkspaceStateSaveDate = 270421475;
 		};
 		perUserProjectItems = {
 			29001F12101B856200B22F74 /* PBXTextBookmark */ = 29001F12101B856200B22F74 /* PBXTextBookmark */;
@@ -583,7 +573,6 @@
 			291C0EBA101E361E00393E77 /* PBXTextBookmark */ = 291C0EBA101E361E00393E77 /* PBXTextBookmark */;
 			291C24E310011D910086EE86 /* PBXBookmark */ = 291C24E310011D910086EE86 /* PBXBookmark */;
 			291D8372101E46AA00CE92DA /* PBXTextBookmark */ = 291D8372101E46AA00CE92DA /* PBXTextBookmark */;
-			291D8373101E46AA00CE92DA /* PBXTextBookmark */ = 291D8373101E46AA00CE92DA /* PBXTextBookmark */;
 			2957D2651007FA09002ABA53 /* PlistBookmark */ = 2957D2651007FA09002ABA53 /* PlistBookmark */;
 			296729FB101CCAF3001BBEDF /* PBXTextBookmark */ = 296729FB101CCAF3001BBEDF /* PBXTextBookmark */;
 			29743750101C64C600DDBB6A /* PBXTextBookmark */ = 29743750101C64C600DDBB6A /* PBXTextBookmark */;
@@ -603,6 +592,10 @@
 			29CD7182100FBD82001150A1 /* PBXTextBookmark */ = 29CD7182100FBD82001150A1 /* PBXTextBookmark */;
 			29CE3CB210079E6700AEC5A4 /* PBXTextBookmark */ = 29CE3CB210079E6700AEC5A4 /* PBXTextBookmark */;
 			29CE3CC510079E6700AEC5A4 /* PBXTextBookmark */ = 29CE3CC510079E6700AEC5A4 /* PBXTextBookmark */;
+			29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */ = 29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */;
+			29D8BFB5101E4DFB006C7865 /* PBXTextBookmark */ = 29D8BFB5101E4DFB006C7865 /* PBXTextBookmark */;
+			29D8BFE5101E5282006C7865 /* PBXTextBookmark */ = 29D8BFE5101E5282006C7865 /* PBXTextBookmark */;
+			29D8BFE7101E5282006C7865 /* PBXTextBookmark */ = 29D8BFE7101E5282006C7865 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 29FE31DA0FF4354400E9FE05 /* Source Control */;
 		userBuildSettings = {
@@ -850,6 +843,44 @@
 			sepNavVisRange = "{0, 1166}";
 		};
 	};
+	29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 56";
+		rLen = 0;
+		rLoc = 2286;
+		rType = 0;
+		vrLen = 1783;
+		vrLoc = 500;
+	};
+	29D8BFB5101E4DFB006C7865 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Glint_Prefix.pch */;
+		name = "Glint_Prefix.pch: 56";
+		rLen = 0;
+		rLoc = 2286;
+		rType = 0;
+		vrLen = 1783;
+		vrLoc = 500;
+	};
+	29D8BFE5101E5282006C7865 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: -[TestCases testGPXReader] : '0.000000' should be equal to '596.000000' + or - '0.100000': totalDistance incorrect";
+		fRef = 291C0DCE101E23C500393E77 /* TestCases.m */;
+		rLen = 1;
+		rLoc = 123;
+		rType = 1;
+	};
+	29D8BFE7101E5282006C7865 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 291C0DCE101E23C500393E77 /* TestCases.m */;
+		name = "TestCases.m: 139";
+		rLen = 0;
+		rLoc = 6814;
+		rType = 0;
+		vrLen = 1754;
+		vrLoc = 5801;
+	};
 	29DC66A4101884B300B9A1ED /* CompassView.m:83 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -948,7 +979,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1112, 784}}";
 			sepNavSelRange = "{2286, 0}";
-			sepNavVisRange = "{575, 1708}";
+			sepNavVisRange = "{500, 1783}";
 		};
 	};
 }
