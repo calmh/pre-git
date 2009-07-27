@@ -277,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>19</integer>
 									<integer>13</integer>
 									<integer>0</integer>
 								</array>
@@ -320,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainScreenViewController.m</string>
+								<string>SendFilesViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MainScreenViewController.m</string>
+										<string>SendFilesViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29C9EF76101D9E5E0015C789</string>
+										<string>29C9EF83101D9F360015C789</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -347,10 +347,10 @@
 											<string>296729FB101CCAF3001BBEDF</string>
 											<string>2981657C101CE5D60085BF07</string>
 											<string>29C9EF37101D97380015C789</string>
-											<string>29C9EF6F101D9E5E0015C789</string>
 											<string>29C9EF70101D9E5E0015C789</string>
 											<string>29C9EF71101D9E5E0015C789</string>
-											<string>29C9EF72101D9E5E0015C789</string>
+											<string>29C9EF80101D9F360015C789</string>
+											<string>29C9EF81101D9F360015C789</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -374,6 +374,7 @@
 											<string>29C9EF73101D9E5E0015C789</string>
 											<string>29C9EF74101D9E5E0015C789</string>
 											<string>29C9EF75101D9E5E0015C789</string>
+											<string>29C9EF82101D9F360015C789</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
