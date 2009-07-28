@@ -30,7 +30,7 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1248, 8274}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1128, 8134}}";
 			sepNavSelRange = "{7572, 0}";
 			sepNavVisRange = "{6988, 1454}";
 			sepNavWindowFrame = "{{621, 69}, {1191, 809}}";
@@ -435,6 +435,16 @@
 		rLen = 0;
 		rLoc = 2147483647;
 	};
+	29942DCB101F46C600900995 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
+		name = "MainScreenViewController.m: 168";
+		rLen = 0;
+		rLoc = 7572;
+		rType = 0;
+		vrLen = 1454;
+		vrLoc = 6988;
+	};
 	29AB7298101649B300A1ABCC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29C7910410027A8E00EA28CC /* CompassView.m */;
@@ -446,7 +456,7 @@
 		vrLoc = 212;
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Distribution;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
 		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
@@ -537,8 +547,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 270461090;
-			PBXWorkspaceStateSaveDate = 270461090;
+			PBXPerProjectTemplateStateSaveDate = 270462226;
+			PBXWorkspaceStateSaveDate = 270462226;
 		};
 		perUserProjectItems = {
 			29001F12101B856200B22F74 /* PBXTextBookmark */ = 29001F12101B856200B22F74 /* PBXTextBookmark */;
@@ -570,6 +580,7 @@
 			29888D7E1004A892007FFCEA /* PBXTextBookmark */ = 29888D7E1004A892007FFCEA /* PBXTextBookmark */;
 			298936AA10199885009F98C3 /* PlistBookmark */ = 298936AA10199885009F98C3 /* PlistBookmark */;
 			298936AB10199885009F98C3 /* PlistBookmark */ = 298936AB10199885009F98C3 /* PlistBookmark */;
+			29942DCB101F46C600900995 /* PBXTextBookmark */ = 29942DCB101F46C600900995 /* PBXTextBookmark */;
 			29AB7298101649B300A1ABCC /* PBXTextBookmark */ = 29AB7298101649B300A1ABCC /* PBXTextBookmark */;
 			29C9A50E1011EC84004CCBDD /* PBXTextBookmark */ = 29C9A50E1011EC84004CCBDD /* PBXTextBookmark */;
 			29C9A50F1011EC84004CCBDD /* PBXTextBookmark */ = 29C9A50F1011EC84004CCBDD /* PBXTextBookmark */;
@@ -586,7 +597,6 @@
 			29D0321E101EE34A00EF7C65 /* PBXTextBookmark */ = 29D0321E101EE34A00EF7C65 /* PBXTextBookmark */;
 			29D7A9B4101EE891007D2478 /* PBXTextBookmark */ = 29D7A9B4101EE891007D2478 /* PBXTextBookmark */;
 			29D7A9B5101EE891007D2478 /* PBXTextBookmark */ = 29D7A9B5101EE891007D2478 /* PBXTextBookmark */;
-			29D7A9C5101EE891007D2478 /* PBXTextBookmark */ = 29D7A9C5101EE891007D2478 /* PBXTextBookmark */;
 			29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */ = 29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 29FE31DA0FF4354400E9FE05 /* Source Control */;
@@ -648,7 +658,7 @@
 		ignoreCount = 0;
 		lineNumber = 144;
 		location = Glint;
-		modificationTime = 270461157.523822;
+		modificationTime = 270461157.5238219;
 		state = 2;
 	};
 	29C7910310027A8E00EA28CC /* CompassView.h */ = {
@@ -884,16 +894,6 @@
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 4572;
-	};
-	29D7A9C5101EE891007D2478 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* MainScreenViewController.m */;
-		name = "MainScreenViewController.m: 162";
-		rLen = 0;
-		rLoc = 7235;
-		rType = 0;
-		vrLen = 1393;
-		vrLoc = 16124;
 	};
 	29D8BFB3101E4DFB006C7865 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
