@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -316,8 +318,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -332,10 +332,6 @@
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>JBLocationMath.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>29D031E0101ED56C00EF7C65</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -385,8 +381,6 @@
 											<string>291C0E2A101E29CD00393E77</string>
 											<string>291C0E2B101E29CD00393E77</string>
 											<string>291C0E82101E2F9900393E77</string>
-											<string>29D031DE101ED56C00EF7C65</string>
-											<string>29D031DF101ED56C00EF7C65</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -530,11 +524,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29D031E1101ED56C00EF7C65</string>
+				<string>29D031FF101ED60B00EF7C65</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>29D031E2101ED56C00EF7C65</string>
+				<string>29D03200101ED60B00EF7C65</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>29D031E3101ED56C00EF7C65</string>
+				<string>29D03201101ED60B00EF7C65</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -724,8 +718,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>29D031EA101ED56C00EF7C65</string>
-		<string>29D031EB101ED56C00EF7C65</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
