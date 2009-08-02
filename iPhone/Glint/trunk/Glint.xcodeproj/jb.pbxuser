@@ -96,9 +96,9 @@
 	};
 	2913DBE91024FD6B00F56A2A /* FileDetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1112, 2716}}";
-			sepNavSelRange = "{1789, 0}";
-			sepNavVisRange = "{693, 1914}";
+			sepNavIntBoundsRect = "{{0, 0}, {1980, 2436}}";
+			sepNavSelRange = "{1281, 0}";
+			sepNavVisRange = "{5515, 1749}";
 			sepNavWindowFrame = "{{15, 64}, {1191, 809}}";
 		};
 	};
@@ -236,7 +236,7 @@
 		ignoreCount = 0;
 		lineNumber = 80;
 		location = Glint;
-		modificationTime = 270934932.893042;
+		modificationTime = 270936216.175008;
 		state = 1;
 	};
 	2913DF481026217900F56A2A /* PBXTextBookmark */ = {
@@ -482,7 +482,7 @@
 		ignoreCount = 0;
 		lineNumber = 32;
 		location = Glint;
-		modificationTime = 270934932.892378;
+		modificationTime = 270936216.174332;
 		state = 1;
 	};
 	2930665710231BB80093FD43 /* SharedCode:18 */ = {
@@ -499,7 +499,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Glint;
-		modificationTime = 270934932.89281;
+		modificationTime = 270936216.174758;
 		state = 1;
 	};
 	2957D2651007FA09002ABA53 /* PlistBookmark */ = {
@@ -689,7 +689,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 29FE31C90FF4353700E9FE05 /* Glint */;
-		activeSDKPreference = iphonesimulator3.0;
+		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Glint */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Glint */,
