@@ -280,8 +280,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>29</integer>
+									<integer>22</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -323,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Glint_Prefix.pch</string>
+								<string>MainScreenViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Glint_Prefix.pch</string>
+										<string>MainScreenViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29CE5CC9102763DB000FC48B</string>
+										<string>29CE5D3E1027709F000FC48B</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -354,17 +354,19 @@
 											<string>2913DD571025BF0600F56A2A</string>
 											<string>2913DF2A10261C3100F56A2A</string>
 											<string>2913DF481026217900F56A2A</string>
-											<string>2976AF02102629C600D9E625</string>
 											<string>29CE5BA910274776000FC48B</string>
 											<string>29CE5BAA10274776000FC48B</string>
 											<string>29CE5BAB10274776000FC48B</string>
 											<string>29CE5BAC10274776000FC48B</string>
 											<string>29CE5BF31027495D000FC48B</string>
 											<string>29CE5C0910274BEB000FC48B</string>
-											<string>29CE5C701027524B000FC48B</string>
-											<string>29CE5C711027524B000FC48B</string>
-											<string>29CE5CC6102763DB000FC48B</string>
-											<string>29CE5CC7102763DB000FC48B</string>
+											<string>29CE5CEA10276AC5000FC48B</string>
+											<string>29CE5CEB10276AC5000FC48B</string>
+											<string>29CE5D1710276EEB000FC48B</string>
+											<string>29CE5D1810276EEB000FC48B</string>
+											<string>29CE5D1910276EEB000FC48B</string>
+											<string>29CE5D3710277054000FC48B</string>
+											<string>29CE5D3B1027705D000FC48B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -399,6 +401,17 @@
 											<string>2913DC1A1025000C00F56A2A</string>
 											<string>29CE5CB3102762D2000FC48B</string>
 											<string>29CE5CC8102763DB000FC48B</string>
+											<string>29CE5CEE10276AC5000FC48B</string>
+											<string>29CE5CEF10276AC5000FC48B</string>
+											<string>29CE5CF010276AC5000FC48B</string>
+											<string>29CE5CF110276AC5000FC48B</string>
+											<string>29CE5D1C10276EEB000FC48B</string>
+											<string>29CE5D1D10276EEB000FC48B</string>
+											<string>29CE5D1E10276EEB000FC48B</string>
+											<string>29CE5D1F10276EEB000FC48B</string>
+											<string>29CE5D2010276EEB000FC48B</string>
+											<string>29CE5D2110276EEB000FC48B</string>
+											<string>29CE5D3910277054000FC48B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -736,6 +749,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>29CE5D2410276EF2000FC48B</string>
+		<string>29CE5D2510276EF2000FC48B</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
