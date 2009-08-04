@@ -274,19 +274,21 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>29FE32100FF436AC00E9FE05</string>
+								<string>29E195F510281EAD00078016</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>18</integer>
+									<integer>33</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 21}, {245, 760}}</string>
+							<string>{{0, 219}, {245, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -316,14 +318,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FilesViewController.m</string>
+								<string>Root.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,16 +331,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FilesViewController.m</string>
+										<string>Root.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29E195E310281AE300078016</string>
+										<string>29E196011028203100078016</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
 											<string>298936AA10199885009F98C3</string>
-											<string>298936AB10199885009F98C3</string>
 											<string>29001F12101B856200B22F74</string>
 											<string>291C0E15101E29CD00393E77</string>
 											<string>291C0E52101E2C3300393E77</string>
@@ -361,12 +360,15 @@
 											<string>29CE5C0910274BEB000FC48B</string>
 											<string>29CE5CEA10276AC5000FC48B</string>
 											<string>29CE5D1710276EEB000FC48B</string>
-											<string>29CE5D1810276EEB000FC48B</string>
 											<string>29CE5D1910276EEB000FC48B</string>
 											<string>29CE5D3710277054000FC48B</string>
 											<string>295DAEA010277B3E00688264</string>
 											<string>29E195B6102816EE00078016</string>
-											<string>29E195DB10281A3700078016</string>
+											<string>29E195EA10281D7300078016</string>
+											<string>29E195EB10281D7300078016</string>
+											<string>29E195FA1028203100078016</string>
+											<string>29E195FB1028203100078016</string>
+											<string>29E195FD1028203100078016</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -400,6 +402,10 @@
 											<string>2913DBF81024FE2300F56A2A</string>
 											<string>2913DC1A1025000C00F56A2A</string>
 											<string>29E195B8102816EE00078016</string>
+											<string>29E195ED10281D7300078016</string>
+											<string>29E195EE10281D7300078016</string>
+											<string>29E195FE1028203100078016</string>
+											<string>29E195FF1028203100078016</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
