@@ -280,7 +280,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
+									<integer>24</integer>
 									<integer>18</integer>
 									<integer>0</integer>
 								</array>
@@ -323,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>29FE31D40FF4354400E9FE05</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainScreenViewController.m</string>
+								<string>FilesViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>29FE31D50FF4354400E9FE05</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MainScreenViewController.m</string>
+										<string>FilesViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>295DAEAF10277C0400688264</string>
+										<string>29E195E310281AE300078016</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -358,7 +358,6 @@
 											<string>29CE5BAA10274776000FC48B</string>
 											<string>29CE5BAB10274776000FC48B</string>
 											<string>29CE5BAC10274776000FC48B</string>
-											<string>29CE5BF31027495D000FC48B</string>
 											<string>29CE5C0910274BEB000FC48B</string>
 											<string>29CE5CEA10276AC5000FC48B</string>
 											<string>29CE5D1710276EEB000FC48B</string>
@@ -366,7 +365,8 @@
 											<string>29CE5D1910276EEB000FC48B</string>
 											<string>29CE5D3710277054000FC48B</string>
 											<string>295DAEA010277B3E00688264</string>
-											<string>295DAEA110277B3E00688264</string>
+											<string>29E195B6102816EE00078016</string>
+											<string>29E195DB10281A3700078016</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -399,7 +399,7 @@
 											<string>29BA74B01023290600262650</string>
 											<string>2913DBF81024FE2300F56A2A</string>
 											<string>2913DC1A1025000C00F56A2A</string>
-											<string>295DAEA210277B3E00688264</string>
+											<string>29E195B8102816EE00078016</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -543,11 +543,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295DAEA410277B3E00688264</string>
+				<string>29E195A41028154D00078016</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>295DAEA510277B3E00688264</string>
+				<string>29E195A51028154D00078016</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>295DAEA610277B3E00688264</string>
+				<string>29E195A61028154D00078016</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -696,14 +696,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>295DAEA710277B3E00688264</string>
+				<string>29E195A71028154D00078016</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>295DAEA810277B3E00688264</string>
-				<string>295DAEA910277B3E00688264</string>
-				<string>295DAEAA10277B3E00688264</string>
-				<string>295DAEAB10277B3E00688264</string>
-				<string>295DAE9B10277B0A00688264</string>
+				<string>29E195A81028154D00078016</string>
+				<string>29E195A91028154D00078016</string>
+				<string>29E195AA1028154D00078016</string>
+				<string>29E195AB1028154D00078016</string>
+				<string>29E195AC1028154D00078016</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -737,8 +737,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>295DAEB010277C0400688264</string>
-		<string>295DAEAD10277B3E00688264</string>
+		<string>29E195BD1028170100078016</string>
+		<string>29E195BB102816EE00078016</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
