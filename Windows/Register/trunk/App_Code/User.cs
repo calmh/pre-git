@@ -18,6 +18,7 @@ public class User
     public User()
     {
         _id = Guid.NewGuid();
+        DefaultValues = new List<DefaultValue>();
     }
 
     private Guid _id;
