@@ -11,12 +11,17 @@
 @implementation MainView
 
 - (void)setFrameSize:(NSSize)newSize {
-        [super setFrameSize:newSize];
+        [super setFrameSize:newSize];/*
+        for (NSView *view in [self subviews]) {
+                NSSize child = newSize;
+                child.height -= 40;
+                [view setFrameSize:child];
+        }*/
         [self setNeedsDisplay:YES];
 }
 
 - (void)drawRect:(NSRect)rect {
-        float bottomMargin = 20;
+        float bottomMargin = 0;
         NSPoint bl = self.bounds.origin;
         bl.y += bottomMargin + 0.5;
         NSPoint br = bl;

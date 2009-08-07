@@ -19,7 +19,7 @@
 
 @implementation Almond_AppDelegate
 
-@synthesize window, folderCollection, folderView, rulesView, availableRulesDrawer;
+@synthesize window, folderCollection, folderView, rulesView, availableRulesDrawer, contentView;
 
 + (void)initialize {
         // Register our transformers
@@ -32,10 +32,8 @@
         [availableRulesDrawer setPreferredEdge:NSMaxXEdge];
 
         NSArray *subViews = [NSArray arrayWithObjects:folderView, rulesView, nil];
-        [(NSView*) [self.window contentView] setSubviews:subViews];
-        NSRect contentBounds = [[self.window contentView] bounds];
-        contentBounds.size.height -= 20;
-        contentBounds.origin.y += 20;
+        [(NSView*) [self contentView] setSubviews:subViews];
+        NSRect contentBounds = [[self contentView] bounds];
         [folderView setFrame:contentBounds];
         [rulesView setFrame:contentBounds];
 
@@ -55,8 +53,8 @@
 }
 
 - (void)animateToSubview:(int)subviewNumber {
-        NSView *currentSubview = [[[window contentView] subviews] objectAtIndex:visibleSubview];
-        NSView *newSubview = [[[window contentView] subviews] objectAtIndex:subviewNumber];
+        NSView *currentSubview = [[[self contentView] subviews] objectAtIndex:visibleSubview];
+        NSView *newSubview = [[[self contentView] subviews] objectAtIndex:subviewNumber];
         [newSubview setAlphaValue:0.0];
         [newSubview setHidden:NO];
         [NSAnimationContext beginGrouping];

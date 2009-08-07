@@ -15,6 +15,7 @@
         NSWindow *window;
         NSView *folderView;
         NSView *rulesView;
+        NSView *contentView;
         NSDrawer *availableRulesDrawer;
         int visibleSubview;
         
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) IBOutlet SelectableCollectionView *folderCollection;
 @property (nonatomic, retain) IBOutlet NSView *folderView;
 @property (nonatomic, retain) IBOutlet NSView *rulesView;
+@property (nonatomic, retain) IBOutlet NSView *contentView;
 @property (nonatomic, retain) IBOutlet NSDrawer *availableRulesDrawer;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
