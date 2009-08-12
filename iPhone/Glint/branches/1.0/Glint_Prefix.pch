@@ -55,7 +55,7 @@
 
 // #define SCREENSHOT
 
-#ifdef DEBUG
+#ifdef _DEBUG
 #define debug_NSLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #else
 #define debug_NSLog(format, ...)

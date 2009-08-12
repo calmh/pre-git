@@ -92,7 +92,7 @@
         UIBarButtonItem *stopRaceButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"End Race",nil) style:UIBarButtonItemStyleBordered target:self action:@selector(endRace:)];
         lockedToolbarItems = [[NSArray arrayWithObject:unlockButton] retain];
         unlockedToolbarItems = [[NSArray arrayWithObjects:sendButton, playButton, stopRaceButton, nil] retain];
-        [toolbar setItems:unlockedToolbarItems animated:YES];
+        [toolbar setItems:lockedToolbarItems animated:YES];
         
         if (USERPREF_DISABLE_IDLE)
                 [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
@@ -200,15 +200,11 @@
  * IBActions
  */
 
-- (void)slided:(id)sender {
-        [self unlock:sender];
-}
-
 - (IBAction)unlock:(id)sender
 {
         @synchronized (self) {
                 debug_NSLog(@"unlock: start");
-                //[toolbar setItems:unlockedToolbarItems animated:NO];
+                [toolbar setItems:unlockedToolbarItems animated:NO];
                 
                 if (gpxWriter)
                         [(UIBarButtonItem*) [unlockedToolbarItems objectAtIndex:1] setTitle:NSLocalizedString(@"End Recording", nil)];
@@ -219,8 +215,6 @@
                         [(UIBarButtonItem*) [unlockedToolbarItems objectAtIndex:2] setEnabled:YES];
                 else
                         [(UIBarButtonItem*) [unlockedToolbarItems objectAtIndex:2] setEnabled:NO];
-                
-                [slider setHidden:YES];
                 
                 if (lockTimer) {
                         [lockTimer invalidate];
@@ -242,8 +236,7 @@
                         [lockTimer release];
                         lockTimer = nil;
                 }
-                [slider setHidden:NO];
-                //[toolbar setItems:lockedToolbarItems animated:NO];
+                [toolbar setItems:lockedToolbarItems animated:NO];
                 debug_NSLog(@"lock: done");
         }
 }

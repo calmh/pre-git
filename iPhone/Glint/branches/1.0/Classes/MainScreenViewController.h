@@ -10,18 +10,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import "JBSoundEffect.h"
 #import "JBLocationMath.h"
-#import "JBGPXWriter.h"
-#import "JBGradientLabel.h"
 #import "CompassView.h"
+#import "JBGPXWriter.h"
 #import "GlintAppDelegate.h"
-#import "SlideView.h"
+#import "JBGradientLabel.h"
 
 typedef enum enumGlintDataSource {
         kGlintDataSourceMovement,
         kGlintDataSourceTimer
 } GlintDataSource;
 
-@interface MainScreenViewController : UIViewController  <CLLocationManagerDelegate, SlideViewDelegate> {
+@interface MainScreenViewController : UIViewController  <CLLocationManagerDelegate> {
         GlintAppDelegate *delegate;
         CLLocationManager *locationManager;
         JBLocationMath *math;
@@ -46,7 +45,6 @@ typedef enum enumGlintDataSource {
         UILabel *signalIndicator, *recordingIndicator, *racingIndicator;
         UIToolbar *toolbar;
         UILabel *measurementsLabel;
-        SlideView *slider;
         
         // Primary stats page
         
@@ -72,7 +70,6 @@ typedef enum enumGlintDataSource {
 @property (nonatomic, retain) IBOutlet UILabel *signalIndicator, *recordingIndicator, *racingIndicator;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) IBOutlet UILabel *measurementsLabel;
-@property (nonatomic, retain) IBOutlet SlideView *slider;
 
 @property (nonatomic, retain) IBOutlet UILabel *elapsedTimeLabel, *elapsedTimeDescrLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalDistanceLabel, *totalDistanceDescrLabel;
@@ -91,7 +88,6 @@ typedef enum enumGlintDataSource {
 - (void)setRaceAgainstLocations:(NSArray*)locations;
 
 - (IBAction)startStopRecording:(id)sender;
-- (void)slided:(id)sender;
 - (IBAction)unlock:(id)sender;
 - (IBAction)endRace:(id)sender;
 - (IBAction)pageChanged:(id)sender;
