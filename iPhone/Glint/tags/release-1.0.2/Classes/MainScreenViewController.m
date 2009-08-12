@@ -203,7 +203,7 @@
 - (IBAction)unlock:(id)sender
 {
         @synchronized (self) {
-                NSLog(@"unlock: start");
+                debug_NSLog(@"unlock: start");
                 [toolbar setItems:unlockedToolbarItems animated:NO];
                 
                 if (gpxWriter)
@@ -223,21 +223,21 @@
                 lockTimer = [NSTimer timerWithTimeInterval:5.0 target:self selector:@selector(lock:) userInfo:nil repeats:NO];
                 [lockTimer retain];
                 [[NSRunLoop currentRunLoop] addTimer:lockTimer forMode:NSDefaultRunLoopMode];
-                NSLog(@"unlock: done");
+                debug_NSLog(@"unlock: done");
         }
 }
 
 - (IBAction)lock:(id)sender
 {
         @synchronized (self) {
-                NSLog(@"lock: start");
+                debug_NSLog(@"lock: start");
                 if (lockTimer) {
                         [lockTimer invalidate];
                         [lockTimer release];
                         lockTimer = nil;
                 }
                 [toolbar setItems:lockedToolbarItems animated:NO];
-                NSLog(@"lock: done");
+                debug_NSLog(@"lock: done");
         }
 }
 
@@ -320,18 +320,18 @@
         // track segment so this is reflected in the saved file.
         
         CLLocation *current = locationManager.location;
-        NSLog([locationManager.location description]);
+        debug_NSLog([locationManager.location description]);
         if (gpxWriter && (!lastWrittenDate || [now timeIntervalSinceDate:lastWrittenDate] >= averageInterval - MEASUREMENT_THREAD_INTERVAL/2.0 )) {
                 if ([self precisionAcceptable:current]) {
-                        NSLog(@"Good precision, saving waypoint");
+                        debug_NSLog(@"Good precision, saving waypoint");
                         [lastWrittenDate release];
                         lastWrittenDate = [now retain];
                         [gpxWriter addTrackPoint:current];
                 } else if ([gpxWriter isInTrackSegment]) {
-                        NSLog(@"Bad precision, breaking track segment");
+                        debug_NSLog(@"Bad precision, breaking track segment");
                         [gpxWriter addTrackSegment];
                 } else {
-                        NSLog(@"Bad precision, waiting for waypoint");                        
+                        debug_NSLog(@"Bad precision, waiting for waypoint");                        
                 }
         }
         
@@ -505,7 +505,7 @@
  */
 
 - (void)enableGPS {
-        NSLog(@"Starting GPS");
+        debug_NSLog(@"Starting GPS");
         locationManager = [[CLLocationManager alloc] init];
         locationManager.distanceFilter = FILTER_DISTANCE;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -515,7 +515,7 @@
 }
 
 - (void)disableGPS {
-        NSLog(@"Stopping GPS");
+        debug_NSLog(@"Stopping GPS");
         locationManager.delegate = nil;
         [locationManager stopUpdatingHeading];
         [locationManager release];

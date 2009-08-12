@@ -443,6 +443,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Glint_Prefix.pch;
 				INFOPLIST_FILE = "Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
