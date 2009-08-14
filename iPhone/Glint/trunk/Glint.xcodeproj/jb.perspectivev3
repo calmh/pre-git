@@ -312,8 +312,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -331,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29EAF7121036250F0017DB8D</string>
+										<string>293CFE29103629DA00316FA9</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -364,7 +362,7 @@
 											<string>29EAF70B1036250F0017DB8D</string>
 											<string>29EAF70C1036250F0017DB8D</string>
 											<string>29EAF70D1036250F0017DB8D</string>
-											<string>29EAF70E1036250F0017DB8D</string>
+											<string>293CFE28103629DA00316FA9</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -400,17 +398,6 @@
 											<string>29E195FF1028203100078016</string>
 											<string>299EE64C103353C800222C35</string>
 											<string>299EE67A10335A3F00222C35</string>
-											<string>29EAF6C710361C200017DB8D</string>
-											<string>29EAF6C810361C200017DB8D</string>
-											<string>29EAF6DB10361CE70017DB8D</string>
-											<string>29EAF6DC10361CE70017DB8D</string>
-											<string>29EAF6DF10361D9E0017DB8D</string>
-											<string>29EAF6F110361F830017DB8D</string>
-											<string>29EAF6F210361F830017DB8D</string>
-											<string>29EAF6F310361F830017DB8D</string>
-											<string>29EAF70F1036250F0017DB8D</string>
-											<string>29EAF7101036250F0017DB8D</string>
-											<string>29EAF7111036250F0017DB8D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -439,6 +426,8 @@
 							<key>Tabs</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -554,11 +543,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29EAF6CA10361C200017DB8D</string>
+				<string>293CFE2A103629DA00316FA9</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>29EAF6CB10361C200017DB8D</string>
+				<string>293CFE2B103629DA00316FA9</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>29EAF6CC10361C200017DB8D</string>
+				<string>293CFE2C103629DA00316FA9</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -748,8 +737,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>29EAF6E510361DE10017DB8D</string>
-		<string>29EAF6E610361DE10017DB8D</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
