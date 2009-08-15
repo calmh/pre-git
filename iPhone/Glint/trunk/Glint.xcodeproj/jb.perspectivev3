@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>298502EA1036FF4C000D97A2</string>
+						<string>298503661037072D000D97A2</string>
 						<key>history</key>
 						<array>
 							<string>29DCC2931036E8E600DD5D4C</string>
@@ -320,13 +320,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>18</integer>
+									<integer>50</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {245, 692}}</string>
+							<string>{{0, 425}, {245, 692}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -373,7 +372,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>298502E91036FF4C000D97A2</string>
+										<string>298503651037072D000D97A2</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -407,8 +406,9 @@
 											<string>2979FF471036DE6500E5E418</string>
 											<string>29DCC2691036E11C00DD5D4C</string>
 											<string>298502B11036FAB4000D97A2</string>
-											<string>298502B21036FAB4000D97A2</string>
-											<string>298502B31036FAB4000D97A2</string>
+											<string>298502F510370129000D97A2</string>
+											<string>2985034010370659000D97A2</string>
+											<string>2985034110370659000D97A2</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -418,6 +418,12 @@
 											<string>298502B51036FAB4000D97A2</string>
 											<string>298502B61036FAB4000D97A2</string>
 											<string>298502B71036FAB4000D97A2</string>
+											<string>298502EF1036FFA6000D97A2</string>
+											<string>298502F810370129000D97A2</string>
+											<string>298502F910370129000D97A2</string>
+											<string>298502FA10370129000D97A2</string>
+											<string>2985034210370659000D97A2</string>
+											<string>2985034310370659000D97A2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -616,12 +622,12 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {1440, 123}}</string>
+						<string>{{0, 0}, {1440, 280}}</string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
 					<key>Proportion</key>
-					<string>123pt</string>
+					<string>280pt</string>
 				</dict>
 				<dict>
 					<key>ContentConfiguration</key>
@@ -640,8 +646,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {703, 281}}</string>
-									<string>{{703, 0}, {737, 281}}</string>
+									<string>{{0, 0}, {703, 205}}</string>
+									<string>{{703, 0}, {737, 205}}</string>
 								</array>
 							</dict>
 							<key>VerticalSplitView</key>
@@ -656,8 +662,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {1440, 281}}</string>
-									<string>{{0, 281}, {1440, 301}}</string>
+									<string>{{0, 0}, {1440, 205}}</string>
+									<string>{{0, 205}, {1440, 220}}</string>
 								</array>
 							</dict>
 						</dict>
@@ -677,7 +683,7 @@
 						<key>DebugSTDIOWindowFrame</key>
 						<string>{{200, 200}, {500, 300}}</string>
 						<key>Frame</key>
-						<string>{{0, 128}, {1440, 582}}</string>
+						<string>{{0, 285}, {1440, 425}}</string>
 						<key>PBXDebugSessionStackFrameViewKey</key>
 						<dict>
 							<key>DebugVariablesTableConfiguration</key>
@@ -690,13 +696,13 @@
 								<real>507</real>
 							</array>
 							<key>Frame</key>
-							<string>{{703, 0}, {737, 281}}</string>
+							<string>{{703, 0}, {737, 205}}</string>
 						</dict>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
 					<key>Proportion</key>
-					<string>582pt</string>
+					<string>425pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
