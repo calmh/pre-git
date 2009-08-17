@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>29D111191038AAC50072A48F</string>
+						<string>29B06200103951FC003B4E89</string>
 						<key>history</key>
 						<array>
-							<string>29EF178510389F4500A0982A</string>
+							<string>29D111191038AAC50072A48F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -327,7 +327,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 131}, {245, 692}}</string>
+							<string>{{0, 0}, {245, 692}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -374,7 +374,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29D111181038AAC50072A48F</string>
+										<string>29B061FF103951FC003B4E89</string>
 										<key>history</key>
 										<array>
 											<string>291C24E310011D910086EE86</string>
@@ -388,8 +388,6 @@
 											<string>2913DD571025BF0600F56A2A</string>
 											<string>2913DF2A10261C3100F56A2A</string>
 											<string>29CE5BAA10274776000FC48B</string>
-											<string>29E195EB10281D7300078016</string>
-											<string>29E195FA1028203100078016</string>
 											<string>29E195FB1028203100078016</string>
 											<string>2927061D102829AC00EAB034</string>
 											<string>299212681035EBD9002DB6E2</string>
@@ -409,12 +407,14 @@
 											<string>29D110BB1038A7940072A48F</string>
 											<string>29D110C11038A7940072A48F</string>
 											<string>29D110C21038A7940072A48F</string>
-											<string>29D110E31038A7BE0072A48F</string>
 											<string>29D110EF1038A8DA0072A48F</string>
 											<string>29D1110E1038AAC50072A48F</string>
-											<string>29D1110F1038AAC50072A48F</string>
 											<string>29D111101038AAC50072A48F</string>
-											<string>29D111111038AAC50072A48F</string>
+											<string>29B061B910393A96003B4E89</string>
+											<string>29B061DA10393DBC003B4E89</string>
+											<string>29B061FA103951FC003B4E89</string>
+											<string>29B061FB103951FC003B4E89</string>
+											<string>29B061FC103951FC003B4E89</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -433,49 +433,26 @@
 											<string>29EF169210372D7900A0982A</string>
 											<string>29EF16D710372FED00A0982A</string>
 											<string>29EF16D810372FED00A0982A</string>
-											<string>29D1109F1038A3380072A48F</string>
 											<string>29D110A01038A3380072A48F</string>
 											<string>29D110A21038A3380072A48F</string>
-											<string>29D110C41038A7940072A48F</string>
-											<string>29D110C51038A7940072A48F</string>
-											<string>29D110C61038A7940072A48F</string>
-											<string>29D110C71038A7940072A48F</string>
-											<string>29D110C81038A7940072A48F</string>
-											<string>29D110C91038A7940072A48F</string>
-											<string>29D110CA1038A7940072A48F</string>
-											<string>29D110CB1038A7940072A48F</string>
-											<string>29D110CC1038A7940072A48F</string>
-											<string>29D110CD1038A7940072A48F</string>
-											<string>29D110CE1038A7940072A48F</string>
-											<string>29D110CF1038A7940072A48F</string>
-											<string>29D110D01038A7940072A48F</string>
-											<string>29D110D11038A7940072A48F</string>
 											<string>29D110D21038A7940072A48F</string>
 											<string>29D110D31038A7940072A48F</string>
-											<string>29D110D41038A7940072A48F</string>
-											<string>29D110D51038A7940072A48F</string>
-											<string>29D110D61038A7940072A48F</string>
-											<string>29D110D71038A7940072A48F</string>
-											<string>29D110D81038A7940072A48F</string>
-											<string>29D110D91038A7940072A48F</string>
-											<string>29D110DA1038A7940072A48F</string>
-											<string>29D110DB1038A7940072A48F</string>
-											<string>29D110DC1038A7940072A48F</string>
-											<string>29D110DD1038A7940072A48F</string>
-											<string>29D110E61038A7BE0072A48F</string>
-											<string>29D110E71038A7BE0072A48F</string>
-											<string>29D110F11038A8DA0072A48F</string>
-											<string>29D110F21038A8DA0072A48F</string>
-											<string>29D110FA1038A93A0072A48F</string>
-											<string>29D110FB1038A93A0072A48F</string>
-											<string>29D110FC1038A93A0072A48F</string>
-											<string>29D111021038A9750072A48F</string>
-											<string>29D111121038AAC50072A48F</string>
-											<string>29D111131038AAC50072A48F</string>
-											<string>29D111141038AAC50072A48F</string>
-											<string>29D111151038AAC50072A48F</string>
-											<string>29D111161038AAC50072A48F</string>
-											<string>29D111171038AAC50072A48F</string>
+											<string>29B0617B103935CB003B4E89</string>
+											<string>29B0618E10393888003B4E89</string>
+											<string>29B0618F10393888003B4E89</string>
+											<string>29B061BB10393A96003B4E89</string>
+											<string>29B061BC10393A96003B4E89</string>
+											<string>29B061BD10393A96003B4E89</string>
+											<string>29B061BE10393A96003B4E89</string>
+											<string>29B061DD10393DBC003B4E89</string>
+											<string>29B061DE10393DBC003B4E89</string>
+											<string>29B061DF10393DBC003B4E89</string>
+											<string>29B061E010393DBC003B4E89</string>
+											<string>29B061E110393DBC003B4E89</string>
+											<string>29B061E210393DBC003B4E89</string>
+											<string>29B061E310393DBC003B4E89</string>
+											<string>29B061FD103951FC003B4E89</string>
+											<string>29B061FE103951FC003B4E89</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -515,6 +492,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1173, 184}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 127 1440 751 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -590,8 +569,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1173, 184}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 127 1440 751 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -619,11 +596,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29D110A51038A3380072A48F</string>
+				<string>29B0617D103935CB003B4E89</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>29D110A61038A3380072A48F</string>
+				<string>29B0617E103935CB003B4E89</string>
 				<string>29FE31D40FF4354400E9FE05</string>
-				<string>29D110A71038A3380072A48F</string>
+				<string>29B0617F103935CB003B4E89</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -772,14 +749,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>29D110A81038A3380072A48F</string>
+				<string>29B06180103935CB003B4E89</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>29D110A91038A3380072A48F</string>
-				<string>29D110AA1038A3380072A48F</string>
-				<string>29D110AB1038A3380072A48F</string>
-				<string>29D110AC1038A3380072A48F</string>
-				<string>29D110AD1038A3380072A48F</string>
+				<string>29B06181103935CB003B4E89</string>
+				<string>29B06182103935CB003B4E89</string>
+				<string>29B06183103935CB003B4E89</string>
+				<string>29B06184103935CB003B4E89</string>
+				<string>29B06185103935CB003B4E89</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -813,9 +790,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>29D1111B1038AAC50072A48F</string>
-		<string>29D1111C1038AAC50072A48F</string>
+		<string>29B06187103935CB003B4E89</string>
+		<string>29B06189103935CB003B4E89</string>
 		<string>297A673C1036D85200B34D28</string>
 		<string>/Users/jb/projekt/iPhone/Glint/trunk/Glint.xcodeproj</string>
 	</array>
