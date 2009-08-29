@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29624FFE103C8CBB00FB56C4 /* LibraryManager.py in Resources */ = {isa = PBXBuildFile; fileRef = 29624FFD103C8CBB00FB56C4 /* LibraryManager.py */; };
+		29624FFF103C8CBB00FB56C4 /* LibraryManager.py in Resources */ = {isa = PBXBuildFile; fileRef = 29624FFD103C8CBB00FB56C4 /* LibraryManager.py */; };
+		29625072103C971800FB56C4 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 29625071103C971800FB56C4 /* Model.m */; };
+		296250C0103DACE500FB56C4 /* StandardLibrary.py in Resources */ = {isa = PBXBuildFile; fileRef = 296250BF103DACE500FB56C4 /* StandardLibrary.py */; };
+		296251D9103DDC6500FB56C4 /* MethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 296251D8103DDC6500FB56C4 /* MethodCell.m */; };
+		29A565E5103C620400E00EDE /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A565E4103C620400E00EDE /* TableView.m */; };
+		29A5663A103C82CC00E00EDE /* Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56639103C82CC00E00EDE /* Method.m */; };
+		29A56645103C832C00E00EDE /* Expression.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56644103C832C00E00EDE /* Expression.m */; };
+		29A56648103C833E00E00EDE /* Evaluable.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56647103C833D00E00EDE /* Evaluable.m */; };
+		29A5664B103C836B00E00EDE /* MethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5664A103C836B00E00EDE /* MethodInvocation.m */; };
+		29A5665F103C83E700E00EDE /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5665C103C83E700E00EDE /* Action.m */; };
+		29A56660103C83E700E00EDE /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5665E103C83E700E00EDE /* Test.m */; };
+		29A56681103C867000E00EDE /* ExpressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56680103C867000E00EDE /* ExpressionTests.m */; };
+		29A56686103C86BF00E00EDE /* BooleanBasics.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56685103C86BF00E00EDE /* BooleanBasics.m */; };
+		29A5668E103C879C00E00EDE /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5665C103C83E700E00EDE /* Action.m */; };
+		29A5668F103C879C00E00EDE /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5665E103C83E700E00EDE /* Test.m */; };
+		29A56690103C879C00E00EDE /* Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56639103C82CC00E00EDE /* Method.m */; };
+		29A56691103C879C00E00EDE /* Expression.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56644103C832C00E00EDE /* Expression.m */; };
+		29A56692103C879C00E00EDE /* Evaluable.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A56647103C833D00E00EDE /* Evaluable.m */; };
+		29A56693103C879C00E00EDE /* MethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5664A103C836B00E00EDE /* MethodInvocation.m */; };
+		29A566CD103C8B2500E00EDE /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A566CC103C8B2500E00EDE /* Folder.m */; };
+		29A566CE103C8B2500E00EDE /* Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A566CC103C8B2500E00EDE /* Folder.m */; };
+		29CB58AF1048894F00CD0AB5 /* FormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB58AE1048894F00CD0AB5 /* FormView.m */; };
+		77631A270C06C501005415CB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77631A260C06C501005415CB /* Python.framework */; };
+		77631A3F0C0748CF005415CB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 77631A3E0C0748CF005415CB /* main.py */; };
+		7790198F0C07548A00326F66 /* AlmondAppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 7790198E0C07548A00326F66 /* AlmondAppDelegate.py */; };
+		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29624FFD103C8CBB00FB56C4 /* LibraryManager.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = LibraryManager.py; path = Classes/LibraryManager.py; sourceTree = "<group>"; };
+		29625070103C971800FB56C4 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Classes/Model.h; sourceTree = "<group>"; };
+		29625071103C971800FB56C4 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = Classes/Model.m; sourceTree = "<group>"; };
+		296250BF103DACE500FB56C4 /* StandardLibrary.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = StandardLibrary.py; sourceTree = "<group>"; };
+		296251D7103DDC6500FB56C4 /* MethodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MethodCell.h; path = Classes/MethodCell.h; sourceTree = "<group>"; };
+		296251D8103DDC6500FB56C4 /* MethodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MethodCell.m; path = Classes/MethodCell.m; sourceTree = "<group>"; };
+		29A565E3103C620400E00EDE /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableView.h; path = Classes/TableView.h; sourceTree = "<group>"; };
+		29A565E4103C620400E00EDE /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableView.m; path = Classes/TableView.m; sourceTree = "<group>"; };
+		29A56638103C82CC00E00EDE /* Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Method.h; path = Classes/Method.h; sourceTree = "<group>"; };
+		29A56639103C82CC00E00EDE /* Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Method.m; path = Classes/Method.m; sourceTree = "<group>"; };
+		29A56643103C832C00E00EDE /* Expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expression.h; path = Classes/Expression.h; sourceTree = "<group>"; };
+		29A56644103C832C00E00EDE /* Expression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expression.m; path = Classes/Expression.m; sourceTree = "<group>"; };
+		29A56646103C833D00E00EDE /* Evaluable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evaluable.h; path = Classes/Evaluable.h; sourceTree = "<group>"; };
+		29A56647103C833D00E00EDE /* Evaluable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evaluable.m; path = Classes/Evaluable.m; sourceTree = "<group>"; };
+		29A56649103C836B00E00EDE /* MethodInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MethodInvocation.h; path = Classes/MethodInvocation.h; sourceTree = "<group>"; };
+		29A5664A103C836B00E00EDE /* MethodInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MethodInvocation.m; path = Classes/MethodInvocation.m; sourceTree = "<group>"; };
+		29A5665B103C83E700E00EDE /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = Classes/Action.h; sourceTree = "<group>"; };
+		29A5665C103C83E700E00EDE /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Action.m; path = Classes/Action.m; sourceTree = "<group>"; };
+		29A5665D103C83E700E00EDE /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test.h; path = Classes/Test.h; sourceTree = "<group>"; };
+		29A5665E103C83E700E00EDE /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test.m; path = Classes/Test.m; sourceTree = "<group>"; };
+		29A56677103C862C00E00EDE /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A56678103C862C00E00EDE /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		29A5667F103C867000E00EDE /* ExpressionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressionTests.h; path = "Test Cases/ExpressionTests.h"; sourceTree = "<group>"; };
+		29A56680103C867000E00EDE /* ExpressionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionTests.m; path = "Test Cases/ExpressionTests.m"; sourceTree = "<group>"; };
+		29A56684103C86BF00E00EDE /* BooleanBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooleanBasics.h; path = "Test Cases/BooleanBasics.h"; sourceTree = "<group>"; };
+		29A56685103C86BF00E00EDE /* BooleanBasics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooleanBasics.m; path = "Test Cases/BooleanBasics.m"; sourceTree = "<group>"; };
+		29A566CB103C8B2500E00EDE /* Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Folder.h; sourceTree = "<group>"; };
+		29A566CC103C8B2500E00EDE /* Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Folder.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		29CB58AD1048894F00CD0AB5 /* FormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormView.h; sourceTree = "<group>"; };
+		29CB58AE1048894F00CD0AB5 /* FormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormView.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Almond_Prefix.pch; sourceTree = "<group>"; };
+		77631A260C06C501005415CB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		77631A3E0C0748CF005415CB /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		7790198E0C07548A00326F66 /* AlmondAppDelegate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AlmondAppDelegate.py; sourceTree = "<group>"; };
+		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Almond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Almond.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29A56674103C862C00E00EDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				77631A270C06C501005415CB /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				29CB58B6104889AA00CD0AB5 /* User Interface */,
+				29CB58B9104889DA00CD0AB5 /* Data Model */,
+				7790198E0C07548A00326F66 /* AlmondAppDelegate.py */,
+				29624FFD103C8CBB00FB56C4 /* LibraryManager.py */,
+				29625070103C971800FB56C4 /* Model.h */,
+				29625071103C971800FB56C4 /* Model.m */,
+				296251D7103DDC6500FB56C4 /* MethodCell.h */,
+				296251D8103DDC6500FB56C4 /* MethodCell.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77631A260C06C501005415CB /* Python.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Almond.app */,
+				29A56677103C862C00E00EDE /* Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29A5667E103C864400E00EDE /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				29A5667F103C867000E00EDE /* ExpressionTests.h */,
+				29A56680103C867000E00EDE /* ExpressionTests.m */,
+				29A56684103C86BF00E00EDE /* BooleanBasics.h */,
+				29A56685103C86BF00E00EDE /* BooleanBasics.m */,
+			);
+			name = "Test Cases";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Almond */ = {
+			isa = PBXGroup;
+			children = (
+				29A5667E103C864400E00EDE /* Test Cases */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				29A56678103C862C00E00EDE /* Tests-Info.plist */,
+			);
+			name = Almond;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				77631A3E0C0748CF005415CB /* main.py */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77C8C1F70C07829500965286 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				296250BF103DACE500FB56C4 /* StandardLibrary.py */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29CB58B6104889AA00CD0AB5 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				29CB58AD1048894F00CD0AB5 /* FormView.h */,
+				29CB58AE1048894F00CD0AB5 /* FormView.m */,
+				29A565E3103C620400E00EDE /* TableView.h */,
+				29A565E4103C620400E00EDE /* TableView.m */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		29CB58B9104889DA00CD0AB5 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				29A5665B103C83E700E00EDE /* Action.h */,
+				29A5665C103C83E700E00EDE /* Action.m */,
+				29A5665D103C83E700E00EDE /* Test.h */,
+				29A5665E103C83E700E00EDE /* Test.m */,
+				29A56638103C82CC00E00EDE /* Method.h */,
+				29A56639103C82CC00E00EDE /* Method.m */,
+				29A56643103C832C00E00EDE /* Expression.h */,
+				29A56644103C832C00E00EDE /* Expression.m */,
+				29A56646103C833D00E00EDE /* Evaluable.h */,
+				29A56647103C833D00E00EDE /* Evaluable.m */,
+				29A56649103C836B00E00EDE /* MethodInvocation.h */,
+				29A5664A103C836B00E00EDE /* MethodInvocation.m */,
+				29A566CB103C8B2500E00EDE /* Folder.h */,
+				29A566CC103C8B2500E00EDE /* Folder.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29A56676103C862C00E00EDE /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A5667C103C862D00E00EDE /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				29A56672103C862C00E00EDE /* Resources */,
+				29A56673103C862C00E00EDE /* Sources */,
+				29A56674103C862C00E00EDE /* Frameworks */,
+				29A56675103C862C00E00EDE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 29A56677103C862C00E00EDE /* Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* Almond */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Almond" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Almond;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Almond;
+			productReference = 8D1107320486CEB800E47090 /* Almond.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Almond" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Almond */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Almond */,
+				29A56676103C862C00E00EDE /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29A56672103C862C00E00EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29624FFE103C8CBB00FB56C4 /* LibraryManager.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				77631A3F0C0748CF005415CB /* main.py in Resources */,
+				7790198F0C07548A00326F66 /* AlmondAppDelegate.py in Resources */,
+				77C8C1F90C07829500965286 /* MainMenu.xib in Resources */,
+				29624FFF103C8CBB00FB56C4 /* LibraryManager.py in Resources */,
+				296250C0103DACE500FB56C4 /* StandardLibrary.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A56675103C862C00E00EDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29A56673103C862C00E00EDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A5668E103C879C00E00EDE /* Action.m in Sources */,
+				29A5668F103C879C00E00EDE /* Test.m in Sources */,
+				29A56690103C879C00E00EDE /* Method.m in Sources */,
+				29A56691103C879C00E00EDE /* Expression.m in Sources */,
+				29A56692103C879C00E00EDE /* Evaluable.m in Sources */,
+				29A56693103C879C00E00EDE /* MethodInvocation.m in Sources */,
+				29A56681103C867000E00EDE /* ExpressionTests.m in Sources */,
+				29A56686103C86BF00E00EDE /* BooleanBasics.m in Sources */,
+				29A566CD103C8B2500E00EDE /* Folder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				29A565E5103C620400E00EDE /* TableView.m in Sources */,
+				29A5663A103C82CC00E00EDE /* Method.m in Sources */,
+				29A56645103C832C00E00EDE /* Expression.m in Sources */,
+				29A56648103C833E00E00EDE /* Evaluable.m in Sources */,
+				29A5664B103C836B00E00EDE /* MethodInvocation.m in Sources */,
+				29A5665F103C83E700E00EDE /* Action.m in Sources */,
+				29A56660103C83E700E00EDE /* Test.m in Sources */,
+				29A566CE103C8B2500E00EDE /* Folder.m in Sources */,
+				29625072103C971800FB56C4 /* Model.m in Sources */,
+				296251D9103DDC6500FB56C4 /* MethodCell.m in Sources */,
+				29CB58AF1048894F00CD0AB5 /* FormView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77C8C1F70C07829500965286 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C8C1F80C07829500965286 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29A5667A103C862C00E00EDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		29A5667B103C862C00E00EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Almond_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Almond;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Almond_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Almond;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29A5667C103C862D00E00EDE /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A5667A103C862C00E00EDE /* Debug */,
+				29A5667B103C862C00E00EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Almond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Almond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
