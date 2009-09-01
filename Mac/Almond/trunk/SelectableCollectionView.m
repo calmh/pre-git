@@ -11,7 +11,7 @@
 @implementation SelectableCollectionView
 
 - (void)awakeFromNib {
-        self.itemHeight = 75;
+        self.itemHeight = 88;
 }
 
 - (float)itemHeight {
@@ -26,4 +26,3 @@
 }
 
 @end
-        

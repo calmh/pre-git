@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ValueTransformers.h"
 
 @interface Almond_AppDelegate : NSObject 
 {

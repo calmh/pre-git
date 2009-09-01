@@ -15,6 +15,13 @@
 @synthesize folderView;
 @synthesize rulesView;
 
++ (void)initialize {
+        // Register our transformers
+        [NSValueTransformer setValueTransformer:[[[IconImageTransformer alloc] init] autorelease] forName:@"IconImageTransformer"];
+        [NSValueTransformer setValueTransformer:[[[NumChildrenTransformer alloc] init] autorelease] forName:@"NumChildrenTransformer"];
+        [NSValueTransformer setValueTransformer:[[[DirectorySizeTransformer alloc] init] autorelease] forName:@"DirectorySizeTransformer"];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
         [self.folderView setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
         [self.rulesView setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];

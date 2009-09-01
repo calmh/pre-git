@@ -10,6 +10,7 @@
 		29A0AF9F104DAE10002C0677 /* SelectableCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AF9C104DAE10002C0677 /* SelectableCollectionView.m */; };
 		29A0AFA0104DAE10002C0677 /* SelectableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AF9E104DAE10002C0677 /* SelectableViewItem.m */; };
 		29A0AFA3104DAE4E002C0677 /* SelectableDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AFA2104DAE4E002C0677 /* SelectableDetailView.m */; };
+		29CF171D104DC9F30046DCCF /* ValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CF171C104DC9F30046DCCF /* ValueTransformers.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* Almond_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* Almond_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */; };
@@ -30,6 +31,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		29CF171B104DC9F30046DCCF /* ValueTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueTransformers.h; sourceTree = "<group>"; };
+		29CF171C104DC9F30046DCCF /* ValueTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTransformers.m; sourceTree = "<group>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Almond_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Almond_Prefix.pch; sourceTree = "<group>"; };
 		770B37EC0679A11B001EADE2 /* Almond_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Almond_DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				29CF171B104DC9F30046DCCF /* ValueTransformers.h */,
+				29CF171C104DC9F30046DCCF /* ValueTransformers.m */,
 				29A0AFA1104DAE4E002C0677 /* SelectableDetailView.h */,
 				29A0AFA2104DAE4E002C0677 /* SelectableDetailView.m */,
 				29A0AF9B104DAE10002C0677 /* SelectableCollectionView.h */,
@@ -203,6 +208,7 @@
 				29A0AF9F104DAE10002C0677 /* SelectableCollectionView.m in Sources */,
 				29A0AFA0104DAE10002C0677 /* SelectableViewItem.m in Sources */,
 				29A0AFA3104DAE4E002C0677 /* SelectableDetailView.m in Sources */,
+				29CF171D104DC9F30046DCCF /* ValueTransformers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

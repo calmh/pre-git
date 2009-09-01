@@ -277,8 +277,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
-									<integer>15</integer>
+									<integer>13</integer>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>292674F4104DA2E6003B9DEA</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SelectableCollectionView.h</string>
+								<string>Almond_AppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,23 +324,26 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>292674F5104DA2E6003B9DEA</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SelectableCollectionView.h</string>
+										<string>Almond_AppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>298A8784104DC7D900BA04CD</string>
+										<string>29CF1771104DCE310046DCCF</string>
 										<key>history</key>
 										<array>
 											<string>29A0AF42104DA986002C0677</string>
 											<string>29A0AF69104DAACE002C0677</string>
-											<string>298A8677104DBC9400BA04CD</string>
 											<string>298A875B104DC61C00BA04CD</string>
 											<string>298A875C104DC61C00BA04CD</string>
 											<string>298A875D104DC61C00BA04CD</string>
 											<string>298A875E104DC61C00BA04CD</string>
-											<string>298A8766104DC63C00BA04CD</string>
-											<string>298A876C104DC65A00BA04CD</string>
-											<string>298A875F104DC61C00BA04CD</string>
+											<string>29CF1722104DCA380046DCCF</string>
+											<string>29CF1723104DCA380046DCCF</string>
+											<string>29CF1724104DCA380046DCCF</string>
+											<string>29CF1725104DCA380046DCCF</string>
+											<string>29CF175B104DCD9A0046DCCF</string>
+											<string>29CF176F104DCE310046DCCF</string>
+											<string>29CF1770104DCE310046DCCF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -463,11 +466,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>298A85F1104DB56B00BA04CD</string>
+				<string>29CF1729104DCA380046DCCF</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>298A85F2104DB56B00BA04CD</string>
+				<string>29CF172A104DCA380046DCCF</string>
 				<string>292674F4104DA2E6003B9DEA</string>
-				<string>298A85F3104DB56B00BA04CD</string>
+				<string>29CF172B104DCA380046DCCF</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -616,14 +619,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>298A85FA104DB6A500BA04CD</string>
+				<string>29CF172C104DCA380046DCCF</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>298A85FB104DB6A500BA04CD</string>
-				<string>298A85FC104DB6A500BA04CD</string>
-				<string>298A85FD104DB6A500BA04CD</string>
-				<string>298A85FE104DB6A500BA04CD</string>
-				<string>298A85FF104DB6A500BA04CD</string>
+				<string>29CF172D104DCA380046DCCF</string>
+				<string>29CF172E104DCA380046DCCF</string>
+				<string>29CF172F104DCA380046DCCF</string>
+				<string>29CF1730104DCA380046DCCF</string>
+				<string>29CF1731104DCA380046DCCF</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -657,8 +660,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>298A8600104DB6A500BA04CD</string>
-		<string>298A8601104DB6A500BA04CD</string>
+		<string>29CF1733104DCA380046DCCF</string>
+		<string>29CF1734104DCA380046DCCF</string>
 		<string>/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
