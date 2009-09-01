@@ -1,0 +1,215 @@
+TAlmond
+v7
+r0
+t273247951.818944
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Info.plist Almond-Info.plist
+cCopyStringsFile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib
+cProcessPCH /var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch.gch Almond_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cDataModelCompile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel
+cCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond normal x86_64
+cTouch /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004A9855C900000000000000EE
+t1251497417
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.h
+c000000004A99374000000000000002F4
+t1251555136
+s756
+i<Cocoa/Cocoa.h>
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m
+c000000004A9937400000000000001DFA
+t1251555136
+s7674
+i"Almond_AppDelegate.h"
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel
+c000000004A9937400000000000000088
+t1251555136
+s136
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_Prefix.pch
+c000000004A993740000000000000008F
+t1251555136
+s143
+i<Cocoa/Cocoa.h>
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/InfoPlist.strings
+c000000004A993740000000000000005A
+t1251555136
+s90
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib
+c000000004A99374000000000000202B6
+t1251555136
+s131766
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond.LinkFileList
+c000000004A9937470000000000000108
+t1251555143
+s264
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o
+t1251555151
+s41600
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o
+t1251555151
+s5024
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app
+t1251555151
+s102
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Info.plist
+t1251555143
+s883
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond
+t1251555151
+s22080
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/PkgInfo
+t1251555143
+s8
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom
+t1251555150
+s488
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1251555145
+s90
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/MainMenu.nib
+t1251555146
+s29852
+
+N/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m
+c000000004A99374000000000000000F3
+t1251555136
+s243
+i<Cocoa/Cocoa.h>
+
+N/var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch.gch
+t1251555150
+s54212368
+
+NAlmond-Info.plist
+c000000004A99374000000000000003F3
+t1251555136
+s1011
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies273247943#273247943#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s273247950.956999
+e273247951.113372
+r1
+xCompileC
+xbuild/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@86"Compile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m273247950#273247951#0(0"0(0#0#78"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m4300882208#1255"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap -F/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/include -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources -include /var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch -c /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_AppDelegate.m -o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond_AppDelegate.o0#
+
+CCompileC build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s273247950.815959
+e273247951.022788
+r1
+xCompileC
+xbuild/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m273247950#273247951#0(0"0(0#0#64"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m4300882208#1227"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap -F/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/include -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources -include /var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch -c /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/main.m -o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib
+s273247943.618478
+e273247946.354381
+r1
+xCompileXIB
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib273247943#273247946#0(0"0(0#0#84"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib4300882208#383"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/MainMenu.nib /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/MainMenu.xib0#
+
+CCopyStringsFile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s273247943.589286
+e273247945.447309
+r1
+xCopyStringsFile
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings273247943#273247945#0(0"0(0#0#89"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/English.lproj/InfoPlist.strings4300882208#403"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/English.lproj0#
+
+CDataModelCompile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel
+s273247950.815110
+e273247950.956890
+r1
+xDataModelCompile
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel
+lSLF07#2@94"Compile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel273247950#273247950#0(0"0(0#0#86"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel4300882208#330"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_DataModel.xcdatamodel /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Resources/Almond_DataModel.mom0#
+
+CLd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond normal x86_64
+s273247951.113461
+e273247951.815833
+r1
+xLd
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond
+xnormal
+xx86_64
+lSLF07#2@107"Link /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond273247951#273247951#0(0"0(0#0#0"4300882208#632"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug -F/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug -filelist /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Objects-normal/x86_64/Almond.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/MacOS/Almond0#
+
+CProcessInfoPlistFile /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Info.plist Almond-Info.plist
+s273247943.521779
+e273247943.589174
+r1
+xProcessInfoPlistFile
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Info.plist
+xAlmond-Info.plist
+lSLF07#2@25"Process Almond-Info.plist273247943#273247943#0(0"0(0#0#75"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond-Info.plist31244010180771952#364"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    builtin-infoPlistUtility Almond-Info.plist -genpkginfo /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch.gch Almond_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s273247946.354574
+e273247950.814942
+r1
+xProcessPCH
+x/var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch.gch
+xAlmond_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@28"Precompile Almond_Prefix.pch273247946#273247950#0(0"0(0#0#75"/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_Prefix.pch4300882208#1115"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/Almond.hmap -F/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/include -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources/x86_64 -I/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Almond.build/Debug/Almond.build/DerivedSources -c /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/Almond_Prefix.pch -o /var/folders/bU/bUb0sOKhHQeV6fpCDR0LEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Almond_Prefix-dtztzlvltoydkpchxyyojpibndln/Almond_Prefix.pch.gch0#
+
+CTouch /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app
+s273247951.815939
+e273247951.818898
+r1
+xTouch
+x/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app
+lSLF07#2@86"Touch /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app273247951#273247951#0(0"0(0#0#0"4300882208#168"    cd /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond    /usr/bin/touch -c /Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond/build/Debug/Almond.app0#
+
