@@ -14,6 +14,8 @@
 @synthesize mainView;
 @synthesize folderView;
 @synthesize rulesView;
+@synthesize folderArrayController;
+@synthesize rulesArrayController;
 
 + (void)initialize {
         // Register our transformers
@@ -30,6 +32,7 @@
 }
 
 - (IBAction)changeToRuleView:(id)sender {
+        [self.rulesArrayController setFilterPredicate:[NSPredicate predicateWithFormat:@"folder == %@", [[self.folderArrayController selectedObjects] objectAtIndex:0]]];
         [[self.folderView animator] setFrame:NSMakeRect(-300.0f, 22.0f, 300.0f, 450.0f)];
         [[self.rulesView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
 }
@@ -37,6 +40,12 @@
 - (IBAction)changeToFolderView:(id)sender {
         [[self.folderView animator] setFrame:NSMakeRect(00.0f, 22.0f, 300.0f, 450.0f)];
         [[self.rulesView animator] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
+}
+
+- (IBAction)addNewRule:(id)sender {
+        NSManagedObject *rule = [NSEntityDescription insertNewObjectForEntityForName:@"Rule" inManagedObjectContext:[self managedObjectContext]];
+        NSManagedObject *folder = [[self.folderArrayController selectedObjects] objectAtIndex:0];
+        [folder addRulesObject:rule];
 }
 
 /**
