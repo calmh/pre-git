@@ -25,4 +25,18 @@
         [self setMaxItemSize:size];        
 }
 
+- (NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
+        
+        // Get a copy of the item prototype, set represented object
+        NSCollectionViewItem *newItem = [[self itemPrototype] copy];
+        [newItem setRepresentedObject:object];
+        
+        // Get the new item's view so you can mess with it
+        NSView *itemView = [newItem view];
+        if ([itemView respondsToSelector:@selector(setRepresentedObject:)])
+                [itemView setRepresentedObject:object];
+        
+        return newItem;
+}
+
 @end

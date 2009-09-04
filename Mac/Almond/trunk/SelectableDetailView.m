@@ -17,16 +17,14 @@
 }
 
 - (void)drawRect:(NSRect)rect {
+        float margin = 8.0f;
+        
+        [NSGraphicsContext saveGraphicsState];
+        
         if (selected) {
                 [[NSColor selectedControlColor] setFill];
                 NSRectFill(rect);
         }
-        
-        float margin = 8.0f;
-        
-        NSBezierPath *border = [NSBezierPath new];
-        [border setLineWidth:1.0];
-        [[NSColor colorWithDeviceWhite:0.3 alpha:1.0] setStroke];
         
         NSShadow *shadow = [NSShadow new];
         [shadow setShadowBlurRadius:3.0];
@@ -54,20 +52,21 @@
         NSPoint br = bl; br.x += bounds.size.width - margin * 2;
         NSPoint tl = bl; tl.y += bounds.size.height - margin * 2;
         NSPoint tr = tl; tr.x += bounds.size.width - margin * 2;
-        
+        NSRect brect = NSMakeRect(bl.x, bl.y, tr.x - bl.x, tr.y - bl.y);
  
+        [[NSColor colorWithDeviceWhite:0.3 alpha:1.0] setStroke];
+        NSBezierPath *border = [NSBezierPath new];
+        [border setLineWidth:1.0];
         [border setLineJoinStyle:NSRoundLineJoinStyle];
-        [border moveToPoint:bl];
-        [border lineToPoint:br];
-        [border lineToPoint:tr];
-        [border lineToPoint:tl];
-        [border lineToPoint:bl];
+        [border appendBezierPathWithRoundedRect:brect xRadius:2.0f yRadius:2.0f];
  
         [shadow set];
         [border stroke];
         [background drawInBezierPath:border angle:-90];
         [shadow release];
         [border release];
+
+         [NSGraphicsContext restoreGraphicsState];
 }
 
 @end

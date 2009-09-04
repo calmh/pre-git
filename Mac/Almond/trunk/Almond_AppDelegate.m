@@ -7,6 +7,7 @@
 //
 
 #import "Almond_AppDelegate.h"
+#import "LuaHandling.h"
 
 @interface Almond_AppDelegate ()
 
@@ -43,7 +44,10 @@
         /*[self.rightDrawer open];
         [self.rightDrawer setContentView:self.folderViewController.rightDrawerView];*/
         [self changeToFolderView:nil];
-        //[self loadPlugin:[[NSBundle mainBundle] pathForResource:@"StandardLibrary" ofType:@"lua"]];
+#ifdef REINITIALIZE_LIBRARY
+        LuaHandling *lua = [[[LuaHandling alloc] initWithManagedObjectContext:self.managedObjectContext] autorelease];
+        [lua loadPlugin:[[NSBundle mainBundle] pathForResource:@"StandardLibrary" ofType:@"lua"]];
+#endif
 }
 
 - (IBAction)changeToRuleView:(id)sender {

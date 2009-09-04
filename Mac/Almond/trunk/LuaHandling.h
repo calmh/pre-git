@@ -12,9 +12,12 @@
 #import "lauxlib.h"
 
 @interface LuaHandling : NSObject {
-
+        NSManagedObjectContext *managedObjectContext;
 }
 
+@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (id)initWithManagedObjectContext:(NSManagedObjectContext*)managedObjectContext;
 - (void) loadPlugin:(NSString*)path;
 
 @end

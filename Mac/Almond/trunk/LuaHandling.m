@@ -17,6 +17,20 @@
 
 @implementation LuaHandling
 
+@synthesize managedObjectContext;
+
+- (id)initWithManagedObjectContext:(NSManagedObjectContext*)newManagedObjectContext {
+        if (self = [super init]) {
+                self.managedObjectContext = newManagedObjectContext;
+        }
+        return self;
+}
+
+- (void)dealloc {
+        self.managedObjectContext = nil;
+        [super dealloc];
+}
+
 - (void) loadPlugin:(NSString*)path {
         NSDictionary *pluginData;
         

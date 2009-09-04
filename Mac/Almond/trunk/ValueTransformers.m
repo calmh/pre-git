@@ -70,3 +70,26 @@
         return [NSString stringWithFormat:@"%d", count];
 }
 @end
+
+@implementation TrueIfEmpty
+
++ (Class)transformedValueClass
+{
+        return [NSString self];
+}
+
++ (BOOL)allowsReverseTransformation
+{
+        return NO;
+}
+
+- (id)transformedValue:(id)beforeObject
+{
+        if (beforeObject == nil) return [NSNumber numberWithInt:1];
+        if ([beforeObject respondsToSelector:@selector(count)])
+                if ([beforeObject count] > 0)
+                        return [NSNumber numberWithInt:0];
+        else
+                return [NSNumber numberWithInt:1];
+}
+@end
