@@ -275,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>17</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -309,14 +309,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>292674F4104DA2E6003B9DEA</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Almond_AppDelegate.m</string>
+								<string>Almond_DataModel.xcdatamodel</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>292674F5104DA2E6003B9DEA</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Almond_AppDelegate.m</string>
+										<string>Almond_DataModel.xcdatamodel</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>297E7E2D1050731F000E0C70</string>
+										<string>29EF459F1051737B00082D77</string>
 										<key>history</key>
 										<array>
 											<string>29A0AF69104DAACE002C0677</string>
@@ -340,10 +338,10 @@
 											<string>29CF1723104DCA380046DCCF</string>
 											<string>29CF1724104DCA380046DCCF</string>
 											<string>29CF176F104DCE310046DCCF</string>
-											<string>297E7DB110506A5C000E0C70</string>
-											<string>297E7DB210506A5C000E0C70</string>
-											<string>297E7DED10506FE9000E0C70</string>
-											<string>297E7E1A10507204000E0C70</string>
+											<string>29EF454210516C7C00082D77</string>
+											<string>29EF454710516CC200082D77</string>
+											<string>29EF459D1051737B00082D77</string>
+											<string>29EF459E1051737B00082D77</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -466,11 +464,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>297E7D87105068B1000E0C70</string>
+				<string>29EF453710516C3C00082D77</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>297E7D88105068B1000E0C70</string>
+				<string>29EF453810516C3C00082D77</string>
 				<string>292674F4104DA2E6003B9DEA</string>
-				<string>297E7D89105068B1000E0C70</string>
+				<string>29EF453910516C3C00082D77</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -521,12 +519,12 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {1440, 295}}</string>
+						<string>{{0, 0}, {1440, 282}}</string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
 					<key>Proportion</key>
-					<string>295pt</string>
+					<string>282pt</string>
 				</dict>
 				<dict>
 					<key>ContentConfiguration</key>
@@ -545,8 +543,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {702, 232}}</string>
-									<string>{{702, 0}, {738, 232}}</string>
+									<string>{{0, 0}, {703, 238}}</string>
+									<string>{{703, 0}, {737, 238}}</string>
 								</array>
 							</dict>
 							<key>VerticalSplitView</key>
@@ -561,8 +559,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {1440, 232}}</string>
-									<string>{{0, 232}, {1440, 246}}</string>
+									<string>{{0, 0}, {1440, 238}}</string>
+									<string>{{0, 238}, {1440, 253}}</string>
 								</array>
 							</dict>
 						</dict>
@@ -582,7 +580,7 @@
 						<key>DebugSTDIOWindowFrame</key>
 						<string>{{200, 200}, {500, 300}}</string>
 						<key>Frame</key>
-						<string>{{0, 300}, {1440, 478}}</string>
+						<string>{{0, 287}, {1440, 491}}</string>
 						<key>PBXDebugSessionStackFrameViewKey</key>
 						<dict>
 							<key>DebugVariablesTableConfiguration</key>
@@ -592,16 +590,16 @@
 								<string>Value</string>
 								<real>85</real>
 								<string>Summary</string>
-								<real>508</real>
+								<real>507</real>
 							</array>
 							<key>Frame</key>
-							<string>{{702, 0}, {738, 232}}</string>
+							<string>{{703, 0}, {737, 238}}</string>
 						</dict>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
 					<key>Proportion</key>
-					<string>478pt</string>
+					<string>491pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -619,14 +617,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>297E7D8A105068B1000E0C70</string>
+				<string>29EF453A10516C3C00082D77</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>297E7D8B105068B1000E0C70</string>
-				<string>297E7D8C105068B1000E0C70</string>
-				<string>297E7D8D105068B1000E0C70</string>
-				<string>297E7D8E105068B1000E0C70</string>
-				<string>297E7D8F105068B1000E0C70</string>
+				<string>29EF453B10516C3C00082D77</string>
+				<string>29EF453C10516C3C00082D77</string>
+				<string>29EF453D10516C3C00082D77</string>
+				<string>29EF453E10516C3C00082D77</string>
+				<string>292674F4104DA2E6003B9DEA</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -660,8 +658,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>297E7D91105068B1000E0C70</string>
-		<string>297E7D92105068B1000E0C70</string>
+		<string>29EF454B10516CCB00082D77</string>
+		<string>29EF454C10516CCB00082D77</string>
 		<string>/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

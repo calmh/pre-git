@@ -14,8 +14,12 @@
 @synthesize mainView;
 @synthesize folderView;
 @synthesize rulesView;
+@synthesize folderDetailView;
+@synthesize ruleDetailView;
 @synthesize folderArrayController;
 @synthesize rulesArrayController;
+@synthesize rightDrawer;
+@synthesize expressionsView;
 
 + (void)initialize {
         // Register our transformers
@@ -27,19 +31,51 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
         [self.folderView setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
         [self.rulesView setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
+        [self.expressionsView setFrame:NSMakeRect(600.0f, 22.0f, 300.0f, 450.0f)];
         [self.mainView addSubview:self.folderView];
         [self.mainView addSubview:self.rulesView];
+        [self.mainView addSubview:self.expressionsView];
+        //[self.rightDrawer setParentWindow:self.window];
+        //[self.rightDrawer setPreferredEdge:NSMaxXEdge];
+        [self.rightDrawer setContentSize:NSSizeFromCGSize(CGSizeMake(200.0f, 350.0f))];
+        [self.rightDrawer setContentView:self.folderDetailView];
+        [self.rightDrawer open];
+}
+
+- (IBAction)browserForFolder:(id)sender {
+        NSOpenPanel *dialog = [[NSOpenPanel alloc] init];
+        [dialog setCanChooseFiles:NO];
+        [dialog setCanChooseDirectories:YES];
+        [dialog setResolvesAliases:YES];
+        [dialog setCanCreateDirectories:YES];
+        [dialog setAllowsMultipleSelection:NO];
+        [dialog beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result) {
+                if (result == NSFileHandlingPanelOKButton) {
+                        NSManagedObject *folder = [NSEntityDescription insertNewObjectForEntityForName:@"Folder" inManagedObjectContext:[self managedObjectContext]];
+                        [folder setPath:[[[dialog URLs] objectAtIndex:0] path]];        
+                }
+        }];
 }
 
 - (IBAction)changeToRuleView:(id)sender {
         [self.rulesArrayController setFilterPredicate:[NSPredicate predicateWithFormat:@"folder == %@", [[self.folderArrayController selectedObjects] objectAtIndex:0]]];
         [[self.folderView animator] setFrame:NSMakeRect(-300.0f, 22.0f, 300.0f, 450.0f)];
         [[self.rulesView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.expressionsView animator] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
+        [self.rightDrawer setContentView:self.ruleDetailView];
 }
 
 - (IBAction)changeToFolderView:(id)sender {
-        [[self.folderView animator] setFrame:NSMakeRect(00.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.folderView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
         [[self.rulesView animator] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.expressionsView animator] setFrame:NSMakeRect(600.0f, 22.0f, 300.0f, 450.0f)];
+        [self.rightDrawer setContentView:self.folderDetailView];
+}
+
+- (IBAction)changeToExpressionsView:(id)sender {
+        [[self.folderView animator] setFrame:NSMakeRect(-600.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.rulesView animator] setFrame:NSMakeRect(-300.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.expressionsView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
 }
 
 - (IBAction)addNewRule:(id)sender {
