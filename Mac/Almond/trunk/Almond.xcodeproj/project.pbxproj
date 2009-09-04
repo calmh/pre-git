@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297F98CE105183A200206CCB /* FolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F98CD105183A200206CCB /* FolderViewController.m */; };
+		297F98D1105183CB00206CCB /* FolderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F98D0105183CB00206CCB /* FolderView.xib */; };
+		297F993E10518B7D00206CCB /* RuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F993D10518B7D00206CCB /* RuleView.xib */; };
+		297F994010518B8B00206CCB /* MethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F993F10518B8B00206CCB /* MethodView.xib */; };
+		297F994310518B9C00206CCB /* RuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F994210518B9C00206CCB /* RuleViewController.m */; };
+		297F994610518BA700206CCB /* MethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F994510518BA700206CCB /* MethodViewController.m */; };
+		297F995510518F1D00206CCB /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F995410518F1D00206CCB /* BasicViewController.m */; };
 		29A0AF9F104DAE10002C0677 /* SelectableCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AF9C104DAE10002C0677 /* SelectableCollectionView.m */; };
 		29A0AFA0104DAE10002C0677 /* SelectableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AF9E104DAE10002C0677 /* SelectableViewItem.m */; };
 		29A0AFA3104DAE4E002C0677 /* SelectableDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0AFA2104DAE4E002C0677 /* SelectableDetailView.m */; };
@@ -22,6 +29,17 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		297F98CC105183A200206CCB /* FolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderViewController.h; sourceTree = "<group>"; };
+		297F98CD105183A200206CCB /* FolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderViewController.m; sourceTree = "<group>"; };
+		297F98D0105183CB00206CCB /* FolderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderView.xib; sourceTree = "<group>"; };
+		297F993D10518B7D00206CCB /* RuleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleView.xib; sourceTree = "<group>"; };
+		297F993F10518B8B00206CCB /* MethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MethodView.xib; sourceTree = "<group>"; };
+		297F994110518B9C00206CCB /* RuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleViewController.h; sourceTree = "<group>"; };
+		297F994210518B9C00206CCB /* RuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleViewController.m; sourceTree = "<group>"; };
+		297F994410518BA700206CCB /* MethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodViewController.h; sourceTree = "<group>"; };
+		297F994510518BA700206CCB /* MethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodViewController.m; sourceTree = "<group>"; };
+		297F995310518F1D00206CCB /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		297F995410518F1D00206CCB /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		29A0AF9B104DAE10002C0677 /* SelectableCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableCollectionView.h; sourceTree = "<group>"; };
 		29A0AF9C104DAE10002C0677 /* SelectableCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableCollectionView.m; sourceTree = "<group>"; };
 		29A0AF9D104DAE10002C0677 /* SelectableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableViewItem.h; sourceTree = "<group>"; };
@@ -68,6 +86,14 @@
 				29A0AF9E104DAE10002C0677 /* SelectableViewItem.m */,
 				77C8280B06725ACE000B614F /* Almond_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* Almond_AppDelegate.m */,
+				297F98CC105183A200206CCB /* FolderViewController.h */,
+				297F98CD105183A200206CCB /* FolderViewController.m */,
+				297F994110518B9C00206CCB /* RuleViewController.h */,
+				297F994210518B9C00206CCB /* RuleViewController.m */,
+				297F994410518BA700206CCB /* MethodViewController.h */,
+				297F994510518BA700206CCB /* MethodViewController.m */,
+				297F995310518F1D00206CCB /* BasicViewController.h */,
+				297F995410518F1D00206CCB /* BasicViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -126,6 +152,9 @@
 				8D1107310486CEB800E47090 /* Almond-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				297F98D0105183CB00206CCB /* FolderView.xib */,
+				297F993D10518B7D00206CCB /* RuleView.xib */,
+				297F993F10518B8B00206CCB /* MethodView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,6 +221,9 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				297F98D1105183CB00206CCB /* FolderView.xib in Resources */,
+				297F993E10518B7D00206CCB /* RuleView.xib in Resources */,
+				297F994010518B8B00206CCB /* MethodView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +241,10 @@
 				29A0AFA0104DAE10002C0677 /* SelectableViewItem.m in Sources */,
 				29A0AFA3104DAE4E002C0677 /* SelectableDetailView.m in Sources */,
 				29CF171D104DC9F30046DCCF /* ValueTransformers.m in Sources */,
+				297F98CE105183A200206CCB /* FolderViewController.m in Sources */,
+				297F994310518B9C00206CCB /* RuleViewController.m in Sources */,
+				297F994610518BA700206CCB /* MethodViewController.m in Sources */,
+				297F995510518F1D00206CCB /* BasicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

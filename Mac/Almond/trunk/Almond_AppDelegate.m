@@ -12,14 +12,10 @@
 
 @synthesize window;
 @synthesize mainView;
-@synthesize folderView;
-@synthesize rulesView;
-@synthesize folderDetailView;
-@synthesize ruleDetailView;
-@synthesize folderArrayController;
-@synthesize rulesArrayController;
+@synthesize folderViewController;
+@synthesize ruleViewController;
+@synthesize methodViewController;
 @synthesize rightDrawer;
-@synthesize expressionsView;
 
 + (void)initialize {
         // Register our transformers
@@ -29,59 +25,66 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-        [self.folderView setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
-        [self.rulesView setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
-        [self.expressionsView setFrame:NSMakeRect(600.0f, 22.0f, 300.0f, 450.0f)];
-        [self.mainView addSubview:self.folderView];
-        [self.mainView addSubview:self.rulesView];
-        [self.mainView addSubview:self.expressionsView];
-        //[self.rightDrawer setParentWindow:self.window];
-        //[self.rightDrawer setPreferredEdge:NSMaxXEdge];
-        [self.rightDrawer setContentSize:NSSizeFromCGSize(CGSizeMake(200.0f, 350.0f))];
-        [self.rightDrawer setContentView:self.folderDetailView];
-        [self.rightDrawer open];
-}
-
-- (IBAction)browserForFolder:(id)sender {
-        NSOpenPanel *dialog = [[NSOpenPanel alloc] init];
-        [dialog setCanChooseFiles:NO];
-        [dialog setCanChooseDirectories:YES];
-        [dialog setResolvesAliases:YES];
-        [dialog setCanCreateDirectories:YES];
-        [dialog setAllowsMultipleSelection:NO];
-        [dialog beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result) {
-                if (result == NSFileHandlingPanelOKButton) {
-                        NSManagedObject *folder = [NSEntityDescription insertNewObjectForEntityForName:@"Folder" inManagedObjectContext:[self managedObjectContext]];
-                        [folder setPath:[[[dialog URLs] objectAtIndex:0] path]];        
-                }
-        }];
+/*        [[self.folderViewController view] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.ruleViewController view] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
+        [[self.methodViewController view] setFrame:NSMakeRect(600.0f, 22.0f, 300.0f, 450.0f)];*/
+        [self.mainView addSubview:[self.folderViewController view]];
+        [self.mainView addSubview:[self.ruleViewController view]];
+        [self.mainView addSubview:[self.methodViewController view]];
+        /*float width = [[self.window contentView] frame].size.width;
+        [self.folderViewController slideViewToX:0.0f];
+        [self.ruleViewController slideViewToX:width];
+         [self.methodViewController slideViewToX:width*2.0f];*/
+        /*[self.rightDrawer open];
+        [self.rightDrawer setContentView:self.folderViewController.rightDrawerView];*/
+        [self changeToFolderView:nil];
 }
 
 - (IBAction)changeToRuleView:(id)sender {
-        [self.rulesArrayController setFilterPredicate:[NSPredicate predicateWithFormat:@"folder == %@", [[self.folderArrayController selectedObjects] objectAtIndex:0]]];
-        [[self.folderView animator] setFrame:NSMakeRect(-300.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.rulesView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.expressionsView animator] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
-        [self.rightDrawer setContentView:self.ruleDetailView];
+        [self.ruleViewController setRepresentedObject:[[self.folderViewController.folderArrayController selectedObjects] objectAtIndex:0]];
+        [self.folderViewController fadeOut];
+        [self.ruleViewController fadeIn];
+        [self.methodViewController fadeOut];
+        //[self.folderViewController slideViewToX:-300.0f];
+        //[self.ruleViewController slideViewToX:0.0f];
+        //[self.methodViewController slideViewToX:300.0f];
+        if (self.ruleViewController.rightDrawerView != nil) {
+                [self.rightDrawer setContentView:self.ruleViewController.rightDrawerView];
+                [self.rightDrawer open];
+        } else {
+                [self.rightDrawer close];
+        }
 }
 
 - (IBAction)changeToFolderView:(id)sender {
-        [[self.folderView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.rulesView animator] setFrame:NSMakeRect(300.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.expressionsView animator] setFrame:NSMakeRect(600.0f, 22.0f, 300.0f, 450.0f)];
-        [self.rightDrawer setContentView:self.folderDetailView];
+        [self.folderViewController fadeIn];
+        [self.ruleViewController fadeOut];
+        [self.methodViewController fadeOut];
+        //[self.folderViewController slideViewToX:0.0f];
+        //[self.ruleViewController slideViewToX:300.0f];
+        //[self.methodViewController slideViewToX:600.0f];
+        if (self.folderViewController.rightDrawerView != nil) {
+                [self.rightDrawer setContentView:self.folderViewController.rightDrawerView];
+                [self.rightDrawer open];
+        } else {
+                [self.rightDrawer close];
+        }
 }
 
-- (IBAction)changeToExpressionsView:(id)sender {
-        [[self.folderView animator] setFrame:NSMakeRect(-600.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.rulesView animator] setFrame:NSMakeRect(-300.0f, 22.0f, 300.0f, 450.0f)];
-        [[self.expressionsView animator] setFrame:NSMakeRect(0.0f, 22.0f, 300.0f, 450.0f)];
-}
-
-- (IBAction)addNewRule:(id)sender {
-        NSManagedObject *rule = [NSEntityDescription insertNewObjectForEntityForName:@"Rule" inManagedObjectContext:[self managedObjectContext]];
-        NSManagedObject *folder = [[self.folderArrayController selectedObjects] objectAtIndex:0];
-        [folder addRulesObject:rule];
+- (IBAction)changeToMethodView:(id)sender {
+        [self.methodViewController setRepresentedObject:[[self.ruleViewController.ruleArrayController selectedObjects] objectAtIndex:0]];
+        [self.folderViewController fadeOut];
+        [self.ruleViewController fadeOut];
+        [self.methodViewController fadeIn];
+        //[self.folderViewController slideViewToX:-600.0f];
+        //[self.ruleViewController slideViewToX:-300.0f];
+        //[self.methodViewController slideViewToX:0.0f];
+        if (self.methodViewController.rightDrawerView != nil) {
+                [self.rightDrawer setContentView:self.methodViewController.rightDrawerView];
+                [self.rightDrawer open];
+        } else {
+                [self.rightDrawer close];
+        }
 }
 
 /**
@@ -280,5 +283,9 @@
     [super dealloc];
 }
 
+
+- (BOOL)drawerShouldClose:(NSDrawer *)sender {
+        return NO;
+}
 
 @end

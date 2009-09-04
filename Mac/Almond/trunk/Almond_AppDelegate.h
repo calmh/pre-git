@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ValueTransformers.h"
+#import "FolderViewController.h"
+#import "RuleViewController.h"
+#import "MethodViewController.h"
 
 @interface Almond_AppDelegate : NSObject 
 {
@@ -25,22 +28,14 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
 @property (retain, nonatomic) IBOutlet NSView *mainView;
-@property (retain, nonatomic) IBOutlet NSView *folderView;
-@property (retain, nonatomic) IBOutlet NSView *rulesView;
-@property (retain, nonatomic) IBOutlet NSView *expressionsView;
-
-@property (retain, nonatomic) IBOutlet NSView *folderDetailView;
-@property (retain, nonatomic) IBOutlet NSView *ruleDetailView;
-
-@property (retain, nonatomic) IBOutlet NSArrayController *folderArrayController;
-@property (retain, nonatomic) IBOutlet NSArrayController *rulesArrayController;
+@property (retain, nonatomic) IBOutlet FolderViewController *folderViewController;
+@property (retain, nonatomic) IBOutlet RuleViewController *ruleViewController;
+@property (retain, nonatomic) IBOutlet MethodViewController *methodViewController;
 @property (retain, nonatomic) IBOutlet NSDrawer *rightDrawer;
 
 - (IBAction)saveAction:sender;
-- (IBAction)browserForFolder:(id)sender;
 - (IBAction)changeToRuleView:(id)sender;
 - (IBAction)changeToFolderView:(id)sender;
-- (IBAction)changeToExpressionsView:(id)sender;
-- (IBAction)addNewRule:(id)sender;
+- (IBAction)changeToMethodView:(id)sender;
 
 @end
