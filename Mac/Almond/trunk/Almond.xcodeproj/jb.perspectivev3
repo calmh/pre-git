@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -283,6 +285,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>24</integer>
+									<integer>5</integer>
+									<integer>0</integer>
+								</array>
+								<array>
+									<integer>25</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -318,14 +326,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>292674F4104DA2E6003B9DEA</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Almond_AppDelegate.m</string>
+								<string>LuaHandling.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,11 +339,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>292674F5104DA2E6003B9DEA</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Almond_AppDelegate.m</string>
+										<string>LuaHandling.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>29A6D7101051B66500A22C0F</string>
+										<string>29A6D7281051B8DF00A22C0F</string>
 										<key>history</key>
 										<array>
 											<string>29A0AF69104DAACE002C0677</string>
@@ -355,14 +361,16 @@
 											<string>29A6D67B1051B06C00A22C0F</string>
 											<string>29A6D67C1051B06C00A22C0F</string>
 											<string>29A6D67D1051B06C00A22C0F</string>
-											<string>29A6D6811051B09900A22C0F</string>
 											<string>29A6D6901051B0D600A22C0F</string>
 											<string>29A6D6C21051B24600A22C0F</string>
 											<string>29A6D6C31051B24600A22C0F</string>
 											<string>29A6D7001051B5E700A22C0F</string>
 											<string>29A6D7071051B60400A22C0F</string>
 											<string>29A6D70B1051B62100A22C0F</string>
-											<string>29A6D70C1051B62100A22C0F</string>
+											<string>29A6D7241051B8DF00A22C0F</string>
+											<string>29A6D7251051B8DF00A22C0F</string>
+											<string>29A6D7261051B8DF00A22C0F</string>
+											<string>29A6D7271051B8DF00A22C0F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

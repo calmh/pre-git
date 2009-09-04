@@ -7,7 +7,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -60,7 +60,7 @@
 	};
 	297F98CC105183A200206CCB /* FolderViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1172, 467}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
 			sepNavSelRange = "{258, 0}";
 			sepNavVisRange = "{0, 431}";
 		};
@@ -342,7 +342,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 311";
 		rLen = 0;
-		rLoc = 12567;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1832;
 		vrLoc = 10972;
@@ -352,7 +352,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 44";
 		rLen = 0;
-		rLoc = 2148;
+		rLoc = 1945;
 		rType = 0;
 		vrLen = 2712;
 		vrLoc = 183;
@@ -372,7 +372,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 303";
 		rLen = 0;
-		rLoc = 11866;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2883;
 		vrLoc = 11516;
@@ -382,7 +382,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 303";
 		rLen = 0;
-		rLoc = 11866;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2761;
 		vrLoc = 11516;
@@ -392,7 +392,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 303";
 		rLen = 0;
-		rLoc = 11866;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 11325;
@@ -448,7 +448,7 @@
 		isa = PBXTextBookmark;
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		rLen = 0;
-		rLoc = 111;
+		rLoc = 104;
 		rType = 1;
 	};
 	29A6D66A1051AF9800A22C0F /* PBXTextBookmark */ = {
@@ -456,7 +456,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 110";
 		rLen = 0;
-		rLoc = 4632;
+		rLoc = 4429;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 11325;
@@ -466,7 +466,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 281";
 		rLen = 0;
-		rLoc = 11473;
+		rLoc = 11270;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 11685;
@@ -503,7 +503,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 20";
 		rLen = 0;
-		rLoc = 413;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 1495;
 		vrLoc = 42;
@@ -603,7 +603,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 110";
 		rLen = 0;
-		rLoc = 4632;
+		rLoc = 4429;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 11439;
@@ -690,7 +690,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 308";
 		rLen = 0;
-		rLoc = 12038;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1589;
 		vrLoc = 11458;
@@ -700,7 +700,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 303";
 		rLen = 0;
-		rLoc = 11848;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 11458;
@@ -710,7 +710,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 4291;
+		rLoc = 4088;
 		rType = 0;
 		vrLen = 1688;
 		vrLoc = 2043;
@@ -720,7 +720,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 71";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 11480;
@@ -740,7 +740,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 71";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 11480;
@@ -750,7 +750,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 71";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 11359;
@@ -775,7 +775,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 71";
 		rLen = 0;
-		rLoc = 2973;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 259;
 		vrLoc = 11359;
@@ -785,7 +785,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 293";
 		rLen = 0;
-		rLoc = 11705;
+		rLoc = 11502;
 		rType = 0;
 		vrLen = 653;
 		vrLoc = 11151;
@@ -795,7 +795,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 289";
 		rLen = 0;
-		rLoc = 11591;
+		rLoc = 11388;
 		rType = 0;
 		vrLen = 967;
 		vrLoc = 10276;
@@ -827,7 +827,7 @@
 		path = "asm -[NSAppleEventManager dispatchRawAppleEvent:withRawReply:handlerRefCon:]  0x98f362ee";
 		sourceTree = "<group>";
 	};
-	29A6D6A81051B15500A22C0F /* Almond_AppDelegate.m:311 */ = {
+	29A6D6A81051B15500A22C0F /* Almond_AppDelegate.m:296 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -839,13 +839,13 @@
 		functionName = "-loadPlugin:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 311;
+		lineNumber = 296;
 		location = Almond;
 		modificationTime = 273790013.308084;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	29A6D6AA1051B15A00A22C0F /* Almond_AppDelegate.m:316 */ = {
+	29A6D6AA1051B15A00A22C0F /* Almond_AppDelegate.m:296 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -857,7 +857,7 @@
 		functionName = "-loadPlugin:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 316;
+		lineNumber = 296;
 		location = Almond;
 		modificationTime = 273790014.239958;
 		originalNumberOfMultipleMatches = 1;
@@ -868,7 +868,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 314";
 		rLen = 0;
-		rLoc = 12415;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1662;
 		vrLoc = 11615;
@@ -878,7 +878,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 319";
 		rLen = 0;
-		rLoc = 12571;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1662;
 		vrLoc = 11615;
@@ -888,7 +888,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 319";
 		rLen = 0;
-		rLoc = 12571;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1662;
 		vrLoc = 11615;
@@ -918,7 +918,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 289";
 		rLen = 0;
-		rLoc = 11591;
+		rLoc = 11388;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 10305;
@@ -977,8 +977,8 @@
 		isa = PBXTextBookmark;
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 360";
-		rLen = 60;
-		rLoc = 15161;
+		rLen = 0;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2027;
 		vrLoc = 15151;
@@ -988,7 +988,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 395";
 		rLen = 0;
-		rLoc = 16477;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3466;
 		vrLoc = 11797;
@@ -998,7 +998,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 395";
 		rLen = 0;
-		rLoc = 16477;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3466;
 		vrLoc = 11797;
@@ -1018,7 +1018,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 395";
 		rLen = 0;
-		rLoc = 16477;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 13816;
@@ -1213,7 +1213,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 351";
 		rLen = 0;
-		rLoc = 14751;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3355;
 		vrLoc = 11797;
@@ -1223,7 +1223,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 355";
 		rLen = 0;
-		rLoc = 15075;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3355;
 		vrLoc = 11797;
@@ -1233,7 +1233,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 355";
 		rLen = 0;
-		rLoc = 15075;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2999;
 		vrLoc = 11704;
@@ -1243,7 +1243,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 332";
 		rLen = 0;
-		rLoc = 13189;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2860;
 		vrLoc = 11704;
@@ -1253,7 +1253,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 332";
 		rLen = 0;
-		rLoc = 13189;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2860;
 		vrLoc = 11704;
@@ -1263,7 +1263,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 332";
 		rLen = 0;
-		rLoc = 13189;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 12803;
@@ -1438,7 +1438,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 332";
 		rLen = 0;
-		rLoc = 13189;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2924;
 		vrLoc = 11704;
@@ -1448,7 +1448,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 336";
 		rLen = 0;
-		rLoc = 13436;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 2860;
 		vrLoc = 11704;
@@ -1458,7 +1458,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 351";
 		rLen = 0;
-		rLoc = 14593;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3245;
 		vrLoc = 12542;
@@ -1961,7 +1961,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 316";
 		rLen = 0;
-		rLoc = 12386;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3024;
 		vrLoc = 492;
@@ -1971,7 +1971,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 359";
 		rLen = 0;
-		rLoc = 15157;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3342;
 		vrLoc = 11838;
@@ -1981,7 +1981,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 346";
 		rLen = 0;
-		rLoc = 14096;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3342;
 		vrLoc = 11838;
@@ -2166,7 +2166,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 346";
 		rLen = 0;
-		rLoc = 14096;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3380;
 		vrLoc = 11800;
@@ -2391,7 +2391,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 346";
 		rLen = 0;
-		rLoc = 14096;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3380;
 		vrLoc = 11800;
@@ -2401,7 +2401,7 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 358";
 		rLen = 0;
-		rLoc = 15147;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3360;
 		vrLoc = 11800;
@@ -2411,17 +2411,81 @@
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 322";
 		rLen = 0;
-		rLoc = 12542;
+		rLoc = 11596;
 		rType = 0;
 		vrLen = 3360;
 		vrLoc = 11800;
+	};
+	29A6D7191051B87000A22C0F /* LuaHandling.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172, 741}}";
+			sepNavSelRange = "{206, 0}";
+			sepNavVisRange = "{0, 291}";
+		};
+	};
+	29A6D71A1051B87000A22C0F /* LuaHandling.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1384, 1755}}";
+			sepNavSelRange = "{157, 0}";
+			sepNavVisRange = "{0, 2391}";
+		};
+	};
+	29A6D7241051B8DF00A22C0F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 297F98CC105183A200206CCB /* FolderViewController.h */;
+		name = "FolderViewController.h: 13";
+		rLen = 0;
+		rLoc = 258;
+		rType = 0;
+		vrLen = 431;
+		vrLoc = 0;
+	};
+	29A6D7251051B8DF00A22C0F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29A6D71A1051B87000A22C0F /* LuaHandling.m */;
+		name = "LuaHandling.m: 11";
+		rLen = 0;
+		rLoc = 157;
+		rType = 0;
+		vrLen = 2391;
+		vrLoc = 0;
+	};
+	29A6D7261051B8DF00A22C0F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
+		name = "Almond_AppDelegate.m: 10";
+		rLen = 0;
+		rLoc = 167;
+		rType = 0;
+		vrLen = 2503;
+		vrLoc = 0;
+	};
+	29A6D7271051B8DF00A22C0F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29A6D7191051B87000A22C0F /* LuaHandling.h */;
+		name = "LuaHandling.h: 17";
+		rLen = 0;
+		rLoc = 285;
+		rType = 0;
+		vrLen = 237;
+		vrLoc = 0;
+	};
+	29A6D7281051B8DF00A22C0F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29A6D7191051B87000A22C0F /* LuaHandling.h */;
+		name = "LuaHandling.h: 12";
+		rLen = 0;
+		rLoc = 206;
+		rType = 0;
+		vrLen = 291;
+		vrLoc = 0;
 	};
 	29AE80241051A58600AFECD4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 77C8280C06725ACE000B614F /* Almond_AppDelegate.m */;
 		name = "Almond_AppDelegate.m: 48";
 		rLen = 0;
-		rLoc = 2470;
+		rLoc = 2267;
 		rType = 0;
 		vrLen = 1750;
 		vrLoc = 1807;
@@ -2445,8 +2509,8 @@
 			8D1107260486CEB800E47090 /* Almond */,
 		);
 		breakpoints = (
-			29A6D6A81051B15500A22C0F /* Almond_AppDelegate.m:311 */,
-			29A6D6AA1051B15A00A22C0F /* Almond_AppDelegate.m:316 */,
+			29A6D6A81051B15500A22C0F /* Almond_AppDelegate.m:296 */,
+			29A6D6AA1051B15A00A22C0F /* Almond_AppDelegate.m:296 */,
 		);
 		codeSenseManager = 292674FB104DA2E6003B9DEA /* Code sense */;
 		executables = (
@@ -2592,6 +2656,11 @@
 			29A6D70C1051B62100A22C0F /* PBXTextBookmark */ = 29A6D70C1051B62100A22C0F /* PBXTextBookmark */;
 			29A6D70D1051B62100A22C0F /* PBXTextBookmark */ = 29A6D70D1051B62100A22C0F /* PBXTextBookmark */;
 			29A6D7101051B66500A22C0F /* PBXTextBookmark */ = 29A6D7101051B66500A22C0F /* PBXTextBookmark */;
+			29A6D7241051B8DF00A22C0F /* PBXTextBookmark */ = 29A6D7241051B8DF00A22C0F /* PBXTextBookmark */;
+			29A6D7251051B8DF00A22C0F /* PBXTextBookmark */ = 29A6D7251051B8DF00A22C0F /* PBXTextBookmark */;
+			29A6D7261051B8DF00A22C0F /* PBXTextBookmark */ = 29A6D7261051B8DF00A22C0F /* PBXTextBookmark */;
+			29A6D7271051B8DF00A22C0F /* PBXTextBookmark */ = 29A6D7271051B8DF00A22C0F /* PBXTextBookmark */;
+			29A6D7281051B8DF00A22C0F /* PBXTextBookmark */ = 29A6D7281051B8DF00A22C0F /* PBXTextBookmark */;
 			29AE80241051A58600AFECD4 = 29AE80241051A58600AFECD4 /* PBXTextBookmark */;
 			29AE80251051A58600AFECD4 = 29AE80251051A58600AFECD4 /* PBXTextBookmark */;
 			29CF1722104DCA380046DCCF = 29CF1722104DCA380046DCCF /* PBXTextBookmark */;
@@ -2843,9 +2912,9 @@
 	};
 	77C8280C06725ACE000B614F /* Almond_AppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1384, 5395}}";
-			sepNavSelRange = "{12542, 0}";
-			sepNavVisRange = "{11800, 3360}";
+			sepNavIntBoundsRect = "{{0, 0}, {1172, 3783}}";
+			sepNavSelRange = "{167, 0}";
+			sepNavVisRange = "{0, 2503}";
 			sepNavWindowFrame = "{{15, 4}, {1047, 874}}";
 		};
 	};
