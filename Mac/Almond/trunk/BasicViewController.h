@@ -11,7 +11,9 @@
 @class Almond_AppDelegate;
 
 @interface BasicViewController : NSViewController {
-
+        Almond_AppDelegate *appDelegate;
+        NSView *rightDrawerView;
+        NSView *leftDrawerView;        
 }
 
 @property (retain, nonatomic) IBOutlet Almond_AppDelegate *appDelegate;

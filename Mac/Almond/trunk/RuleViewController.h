@@ -11,7 +11,7 @@
 #import "BasicViewController.h"
 
 @interface RuleViewController : BasicViewController {
-
+        NSArrayController *ruleArrayController;
 }
 
 @property (retain, nonatomic) IBOutlet NSArrayController *ruleArrayController;

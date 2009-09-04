@@ -10,7 +10,8 @@
 #import "BasicViewController.h"
 
 @interface MethodViewController : BasicViewController {
-
+        NSArrayController *testArrayController;
+        NSArrayController *actionArrayController;
 }
 
 @property (retain, nonatomic) IBOutlet NSArrayController *testArrayController;

@@ -19,6 +19,12 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+
+    NSView *mainView;
+    FolderViewController *folderViewController;
+    RuleViewController *ruleViewController;
+    MethodViewController *methodViewController;
+    NSDrawer *rightDrawer;
 }
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;

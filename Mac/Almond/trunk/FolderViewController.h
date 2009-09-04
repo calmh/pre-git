@@ -10,6 +10,7 @@
 #import "BasicViewController.h"
 
 @interface FolderViewController : BasicViewController {
+        NSArrayController *folderArrayController;
 }
 
 @property (retain, nonatomic) IBOutlet NSArrayController *folderArrayController;
