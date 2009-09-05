@@ -46,7 +46,7 @@
         NSPoint tr = tl; tr.x += bounds.size.width - margin * 2;
         NSRect brect = NSMakeRect(bl.x, bl.y, tr.x - bl.x, tr.y - bl.y);
         
-        float lineDash[2];
+        CGFloat lineDash[2];
         lineDash[0] = 15.0;
         lineDash[1] = 9.0;
         

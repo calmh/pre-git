@@ -23,6 +23,7 @@
         size.width = 0;
         size.height = height;
         [self setMaxItemSize:size];        
+        [self setMinItemSize:size];        
 }
 
 - (NSCollectionViewItem *)newItemForRepresentedObject:(id)object {

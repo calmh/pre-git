@@ -6,7 +6,7 @@ plugin = {
                         description = "Create age is between min and max",
                         type = "test",
                         arguments = {
-                                -- File name is alway the first argument and shouldn't be mentioned here
+                                -- File name is always the first argument and shouldn't be mentioned here
                                 -- It is functionally equivalent to { description = "File name", type = "string", default = "" }
                                 { description = "Minimum age", type = "seconds", default = "0" },
                                 { description = "Maximum age", type = "seconds", default = "0" },
@@ -16,7 +16,7 @@ plugin = {
                         description = "File size is between min and max",
                         type = "test",
                         arguments = {
-                                -- File name is alway the first argument and shouldn't be mentioned here
+                                -- File name is always the first argument and shouldn't be mentioned here
                                 -- It is functionally equivalent to { description = "File name", type = "string", default = "" }
                                 { description = "Minimum size", type = "bytes", default = "0" },
                                 { description = "Maximum size", type = "bytes", default = "0" },
@@ -26,7 +26,7 @@ plugin = {
                         description = "Move to trash",
                         type = "action",
                         arguments = {
-                                -- File name is alway the first argument and shouldn't be mentioned here
+                                -- File name is always the first argument and shouldn't be mentioned here
                                 -- It is functionally equivalent to { description = "File name", type = "path", default = "" }
                         },
                 },
@@ -34,7 +34,7 @@ plugin = {
                         description = "Move to folder",
                         type = "action",
                         arguments = {
-                                -- File name is alway the first argument and shouldn't be mentioned here
+                                -- File name is always the first argument and shouldn't be mentioned here
                                 -- It is functionally equivalent to { description = "File name", type = "string", default = "" }
                                 { description = "Destination path", type = "path", default = "" },
                         },
@@ -43,18 +43,18 @@ plugin = {
 };
 
 function fileAge (filename, minAge, maxAge)
-        return 0
+        return 0;
 end
 
 function fileSize (filename, minSize, maxSize)
-        return 0
+        return 0;
 end
 
 function deleteFile (filename)
-        return 0
+        os.remove(filename);
 end
 
 function moveFileTo (filename, newPath)
-        return 0
+        os.rename(filename, newPath + "/" + filename);
 end
 

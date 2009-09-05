@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2922BD1B1052E9A600F7DF18 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2922BD271052E9F000F7DF18 /* worker_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2922BD261052E9F000F7DF18 /* worker_main.m */; };
+		2922BD521052ECB800F7DF18 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E81051ACCA00A22C0F /* liolib.c */; };
+		2922BD531052ECB800F7DF18 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5DD1051ACCA00A22C0F /* ldblib.c */; };
+		2922BD541052ECB800F7DF18 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E91051ACCA00A22C0F /* llex.c */; };
+		2922BD551052ECB800F7DF18 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F51051ACCA00A22C0F /* lparser.c */; };
+		2922BD561052ECB800F7DF18 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F91051ACCA00A22C0F /* lstring.c */; };
+		2922BD571052ECB800F7DF18 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F41051ACCA00A22C0F /* loslib.c */; };
+		2922BD581052ECB800F7DF18 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5FB1051ACCA00A22C0F /* lstrlib.c */; };
+		2922BD591052ECB800F7DF18 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E31051ACCA00A22C0F /* lfunc.c */; };
+		2922BD5A1052ECB800F7DF18 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5FE1051ACCA00A22C0F /* ltablib.c */; };
+		2922BD5B1052ECB800F7DF18 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D6061051ACCA00A22C0F /* lundump.c */; };
+		2922BD5C1052ECB800F7DF18 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D6081051ACCA00A22C0F /* lvm.c */; };
+		2922BD5D1052ECB800F7DF18 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E71051ACCA00A22C0F /* linit.c */; };
+		2922BD5E1052ECB800F7DF18 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5D81051ACCA00A22C0F /* lauxlib.c */; };
+		2922BD5F1052ECB800F7DF18 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5DB1051ACCA00A22C0F /* lcode.c */; };
+		2922BD601052ECB800F7DF18 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5DE1051ACCA00A22C0F /* ldebug.c */; };
+		2922BD611052ECB800F7DF18 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E01051ACCA00A22C0F /* ldo.c */; };
+		2922BD621052ECB800F7DF18 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5EF1051ACCA00A22C0F /* loadlib.c */; };
+		2922BD631052ECB800F7DF18 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5D61051ACCA00A22C0F /* lapi.c */; };
+		2922BD641052ECB800F7DF18 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F01051ACCA00A22C0F /* lobject.c */; };
+		2922BD651052ECB800F7DF18 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5FC1051ACCA00A22C0F /* ltable.c */; };
+		2922BD661052ECB800F7DF18 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5EC1051ACCA00A22C0F /* lmathlib.c */; };
+		2922BD671052ECB800F7DF18 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D60C1051ACCA00A22C0F /* print.c */; };
+		2922BD681052ECB800F7DF18 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5DA1051ACCA00A22C0F /* lbaselib.c */; };
+		2922BD691052ECB800F7DF18 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5FF1051ACCA00A22C0F /* ltm.c */; };
+		2922BD6A1052ECB800F7DF18 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5ED1051ACCA00A22C0F /* lmem.c */; };
+		2922BD6B1052ECB800F7DF18 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F71051ACCA00A22C0F /* lstate.c */; };
+		2922BD6C1052ECB800F7DF18 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E21051ACCA00A22C0F /* ldump.c */; };
+		2922BD6D1052ECB800F7DF18 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5E51051ACCA00A22C0F /* lgc.c */; };
+		2922BD6E1052ECB800F7DF18 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D5F21051ACCA00A22C0F /* lopcodes.c */; };
+		2922BD6F1052ECB800F7DF18 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 29A6D60A1051ACCA00A22C0F /* lzio.c */; };
 		297F98CE105183A200206CCB /* FolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F98CD105183A200206CCB /* FolderViewController.m */; };
 		297F98D1105183CB00206CCB /* FolderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F98D0105183CB00206CCB /* FolderView.xib */; };
 		297F993E10518B7D00206CCB /* RuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F993D10518B7D00206CCB /* RuleView.xib */; };
@@ -59,9 +91,21 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2922BD351052EA6D00F7DF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2922BD161052E99000F7DF18 /* AlmondWorker */;
+			remoteInfo = AlmondWorker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2922BD171052E99000F7DF18 /* AlmondWorker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlmondWorker; sourceTree = BUILT_PRODUCTS_DIR; };
+		2922BD261052E9F000F7DF18 /* worker_main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = worker_main.m; sourceTree = "<group>"; };
 		297F98CC105183A200206CCB /* FolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderViewController.h; sourceTree = "<group>"; };
 		297F98CD105183A200206CCB /* FolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderViewController.m; sourceTree = "<group>"; };
 		297F98D0105183CB00206CCB /* FolderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderView.xib; sourceTree = "<group>"; };
@@ -73,6 +117,7 @@
 		297F994510518BA700206CCB /* MethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodViewController.m; sourceTree = "<group>"; };
 		297F995310518F1D00206CCB /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		297F995410518F1D00206CCB /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		298322BE1052BAB50056424A /* AlmondWorker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlmondWorker-Info.plist"; sourceTree = "<group>"; };
 		29A0AF9B104DAE10002C0677 /* SelectableCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableCollectionView.h; sourceTree = "<group>"; };
 		29A0AF9C104DAE10002C0677 /* SelectableCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableCollectionView.m; sourceTree = "<group>"; };
 		29A0AF9D104DAE10002C0677 /* SelectableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableViewItem.h; sourceTree = "<group>"; };
@@ -131,7 +176,7 @@
 		29A6D60A1051ACCA00A22C0F /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = "lua-5.1.4/src/lzio.c"; sourceTree = "<group>"; };
 		29A6D60B1051ACCA00A22C0F /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = "lua-5.1.4/src/lzio.h"; sourceTree = "<group>"; };
 		29A6D60C1051ACCA00A22C0F /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = print.c; path = "lua-5.1.4/src/print.c"; sourceTree = "<group>"; };
-		29A6D6421051AE2000A22C0F /* StandardLibrary.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StandardLibrary.lua; sourceTree = "<group>"; };
+		29A6D6421051AE2000A22C0F /* StandardLibrary.lua */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = StandardLibrary.lua; sourceTree = "<group>"; };
 		29A6D7191051B87000A22C0F /* LuaHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaHandling.h; sourceTree = "<group>"; };
 		29A6D71A1051B87000A22C0F /* LuaHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaHandling.m; sourceTree = "<group>"; };
 		29A6D7821051BDC100A22C0F /* DraggableDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableDetailView.h; sourceTree = "<group>"; };
@@ -152,6 +197,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2922BD151052E99000F7DF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2922BD1B1052E9A600F7DF18 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,8 +267,17 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Almond.app */,
+				2922BD171052E99000F7DF18 /* AlmondWorker */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		298322841052B90F0056424A /* Worker Process */ = {
+			isa = PBXGroup;
+			children = (
+				2922BD261052E9F000F7DF18 /* worker_main.m */,
+			);
+			name = "Worker Process";
 			sourceTree = "<group>";
 		};
 		29A6D5D51051ACAE00A22C0F /* LUA */ = {
@@ -288,6 +350,7 @@
 		29B97314FDCFA39411CA2CEA /* Almond */ = {
 			isa = PBXGroup;
 			children = (
+				298322841052B90F0056424A /* Worker Process */,
 				29A6D6351051ADD500A22C0F /* Library */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -296,6 +359,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				29A6D5D51051ACAE00A22C0F /* LUA */,
+				298322BE1052BAB50056424A /* AlmondWorker-Info.plist */,
 			);
 			name = Almond;
 			sourceTree = "<group>";
@@ -342,6 +406,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2922BD161052E99000F7DF18 /* AlmondWorker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2922BD241052E9E500F7DF18 /* Build configuration list for PBXNativeTarget "AlmondWorker" */;
+			buildPhases = (
+				2922BD141052E99000F7DF18 /* Sources */,
+				2922BD151052E99000F7DF18 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlmondWorker;
+			productName = AlmondWorker;
+			productReference = 2922BD171052E99000F7DF18 /* AlmondWorker */;
+			productType = "com.apple.product-type.tool";
+		};
 		8D1107260486CEB800E47090 /* Almond */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Almond" */;
@@ -349,10 +429,12 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				2922BD471052EBA800F7DF18 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2922BD361052EA6D00F7DF18 /* PBXTargetDependency */,
 			);
 			name = Almond;
 			productInstallPath = "$(HOME)/Applications";
@@ -373,6 +455,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Almond */,
+				2922BD161052E99000F7DF18 /* AlmondWorker */,
 			);
 		};
 /* End PBXProject section */
@@ -393,7 +476,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2922BD471052EBA800F7DF18 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${TARGET_BUILD_DIR}\ncp AlmondWorker Almond.app/Contents/MacOS\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2922BD141052E99000F7DF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2922BD271052E9F000F7DF18 /* worker_main.m in Sources */,
+				2922BD521052ECB800F7DF18 /* liolib.c in Sources */,
+				2922BD531052ECB800F7DF18 /* ldblib.c in Sources */,
+				2922BD541052ECB800F7DF18 /* llex.c in Sources */,
+				2922BD551052ECB800F7DF18 /* lparser.c in Sources */,
+				2922BD561052ECB800F7DF18 /* lstring.c in Sources */,
+				2922BD571052ECB800F7DF18 /* loslib.c in Sources */,
+				2922BD581052ECB800F7DF18 /* lstrlib.c in Sources */,
+				2922BD591052ECB800F7DF18 /* lfunc.c in Sources */,
+				2922BD5A1052ECB800F7DF18 /* ltablib.c in Sources */,
+				2922BD5B1052ECB800F7DF18 /* lundump.c in Sources */,
+				2922BD5C1052ECB800F7DF18 /* lvm.c in Sources */,
+				2922BD5D1052ECB800F7DF18 /* linit.c in Sources */,
+				2922BD5E1052ECB800F7DF18 /* lauxlib.c in Sources */,
+				2922BD5F1052ECB800F7DF18 /* lcode.c in Sources */,
+				2922BD601052ECB800F7DF18 /* ldebug.c in Sources */,
+				2922BD611052ECB800F7DF18 /* ldo.c in Sources */,
+				2922BD621052ECB800F7DF18 /* loadlib.c in Sources */,
+				2922BD631052ECB800F7DF18 /* lapi.c in Sources */,
+				2922BD641052ECB800F7DF18 /* lobject.c in Sources */,
+				2922BD651052ECB800F7DF18 /* ltable.c in Sources */,
+				2922BD661052ECB800F7DF18 /* lmathlib.c in Sources */,
+				2922BD671052ECB800F7DF18 /* print.c in Sources */,
+				2922BD681052ECB800F7DF18 /* lbaselib.c in Sources */,
+				2922BD691052ECB800F7DF18 /* ltm.c in Sources */,
+				2922BD6A1052ECB800F7DF18 /* lmem.c in Sources */,
+				2922BD6B1052ECB800F7DF18 /* lstate.c in Sources */,
+				2922BD6C1052ECB800F7DF18 /* ldump.c in Sources */,
+				2922BD6D1052ECB800F7DF18 /* lgc.c in Sources */,
+				2922BD6E1052ECB800F7DF18 /* lopcodes.c in Sources */,
+				2922BD6F1052ECB800F7DF18 /* lzio.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +582,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2922BD361052EA6D00F7DF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2922BD161052E99000F7DF18 /* AlmondWorker */;
+			targetProxy = 2922BD351052EA6D00F7DF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -531,6 +676,52 @@
 			};
 			name = Release;
 		};
+		2922BD191052E99000F7DF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AlmondWorker;
+			};
+			name = Debug;
+		};
+		2922BD1A1052E99000F7DF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AlmondWorker;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,6 +739,15 @@
 			buildConfigurations = (
 				26FC0A890875C7B200E6366F /* Debug */,
 				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2922BD241052E9E500F7DF18 /* Build configuration list for PBXNativeTarget "AlmondWorker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2922BD191052E99000F7DF18 /* Debug */,
+				2922BD1A1052E99000F7DF18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
