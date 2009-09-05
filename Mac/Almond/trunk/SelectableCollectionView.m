@@ -26,15 +26,16 @@
 }
 
 - (NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
-        
-        // Get a copy of the item prototype, set represented object
         NSCollectionViewItem *newItem = [[self itemPrototype] copy];
         [newItem setRepresentedObject:object];
         
-        // Get the new item's view so you can mess with it
         NSView *itemView = [newItem view];
         if ([itemView respondsToSelector:@selector(setRepresentedObject:)])
                 [itemView setRepresentedObject:object];
+        if ([itemView respondsToSelector:@selector(setDelegate:)]) {
+                id myDelegate = [self delegate];
+                [itemView setDelegate:myDelegate];
+        }
         
         return newItem;
 }
