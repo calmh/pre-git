@@ -335,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>299C3CC01051D17C00A38B37</string>
+										<string>299C3CE1105264F700A38B37</string>
 										<key>history</key>
 										<array>
 											<string>29A0AF69104DAACE002C0677</string>
@@ -364,7 +364,7 @@
 											<string>29A6D8B71051C9F300A22C0F</string>
 											<string>29A6D8D01051CCA200A22C0F</string>
 											<string>29A6D91D1051CFCA00A22C0F</string>
-											<string>29A6D9231051D16300A22C0F</string>
+											<string>299C3CCF105264A400A38B37</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -378,18 +378,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1233, 515}}</string>
+								<string>{{0, 0}, {1233, 508}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>515pt</string>
+							<string>508pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>258pt</string>
+							<string>265pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -403,7 +403,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1233, 231}}</string>
+										<string>{{10, 27}, {1233, 238}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
@@ -508,11 +508,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>299C3CC11051D17C00A38B37</string>
+				<string>299C3CE2105264F700A38B37</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>299C3CC21051D17C00A38B37</string>
+				<string>299C3CE3105264F700A38B37</string>
 				<string>292674F4104DA2E6003B9DEA</string>
-				<string>299C3CC31051D17C00A38B37</string>
+				<string>299C3CE4105264F700A38B37</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -661,14 +661,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>299C3CC41051D17C00A38B37</string>
+				<string>299C3CE5105264F700A38B37</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>299C3CC51051D17C00A38B37</string>
-				<string>299C3CC61051D17C00A38B37</string>
-				<string>299C3CC71051D17C00A38B37</string>
-				<string>299C3CC81051D17C00A38B37</string>
-				<string>299C3CC91051D17C00A38B37</string>
+				<string>299C3CE6105264F700A38B37</string>
+				<string>299C3CE7105264F700A38B37</string>
+				<string>299C3CE8105264F700A38B37</string>
+				<string>299C3CE9105264F700A38B37</string>
+				<string>299C3CEA105264F700A38B37</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -702,6 +702,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>299C3CEB105264F700A38B37</string>
+		<string>299C3CEC105264F700A38B37</string>
+		<string>299C3CED105264F700A38B37</string>
 		<string>/Volumes/Storage/Users/jb/projekt/Mac/Almond/trunk/Almond.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
