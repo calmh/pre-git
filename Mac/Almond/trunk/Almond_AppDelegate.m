@@ -22,6 +22,7 @@
 @synthesize ruleViewController;
 @synthesize methodViewController;
 @synthesize rightDrawer;
+@synthesize leftDrawer;
 
 + (void)initialize {
         // Register our transformers
@@ -64,6 +65,12 @@
         } else {
                 [self.rightDrawer close];
         }
+        if (self.ruleViewController.leftDrawerView != nil) {
+                [self.leftDrawer setContentView:self.ruleViewController.leftDrawerView];
+                [self.leftDrawer open];
+        } else {
+                [self.leftDrawer close];
+        }
 }
 
 - (IBAction)changeToFolderView:(id)sender {
@@ -78,6 +85,12 @@
                 [self.rightDrawer open];
         } else {
                 [self.rightDrawer close];
+        }
+        if (self.folderViewController.leftDrawerView != nil) {
+                [self.leftDrawer setContentView:self.folderViewController.leftDrawerView];
+                [self.leftDrawer open];
+        } else {
+                [self.leftDrawer close];
         }
 }
 
@@ -94,6 +107,12 @@
                 [self.rightDrawer open];
         } else {
                 [self.rightDrawer close];
+        }
+        if (self.methodViewController.leftDrawerView != nil) {
+                [self.leftDrawer setContentView:self.methodViewController.leftDrawerView];
+                [self.leftDrawer open];
+        } else {
+                [self.leftDrawer close];
         }
 }
 

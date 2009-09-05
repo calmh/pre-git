@@ -1162,6 +1162,17 @@
 				<nil key="NSParentWindow"/>
 				<nil key="NSDelegate"/>
 			</object>
+			<object class="NSDrawer" id="582762275">
+				<nil key="NSNextResponder"/>
+				<string key="NSContentSize">{200, 350}</string>
+				<string key="NSMinContentSize">{200, 350}</string>
+				<string key="NSMaxContentSize">{300, 700}</string>
+				<int key="NSPreferredEdge">0</int>
+				<double key="NSLeadingOffset">0.0</double>
+				<double key="NSTrailingOffset">15</double>
+				<nil key="NSParentWindow"/>
+				<nil key="NSDelegate"/>
+			</object>
 			<object class="NSViewController" id="1026560021">
 				<string key="NSNibName">FolderView</string>
 			</object>
@@ -1838,6 +1849,30 @@
 						<reference key="destination" ref="612578685"/>
 					</object>
 					<int key="connectionID">848</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="582762275"/>
+						<reference key="destination" ref="612578685"/>
+					</object>
+					<int key="connectionID">862</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">parentWindow</string>
+						<reference key="source" ref="582762275"/>
+						<reference key="destination" ref="483958638"/>
+					</object>
+					<int key="connectionID">863</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">leftDrawer</string>
+						<reference key="source" ref="612578685"/>
+						<reference key="destination" ref="582762275"/>
+					</object>
+					<int key="connectionID">864</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2769,6 +2804,12 @@
 						<reference key="object" ref="828970534"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">861</int>
+						<reference key="object" ref="582762275"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Left Drawer</string>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2961,6 +3002,7 @@
 					<string>840.IBPluginDependency</string>
 					<string>844.CustomClassName</string>
 					<string>844.IBPluginDependency</string>
+					<string>861.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3150,6 +3192,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>MethodViewController</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -3168,7 +3211,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">860</int>
+			<int key="maxID">864</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3198,6 +3241,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>folderViewController</string>
+							<string>leftDrawer</string>
 							<string>mainView</string>
 							<string>methodViewController</string>
 							<string>rightDrawer</string>
@@ -3207,6 +3251,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>FolderViewController</string>
+							<string>NSDrawer</string>
 							<string>NSView</string>
 							<string>MethodViewController</string>
 							<string>NSDrawer</string>

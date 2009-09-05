@@ -14,4 +14,8 @@
 @synthesize testArrayController;
 @synthesize actionArrayController;
 
+- (void)itemWasDoubleClicked:(id)object {
+        NSLog(@"Double click detected");
+}
+
 @end

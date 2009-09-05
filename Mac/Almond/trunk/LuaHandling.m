@@ -99,7 +99,6 @@
         if (lua_isstring(l, -1)) {
                 const char* str = lua_tostring(l, -1);
                 NSString* nsstr = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
-                [nsstr autorelease];
                 lua_pop(l, 1);
                 return nsstr;
         } else {

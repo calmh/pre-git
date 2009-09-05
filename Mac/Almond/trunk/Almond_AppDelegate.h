@@ -24,7 +24,7 @@
     FolderViewController *folderViewController;
     RuleViewController *ruleViewController;
     MethodViewController *methodViewController;
-    NSDrawer *rightDrawer;
+    NSDrawer *rightDrawer, *leftDrawer;
 }
 
 @property (nonatomic, retain) IBOutlet NSWindow *window;
@@ -38,6 +38,7 @@
 @property (retain, nonatomic) IBOutlet RuleViewController *ruleViewController;
 @property (retain, nonatomic) IBOutlet MethodViewController *methodViewController;
 @property (retain, nonatomic) IBOutlet NSDrawer *rightDrawer;
+@property (retain, nonatomic) IBOutlet NSDrawer *leftDrawer;
 
 - (IBAction)saveAction:sender;
 - (IBAction)changeToRuleView:(id)sender;

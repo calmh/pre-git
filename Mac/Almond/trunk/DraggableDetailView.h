@@ -10,8 +10,10 @@
 
 @interface DraggableDetailView : NSView {
         id representedObject;
+        id delegate;
 }
 
 @property (retain, nonatomic) id representedObject;
+@property (retain, nonatomic) id delegate;
 
 @end

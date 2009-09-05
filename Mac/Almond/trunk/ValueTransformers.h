@@ -32,3 +32,9 @@
 }
 
 @end
+
+@interface FalseIfEmpty : NSValueTransformer {
+        
+}
+
+@end

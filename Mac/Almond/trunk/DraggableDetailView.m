@@ -12,7 +12,7 @@
 @implementation DraggableDetailView
 
 @synthesize representedObject;
-
+@synthesize delegate;
 
 - (void)dealloc {
         [super dealloc];
@@ -61,8 +61,18 @@
         [border fill];
         [background drawInBezierPath:border angle:-90];
         [border release];
+        [background release];
         
         [NSGraphicsContext restoreGraphicsState];
+}
+
+-(void)mouseDown:(NSEvent *)theEvent {
+        [super mouseDown:theEvent];
+        if([theEvent clickCount] == 2) {
+                if([delegate respondsToSelector:@selector(itemWasDoubleClicked:)]) {
+                        [delegate itemWasDoubleClicked:self.representedObject];
+                }
+        }
 }
 
 @end

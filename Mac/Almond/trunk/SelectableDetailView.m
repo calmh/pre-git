@@ -65,6 +65,7 @@
         [background drawInBezierPath:border angle:-90];
         [shadow release];
         [border release];
+        [background release];
 
          [NSGraphicsContext restoreGraphicsState];
 }

@@ -17,4 +17,6 @@
 @property (retain, nonatomic) IBOutlet NSArrayController *testArrayController;
 @property (retain, nonatomic) IBOutlet NSArrayController *actionArrayController;
 
+- (void)itemWasDoubleClicked:(id)object;
+
 @end
